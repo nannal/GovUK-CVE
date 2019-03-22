@@ -1,0 +1,123 @@
+# Nmap 7.70 scan initiated Sat Mar 16 12:44:48 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/mail1.environment-agency.gov.uk mail1.environment-agency.gov.uk
+Nmap scan report for mail1.environment-agency.gov.uk (195.59.199.166)
+Host is up (0.47s latency).
+Other addresses for mail1.environment-agency.gov.uk (not scanned): 195.59.221.52
+Not shown: 65535 filtered ports
+PORT     STATE SERVICE     VERSION
+9449/tcp open  ssl/unknown
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Content-Type: text/html
+|     Content-Length: 865
+|     Date: Sat, 16 Mar 2019 12:03:14 GMT
+|     Connection: close
+|     Server: Websense Server
+|     <html><head><title>Error report</title><style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 404</h1><HR size="1" noshade="noshade"><p><b>type</b> Status report</p>
+|   GetRequest: 
+|     HTTP/1.1 302 Found
+|     Set-Cookie: JSESSIONID=6EA5CA87DBA582EA81352979D6C127B3; Path=/; Secure; HttpOnly
+|     Location: https://localhost:6643/pem/login/pages/login.jsf
+|     Content-Type: text/html;charset=ISO-8859-1
+|     Content-Length: 0
+|     Date: Sat, 16 Mar 2019 12:02:39 GMT
+|     Connection: close
+|     Server: Websense Server
+|   HTTPOptions: 
+|     HTTP/1.1 302 Found
+|     Set-Cookie: JSESSIONID=817E60FC7B5441CA7E1F7A9018D87481; Path=/; Secure; HttpOnly
+|     Location: https://localhost:6643/pem/login/pages/login.jsf
+|     Content-Type: text/html;charset=ISO-8859-1
+|     Content-Length: 0
+|     Date: Sat, 16 Mar 2019 12:02:39 GMT
+|     Connection: close
+|     Server: Websense Server
+|   Help, SSLSessionReq: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 16 Mar 2019 12:02:59 GMT
+|     Connection: close
+|     Server: Websense Server
+|   Kerberos: 
+|     HTTP/1.1 400 Bad Request
+|     Transfer-Encoding: chunked
+|     Date: Sat, 16 Mar 2019 12:03:01 GMT
+|     Connection: close
+|     Server: Websense Server
+|   RTSPRequest: 
+|     HTTP/1.1 505 HTTP Version Not Supported
+|     Date: Sat, 16 Mar 2019 12:02:39 GMT
+|     Connection: close
+|     Server: Websense Server
+|   TLSSessionReq: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 16 Mar 2019 12:03:01 GMT
+|     Connection: close
+|_    Server: Websense Server
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port9449-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CE5DB%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,135,"HTTP/1\.1\x20302\x20Found\r\nSet-Cookie:\x20JS
+SF:ESSIONID=6EA5CA87DBA582EA81352979D6C127B3;\x20Path=/;\x20Secure;\x20Htt
+SF:pOnly\r\nLocation:\x20https://localhost:6643/pem/login/pages/login\.jsf
+SF:\r\nContent-Type:\x20text/html;charset=ISO-8859-1\r\nContent-Length:\x2
+SF:00\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2012:02:39\x20GMT\r\nConnecti
+SF:on:\x20close\r\nServer:\x20Websense\x20Server\r\n\r\n")%r(HTTPOptions,1
+SF:35,"HTTP/1\.1\x20302\x20Found\r\nSet-Cookie:\x20JSESSIONID=817E60FC7B54
+SF:41CA7E1F7A9018D87481;\x20Path=/;\x20Secure;\x20HttpOnly\r\nLocation:\x2
+SF:0https://localhost:6643/pem/login/pages/login\.jsf\r\nContent-Type:\x20
+SF:text/html;charset=ISO-8859-1\r\nContent-Length:\x200\r\nDate:\x20Sat,\x
+SF:2016\x20Mar\x202019\x2012:02:39\x20GMT\r\nConnection:\x20close\r\nServe
+SF:r:\x20Websense\x20Server\r\n\r\n")%r(RTSPRequest,7C,"HTTP/1\.1\x20505\x
+SF:20HTTP\x20Version\x20Not\x20Supported\r\nDate:\x20Sat,\x2016\x20Mar\x20
+SF:2019\x2012:02:39\x20GMT\r\nConnection:\x20close\r\nServer:\x20Websense\
+SF:x20Server\r\n\r\n")%r(Help,6D,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDa
+SF:te:\x20Sat,\x2016\x20Mar\x202019\x2012:02:59\x20GMT\r\nConnection:\x20c
+SF:lose\r\nServer:\x20Websense\x20Server\r\n\r\n")%r(SSLSessionReq,6D,"HTT
+SF:P/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x
+SF:2012:02:59\x20GMT\r\nConnection:\x20close\r\nServer:\x20Websense\x20Ser
+SF:ver\r\n\r\n")%r(TLSSessionReq,6D,"HTTP/1\.1\x20400\x20Bad\x20Request\r\
+SF:nDate:\x20Sat,\x2016\x20Mar\x202019\x2012:03:01\x20GMT\r\nConnection:\x
+SF:20close\r\nServer:\x20Websense\x20Server\r\n\r\n")%r(Kerberos,8E,"HTTP/
+SF:1\.1\x20400\x20Bad\x20Request\r\nTransfer-Encoding:\x20chunked\r\nDate:
+SF:\x20Sat,\x2016\x20Mar\x202019\x2012:03:01\x20GMT\r\nConnection:\x20clos
+SF:e\r\nServer:\x20Websense\x20Server\r\n\r\n0\r\n\r\n")%r(FourOhFourReque
+SF:st,3FA,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Type:\x20text/html\
+SF:r\nContent-Length:\x20865\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2012:0
+SF:3:14\x20GMT\r\nConnection:\x20close\r\nServer:\x20Websense\x20Server\r\
+SF:n\r\n<html><head><title>Error\x20report</title><style><!--H1\x20{font-f
+SF:amily:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font
+SF:-size:22px;}\x20H2\x20{font-family:Tahoma,Arial,sans-serif;color:white;
+SF:background-color:#525D76;font-size:16px;}\x20H3\x20{font-family:Tahoma,
+SF:Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;}\
+SF:x20BODY\x20{font-family:Tahoma,Arial,sans-serif;color:black;background-
+SF:color:white;}\x20B\x20{font-family:Tahoma,Arial,sans-serif;color:white;
+SF:background-color:#525D76;}\x20P\x20{font-family:Tahoma,Arial,sans-serif
+SF:;background:white;color:black;font-size:12px;}A\x20{color\x20:\x20black
+SF:;}A\.name\x20{color\x20:\x20black;}HR\x20{color\x20:\x20#525D76;}--></s
+SF:tyle>\x20</head><body><h1>HTTP\x20Status\x20404</h1><HR\x20size=\"1\"\x
+SF:20noshade=\"noshade\"><p><b>type</b>\x20Status\x20report</p>");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 14:04:37 2019 -- 1 IP address (1 host up) scanned in 4788.60 seconds

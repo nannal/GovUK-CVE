@@ -1,0 +1,907 @@
+# Nmap 7.70 scan initiated Sat Mar 16 12:29:05 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/loughtonandgreatholm-pc.gov.uk loughtonandgreatholm-pc.gov.uk
+Warning: 176.74.20.5 giving up on port because retransmission cap hit (6).
+Nmap scan report for loughtonandgreatholm-pc.gov.uk (176.74.20.5)
+Host is up (0.084s latency).
+rDNS record for 176.74.20.5: porth.cloudabove.com
+Not shown: 49156 filtered ports, 16355 closed ports
+PORT      STATE SERVICE      VERSION
+21/tcp    open  ftp          Pure-FTPd
+| banner: 220---------- Welcome to Pure-FTPd [privsep] [TLS] ----------\x
+|_0D\x0A220-You are user number 2 of 50 allowed.\x0D\x0A220-Local time...
+26/tcp    open  smtp         Exim smtpd 4.91
+| banner: 220-porth.cloudabove.com ESMTP Exim 4.91 #1 Sat, 16 Mar 2019 11
+|_:44:17 +0000 \x0D\x0A220-We do not authorize the use of this system ...
+80/tcp    open  http         LiteSpeed httpd
+|_http-server-header: LiteSpeed
+110/tcp   open  pop3         Dovecot pop3d
+|_banner: +OK Dovecot ready.
+143/tcp   open  imap         Dovecot imapd
+| banner: * OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE ID
+|_LE NAMESPACE LITERAL+ STARTTLS AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+443/tcp   open  ssl/http     LiteSpeed httpd
+|_http-server-header: LiteSpeed
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+465/tcp   open  ssl/smtp     Exim smtpd 4.91
+| banner: 220-porth.cloudabove.com ESMTP Exim 4.91 #1 Sat, 16 Mar 2019 11
+|_:44:26 +0000 \x0D\x0A220-We do not authorize the use of this system ...
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - C
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_RC4_128_SHA (secp256r1) - C
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_IDEA_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       64-bit block cipher IDEA vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - C
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_RC4_128_SHA (secp256r1) - C
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_IDEA_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       64-bit block cipher IDEA vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - C
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_RC4_128_SHA (secp256r1) - C
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_IDEA_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       64-bit block cipher IDEA vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|_  least strength: C
+587/tcp   open  smtp         Exim smtpd 4.91
+| banner: 220-porth.cloudabove.com ESMTP Exim 4.91 #1 Sat, 16 Mar 2019 11
+|_:44:18 +0000 \x0D\x0A220-We do not authorize the use of this system ...
+993/tcp   open  ssl/imap     Dovecot imapd
+| banner: * OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE ID
+|_LE NAMESPACE LITERAL+ AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       Key exchange (dh 1024) of lower strength than certificate key
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       Key exchange (dh 1024) of lower strength than certificate key
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       Key exchange (dh 1024) of lower strength than certificate key
+|_  least strength: A
+995/tcp   open  ssl/pop3     Dovecot pop3d
+|_banner: +OK Dovecot ready.
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       Key exchange (dh 1024) of lower strength than certificate key
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       Key exchange (dh 1024) of lower strength than certificate key
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       Key exchange (dh 1024) of lower strength than certificate key
+|_  least strength: A
+2083/tcp  open  ssl/radsec?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 11:41:59 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=%3adjwayiSNR2qWTnT9%2caaeb7c1e5a144e2a1764d2376dd064b7; HttpOnly; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=porth.cloudabove.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.porth.cloudabove.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: horde_secret_key=expired; HttpOnly
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 11:42:00 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=%3ayo52NV1h1CYfhntw%2cb9465baa88d4d71df6654c160fae8d6f; HttpOnly; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=porth.cloudabove.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.porth.cloudabove.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|_    Set-Cookie: horde_secret_key=expired; HttpOnly
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2087/tcp  open  ssl/eli?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 11:42:00 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="Web Host Manager"
+|     Set-Cookie: whostmgrrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: whostmgrsession=%3ab0FS5GEidbnKWDhN%2c70365e01faea2b960ba3d81db97375f7; HttpOnly; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=porth.cloudabove.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.porth.cloudabove.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: horde_secret
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 11:42:01 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="Web Host Manager"
+|     Set-Cookie: whostmgrrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: whostmgrsession=%3aQVVL_JcGrbLZyF0j%2cd80f1e7b948a962ed4dd765dfbf8dfa8; HttpOnly; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=porth.cloudabove.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.porth.cloudabove.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|_    Set-Cookie: horde_secret
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2096/tcp  open  ssl/nbx-dir?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 11:42:00 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=%3arRwMPjvoAFKYoZev%2c9c3007441ecea0b6f7aee236bdf6c9fc; HttpOnly; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=porth.cloudabove.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.porth.cloudabove.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: horde_secret_key=expire
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 11:42:01 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=%3aTXVJ4ykBrMNMxoad%2cea5d67ba8673039ab66df0f321d42fdc; HttpOnly; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=porth.cloudabove.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.porth.cloudabove.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|_    Set-Cookie: horde_secret_key=expire
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2223/tcp  open  ssh          OpenSSH 7.4 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_7.4
+3306/tcp  open  mysql        MySQL 5.7.25
+| banner: J\x00\x00\x00\x0A5.7.25\x00Bw\xAA\x00g4=nZ;\x0C6\x00\xFF\xFF\x0
+|_8\x02\x00\xFF\xC1\x15\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x19H\x...
+50695/tcp open  tcpwrapped
+52227/tcp open  ssl/http     nginx
+|_http-server-header: imunify360-webshield/1.6
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+52228/tcp open  unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 16 Mar 2019 11:41:42 GMT
+|     Content-Type: text/html
+|     Content-Length: 170
+|     Connection: close
+|     Server: imunify360-webshield/1.6
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|     </html>
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved
+|     Date: Sat, 16 Mar 2019 11:41:40 GMT
+|     Content-Type: text/html; charset="utf-8"
+|     Content-Length: 118
+|     Connection: close
+|     Location: https://porth.cloudabove.com:2087/
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Server: imunify360-webshield/1.6
+|     Expires: Sat, 16 Mar 2019 11:41:39 GMT
+|     <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://porth.cloudabove.com:2087/"></head><body></body></html>
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|_    </html>
+52229/tcp open  ssl/http     nginx
+|_http-server-header: imunify360-webshield/1.6
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+52230/tcp open  unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 16 Mar 2019 11:41:40 GMT
+|     Content-Type: text/html
+|     Content-Length: 170
+|     Connection: close
+|     Server: imunify360-webshield/1.6
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|     </html>
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved
+|     Date: Sat, 16 Mar 2019 11:41:40 GMT
+|     Content-Type: text/html; charset="utf-8"
+|     Content-Length: 118
+|     Connection: close
+|     Location: https://porth.cloudabove.com:2083/
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Server: imunify360-webshield/1.6
+|     Expires: Sat, 16 Mar 2019 11:41:39 GMT
+|     <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://porth.cloudabove.com:2083/"></head><body></body></html>
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|_    </html>
+52231/tcp open  ssl/http     nginx
+|_http-server-header: imunify360-webshield/1.6
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+52232/tcp open  unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 16 Mar 2019 11:41:42 GMT
+|     Content-Type: text/html
+|     Content-Length: 170
+|     Connection: close
+|     Server: imunify360-webshield/1.6
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|     </html>
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved
+|     Date: Sat, 16 Mar 2019 11:41:40 GMT
+|     Content-Type: text/html; charset="utf-8"
+|     Content-Length: 118
+|     Connection: close
+|     Location: https://porth.cloudabove.com:2096/
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Server: imunify360-webshield/1.6
+|     Expires: Sat, 16 Mar 2019 11:41:39 GMT
+|     <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://porth.cloudabove.com:2096/"></head><body></body></html>
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|_    </html>
+52233/tcp open  ssl/http     nginx
+|_http-server-header: imunify360-webshield/1.6
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+52234/tcp open  http-proxy   (bad gateway)
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 502 Bad Gateway
+|     Date: Sat, 16 Mar 2019 11:41:42 GMT
+|     Content-Type: text/html
+|     Content-Length: 170
+|     Connection: close
+|     Server: imunify360-webshield/1.6
+|     <html>
+|     <head><title>502 Bad Gateway</title></head>
+|     <body bgcolor="white">
+|     <center><h1>502 Bad Gateway</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|     </html>
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 502 Bad Gateway
+|     Date: Sat, 16 Mar 2019 11:41:40 GMT
+|     Content-Type: text/html
+|     Content-Length: 170
+|     Connection: close
+|     Server: imunify360-webshield/1.6
+|     <html>
+|     <head><title>502 Bad Gateway</title></head>
+|     <body bgcolor="white">
+|     <center><h1>502 Bad Gateway</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|     </html>
+|   Help, SSLSessionReq: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 16 Mar 2019 11:41:42 GMT
+|     Content-Type: text/html
+|     Content-Length: 170
+|     Connection: close
+|     Server: imunify360-webshield/1.6
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|     </html>
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|_    </html>
+|_http-server-header: imunify360-webshield/1.6
+65056/tcp open  tcpwrapped
+7 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2083-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CE104%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2011:41:59\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"cPanel\"\r\nSet-Cook
+SF:ie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:
+SF:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20cpse
+SF:ssion=%3adjwayiSNR2qWTnT9%2caaeb7c1e5a144e2a1764d2376dd064b7;\x20HttpOn
+SF:ly;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_sess
+SF:id=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20
+SF:GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_ses
+SF:sauth=expired;\x20HttpOnly;\x20domain=porth\.cloudabove\.com;\x20expire
+SF:s=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20s
+SF:ecure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20domain=\.porth\.
+SF:cloudabove\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20
+SF:path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20horde_secret_key=expi
+SF:red;\x20HttpOnly")%r(HTTPOptions,8000,"HTTP/1\.0\x20401\x20Access\x20De
+SF:nied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=
+SF:\"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2011:42:00\x20GMT\r\nC
+SF:ache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\
+SF:r\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"cPanel\
+SF:"\r\nSet-Cookie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Ja
+SF:n-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Co
+SF:okie:\x20cpsession=%3ayo52NV1h1CYfhntw%2cb9465baa88d4d71df6654c160fae8d
+SF:6f;\x20HttpOnly;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20r
+SF:oundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2
+SF:000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20
+SF:roundcube_sessauth=expired;\x20HttpOnly;\x20domain=porth\.cloudabove\.c
+SF:om;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20po
+SF:rt=2083;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20dom
+SF:ain=\.porth\.cloudabove\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:0
+SF:1\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20horde_se
+SF:cret_key=expired;\x20HttpOnly");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2087-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CE104%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2011:42:00\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"Web\x20Host\x20Manag
+SF:er\"\r\nSet-Cookie:\x20whostmgrrelogin=no;\x20HttpOnly;\x20expires=Thu,
+SF:\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\
+SF:r\nSet-Cookie:\x20whostmgrsession=%3ab0FS5GEidbnKWDhN%2c70365e01faea2b9
+SF:60ba3d81db97375f7;\x20HttpOnly;\x20path=/;\x20port=2087;\x20secure\r\nS
+SF:et-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2
+SF:001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\n
+SF:Set-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=porth
+SF:\.cloudabove\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x
+SF:20path=/;\x20port=2087;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20H
+SF:ttpOnly;\x20domain=\.porth\.cloudabove\.com;\x20expires=Thu,\x2001-Jan-
+SF:1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\nSet-Cook
+SF:ie:\x20horde_secret")%r(HTTPOptions,4000,"HTTP/1\.0\x20401\x20Access\x2
+SF:0Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20chars
+SF:et=\"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2011:42:01\x20GMT\r
+SF:\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20priva
+SF:te\r\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"Web\
+SF:x20Host\x20Manager\"\r\nSet-Cookie:\x20whostmgrrelogin=no;\x20HttpOnly;
+SF:\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=
+SF:2087;\x20secure\r\nSet-Cookie:\x20whostmgrsession=%3aQVVL_JcGrbLZyF0j%2
+SF:cd80f1e7b948a962ed4dd765dfbf8dfa8;\x20HttpOnly;\x20path=/;\x20port=2087
+SF:;\x20secure\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x2
+SF:0expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=208
+SF:7;\x20secure\r\nSet-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;
+SF:\x20domain=porth\.cloudabove\.com;\x20expires=Thu,\x2001-Jan-1970\x2000
+SF::00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\nSet-Cookie:\x20Hor
+SF:de=expired;\x20HttpOnly;\x20domain=\.porth\.cloudabove\.com;\x20expires
+SF:=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20se
+SF:cure\r\nSet-Cookie:\x20horde_secret");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2096-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CE104%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2011:42:00\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"WebMail\"\r\nSet-Coo
+SF:kie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\
+SF:x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x
+SF:20webmailsession=%3arRwMPjvoAFKYoZev%2c9c3007441ecea0b6f7aee236bdf6c9fc
+SF:;\x20HttpOnly;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20rou
+SF:ndcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x200
+SF:0:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20ro
+SF:undcube_sessauth=expired;\x20HttpOnly;\x20domain=porth\.cloudabove\.com
+SF:;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port
+SF:=2096;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20domai
+SF:n=\.porth\.cloudabove\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\
+SF:x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20horde_secr
+SF:et_key=expire")%r(HTTPOptions,95E3,"HTTP/1\.0\x20401\x20Access\x20Denie
+SF:d\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"u
+SF:tf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2011:42:01\x20GMT\r\nCach
+SF:e-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\n
+SF:Pragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"WebMail\"\
+SF:r\nSet-Cookie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001
+SF:-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet
+SF:-Cookie:\x20webmailsession=%3aTXVJ4ykBrMNMxoad%2cea5d67ba8673039ab66df0
+SF:f321d42fdc;\x20HttpOnly;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cook
+SF:ie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan
+SF:-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Coo
+SF:kie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=porth\.cloud
+SF:above\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=
+SF:/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly
+SF:;\x20domain=\.porth\.cloudabove\.com;\x20expires=Thu,\x2001-Jan-1970\x2
+SF:000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20
+SF:horde_secret_key=expire");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port52228-TCP:V=7.70%I=7%D=3/16%Time=5C8CE0F0%P=x86_64-unknown-linux-gn
+SF:u%r(GetRequest,1A6,"HTTP/1\.1\x20301\x20Moved\r\nDate:\x20Sat,\x2016\x2
+SF:0Mar\x202019\x2011:41:40\x20GMT\r\nContent-Type:\x20text/html;\x20chars
+SF:et=\"utf-8\"\r\nContent-Length:\x20118\r\nConnection:\x20close\r\nLocat
+SF:ion:\x20https://porth\.cloudabove\.com:2087/\r\nCache-Control:\x20no-ca
+SF:che\r\nPragma:\x20no-cache\r\nServer:\x20imunify360-webshield/1\.6\r\nE
+SF:xpires:\x20Sat,\x2016\x20Mar\x202019\x2011:41:39\x20GMT\r\n\r\n<html><h
+SF:ead><META\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://porth\.c
+SF:loudabove\.com:2087/\"></head><body></body></html>\n")%r(HTTPOptions,1A
+SF:6,"HTTP/1\.1\x20301\x20Moved\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x201
+SF:1:41:40\x20GMT\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nC
+SF:ontent-Length:\x20118\r\nConnection:\x20close\r\nLocation:\x20https://p
+SF:orth\.cloudabove\.com:2087/\r\nCache-Control:\x20no-cache\r\nPragma:\x2
+SF:0no-cache\r\nServer:\x20imunify360-webshield/1\.6\r\nExpires:\x20Sat,\x
+SF:2016\x20Mar\x202019\x2011:41:39\x20GMT\r\n\r\n<html><head><META\x20HTTP
+SF:-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://porth\.cloudabove\.com:20
+SF:87/\"></head><body></body></html>\n")%r(RTSPRequest,AA,"<html>\r\n<head
+SF:><title>400\x20Bad\x20Request</title></head>\r\n<body\x20bgcolor=\"whit
+SF:e\">\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>
+SF:openresty</center>\r\n</body>\r\n</html>\r\n")%r(RPCCheck,14E,"HTTP/1\.
+SF:1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2011:
+SF:41:42\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20170\r\
+SF:nConnection:\x20close\r\nServer:\x20imunify360-webshield/1\.6\r\n\r\n<h
+SF:tml>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<body\x20b
+SF:gcolor=\"white\">\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\
+SF:n<hr><center>openresty</center>\r\n</body>\r\n</html>\r\n")%r(DNSVersio
+SF:nBindReqTCP,14E,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2
+SF:016\x20Mar\x202019\x2011:41:42\x20GMT\r\nContent-Type:\x20text/html\r\n
+SF:Content-Length:\x20170\r\nConnection:\x20close\r\nServer:\x20imunify360
+SF:-webshield/1\.6\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</ti
+SF:tle></head>\r\n<body\x20bgcolor=\"white\">\r\n<center><h1>400\x20Bad\x2
+SF:0Request</h1></center>\r\n<hr><center>openresty</center>\r\n</body>\r\n
+SF:</html>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port52230-TCP:V=7.70%I=7%D=3/16%Time=5C8CE0F0%P=x86_64-unknown-linux-gn
+SF:u%r(GetRequest,1A6,"HTTP/1\.1\x20301\x20Moved\r\nDate:\x20Sat,\x2016\x2
+SF:0Mar\x202019\x2011:41:40\x20GMT\r\nContent-Type:\x20text/html;\x20chars
+SF:et=\"utf-8\"\r\nContent-Length:\x20118\r\nConnection:\x20close\r\nLocat
+SF:ion:\x20https://porth\.cloudabove\.com:2083/\r\nCache-Control:\x20no-ca
+SF:che\r\nPragma:\x20no-cache\r\nServer:\x20imunify360-webshield/1\.6\r\nE
+SF:xpires:\x20Sat,\x2016\x20Mar\x202019\x2011:41:39\x20GMT\r\n\r\n<html><h
+SF:ead><META\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://porth\.c
+SF:loudabove\.com:2083/\"></head><body></body></html>\n")%r(HTTPOptions,1A
+SF:6,"HTTP/1\.1\x20301\x20Moved\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x201
+SF:1:41:40\x20GMT\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nC
+SF:ontent-Length:\x20118\r\nConnection:\x20close\r\nLocation:\x20https://p
+SF:orth\.cloudabove\.com:2083/\r\nCache-Control:\x20no-cache\r\nPragma:\x2
+SF:0no-cache\r\nServer:\x20imunify360-webshield/1\.6\r\nExpires:\x20Sat,\x
+SF:2016\x20Mar\x202019\x2011:41:39\x20GMT\r\n\r\n<html><head><META\x20HTTP
+SF:-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://porth\.cloudabove\.com:20
+SF:83/\"></head><body></body></html>\n")%r(RTSPRequest,AA,"<html>\r\n<head
+SF:><title>400\x20Bad\x20Request</title></head>\r\n<body\x20bgcolor=\"whit
+SF:e\">\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>
+SF:openresty</center>\r\n</body>\r\n</html>\r\n")%r(RPCCheck,14E,"HTTP/1\.
+SF:1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2011:
+SF:41:40\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20170\r\
+SF:nConnection:\x20close\r\nServer:\x20imunify360-webshield/1\.6\r\n\r\n<h
+SF:tml>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<body\x20b
+SF:gcolor=\"white\">\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\
+SF:n<hr><center>openresty</center>\r\n</body>\r\n</html>\r\n")%r(DNSVersio
+SF:nBindReqTCP,14E,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2
+SF:016\x20Mar\x202019\x2011:41:40\x20GMT\r\nContent-Type:\x20text/html\r\n
+SF:Content-Length:\x20170\r\nConnection:\x20close\r\nServer:\x20imunify360
+SF:-webshield/1\.6\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</ti
+SF:tle></head>\r\n<body\x20bgcolor=\"white\">\r\n<center><h1>400\x20Bad\x2
+SF:0Request</h1></center>\r\n<hr><center>openresty</center>\r\n</body>\r\n
+SF:</html>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port52232-TCP:V=7.70%I=7%D=3/16%Time=5C8CE0F0%P=x86_64-unknown-linux-gn
+SF:u%r(GetRequest,1A6,"HTTP/1\.1\x20301\x20Moved\r\nDate:\x20Sat,\x2016\x2
+SF:0Mar\x202019\x2011:41:40\x20GMT\r\nContent-Type:\x20text/html;\x20chars
+SF:et=\"utf-8\"\r\nContent-Length:\x20118\r\nConnection:\x20close\r\nLocat
+SF:ion:\x20https://porth\.cloudabove\.com:2096/\r\nCache-Control:\x20no-ca
+SF:che\r\nPragma:\x20no-cache\r\nServer:\x20imunify360-webshield/1\.6\r\nE
+SF:xpires:\x20Sat,\x2016\x20Mar\x202019\x2011:41:39\x20GMT\r\n\r\n<html><h
+SF:ead><META\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://porth\.c
+SF:loudabove\.com:2096/\"></head><body></body></html>\n")%r(HTTPOptions,1A
+SF:6,"HTTP/1\.1\x20301\x20Moved\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x201
+SF:1:41:40\x20GMT\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nC
+SF:ontent-Length:\x20118\r\nConnection:\x20close\r\nLocation:\x20https://p
+SF:orth\.cloudabove\.com:2096/\r\nCache-Control:\x20no-cache\r\nPragma:\x2
+SF:0no-cache\r\nServer:\x20imunify360-webshield/1\.6\r\nExpires:\x20Sat,\x
+SF:2016\x20Mar\x202019\x2011:41:39\x20GMT\r\n\r\n<html><head><META\x20HTTP
+SF:-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://porth\.cloudabove\.com:20
+SF:96/\"></head><body></body></html>\n")%r(RTSPRequest,AA,"<html>\r\n<head
+SF:><title>400\x20Bad\x20Request</title></head>\r\n<body\x20bgcolor=\"whit
+SF:e\">\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>
+SF:openresty</center>\r\n</body>\r\n</html>\r\n")%r(RPCCheck,14E,"HTTP/1\.
+SF:1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2011:
+SF:41:42\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20170\r\
+SF:nConnection:\x20close\r\nServer:\x20imunify360-webshield/1\.6\r\n\r\n<h
+SF:tml>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<body\x20b
+SF:gcolor=\"white\">\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\
+SF:n<hr><center>openresty</center>\r\n</body>\r\n</html>\r\n")%r(DNSVersio
+SF:nBindReqTCP,14E,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2
+SF:016\x20Mar\x202019\x2011:41:42\x20GMT\r\nContent-Type:\x20text/html\r\n
+SF:Content-Length:\x20170\r\nConnection:\x20close\r\nServer:\x20imunify360
+SF:-webshield/1\.6\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</ti
+SF:tle></head>\r\n<body\x20bgcolor=\"white\">\r\n<center><h1>400\x20Bad\x2
+SF:0Request</h1></center>\r\n<hr><center>openresty</center>\r\n</body>\r\n
+SF:</html>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port52234-TCP:V=7.70%I=7%D=3/16%Time=5C8CE0F0%P=x86_64-unknown-linux-gn
+SF:u%r(GetRequest,14E,"HTTP/1\.1\x20502\x20Bad\x20Gateway\r\nDate:\x20Sat,
+SF:\x2016\x20Mar\x202019\x2011:41:40\x20GMT\r\nContent-Type:\x20text/html\
+SF:r\nContent-Length:\x20170\r\nConnection:\x20close\r\nServer:\x20imunify
+SF:360-webshield/1\.6\r\n\r\n<html>\r\n<head><title>502\x20Bad\x20Gateway<
+SF:/title></head>\r\n<body\x20bgcolor=\"white\">\r\n<center><h1>502\x20Bad
+SF:\x20Gateway</h1></center>\r\n<hr><center>openresty</center>\r\n</body>\
+SF:r\n</html>\r\n")%r(HTTPOptions,14E,"HTTP/1\.1\x20502\x20Bad\x20Gateway\
+SF:r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2011:41:40\x20GMT\r\nContent-Typ
+SF:e:\x20text/html\r\nContent-Length:\x20170\r\nConnection:\x20close\r\nSe
+SF:rver:\x20imunify360-webshield/1\.6\r\n\r\n<html>\r\n<head><title>502\x2
+SF:0Bad\x20Gateway</title></head>\r\n<body\x20bgcolor=\"white\">\r\n<cente
+SF:r><h1>502\x20Bad\x20Gateway</h1></center>\r\n<hr><center>openresty</cen
+SF:ter>\r\n</body>\r\n</html>\r\n")%r(RTSPRequest,AA,"<html>\r\n<head><tit
+SF:le>400\x20Bad\x20Request</title></head>\r\n<body\x20bgcolor=\"white\">\
+SF:r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>openr
+SF:esty</center>\r\n</body>\r\n</html>\r\n")%r(Help,14E,"HTTP/1\.1\x20400\
+SF:x20Bad\x20Request\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2011:41:42\x20
+SF:GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20170\r\nConnecti
+SF:on:\x20close\r\nServer:\x20imunify360-webshield/1\.6\r\n\r\n<html>\r\n<
+SF:head><title>400\x20Bad\x20Request</title></head>\r\n<body\x20bgcolor=\"
+SF:white\">\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><cen
+SF:ter>openresty</center>\r\n</body>\r\n</html>\r\n")%r(SSLSessionReq,14E,
+SF:"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2016\x20Mar\x2020
+SF:19\x2011:41:42\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\
+SF:x20170\r\nConnection:\x20close\r\nServer:\x20imunify360-webshield/1\.6\
+SF:r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<
+SF:body\x20bgcolor=\"white\">\r\n<center><h1>400\x20Bad\x20Request</h1></c
+SF:enter>\r\n<hr><center>openresty</center>\r\n</body>\r\n</html>\r\n")%r(
+SF:FourOhFourRequest,14E,"HTTP/1\.1\x20502\x20Bad\x20Gateway\r\nDate:\x20S
+SF:at,\x2016\x20Mar\x202019\x2011:41:42\x20GMT\r\nContent-Type:\x20text/ht
+SF:ml\r\nContent-Length:\x20170\r\nConnection:\x20close\r\nServer:\x20imun
+SF:ify360-webshield/1\.6\r\n\r\n<html>\r\n<head><title>502\x20Bad\x20Gatew
+SF:ay</title></head>\r\n<body\x20bgcolor=\"white\">\r\n<center><h1>502\x20
+SF:Bad\x20Gateway</h1></center>\r\n<hr><center>openresty</center>\r\n</bod
+SF:y>\r\n</html>\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 13:44:58 2019 -- 1 IP address (1 host up) scanned in 4553.22 seconds

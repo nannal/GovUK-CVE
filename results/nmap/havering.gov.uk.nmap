@@ -1,0 +1,85 @@
+# Nmap 7.70 scan initiated Sat Mar 16 09:54:03 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/havering.gov.uk havering.gov.uk
+Nmap scan report for havering.gov.uk (134.213.180.29)
+Host is up (0.34s latency).
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 302 Security Redirect
+|     Location: http://waf.jadu.net/waf/error.html?EVENT_ID=340938948242&HOST=192.168.100.81
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Expires: 0
+|     Connection: close
+|   GetRequest: 
+|     HTTP/1.0 302 Security Redirect
+|     Location: http://waf.jadu.net/waf/error.html?EVENT_ID=340938948219&HOST=192.168.100.81
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Expires: 0
+|     Connection: close
+|   HTTPOptions: 
+|     HTTP/1.0 302 Security Redirect
+|     Location: http://waf.jadu.net/waf/error.html?EVENT_ID=340938948232&HOST=192.168.100.81
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Expires: 0
+|     Connection: close
+|   RTSPRequest: 
+|     HTTP/1.0 302 Security Redirect
+|     Location: http://waf.jadu.net/waf/error.html?EVENT_ID=340938949434&HOST=192.168.100.81
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Expires: 0
+|_    Connection: close
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 4096) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 4096) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 4096) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CB90E%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,C4,"HTTP/1\.0\x20302\x20Security\x20Redirect\r\nLoca
+SF:tion:\x20http://waf\.jadu\.net/waf/error\.html\?EVENT_ID=340938948219&H
+SF:OST=192\.168\.100\.81\r\nCache-Control:\x20no-cache\r\nPragma:\x20no-ca
+SF:che\r\nExpires:\x200\r\nConnection:\x20close\r\n\r\n")%r(HTTPOptions,C4
+SF:,"HTTP/1\.0\x20302\x20Security\x20Redirect\r\nLocation:\x20http://waf\.
+SF:jadu\.net/waf/error\.html\?EVENT_ID=340938948232&HOST=192\.168\.100\.81
+SF:\r\nCache-Control:\x20no-cache\r\nPragma:\x20no-cache\r\nExpires:\x200\
+SF:r\nConnection:\x20close\r\n\r\n")%r(FourOhFourRequest,C4,"HTTP/1\.0\x20
+SF:302\x20Security\x20Redirect\r\nLocation:\x20http://waf\.jadu\.net/waf/e
+SF:rror\.html\?EVENT_ID=340938948242&HOST=192\.168\.100\.81\r\nCache-Contr
+SF:ol:\x20no-cache\r\nPragma:\x20no-cache\r\nExpires:\x200\r\nConnection:\
+SF:x20close\r\n\r\n")%r(RTSPRequest,C4,"HTTP/1\.0\x20302\x20Security\x20Re
+SF:direct\r\nLocation:\x20http://waf\.jadu\.net/waf/error\.html\?EVENT_ID=
+SF:340938949434&HOST=192\.168\.100\.81\r\nCache-Control:\x20no-cache\r\nPr
+SF:agma:\x20no-cache\r\nExpires:\x200\r\nConnection:\x20close\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 10:52:34 2019 -- 1 IP address (1 host up) scanned in 3510.97 seconds

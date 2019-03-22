@@ -1,0 +1,462 @@
+# Nmap 7.70 scan initiated Sat Mar 16 15:02:28 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/oswestry-tc.gov.uk oswestry-tc.gov.uk
+Warning: 185.27.245.187 giving up on port because retransmission cap hit (6).
+Nmap scan report for oswestry-tc.gov.uk (185.27.245.187)
+Host is up (0.075s latency).
+rDNS record for 185.27.245.187: primary.trimastsystems.co.uk
+Not shown: 65494 closed ports
+PORT      STATE    SERVICE        VERSION
+21/tcp    open     ftp            Pure-FTPd
+| banner: 220---------- Welcome to Pure-FTPd [privsep] [TLS] ----------\x
+|_0D\x0A220-You are user number 1 of 50 allowed.\x0D\x0A220-Local time...
+22/tcp    open     ssh            OpenSSH 5.3 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_5.3
+25/tcp    filtered smtp
+53/tcp    open     domain         ISC BIND 9.8.2rc1 (RedHat Enterprise Linux 6)
+80/tcp    open     http           Apache httpd 2.4.38 ((cPanel) OpenSSL/1.0.2r mod_bwlimited/1.4)
+|_http-server-header: Apache/2.4.38 (cPanel) OpenSSL/1.0.2r mod_bwlimited/1.4
+111/tcp   filtered rpcbind
+443/tcp   open     ssl/http       Apache httpd 2.4.38 ((cPanel) OpenSSL/1.0.2r mod_bwlimited/1.4)
+|_http-server-header: Apache/2.4.38 (cPanel) OpenSSL/1.0.2r mod_bwlimited/1.4
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - C
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_RC4_128_SHA (secp256r1) - C
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+| 
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_RC4_128_SHA (secp256r1) - C
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA and TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_ECDHE_RSA_WITH_RC4_128_SHA - unknown
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|_  least strength: unknown
+465/tcp   open     ssl/smtps?
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_CBC_SHA and TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+| 
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_CBC_SHA and TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|     compressors: 
+| 
+|     cipher preference: client
+|_  least strength: A
+587/tcp   open     smtp           Exim smtpd 4.91
+| banner: 220-primary.trimastsystems.co.uk ESMTP Exim 4.91 #1 Sat, 16 Mar
+|_ 2019 13:23:08 +0000 \x0D\x0A220-We do not authorize the use of this...
+1167/tcp  open     r1soft-cdp     R1Soft Continuous Data Protection Agent (name: NOTFOUND)
+2077/tcp  open     tsrmagt?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 302 Moved
+|     Date: Sat, 16 Mar 2019 13:21:38 GMT
+|     Server: cPanel
+|     Persistent-Auth: false
+|     Host: primary.trimastsystems.co.uk:2077
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Connection: close
+|     Location: https://primary.trimastsystems.co.uk:2078sip:nm
+|     Vary: Accept-Encoding
+|     Expires: Fri, 01 Jan 1990 00:00:00 GMT
+|_    X-Redirect-Reason: requiressl
+2078/tcp  open     ssl/http       cPanel httpd (unauthorized)
+|_http-server-header: cPanel
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|     compressors: 
+| 
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2079/tcp  open     idware-router?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 302 Moved
+|     Date: Sat, 16 Mar 2019 13:21:38 GMT
+|     Server: cPanel
+|     Persistent-Auth: false
+|     Host: primary.trimastsystems.co.uk:2079
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Connection: close
+|     Location: https://primary.trimastsystems.co.uk:2080sip:nm
+|     Vary: Accept-Encoding
+|     Expires: Fri, 01 Jan 1990 00:00:00 GMT
+|_    X-Redirect-Reason: requiressl
+2080/tcp  open     ssl/http       cPanel httpd (unauthorized)
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_CBC_SHA and TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+|   TLSv1.1: 
+|     ciphers: 
+| 
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|     compressors: 
+| 
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 and TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
+|_  least strength: A
+2082/tcp  open     infowave?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 301 Moved
+|     Content-length: 134
+|     Location: https://primary.trimastsystems.co.uk:2083/sip%3anm
+|     Content-type: text/html; charset="utf-8"
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|_    <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://primary.trimastsystems.co.uk:2083/sip%3anm"></head><body></body></html>
+2083/tcp  open     ssl/radsec?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 13:20:32 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=%3avqJNU7eelnILmZ50%2ce459efdc29013b3bd7ab6c18548678bb; HttpOnly; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=primary.trimastsystems.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.primary.trimastsystems.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: horde_secret_key=e
+|   RTSPRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 13:20:38 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=%3atoiznY6pjAy57mP8%2ce781fdeaa121727d1ff05ca83beb2805; HttpOnly; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=primary.trimastsystems.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.primary.trimastsystems.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|_    Set-Cookie: horde_secret_key=e
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+| 
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2086/tcp  open     gnunet?
+2087/tcp  open     ssl/eli?
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|     compressors: 
+| 
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|     compressors: 
+| 
+|     cipher preference: server
+|_  least strength: A
+2095/tcp  open     nbx-ser?
+2096/tcp  open     ssl/nbx-dir?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 13:20:36 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=%3ajKKn0UJcVW5Vpkp6%2c15d890445a4f58c1821dbcfba3cae4d5; HttpOnly; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=primary.trimastsystems.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.primary.trimastsystems.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: horde_s
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 13:20:37 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=%3aoWvhEaxz36t19iyH%2cb2715860c4a59a608bd6f0f3ce9186ce; HttpOnly; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=primary.trimastsystems.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.primary.trimastsystems.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|_    Set-Cookie: horde_s
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+| 
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|     compressors: 
+| 
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 and TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+|_  least strength: A
+3306/tcp  open     mysql          MySQL (unauthorized)
+| banner: U\x00\x00\x00\xFFj\x04Host '78-58-49-144.static.zebra.lt' is no
+|_t allowed to connect to this MySQL server
+4933/tcp  filtered unknown
+7720/tcp  filtered medimageportal
+8635/tcp  filtered unknown
+10050/tcp open     zabbix-agent?
+11214/tcp filtered unknown
+12647/tcp filtered unknown
+14488/tcp filtered unknown
+19630/tcp filtered unknown
+22661/tcp filtered unknown
+32235/tcp filtered unknown
+36537/tcp filtered unknown
+38304/tcp filtered unknown
+39577/tcp filtered unknown
+41560/tcp filtered unknown
+45808/tcp filtered unknown
+47079/tcp filtered unknown
+47084/tcp filtered unknown
+52855/tcp filtered unknown
+60485/tcp filtered unknown
+62501/tcp filtered unknown
+64965/tcp filtered unknown
+5 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2077-TCP:V=7.70%I=7%D=3/16%Time=5C8CF85F%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,175,"HTTP/1\.1\x20302\x20Moved\r\nDate:\x20Sat,\x2016\x20
+SF:Mar\x202019\x2013:21:38\x20GMT\r\nServer:\x20cPanel\r\nPersistent-Auth:
+SF:\x20false\r\nHost:\x20primary\.trimastsystems\.co\.uk:2077\r\nCache-Con
+SF:trol:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nConne
+SF:ction:\x20close\r\nLocation:\x20https://primary\.trimastsystems\.co\.uk
+SF::2078sip:nm\r\nVary:\x20Accept-Encoding\r\nExpires:\x20Fri,\x2001\x20Ja
+SF:n\x201990\x2000:00:00\x20GMT\r\nX-Redirect-Reason:\x20requiressl\r\n\r\
+SF:n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2079-TCP:V=7.70%I=7%D=3/16%Time=5C8CF85F%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,175,"HTTP/1\.1\x20302\x20Moved\r\nDate:\x20Sat,\x2016\x20
+SF:Mar\x202019\x2013:21:38\x20GMT\r\nServer:\x20cPanel\r\nPersistent-Auth:
+SF:\x20false\r\nHost:\x20primary\.trimastsystems\.co\.uk:2079\r\nCache-Con
+SF:trol:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nConne
+SF:ction:\x20close\r\nLocation:\x20https://primary\.trimastsystems\.co\.uk
+SF::2080sip:nm\r\nVary:\x20Accept-Encoding\r\nExpires:\x20Fri,\x2001\x20Ja
+SF:n\x201990\x2000:00:00\x20GMT\r\nX-Redirect-Reason:\x20requiressl\r\n\r\
+SF:n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2082-TCP:V=7.70%I=7%D=3/16%Time=5C8CF860%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,156,"HTTP/1\.1\x20301\x20Moved\r\nContent-length:\x20134\
+SF:r\nLocation:\x20https://primary\.trimastsystems\.co\.uk:2083/sip%3anm\r
+SF:\nContent-type:\x20text/html;\x20charset=\"utf-8\"\r\nCache-Control:\x2
+SF:0no-cache,\x20no-store,\x20must-revalidate,\x20private\r\n\r\n<html><he
+SF:ad><META\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://primary\.
+SF:trimastsystems\.co\.uk:2083/sip%3anm\"></head><body></body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2083-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CF81D%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2013:20:32\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"cPanel\"\r\nSet-Cook
+SF:ie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:
+SF:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20cpse
+SF:ssion=%3avqJNU7eelnILmZ50%2ce459efdc29013b3bd7ab6c18548678bb;\x20HttpOn
+SF:ly;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_sess
+SF:id=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20
+SF:GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_ses
+SF:sauth=expired;\x20HttpOnly;\x20domain=primary\.trimastsystems\.co\.uk;\
+SF:x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2
+SF:083;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20domain=
+SF:\.primary\.trimastsystems\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000
+SF::00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20hor
+SF:de_secret_key=e")%r(RTSPRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Den
+SF:ied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=\
+SF:"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2013:20:38\x20GMT\r\nCa
+SF:che-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r
+SF:\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"cPanel\"
+SF:\r\nSet-Cookie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan
+SF:-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Coo
+SF:kie:\x20cpsession=%3atoiznY6pjAy57mP8%2ce781fdeaa121727d1ff05ca83beb280
+SF:5;\x20HttpOnly;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20ro
+SF:undcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x20
+SF:00:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20r
+SF:oundcube_sessauth=expired;\x20HttpOnly;\x20domain=primary\.trimastsyste
+SF:ms\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=
+SF:/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly
+SF:;\x20domain=\.primary\.trimastsystems\.co\.uk;\x20expires=Thu,\x2001-Ja
+SF:n-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Co
+SF:okie:\x20horde_secret_key=e");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2096-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CF821%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2013:20:36\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"WebMail\"\r\nSet-Coo
+SF:kie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\
+SF:x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x
+SF:20webmailsession=%3ajKKn0UJcVW5Vpkp6%2c15d890445a4f58c1821dbcfba3cae4d5
+SF:;\x20HttpOnly;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20rou
+SF:ndcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x200
+SF:0:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20ro
+SF:undcube_sessauth=expired;\x20HttpOnly;\x20domain=primary\.trimastsystem
+SF:s\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/
+SF:;\x20port=2096;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;
+SF:\x20domain=\.primary\.trimastsystems\.co\.uk;\x20expires=Thu,\x2001-Jan
+SF:-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Coo
+SF:kie:\x20horde_s")%r(HTTPOptions,8000,"HTTP/1\.0\x20401\x20Access\x20Den
+SF:ied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=\
+SF:"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2013:20:37\x20GMT\r\nCa
+SF:che-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r
+SF:\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"WebMail\
+SF:"\r\nSet-Cookie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x20
+SF:01-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nS
+SF:et-Cookie:\x20webmailsession=%3aoWvhEaxz36t19iyH%2cb2715860c4a59a608bd6
+SF:f0f3ce9186ce;\x20HttpOnly;\x20path=/;\x20port=2096;\x20secure\r\nSet-Co
+SF:okie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-J
+SF:an-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-C
+SF:ookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=primary\.t
+SF:rimastsystems\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GM
+SF:T;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20Horde=expired;\
+SF:x20HttpOnly;\x20domain=\.primary\.trimastsystems\.co\.uk;\x20expires=Th
+SF:u,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secur
+SF:e\r\nSet-Cookie:\x20horde_s");
+Service Info: OS: Linux; CPE: cpe:/o:redhat:enterprise_linux:6
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 15:23:55 2019 -- 1 IP address (1 host up) scanned in 1286.95 seconds

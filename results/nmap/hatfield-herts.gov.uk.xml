@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 09:51:30 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/hatfield-herts.gov.uk hatfield-herts.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/hatfield-herts.gov.uk hatfield-herts.gov.uk" start="1552722690" startstr="Sat Mar 16 09:51:30 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552722691" endtime="1552726875"><status state="up" reason="syn-ack" reason_ttl="54"/>
+<address addr="217.160.123.74" addrtype="ipv4"/>
+<hostnames>
+<hostname name="hatfield-herts.gov.uk" type="user"/>
+<hostname name="clienthosting.eu" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="49024">
+<extrareasons reason="no-responses" count="46011"/>
+<extrareasons reason="port-unreaches" count="3013"/>
+</extraports>
+<extraports state="closed" count="16507">
+<extrareasons reason="resets" count="16507"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="ftp" product="ProFTPD or KnFTPD" ostype="Unix" method="probed" conf="10"/><script id="banner" output="220 FTP Server ready."/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="ssh" product="OpenSSH" version="6.7p1 Debian 5+deb8u7~ui80+1" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:6.7p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="banner" output="SSH-2.0-OpenSSH_6.7p1 Debian-5+deb8u7~ui80+1"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-trane-info" output="Problem with XML parsing of /evox/about"/></port>
+<port protocol="tcp" portid="81"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="https" tunnel="ssl" method="table" conf="3"/></port>
+</ports>
+<times srtt="77120" rttvar="12993" to="129092"/>
+</host>
+<runstats><finished time="1552726875" timestr="Sat Mar 16 11:01:15 2019" elapsed="4185.02" summary="Nmap done at Sat Mar 16 11:01:15 2019; 1 IP address (1 host up) scanned in 4185.02 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

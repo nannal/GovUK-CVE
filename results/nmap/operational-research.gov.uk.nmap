@@ -1,0 +1,56 @@
+# Nmap 7.70 scan initiated Sat Mar 16 14:53:01 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/operational-research.gov.uk operational-research.gov.uk
+Warning: 94.136.40.100 giving up on port because retransmission cap hit (6).
+Nmap scan report for operational-research.gov.uk (94.136.40.100)
+Host is up (0.070s latency).
+rDNS record for 94.136.40.100: outbound-traffic.linweb.ahost.me
+Not shown: 65368 closed ports, 164 filtered ports
+PORT    STATE SERVICE   VERSION
+21/tcp  open  ftp       ProFTPD
+|_banner: 220 ATLAS/WebFusion FTP server
+22/tcp  open  ssh       (protocol 2.0)
+| banner: SSH-2.0-ATLAS/WebFusion FTP server\x0D\x0A\x00\x00\x01\xA4\x08\
+|_x14d\xA4_;\x88\xAE\xD7\x873\xF7\x9E7\xDB#0\x9C\x00\x00\x00\xC4ecdh-s...
+| fingerprint-strings: 
+|   NULL: 
+|     SSH-2.0-ATLAS/WebFusion FTP server
+|     ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,rsa1024-sha1
+|     ssh-rsa
+|     -aes256-ctr,aes192-ctr,aes128-ctr,blowfish-ctr
+|     -aes256-ctr,aes192-ctr,aes128-ctr,blowfish-ctr
+|     hmac-sha1,hmac-ripemd160
+|     hmac-sha1,hmac-ripemd160
+|     none
+|     none
+|_    .?61g
+80/tcp  open  http      Apache httpd
+|_http-server-header: Apache
+443/tcp open  ssl/https BigIP
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 302 Found
+|     Location: http://webfusion-support.co.uk
+|     Server: BigIP
+|     Connection: close
+|_    Content-Length: 0
+|_http-server-header: BigIP
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port22-TCP:V=7.70%I=7%D=3/16%Time=5C8CF893%P=x86_64-unknown-linux-gnu%r
+SF:(NULL,1CC,"SSH-2\.0-ATLAS/WebFusion\x20FTP\x20server\r\n\0\0\x01\xa4\x0
+SF:8\x14d\xa4_;\x88\xae\xd7\x873\xf7\x9e7\xdb#0\x9c\0\0\0\xc4ecdh-sha2-nis
+SF:tp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchan
+SF:ge-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha
+SF:1,diffie-hellman-group1-sha1,rsa1024-sha1\0\0\0\x07ssh-rsa\0\0\0-aes256
+SF:-ctr,aes192-ctr,aes128-ctr,blowfish-ctr\0\0\0-aes256-ctr,aes192-ctr,aes
+SF:128-ctr,blowfish-ctr\0\0\0\x18hmac-sha1,hmac-ripemd160\0\0\0\x18hmac-sh
+SF:a1,hmac-ripemd160\0\0\0\x04none\0\0\0\x04none\0\0\0\0\0\0\0\0\0\0\0\0\0
+SF:\xb0\.\?61g\xae\x16");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CF89A%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,75,"HTTP/1\.0\x20302\x20Found\r\nLocation:\x20http:/
+SF:/webfusion-support\.co\.uk\r\nServer:\x20BigIP\r\nConnection:\x20close\
+SF:r\nContent-Length:\x200\r\n\r\n");
+Service Info: Host: 02-webfusion
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 15:23:05 2019 -- 1 IP address (1 host up) scanned in 1803.80 seconds

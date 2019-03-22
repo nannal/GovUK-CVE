@@ -1,0 +1,137 @@
+# Nmap 7.70 scan initiated Sat Mar 16 16:45:18 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/sandwell.gov.uk sandwell.gov.uk
+Nmap scan report for sandwell.gov.uk (162.13.171.80)
+Host is up (0.24s latency).
+rDNS record for 162.13.171.80: rsvm86.servers.jadu.net
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 302 Security Redirect
+|     Location: http://waf.jadu.net/waf/error.html?EVENT_ID=340940959428&HOST=192.168.115.80
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Expires: 0
+|     Connection: close
+|   GetRequest: 
+|     HTTP/1.0 302 Security Redirect
+|     Location: http://waf.jadu.net/waf/error.html?EVENT_ID=340940959081&HOST=192.168.115.80
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Expires: 0
+|     Connection: close
+|   HTTPOptions: 
+|     HTTP/1.0 302 Security Redirect
+|     Location: http://waf.jadu.net/waf/error.html?EVENT_ID=340940959089&HOST=192.168.115.80
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Expires: 0
+|     Connection: close
+|   RTSPRequest: 
+|     HTTP/1.0 302 Security Redirect
+|     Location: http://waf.jadu.net/waf/error.html?EVENT_ID=340940959171&HOST=192.168.115.80
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Expires: 0
+|     Connection: close
+|   SIPOptions: 
+|     HTTP/1.0 302 Security Redirect
+|     Location: http://waf.jadu.net/waf/error.html?EVENT_ID=340940964831&HOST=192.168.115.80
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Expires: 0
+|_    Connection: close
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 302 Security Redirect
+|     Location: http://waf.jadu.net/waf/error.html?EVENT_ID=340940959576&HOST=192.168.115.80
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Expires: 0
+|     Connection: close
+|   GetRequest: 
+|     HTTP/1.0 302 Security Redirect
+|     Location: http://waf.jadu.net/waf/error.html?EVENT_ID=340940959512&HOST=192.168.115.80
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Expires: 0
+|     Connection: close
+|   HTTPOptions: 
+|     HTTP/1.0 302 Security Redirect
+|     Location: http://waf.jadu.net/waf/error.html?EVENT_ID=340940959539&HOST=192.168.115.80
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Expires: 0
+|     Connection: close
+|   RTSPRequest: 
+|     HTTP/1.0 302 Security Redirect
+|     Location: http://waf.jadu.net/waf/error.html?EVENT_ID=340940960592&HOST=192.168.115.80
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Expires: 0
+|     Connection: close
+|   SIPOptions: 
+|     HTTP/1.0 302 Security Redirect
+|     Location: http://waf.jadu.net/waf/error.html?EVENT_ID=340940965909&HOST=192.168.115.80
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Expires: 0
+|_    Connection: close
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8D1634%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,C4,"HTTP/1\.0\x20302\x20Security\x20Redirect\r\nLocation:\x
+SF:20http://waf\.jadu\.net/waf/error\.html\?EVENT_ID=340940959081&HOST=192
+SF:\.168\.115\.80\r\nCache-Control:\x20no-cache\r\nPragma:\x20no-cache\r\n
+SF:Expires:\x200\r\nConnection:\x20close\r\n\r\n")%r(HTTPOptions,C4,"HTTP/
+SF:1\.0\x20302\x20Security\x20Redirect\r\nLocation:\x20http://waf\.jadu\.n
+SF:et/waf/error\.html\?EVENT_ID=340940959089&HOST=192\.168\.115\.80\r\nCac
+SF:he-Control:\x20no-cache\r\nPragma:\x20no-cache\r\nExpires:\x200\r\nConn
+SF:ection:\x20close\r\n\r\n")%r(RTSPRequest,C4,"HTTP/1\.0\x20302\x20Securi
+SF:ty\x20Redirect\r\nLocation:\x20http://waf\.jadu\.net/waf/error\.html\?E
+SF:VENT_ID=340940959171&HOST=192\.168\.115\.80\r\nCache-Control:\x20no-cac
+SF:he\r\nPragma:\x20no-cache\r\nExpires:\x200\r\nConnection:\x20close\r\n\
+SF:r\n")%r(FourOhFourRequest,C4,"HTTP/1\.0\x20302\x20Security\x20Redirect\
+SF:r\nLocation:\x20http://waf\.jadu\.net/waf/error\.html\?EVENT_ID=3409409
+SF:59428&HOST=192\.168\.115\.80\r\nCache-Control:\x20no-cache\r\nPragma:\x
+SF:20no-cache\r\nExpires:\x200\r\nConnection:\x20close\r\n\r\n")%r(SIPOpti
+SF:ons,C4,"HTTP/1\.0\x20302\x20Security\x20Redirect\r\nLocation:\x20http:/
+SF:/waf\.jadu\.net/waf/error\.html\?EVENT_ID=340940964831&HOST=192\.168\.1
+SF:15\.80\r\nCache-Control:\x20no-cache\r\nPragma:\x20no-cache\r\nExpires:
+SF:\x200\r\nConnection:\x20close\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D163C%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,C4,"HTTP/1\.0\x20302\x20Security\x20Redirect\r\nLoca
+SF:tion:\x20http://waf\.jadu\.net/waf/error\.html\?EVENT_ID=340940959512&H
+SF:OST=192\.168\.115\.80\r\nCache-Control:\x20no-cache\r\nPragma:\x20no-ca
+SF:che\r\nExpires:\x200\r\nConnection:\x20close\r\n\r\n")%r(HTTPOptions,C4
+SF:,"HTTP/1\.0\x20302\x20Security\x20Redirect\r\nLocation:\x20http://waf\.
+SF:jadu\.net/waf/error\.html\?EVENT_ID=340940959539&HOST=192\.168\.115\.80
+SF:\r\nCache-Control:\x20no-cache\r\nPragma:\x20no-cache\r\nExpires:\x200\
+SF:r\nConnection:\x20close\r\n\r\n")%r(FourOhFourRequest,C4,"HTTP/1\.0\x20
+SF:302\x20Security\x20Redirect\r\nLocation:\x20http://waf\.jadu\.net/waf/e
+SF:rror\.html\?EVENT_ID=340940959576&HOST=192\.168\.115\.80\r\nCache-Contr
+SF:ol:\x20no-cache\r\nPragma:\x20no-cache\r\nExpires:\x200\r\nConnection:\
+SF:x20close\r\n\r\n")%r(RTSPRequest,C4,"HTTP/1\.0\x20302\x20Security\x20Re
+SF:direct\r\nLocation:\x20http://waf\.jadu\.net/waf/error\.html\?EVENT_ID=
+SF:340940960592&HOST=192\.168\.115\.80\r\nCache-Control:\x20no-cache\r\nPr
+SF:agma:\x20no-cache\r\nExpires:\x200\r\nConnection:\x20close\r\n\r\n")%r(
+SF:SIPOptions,C4,"HTTP/1\.0\x20302\x20Security\x20Redirect\r\nLocation:\x2
+SF:0http://waf\.jadu\.net/waf/error\.html\?EVENT_ID=340940965909&HOST=192\
+SF:.168\.115\.80\r\nCache-Control:\x20no-cache\r\nPragma:\x20no-cache\r\nE
+SF:xpires:\x200\r\nConnection:\x20close\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 17:31:34 2019 -- 1 IP address (1 host up) scanned in 2775.76 seconds

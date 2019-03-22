@@ -1,0 +1,58 @@
+# Nmap 7.70 scan initiated Sat Mar 16 02:38:37 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/bamptonoxon-parishcouncil.gov.uk bamptonoxon-parishcouncil.gov.uk
+Nmap scan report for bamptonoxon-parishcouncil.gov.uk (84.18.198.200)
+Host is up (0.076s latency).
+rDNS record for 84.18.198.200: enterprise1.hosting.123connect.co.uk
+Not shown: 65524 filtered ports
+PORT     STATE  SERVICE   VERSION
+21/tcp   open   ftp       Microsoft ftpd
+|_banner: 220 Microsoft FTP Service
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp521r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp521r1) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: A
+53/tcp   open   domain    Microsoft DNS 6.1.7601 (1DB15EC5) (Windows Server 2008 R2 SP1)
+80/tcp   open   http      Microsoft IIS httpd 7.5
+|_http-server-header: Microsoft-IIS/7.5
+110/tcp  open   pop3      SmarterMail pop3d
+| banner: +OK POP3 server ready <0d450125-fccb-4644-a7a4-f99b6303663e@ent
+|_erprise1.hosting.123connect.co.uk>
+113/tcp  closed ident
+143/tcp  open   imap      SmarterMail imapd
+443/tcp  open   https?
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp521r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp521r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     cipher preference error: Network error
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+465/tcp  open   smtps?
+|_banner: 220 enterprise1.hosting.123connect.co.uk
+587/tcp  open   smtp      IA Mailserver smtpd
+995/tcp  open   pop3s?
+| banner: +OK POP3 server ready <d21cb989-46fd-42f7-9b4f-55ea7bda5f86@ent
+|_erprise1.hosting.123connect.co.uk>
+3306/tcp open   mysql     MySQL 5.6.43
+8443/tcp open   https-alt Microsoft-IIS/7.5
+|_http-server-header: Microsoft-IIS/7.5
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_server_2008:r2:sp1
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 02:48:57 2019 -- 1 IP address (1 host up) scanned in 620.52 seconds

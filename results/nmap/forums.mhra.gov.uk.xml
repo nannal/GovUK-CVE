@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 09:01:58 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/forums.mhra.gov.uk forums.mhra.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/forums.mhra.gov.uk forums.mhra.gov.uk" start="1552719718" startstr="Sat Mar 16 09:01:58 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552719718" endtime="1552726372"><status state="up" reason="echo-reply" reason_ttl="51"/>
+<address addr="91.146.108.71" addrtype="ipv4"/>
+<hostnames>
+<hostname name="forums.mhra.gov.uk" type="user"/>
+<hostname name="ursa.servers.eqx.misp.co.uk" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="62513">
+<extrareasons reason="no-responses" count="62513"/>
+</extraports>
+<extraports state="closed" count="3005">
+<extrareasons reason="resets" count="3005"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="ftp" product="Pure-FTPd" method="probed" conf="10"><cpe>cpe:/a:pureftpd:pure-ftpd</cpe></service><script id="banner" output="220-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; Welcome to Pure-FTPd [privsep] [TLS] -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\x&#xa;0D\x0A220-You are user number 2 of 50 allowed.\x0D\x0A220-Local time...&#xa;"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+<port protocol="tcp" portid="110"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="pop3" product="Dovecot pop3d" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="banner" output="+OK Dovecot ready."/></port>
+<port protocol="tcp" portid="143"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="imap" product="Dovecot imapd" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="banner" output="* OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID &#xa;ENABLE IDLE NAMESPACE STARTTLS AUTH=PLAIN AUTH=LOGIN] Dovecot ready."/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="https" product="Apache" tunnel="ssl" method="probed" conf="10"/><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;  least strength: C"><table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">C</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+</table>
+</table>
+<elem key="least strength">C</elem>
+</script></port>
+<port protocol="tcp" portid="465"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="smtps" tunnel="ssl" method="table" conf="3"/><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_256_CBC_SHA and TLS_DHE_RSA_WITH_AES_128_CBC_SHA&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;  least strength: C"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">C</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference error">Error when comparing TLS_DHE_RSA_WITH_AES_256_CBC_SHA and TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+</table>
+</table>
+<elem key="least strength">C</elem>
+</script></port>
+<port protocol="tcp" portid="587"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="smtp" product="Exim smtpd" version="4.87" hostname="ursa.servers.eqx.misp.co.uk" method="probed" conf="10"><cpe>cpe:/a:exim:exim:4.87</cpe></service><script id="banner" output="220-ursa.servers.eqx.misp.co.uk ESMTP Exim 4.87 #1 Sat, 16 Mar &#xa;2019 08:52:19 +0000 \x0D\x0A220-We do not authorize the use of this ...&#xa;"/></port>
+<port protocol="tcp" portid="993"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="imaps" tunnel="ssl" method="table" conf="3"/><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;    compressors: &#xa;&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Key exchange (dh 1024) of lower strength than certificate key&#xa;  least strength: D"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="strength">D</elem>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">C</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+</table>
+</table>
+<table key="compressors">
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Key exchange (dh 1024) of lower strength than certificate key</elem>
+</table>
+</table>
+<elem key="least strength">D</elem>
+</script></port>
+<port protocol="tcp" portid="995"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="pop3s" tunnel="ssl" method="table" conf="3"/><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA - unknown&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Key exchange (dh 1024) of lower strength than certificate key&#xa;  least strength: unknown"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="strength">D</elem>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">C</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">unknown</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">C</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+</table>
+<table>
+<elem key="strength">C</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Key exchange (dh 1024) of lower strength than certificate key</elem>
+</table>
+</table>
+<elem key="least strength">unknown</elem>
+</script></port>
+<port protocol="tcp" portid="2077"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="webdav" product="cPanel webdav" ostype="Linux" method="probed" conf="10"><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="2078"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="tpcsrvr" tunnel="ssl" method="table" conf="3"/><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;&#xa;    compressors: &#xa;&#xa;    cipher preference: server&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;  least strength: A"><table key="TLSv1.0">
+<table key="ciphers">
+</table>
+<table key="compressors">
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+</table>
+</table>
+<elem key="least strength">A</elem>
+</script></port>
+<port protocol="tcp" portid="2082"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="infowave" servicefp="SF-Port2082-TCP:V=7.70%I=7%D=3/16%Time=5C8CB8FA%P=x86_64-unknown-linux-gnu%r(SIPOptions,10F8,&quot;HTTP/1\.0\x20401\x20Access\x20Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=\&quot;utf-8\&quot;\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2008:51:10\x20GMT\r\nWWW-Authenticate:\x20Basic\x20realm=\&quot;cPanel\&quot;\r\nSet-Cookie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2082\r\nSet-Cookie:\x20cpsession=%3ak0uhFQuQfclO76Wt%2cbe8c78432ac2faf013cc8b42b2be4496;\x20HttpOnly;\x20path=/;\x20port=2082\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2082\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/horde;\x20port=2082\r\nSet-Cookie:\x20PPA_ID=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2082\r\nSet-Cookie:\x20imp_key=expired;\x20HttpOnly;\x20domain=ursa\.servers\.eqx\.misp\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/horde;\x20port=2082\r\nSet-Cookie:\x20key=expired;\x20HttpOnly;\x20domain=ursa\.servers\.eqx\.misp\.co\.uk;\x20expires=Thu,\x2001-Jan-19&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  SIPOptions: &#xa;    HTTP/1.0 401 Access Denied&#xa;    Connection: close&#xa;    Content-Type: text/html; charset=&quot;utf-8&quot;&#xa;    Date: Sat, 16 Mar 2019 08:51:10 GMT&#xa;    WWW-Authenticate: Basic realm=&quot;cPanel&quot;&#xa;    Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082&#xa;    Set-Cookie: cpsession=%3ak0uhFQuQfclO76Wt%2cbe8c78432ac2faf013cc8b42b2be4496; HttpOnly; path=/; port=2082&#xa;    Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082&#xa;    Set-Cookie: Horde=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2082&#xa;    Set-Cookie: PPA_ID=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082&#xa;    Set-Cookie: imp_key=expired; HttpOnly; domain=ursa.servers.eqx.misp.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2082&#xa;    Set-Cookie: key=expired; HttpOnly; domain=ursa.servers.eqx.misp.co.uk; expires=Thu, 01-Jan-19"><elem key="SIPOptions">&#xa;    HTTP/1.0 401 Access Denied&#xa;    Connection: close&#xa;    Content-Type: text/html; charset=&quot;utf-8&quot;&#xa;    Date: Sat, 16 Mar 2019 08:51:10 GMT&#xa;    WWW-Authenticate: Basic realm=&quot;cPanel&quot;&#xa;    Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082&#xa;    Set-Cookie: cpsession=%3ak0uhFQuQfclO76Wt%2cbe8c78432ac2faf013cc8b42b2be4496; HttpOnly; path=/; port=2082&#xa;    Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082&#xa;    Set-Cookie: Horde=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2082&#xa;    Set-Cookie: PPA_ID=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082&#xa;    Set-Cookie: imp_key=expired; HttpOnly; domain=ursa.servers.eqx.misp.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2082&#xa;    Set-Cookie: key=expired; HttpOnly; domain=ursa.servers.eqx.misp.co.uk; expires=Thu, 01-Jan-19</elem>
+</script></port>
+<port protocol="tcp" portid="2083"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="http" product="cPanel httpd" version="11.56.0.52" ostype="Unix" method="probed" conf="10"/><script id="http-server-header" output="cpsrvd/11.56.0.52"><elem>cpsrvd/11.56.0.52</elem>
+</script></port>
+<port protocol="tcp" portid="2086"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="gnunet" servicefp="SF-Port2086-TCP:V=7.70%I=7%D=3/16%Time=5C8CB8FC%P=x86_64-unknown-linux-gnu%r(SIPOptions,10F8,&quot;HTTP/1\.0\x20401\x20Access\x20Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=\&quot;utf-8\&quot;\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2008:51:12\x20GMT\r\nWWW-Authenticate:\x20Basic\x20realm=\&quot;Web\x20Host\x20Manager\&quot;\r\nSet-Cookie:\x20whostmgrrelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2086\r\nSet-Cookie:\x20whostmgrsession=%3ar4DqKn91hm5Sqpmn%2c2e52c646d8686a7448b4d16e49326880;\x20HttpOnly;\x20path=/;\x20port=2086\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2086\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/horde;\x20port=2086\r\nSet-Cookie:\x20PPA_ID=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2086\r\nSet-Cookie:\x20imp_key=expired;\x20HttpOnly;\x20domain=ursa\.servers\.eqx\.misp\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/horde;\x20port=2086\r\nSet-Cookie:\x20key=expired;\x20HttpOnly;\x20domain=ursa\.servers\.eqx\.misp\.co\.uk;\x20&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  SIPOptions: &#xa;    HTTP/1.0 401 Access Denied&#xa;    Connection: close&#xa;    Content-Type: text/html; charset=&quot;utf-8&quot;&#xa;    Date: Sat, 16 Mar 2019 08:51:12 GMT&#xa;    WWW-Authenticate: Basic realm=&quot;Web Host Manager&quot;&#xa;    Set-Cookie: whostmgrrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2086&#xa;    Set-Cookie: whostmgrsession=%3ar4DqKn91hm5Sqpmn%2c2e52c646d8686a7448b4d16e49326880; HttpOnly; path=/; port=2086&#xa;    Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2086&#xa;    Set-Cookie: Horde=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2086&#xa;    Set-Cookie: PPA_ID=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2086&#xa;    Set-Cookie: imp_key=expired; HttpOnly; domain=ursa.servers.eqx.misp.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2086&#xa;    Set-Cookie: key=expired; HttpOnly; domain=ursa.servers.eqx.misp.co.uk;"><elem key="SIPOptions">&#xa;    HTTP/1.0 401 Access Denied&#xa;    Connection: close&#xa;    Content-Type: text/html; charset=&quot;utf-8&quot;&#xa;    Date: Sat, 16 Mar 2019 08:51:12 GMT&#xa;    WWW-Authenticate: Basic realm=&quot;Web Host Manager&quot;&#xa;    Set-Cookie: whostmgrrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2086&#xa;    Set-Cookie: whostmgrsession=%3ar4DqKn91hm5Sqpmn%2c2e52c646d8686a7448b4d16e49326880; HttpOnly; path=/; port=2086&#xa;    Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2086&#xa;    Set-Cookie: Horde=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2086&#xa;    Set-Cookie: PPA_ID=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2086&#xa;    Set-Cookie: imp_key=expired; HttpOnly; domain=ursa.servers.eqx.misp.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2086&#xa;    Set-Cookie: key=expired; HttpOnly; domain=ursa.servers.eqx.misp.co.uk;</elem>
+</script></port>
+<port protocol="tcp" portid="2087"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="http" product="cPanel httpd" version="11.56.0.52" ostype="Unix" method="probed" conf="10"/><script id="http-server-header" output="cpsrvd/11.56.0.52"><elem>cpsrvd/11.56.0.52</elem>
+</script></port>
+<port protocol="tcp" portid="2095"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="nbx-ser" servicefp="SF-Port2095-TCP:V=7.70%I=7%D=3/16%Time=5C8CB8FC%P=x86_64-unknown-linux-gnu%r(SIPOptions,1C48,&quot;HTTP/1\.0\x20401\x20Access\x20Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=\&quot;utf-8\&quot;\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2008:51:11\x20GMT\r\nWWW-Authenticate:\x20Basic\x20realm=\&quot;WebMail\&quot;\r\nSet-Cookie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2095\r\nSet-Cookie:\x20webmailsession=%3azZj0OtfnkHLH0y54%2cda3afeaa1bf45925fd9725929055eb0a;\x20HttpOnly;\x20path=/;\x20port=2095\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2095\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/horde;\x20port=2095\r\nSet-Cookie:\x20PPA_ID=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2095\r\nSet-Cookie:\x20imp_key=expired;\x20HttpOnly;\x20domain=ursa\.servers\.eqx\.misp\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/horde;\x20port=2095\r\nSet-Cookie:\x20key=expired;\x20HttpOnly;\x20domain=ursa\.servers\.eqx\.misp\.co\.uk;\x20expires=Thu&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  SIPOptions: &#xa;    HTTP/1.0 401 Access Denied&#xa;    Connection: close&#xa;    Content-Type: text/html; charset=&quot;utf-8&quot;&#xa;    Date: Sat, 16 Mar 2019 08:51:11 GMT&#xa;    WWW-Authenticate: Basic realm=&quot;WebMail&quot;&#xa;    Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095&#xa;    Set-Cookie: webmailsession=%3azZj0OtfnkHLH0y54%2cda3afeaa1bf45925fd9725929055eb0a; HttpOnly; path=/; port=2095&#xa;    Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095&#xa;    Set-Cookie: Horde=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2095&#xa;    Set-Cookie: PPA_ID=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095&#xa;    Set-Cookie: imp_key=expired; HttpOnly; domain=ursa.servers.eqx.misp.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2095&#xa;    Set-Cookie: key=expired; HttpOnly; domain=ursa.servers.eqx.misp.co.uk; expires=Thu"><elem key="SIPOptions">&#xa;    HTTP/1.0 401 Access Denied&#xa;    Connection: close&#xa;    Content-Type: text/html; charset=&quot;utf-8&quot;&#xa;    Date: Sat, 16 Mar 2019 08:51:11 GMT&#xa;    WWW-Authenticate: Basic realm=&quot;WebMail&quot;&#xa;    Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095&#xa;    Set-Cookie: webmailsession=%3azZj0OtfnkHLH0y54%2cda3afeaa1bf45925fd9725929055eb0a; HttpOnly; path=/; port=2095&#xa;    Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095&#xa;    Set-Cookie: Horde=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2095&#xa;    Set-Cookie: PPA_ID=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095&#xa;    Set-Cookie: imp_key=expired; HttpOnly; domain=ursa.servers.eqx.misp.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2095&#xa;    Set-Cookie: key=expired; HttpOnly; domain=ursa.servers.eqx.misp.co.uk; expires=Thu</elem>
+</script></port>
+<port protocol="tcp" portid="2096"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="http" product="cPanel httpd" version="11.56.0.52" ostype="Unix" method="probed" conf="10"/><script id="http-server-header" output="cpsrvd/11.56.0.52"><elem>cpsrvd/11.56.0.52</elem>
+</script></port>
+<port protocol="tcp" portid="2510"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="ssh" product="OpenSSH" version="4.3" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:4.3</cpe></service><script id="banner" output="SSH-2.0-OpenSSH_4.3"/></port>
+</ports>
+<times srtt="69890" rttvar="18683" to="144622"/>
+</host>
+<runstats><finished time="1552726372" timestr="Sat Mar 16 10:52:52 2019" elapsed="6654.39" summary="Nmap done at Sat Mar 16 10:52:52 2019; 1 IP address (1 host up) scanned in 6654.39 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

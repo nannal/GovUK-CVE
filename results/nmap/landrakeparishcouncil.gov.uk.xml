@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 11:37:03 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/landrakeparishcouncil.gov.uk landrakeparishcouncil.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/landrakeparishcouncil.gov.uk landrakeparishcouncil.gov.uk" start="1552729023" startstr="Sat Mar 16 11:37:03 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552729024" endtime="1552729442"><status state="up" reason="reset" reason_ttl="52"/>
+<address addr="212.113.204.114" addrtype="ipv4"/>
+<hostnames>
+<hostname name="landrakeparishcouncil.gov.uk" type="user"/>
+<hostname name="morpheous.jabhosting.com" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65529">
+<extrareasons reason="no-responses" count="65305"/>
+<extrareasons reason="port-unreaches" count="224"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="ftp" product="ProFTPD" version="1.3.2c" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:proftpd:proftpd:1.3.2c</cpe></service><script id="banner" output="220 ProFTPD 1.3.2c Server (morpheous) [::ffff:212.113.204.114]"/></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="domain" extrainfo="unknown banner: Oooh you nosey parker!" servicefp="SF-Port53-TCP:V=7.70%I=7%D=3/16%Time=5C8CC541%P=x86_64-unknown-linux-gnu%r(DNSVersionBindReqTCP,51,&quot;\0O\0\x06\x85\0\0\x01\0\x01\0\x01\0\0\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\x17\x16Oooh\x20you\x20nosey\x20parker!\xc0\x0c\0\x02\0\x03\0\0\0\0\0\x02\xc0\x0c&quot;);" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  DNSVersionBindReqTCP: &#xa;    version&#xa;    bind&#xa;    Oooh you nosey parker!"><elem key="DNSVersionBindReqTCP">&#xa;    version&#xa;    bind&#xa;    Oooh you nosey parker!</elem>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+<port protocol="tcp" portid="110"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="pop3" product="Dovecot pop3d" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="banner" output="+OK Dovecot ready."/></port>
+<port protocol="tcp" portid="143"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="imap" product="Dovecot imapd" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="banner" output="* OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID &#xa;ENABLE STARTTLS AUTH=PLAIN] Dovecot ready."/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="ssl" product="Apache httpd" extrainfo="SSL-only mode" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C&#xa;    compressors: &#xa;      DEFLATE&#xa;      NULL&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Key exchange (dh 1024) of lower strength than certificate key&#xa;  least strength: D"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">D</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">C</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+<elem key="strength">C</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="strength">C</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>DEFLATE</elem>
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Key exchange (dh 1024) of lower strength than certificate key</elem>
+</table>
+</table>
+<elem key="least strength">D</elem>
+</script></port>
+<port protocol="tcp" portid="587"><state state="closed" reason="reset" reason_ttl="52"/><service name="submission" method="table" conf="3"/></port>
+</ports>
+<times srtt="67953" rttvar="12259" to="116989"/>
+</host>
+<runstats><finished time="1552729442" timestr="Sat Mar 16 11:44:02 2019" elapsed="418.61" summary="Nmap done at Sat Mar 16 11:44:02 2019; 1 IP address (1 host up) scanned in 418.61 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

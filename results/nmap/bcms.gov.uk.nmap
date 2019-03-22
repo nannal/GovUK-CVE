@@ -1,0 +1,111 @@
+# Nmap 7.70 scan initiated Sat Mar 16 02:46:54 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/bcms.gov.uk bcms.gov.uk
+Nmap scan report for bcms.gov.uk (148.253.220.138)
+Host is up (0.074s latency).
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Set-Cookie: AlteonP=AcwoJ4sDBQqgglQ0TT6sYw$$; Path=/
+|     connection: close
+|     content-length: 5263
+|     content-type: text/html
+|     date: Sat, 16 Mar 2019 01:06:23 GMT
+|     last-modified: Mon, 13 Mar 2017 17:06:29 GMT
+|     p3p: CP="NON CUR OTPi OUR NOR UNI"
+|     strict-transport-security: 
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+|     <html>
+|     <head>
+|     <link href="/style/defra-main.css" rel="styleSheet" type="text/css">
+|     </head>
+|     <body>
+|     <div><img src="" width="0" height="0" onError="this.onError=''; var css= document.createElement('link');css.setAttribute('rel','styleSheet');css.setAttribute('href','http://services.defra.gov.uk/style/defra-main.css');document.getElementsByTagName('head')[0].appendChild(css);"></div>
+|     <script language="javascript" type="text/javascript">
+|     if(navigator.appName.indexOf('Microsoft') > -1) {
+|     //Internet Explorer
+|     document.write('<div id="wra
+|   HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     connection: close
+|     content-length: 3995
+|     content-type: text/html
+|     date: Sat, 16 Mar 2019 01:06:47 GMT
+|     p3p: CP="NON CUR OTPi OUR NOR UNI"
+|     cache-control: no-store
+|     strict-transport-security: 
+|     pragma: no-cache
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+|     <html>
+|     <head>
+|     <link href="/style/generic-main.css" rel="styleSheet" type="text/css">
+|     </head>
+|     <body>
+|     <div><img src="" width="0" height="0" onError="this.onError=''; var css= document.createElement('link');css.setAttribute('rel','styleSheet');css.setAttribute('href','http://services.defra.gov.uk/style/generic-main.css');document.getElementsByTagName('head')[0].appendChild(css);"></div>
+|     <script language="javascript" type="text/javascript">
+|     if(navigator.appName.indexOf('Microsoft') > -1) {
+|     //Internet Explorer
+|_    document.write('<div id="wrapperz" style="width:expression(document.bod
+443/tcp open  ssl/https?
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+| 
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|_  least strength: A
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8C4BAD%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,15AE,"HTTP/1\.1\x20200\x20OK\r\nSet-Cookie:\x20AlteonP=Acwo
+SF:J4sDBQqgglQ0TT6sYw\$\$;\x20Path=/\r\nconnection:\x20close\r\ncontent-le
+SF:ngth:\x205263\r\ncontent-type:\x20text/html\r\ndate:\x20Sat,\x2016\x20M
+SF:ar\x202019\x2001:06:23\x20GMT\r\nlast-modified:\x20Mon,\x2013\x20Mar\x2
+SF:02017\x2017:06:29\x20GMT\r\np3p:\x20CP=\"NON\x20CUR\x20OTPi\x20OUR\x20N
+SF:OR\x20UNI\"\r\nstrict-transport-security:\x20\r\n\r\n<!DOCTYPE\x20HTML\
+SF:x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.0\x20Transitional//EN\">\r\n<h
+SF:tml>\r\n<head>\r\n<link\x20href=\"/style/defra-main\.css\"\x20rel=\"sty
+SF:leSheet\"\x20type=\"text/css\">\r\n</head>\r\n<body>\r\n<div><img\x20sr
+SF:c=\"\"\x20width=\"0\"\x20height=\"0\"\x20onError=\"this\.onError='';\x2
+SF:0var\x20css=\x20document\.createElement\('link'\);css\.setAttribute\('r
+SF:el','styleSheet'\);css\.setAttribute\('href','http://services\.defra\.g
+SF:ov\.uk/style/defra-main\.css'\);document\.getElementsByTagName\('head'\
+SF:)\[0\]\.appendChild\(css\);\"></div>\r\n<script\x20language=\"javascrip
+SF:t\"\x20type=\"text/javascript\">\r\n\tif\(navigator\.appName\.indexOf\(
+SF:'Microsoft'\)\x20>\x20-1\)\x20{\r\n\t\t//Internet\x20Explorer\r\n\t\tdo
+SF:cument\.write\('<div\x20id=\"wra")%r(HTTPOptions,108A,"HTTP/1\.1\x20400
+SF:\x20Bad\x20Request\r\nconnection:\x20close\r\ncontent-length:\x203995\r
+SF:\ncontent-type:\x20text/html\r\ndate:\x20Sat,\x2016\x20Mar\x202019\x200
+SF:1:06:47\x20GMT\r\np3p:\x20CP=\"NON\x20CUR\x20OTPi\x20OUR\x20NOR\x20UNI\
+SF:"\r\ncache-control:\x20no-store\r\nstrict-transport-security:\x20\r\npr
+SF:agma:\x20no-cache\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//W3C//DTD\x
+SF:20HTML\x204\.0\x20Transitional//EN\">\r\n<html>\r\n<head>\r\n<link\x20h
+SF:ref=\"/style/generic-main\.css\"\x20rel=\"styleSheet\"\x20type=\"text/c
+SF:ss\">\r\n</head>\r\n<body>\r\n<div><img\x20src=\"\"\x20width=\"0\"\x20h
+SF:eight=\"0\"\x20onError=\"this\.onError='';\x20var\x20css=\x20document\.
+SF:createElement\('link'\);css\.setAttribute\('rel','styleSheet'\);css\.se
+SF:tAttribute\('href','http://services\.defra\.gov\.uk/style/generic-main\
+SF:.css'\);document\.getElementsByTagName\('head'\)\[0\]\.appendChild\(css
+SF:\);\"></div>\r\n<script\x20language=\"javascript\"\x20type=\"text/javas
+SF:cript\">\r\n\tif\(navigator\.appName\.indexOf\('Microsoft'\)\x20>\x20-1
+SF:\)\x20{\r\n\t\t//Internet\x20Explorer\r\n\t\tdocument\.write\('<div\x20
+SF:id=\"wrapperz\"\x20style=\\\"width:expression\(document\.bod");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 03:07:10 2019 -- 1 IP address (1 host up) scanned in 1215.39 seconds

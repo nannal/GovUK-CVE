@@ -1,0 +1,178 @@
+# Nmap 7.70 scan initiated Sat Mar 16 18:07:18 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/southwest-ra.gov.uk southwest-ra.gov.uk
+Nmap scan report for southwest-ra.gov.uk (217.199.174.174)
+Host is up (0.060s latency).
+rDNS record for 217.199.174.174: ds10020.dedicated.turbodns.co.uk
+Not shown: 65524 filtered ports
+PORT      STATE SERVICE  VERSION
+21/tcp    open  ftp      Microsoft ftpd
+|_banner: 220 Microsoft FTP Service
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|_  least strength: C
+53/tcp    open  domain?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|_    bind
+80/tcp    open  http     Microsoft IIS httpd 8.5
+110/tcp   open  pop3     MailEnable POP3 Server
+|_banner: +OK Welcome to MailEnable POP3 Server
+143/tcp   open  imap     MailEnable imapd
+|_banner: * OK IMAP4rev1 server ready at 03/16/19 16:11:36
+3389/tcp  open  ssl?     Microsoft SChannel TLS
+| fingerprint-strings: 
+|   TLSSessionReq: 
+|     \x8d &
+|     ]\xb0
+|     WIN-4UH24GUJG450
+|     190303024309Z
+|     190902024309Z0
+|     WIN-4UH24GUJG450
+|     hD'Y
+|     dV85_9
+|     =^^I
+|     "opAF
+|     `u>I
+|     6\xac
+|     OjE$
+|     $0"0
+|     y#06
+|     b15aS&
+|_    v&eJgLw
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|_  least strength: C
+5986/tcp  open  ssl/http Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 4096) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 4096) - C
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 4096) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     cipher preference error: Network error
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Key exchange (secp256r1) of lower strength than certificate key
+|       Weak certificate signature: SHA1
+|_  least strength: C
+8401/tcp  open  sabarsd?
+8443/tcp  open  ssl/http Microsoft IIS httpd 8.5
+|_http-server-header: Microsoft-IIS/8.5
+| ssl-enum-ciphers: 
+|   SSLv3: 
+|     ciphers: 
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       CBC-mode cipher in SSLv3 (CVE-2014-3566)
+|       Ciphersuite uses MD5 for message integrity
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|_  least strength: C
+8880/tcp  open  http     Microsoft IIS httpd 8.5
+49154/tcp open  unknown
+49157/tcp open  unknown
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port53-TCP:V=7.70%I=7%D=3/16%Time=5C8D2029%P=x86_64-unknown-linux-gnu%r
+SF:(DNSVersionBindReqTCP,20,"\0\x1e\0\x06\x81\x04\0\x01\0\0\0\0\0\0\x07ver
+SF:sion\x04bind\0\0\x10\0\x03");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port3389-TCP:V=7.70%I=7%D=3/16%Time=5C8D2029%P=x86_64-unknown-linux-gnu
+SF:%r(TLSSessionReq,34A,"\x16\x03\x03\x03E\x02\0\0M\x03\x03\\\x8d\x20&\x01
+SF:\x8bS\x9a3\x92\xf3\xa4\xd4\]\xf7}\xa7\x87\x05S\x1c\x94{NJ\x18\x1b\xfb\x
+SF:af\xca\xf2H\x20\x01K\0\0m\xbd\xcd\[G\x1c\xbe\xbb\xa2\xeb\xfd\x1f\x97\x8
+SF:aGhu\x99\x99\]\\\xb0\x0c\xb0w\xac`\xf1\0/\0\0\x05\xff\x01\0\x01\0\x0b\0
+SF:\x02\xec\0\x02\xe9\0\x02\xe60\x82\x02\xe20\x82\x01\xca\xa0\x03\x02\x01\
+SF:x02\x02\x10m\x18\xf6;N\xdar\xa0@\x8e\xdc\x11\xf2\xeaI\xbc0\r\x06\t\*\x8
+SF:6H\x86\xf7\r\x01\x01\x0b\x05\x000\x1a1\x180\x16\x06\x03U\x04\x03\x13\x0
+SF:fWIN-4UH24GUJG450\x1e\x17\r190303024309Z\x17\r190902024309Z0\x1a1\x180\
+SF:x16\x06\x03U\x04\x03\x13\x0fWIN-4UH24GUJG450\x82\x01\"0\r\x06\t\*\x86H\
+SF:x86\xf7\r\x01\x01\x01\x05\0\x03\x82\x01\x0f\x000\x82\x01\n\x02\x82\x01\
+SF:x01\0\x9d\xebh\x9b\x82hD'Y\x9c\x89nN\xd1E\xaa\xc2\xc6\x04\x8d\xd3\xe2\x
+SF:05\xa4&\x89\xcc\xcf\x80dV85_9\xdc\]\xdd\xc6n\xbdPF\x8e\xf5\xbei\x8a\xec
+SF:S\x0c\x8aH\xe5\x83\xedd\x9e\x1f\xa6k\x07e\x94'C\xfe\xd1\xaa\xe1\xfc\xe7
+SF:\xec<\x81\x8e=\^\^I\xe51'\xear\xb5\xfbk\xa4\xbe\x8b\x98\xbb\xbcx\xb0d\x
+SF:90\]\$\xbf\xb2\xdd\xe3s\x90\]\x0e\xb2\xc5\x90\x1f\x07\xe7\xdb\x84\xa5\x
+SF:bak\x01\x16\xb2\xd7\xbf5\"\x80\xb1\xaf\xeb\x9b8\xea\xaa\x1fF\x10Y\xc7L\
+SF:xf8\xaf\xcba%i\xc6\xf7\x1eY\xc6\xbc\xbe\(\xb1\x02\xdc\x14\xf8\x9c\x1f\x
+SF:bf\x95\xf5\|\xe5\x80\xd3\xcc\xaer\xd9\"opAF\xc4y\xf9`u>I\xf9\xf5\xcb#~\
+SF:xd4\xbf\x1a\xdd\xe16\\\xac\x82<\x86\xfd\xe2\xe1\xb5\x1cOjE\$\x91\xc6\xe
+SF:7Z\xa2\xac\)\r\?\x9d/\xee\xbe\xae\x13=\xb7\x97`y/\xca\x86\xed\xe2\xe3\x
+SF:cb\xda\x91\xd2\x8a\xd3\x99\x9a\x8d\xea\x85\xa5Z3A\xaf\xa0\xd0\x92\*K\x0
+SF:2\x03\x01\0\x01\xa3\$0\"0\x13\x06\x03U\x1d%\x04\x0c0\n\x06\x08\+\x06\x0
+SF:1\x05\x05\x07\x03\x010\x0b\x06\x03U\x1d\x0f\x04\x04\x03\x02\x0400\r\x06
+SF:\t\*\x86H\x86\xf7\r\x01\x01\x0b\x05\0\x03\x82\x01\x01\0y#06\x7f\xee\xc9
+SF:{k5\xdb\xe2\[\+\xfb/\xee@\x7f}\xad\xca\x1b-!-\xd6\x03t\xff\x94\xc2\xd2C
+SF:\x05\xc7\x0c-\xcb\xce\xd9\xd8/\x0f\0\x0f\xc7\xae\xd3k\xf1G\x16B\x80\x85
+SF:\xbe\0Z\x80\xe7P\xc32\x14ME\xf2\x19\xf8\x80\"\x99\x01\x8aQ5\xf9\.\x8a\x
+SF:e4\x14\xc5\x07\t\xe1\x90V\xb8\x14\xd2x\xf0\x87VU\xd0\xbd\xf6_\xddk47\xb
+SF:4b15aS&\xf3\x9b\+\xac\xb1\x84\x18\xa1\xd3\x01\xdeYY\xf2\xd2i\xe2g\xfe4d
+SF:\xaa\xfb\xde\xd5\xf0\x02\xbb\x02\xaa~\x95Z\x1c\xe1\xf0\xb8\xe3\xaev&eJg
+SF:Lw\x84\x99\xfb\x99!\x95U\xaf\xc8\xbd\+\xa3\xe6\xfa`\xf4\xfa\xc8\xa9\|\x
+SF:c9b9\xd6\x8f\xb3\(\xa3\xa9\x1d>\xba\x0c\xee\xf1pH\x91v\x9f%w\xf6\xd1\x0
+SF:b\xde\xda\xe3\xdc2\x01X\]\xb0\xe9\x9aV\xee\xe9\xef\xa2N\0/\xd8\xf1\x1c=
+SF:\xab\xc8\xe3\xaf\xecE\xe5\xc4\?\xfc\xca\xafiQF\x1d\x17L\x82j\xa8\x84L\x
+SF:b5\xb5!:\?\xc7\xaf\xa8\x0e\0\0\0");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 18:11:56 2019 -- 1 IP address (1 host up) scanned in 278.00 seconds

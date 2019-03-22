@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 03:58:26 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/cabinet-office.gov.uk cabinet-office.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/cabinet-office.gov.uk cabinet-office.gov.uk" start="1552701506" startstr="Sat Mar 16 03:58:26 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552701507" endtime="1552702514"><status state="up" reason="reset" reason_ttl="56"/>
+<address addr="151.101.64.204" addrtype="ipv4"/>
+<hostnames>
+<hostname name="cabinet-office.gov.uk" type="user"/>
+</hostnames>
+<ports><extraports state="filtered" count="65534">
+<extrareasons reason="no-responses" count="65534"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="56"/><service name="http-proxy" product="Varnish" method="probed" conf="10"><cpe>cpe:/a:varnish-cache:varnish</cpe></service><script id="http-server-header" output="&#xa;  Varnish&#xa;  nginx"><elem>Varnish</elem>
+<elem>nginx</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="56"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="50049" rttvar="7306" to="100000"/>
+</host>
+<runstats><finished time="1552702514" timestr="Sat Mar 16 04:15:14 2019" elapsed="1007.97" summary="Nmap done at Sat Mar 16 04:15:14 2019; 1 IP address (1 host up) scanned in 1007.97 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

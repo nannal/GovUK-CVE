@@ -1,0 +1,492 @@
+# Nmap 7.70 scan initiated Sat Mar 16 18:37:13 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/stdavids.gov.uk stdavids.gov.uk
+Nmap scan report for stdavids.gov.uk (31.3.68.19)
+Host is up (0.058s latency).
+rDNS record for 31.3.68.19: web7.webadepthost.co.uk
+Not shown: 65521 filtered ports
+PORT     STATE  SERVICE      VERSION
+20/tcp   closed ftp-data
+21/tcp   open   ftp          Pure-FTPd
+| banner: 220---------- Welcome to Pure-FTPd [privsep] [TLS] ----------\x
+|_0D\x0A220-You are user number 1 of 50 allowed.\x0D\x0A220-Local time...
+26/tcp   closed rsftp
+53/tcp   closed domain
+80/tcp   open   http         Apache httpd
+110/tcp  open   pop3         Dovecot pop3d
+|_banner: +OK Dovecot ready.
+143/tcp  open   imap         Dovecot imapd
+| banner: * OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE ID
+|_LE NAMESPACE LITERAL+ STARTTLS AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+443/tcp  open   ssl/http     Apache httpd (PHP 5.6.40)
+|_http-trane-info: ERROR: Script execution failed (use -d to debug)
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA - unknown
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA - unknown
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+| 
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA - unknown
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA - unknown
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_CBC_SHA and TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: unknown
+465/tcp  open   ssl/smtp     Exim smtpd 4.91
+| banner: 220-web7.webadepthost.co.uk ESMTP Exim 4.91 #1 Sat, 16 Mar 2019
+|_ 16:44:40 +0000 \x0D\x0A220-We do not authorize the use of this syst...
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA - unknown
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: unknown
+993/tcp  open   ssl/imap     Dovecot imapd
+| banner: * OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE ID
+|_LE NAMESPACE LITERAL+ AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp384r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+| 
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (dh 1024) of lower strength than certificate key
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (dh 1024) of lower strength than certificate key
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp384r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp384r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (dh 1024) of lower strength than certificate key
+|_  least strength: D
+2082/tcp open   infowave?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 301 Moved
+|     Content-length: 129
+|     Location: https://web7.webadepthost.co.uk:2083/sip%3anm
+|     Content-type: text/html; charset="utf-8"
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|_    <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://web7.webadepthost.co.uk:2083/sip%3anm"></head><body></body></html>
+2083/tcp open   ssl/radsec?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 16:42:29 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=%3aYzed7Wo5cCd0nAL9%2ca58377e6f0b84bc71de02d9c3c7ef20a; HttpOnly; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=web7.webadepthost.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.web7.webadepthost.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: horde_secret_key=expired; Ht
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 16:42:30 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=%3ayPZ516AdVfiCI2u0%2cd090a8242d90999a19bcfc443f9997dd; HttpOnly; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=web7.webadepthost.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.web7.webadepthost.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|_    Set-Cookie: horde_secret_key=expired; Ht
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA - unknown
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: unknown
+2087/tcp open   ssl/eli?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 16:42:28 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="Web Host Manager"
+|     Set-Cookie: whostmgrrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: whostmgrsession=%3aiXSg1jjc3Te4MaLI%2c15da551c0a58a56c0f69e443cb2f545d; HttpOnly; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=web7.webadepthost.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.web7.webadepthost.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: horde_
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 16:42:28 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="Web Host Manager"
+|     Set-Cookie: whostmgrrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: whostmgrsession=%3atRV2uMAgNFCZQNsJ%2c27fe499301481d872e7fe6ff1309d4a8; HttpOnly; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=web7.webadepthost.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.web7.webadepthost.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|_    Set-Cookie: horde_
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|     compressors: 
+| 
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA and TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+| 
+|     cipher preference: server
+|_  least strength: A
+2095/tcp open   nbx-ser?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 301 Moved
+|     Content-length: 129
+|     Location: https://web7.webadepthost.co.uk:2096/sip%3anm
+|     Content-type: text/html; charset="utf-8"
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|_    <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://web7.webadepthost.co.uk:2096/sip%3anm"></head><body></body></html>
+2096/tcp open   ssl/nbx-dir?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 16:42:25 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=%3aggcHYtvhA3kTWwJy%2c37ca9661d2b12243ffd39e12f653670d; HttpOnly; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=web7.webadepthost.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.web7.webadepthost.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: horde_secret_key=
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 16:42:26 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=%3a_lhkZBmswJVy81Et%2ca2911d60587ff9ceaa1076d3d7e034ab; HttpOnly; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=web7.webadepthost.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.web7.webadepthost.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|_    Set-Cookie: horde_secret_key=
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA - unknown
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA - unknown
+|     compressors: 
+| 
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 - unknown
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 - unknown
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 - unknown
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: unknown
+5 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2082-TCP:V=7.70%I=7%D=3/16%Time=5C8D27B1%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,14C,"HTTP/1\.1\x20301\x20Moved\r\nContent-length:\x20129\
+SF:r\nLocation:\x20https://web7\.webadepthost\.co\.uk:2083/sip%3anm\r\nCon
+SF:tent-type:\x20text/html;\x20charset=\"utf-8\"\r\nCache-Control:\x20no-c
+SF:ache,\x20no-store,\x20must-revalidate,\x20private\r\n\r\n<html><head><M
+SF:ETA\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://web7\.webadept
+SF:host\.co\.uk:2083/sip%3anm\"></head><body></body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2083-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D2772%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2016:42:29\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"cPanel\"\r\nSet-Cook
+SF:ie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:
+SF:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20cpse
+SF:ssion=%3aYzed7Wo5cCd0nAL9%2ca58377e6f0b84bc71de02d9c3c7ef20a;\x20HttpOn
+SF:ly;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_sess
+SF:id=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20
+SF:GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_ses
+SF:sauth=expired;\x20HttpOnly;\x20domain=web7\.webadepthost\.co\.uk;\x20ex
+SF:pires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\
+SF:x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20domain=\.web
+SF:7\.webadepthost\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20
+SF:GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20horde_secret_
+SF:key=expired;\x20Ht")%r(HTTPOptions,4000,"HTTP/1\.0\x20401\x20Access\x20
+SF:Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charse
+SF:t=\"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2016:42:30\x20GMT\r\
+SF:nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20privat
+SF:e\r\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"cPane
+SF:l\"\r\nSet-Cookie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-
+SF:Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-
+SF:Cookie:\x20cpsession=%3ayPZ516AdVfiCI2u0%2cd090a8242d90999a19bcfc443f99
+SF:97dd;\x20HttpOnly;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x2
+SF:0roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\
+SF:x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x
+SF:20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=web7\.webadepthost
+SF:\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;
+SF:\x20port=2083;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\
+SF:x20domain=\.web7\.webadepthost\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\
+SF:x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x
+SF:20horde_secret_key=expired;\x20Ht");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2087-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D2770%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2016:42:28\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"Web\x20Host\x20Manag
+SF:er\"\r\nSet-Cookie:\x20whostmgrrelogin=no;\x20HttpOnly;\x20expires=Thu,
+SF:\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\
+SF:r\nSet-Cookie:\x20whostmgrsession=%3aiXSg1jjc3Te4MaLI%2c15da551c0a58a56
+SF:c0f69e443cb2f545d;\x20HttpOnly;\x20path=/;\x20port=2087;\x20secure\r\nS
+SF:et-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2
+SF:001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\n
+SF:Set-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=web7\
+SF:.webadepthost\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GM
+SF:T;\x20path=/;\x20port=2087;\x20secure\r\nSet-Cookie:\x20Horde=expired;\
+SF:x20HttpOnly;\x20domain=\.web7\.webadepthost\.co\.uk;\x20expires=Thu,\x2
+SF:001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\n
+SF:Set-Cookie:\x20horde_")%r(HTTPOptions,4000,"HTTP/1\.0\x20401\x20Access\
+SF:x20Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20cha
+SF:rset=\"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2016:42:28\x20GMT
+SF:\r\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20pri
+SF:vate\r\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"We
+SF:b\x20Host\x20Manager\"\r\nSet-Cookie:\x20whostmgrrelogin=no;\x20HttpOnl
+SF:y;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20por
+SF:t=2087;\x20secure\r\nSet-Cookie:\x20whostmgrsession=%3atRV2uMAgNFCZQNsJ
+SF:%2c27fe499301481d872e7fe6ff1309d4a8;\x20HttpOnly;\x20path=/;\x20port=20
+SF:87;\x20secure\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\
+SF:x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2
+SF:087;\x20secure\r\nSet-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnl
+SF:y;\x20domain=web7\.webadepthost\.co\.uk;\x20expires=Thu,\x2001-Jan-1970
+SF:\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\nSet-Cookie:\
+SF:x20Horde=expired;\x20HttpOnly;\x20domain=\.web7\.webadepthost\.co\.uk;\
+SF:x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2
+SF:087;\x20secure\r\nSet-Cookie:\x20horde_");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2095-TCP:V=7.70%I=7%D=3/16%Time=5C8D27B0%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,14C,"HTTP/1\.1\x20301\x20Moved\r\nContent-length:\x20129\
+SF:r\nLocation:\x20https://web7\.webadepthost\.co\.uk:2096/sip%3anm\r\nCon
+SF:tent-type:\x20text/html;\x20charset=\"utf-8\"\r\nCache-Control:\x20no-c
+SF:ache,\x20no-store,\x20must-revalidate,\x20private\r\n\r\n<html><head><M
+SF:ETA\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://web7\.webadept
+SF:host\.co\.uk:2096/sip%3anm\"></head><body></body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2096-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D276E%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2016:42:25\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"WebMail\"\r\nSet-Coo
+SF:kie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\
+SF:x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x
+SF:20webmailsession=%3aggcHYtvhA3kTWwJy%2c37ca9661d2b12243ffd39e12f653670d
+SF:;\x20HttpOnly;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20rou
+SF:ndcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x200
+SF:0:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20ro
+SF:undcube_sessauth=expired;\x20HttpOnly;\x20domain=web7\.webadepthost\.co
+SF:\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20
+SF:port=2096;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20d
+SF:omain=\.web7\.webadepthost\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x200
+SF:0:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20ho
+SF:rde_secret_key=")%r(HTTPOptions,4000,"HTTP/1\.0\x20401\x20Access\x20Den
+SF:ied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=\
+SF:"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2016:42:26\x20GMT\r\nCa
+SF:che-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r
+SF:\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"WebMail\
+SF:"\r\nSet-Cookie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x20
+SF:01-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nS
+SF:et-Cookie:\x20webmailsession=%3a_lhkZBmswJVy81Et%2ca2911d60587ff9ceaa10
+SF:76d3d7e034ab;\x20HttpOnly;\x20path=/;\x20port=2096;\x20secure\r\nSet-Co
+SF:okie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-J
+SF:an-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-C
+SF:ookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=web7\.weba
+SF:depthost\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x2
+SF:0path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20Ht
+SF:tpOnly;\x20domain=\.web7\.webadepthost\.co\.uk;\x20expires=Thu,\x2001-J
+SF:an-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-C
+SF:ookie:\x20horde_secret_key=");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 18:46:01 2019 -- 1 IP address (1 host up) scanned in 527.86 seconds

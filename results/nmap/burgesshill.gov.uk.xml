@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 03:46:38 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/burgesshill.gov.uk burgesshill.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/burgesshill.gov.uk burgesshill.gov.uk" start="1552700798" startstr="Sat Mar 16 03:46:38 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552700803" endtime="1552704159"><status state="up" reason="syn-ack" reason_ttl="52"/>
+<address addr="159.253.212.220" addrtype="ipv4"/>
+<hostnames>
+<hostname name="burgesshill.gov.uk" type="user"/>
+<hostname name="159.253.212.220.srvlist.ukfast.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65513">
+<extrareasons reason="no-responses" count="65513"/>
+</extraports>
+<port protocol="tcp" portid="20"><state state="closed" reason="reset" reason_ttl="52"/><service name="ftp-data" method="table" conf="3"/></port>
+<port protocol="tcp" portid="22"><state state="closed" reason="reset" reason_ttl="52"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="http" product="Apache httpd" extrainfo="PleskLin" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service></port>
+<port protocol="tcp" portid="110"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="pop3" product="Courier pop3d" hostname="localhost.localdomain" method="probed" conf="10"/><script id="banner" output="+OK Hello there. &lt;30447.1552704120@localhost.localdomain&gt;"/></port>
+<port protocol="tcp" portid="143"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="imap" product="Plesk Courier imapd" method="probed" conf="10"/><script id="banner" output="* OK [CAPABILITY IMAP4rev1 UIDPLUS CHILDREN NAMESPACE THREAD=OR&#xa;DEREDSUBJECT THREAD=REFERENCES SORT QUOTA AUTH=CRAM-MD5 AUTH=PLAIN I...&#xa;"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="http" product="Apache httpd" extrainfo="PleskLin" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="ssl-enum-ciphers" output="&#xa;  SSLv3: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA - E&#xa;      TLS_RSA_EXPORT_WITH_DES40_CBC_SHA - E&#xa;      TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5 - E&#xa;    compressors: &#xa;&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher DES40 vulnerable to SWEET32 attack&#xa;      64-bit block cipher RC2 vulnerable to SWEET32 attack&#xa;      CBC-mode cipher in SSLv3 (CVE-2014-3566)&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_DES_CBC_SHA (dh 1024) - D&#xa;      TLS_RSA_EXPORT_WITH_DES40_CBC_SHA - E&#xa;      TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5 - E&#xa;      TLS_RSA_EXPORT_WITH_RC4_40_MD5 - E&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference error: Error when comparing TLS_DHE_RSA_WITH_DES_CBC_SHA and TLS_RSA_EXPORT_WITH_DES40_CBC_SHA&#xa;    warnings: &#xa;      64-bit block cipher DES vulnerable to SWEET32 attack&#xa;      64-bit block cipher DES40 vulnerable to SWEET32 attack&#xa;      64-bit block cipher RC2 vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Key exchange (dh 1024) of lower strength than certificate key&#xa;  least strength: E"><table key="SSLv3">
+<table key="ciphers">
+<table>
+<elem key="strength">E</elem>
+<elem key="name">TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">E</elem>
+<elem key="name">TLS_RSA_EXPORT_WITH_DES40_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">E</elem>
+<elem key="name">TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5</elem>
+</table>
+</table>
+<table key="compressors">
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher DES40 vulnerable to SWEET32 attack</elem>
+<elem>64-bit block cipher RC2 vulnerable to SWEET32 attack</elem>
+<elem>CBC-mode cipher in SSLv3 (CVE-2014-3566)</elem>
+</table>
+</table>
+<table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">D</elem>
+<elem key="name">TLS_DHE_RSA_WITH_DES_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">E</elem>
+<elem key="name">TLS_RSA_EXPORT_WITH_DES40_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">E</elem>
+<elem key="name">TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5</elem>
+</table>
+<table>
+<elem key="strength">E</elem>
+<elem key="name">TLS_RSA_EXPORT_WITH_RC4_40_MD5</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference error">Error when comparing TLS_DHE_RSA_WITH_DES_CBC_SHA and TLS_RSA_EXPORT_WITH_DES40_CBC_SHA</elem>
+<table key="warnings">
+<elem>64-bit block cipher DES vulnerable to SWEET32 attack</elem>
+<elem>64-bit block cipher DES40 vulnerable to SWEET32 attack</elem>
+<elem>64-bit block cipher RC2 vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Key exchange (dh 1024) of lower strength than certificate key</elem>
+</table>
+</table>
+<elem key="least strength">E</elem>
+</script></port>
+<port protocol="tcp" portid="587"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="smtp" product="qmail smtpd" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:djb:qmail</cpe></service><script id="banner" output="220 mail2.preview.co.uk ESMTP"/></port>
+<port protocol="tcp" portid="902"><state state="closed" reason="reset" reason_ttl="52"/><service name="iss-realsecure" method="table" conf="3"/></port>
+<port protocol="tcp" portid="903"><state state="closed" reason="reset" reason_ttl="52"/><service name="iss-console-mgr" method="table" conf="3"/></port>
+<port protocol="tcp" portid="993"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="imap" product="Plesk Courier imapd" tunnel="ssl" method="probed" conf="10"/><script id="ssl-enum-ciphers" output="&#xa;  SSLv3: &#xa;    ciphers: &#xa;      TLS_RSA_EXPORT_WITH_DES40_CBC_SHA - E&#xa;      TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5 - E&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher DES40 vulnerable to SWEET32 attack&#xa;      64-bit block cipher RC2 vulnerable to SWEET32 attack&#xa;      CBC-mode cipher in SSLv3 (CVE-2014-3566)&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_RSA_EXPORT_WITH_DES40_CBC_SHA - E&#xa;      TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5 - E&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference error: Error when comparing TLS_RSA_EXPORT_WITH_DES40_CBC_SHA and TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5&#xa;    warnings: &#xa;      64-bit block cipher DES40 vulnerable to SWEET32 attack&#xa;      64-bit block cipher RC2 vulnerable to SWEET32 attack&#xa;  least strength: E"><table key="SSLv3">
+<table key="ciphers">
+<table>
+<elem key="strength">E</elem>
+<elem key="name">TLS_RSA_EXPORT_WITH_DES40_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">E</elem>
+<elem key="name">TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher DES40 vulnerable to SWEET32 attack</elem>
+<elem>64-bit block cipher RC2 vulnerable to SWEET32 attack</elem>
+<elem>CBC-mode cipher in SSLv3 (CVE-2014-3566)</elem>
+</table>
+</table>
+<table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="strength">E</elem>
+<elem key="name">TLS_RSA_EXPORT_WITH_DES40_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">E</elem>
+<elem key="name">TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference error">Error when comparing TLS_RSA_EXPORT_WITH_DES40_CBC_SHA and TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5</elem>
+<table key="warnings">
+<elem>64-bit block cipher DES40 vulnerable to SWEET32 attack</elem>
+<elem>64-bit block cipher RC2 vulnerable to SWEET32 attack</elem>
+</table>
+</table>
+<elem key="least strength">E</elem>
+</script></port>
+<port protocol="tcp" portid="2020"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="ssh" product="OpenSSH" version="4.3" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:4.3</cpe></service><script id="banner" output="SSH-2.0-OpenSSH_4.3"/></port>
+<port protocol="tcp" portid="2082"><state state="closed" reason="reset" reason_ttl="52"/><service name="infowave" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2083"><state state="closed" reason="reset" reason_ttl="52"/><service name="radsec" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2086"><state state="closed" reason="reset" reason_ttl="52"/><service name="gnunet" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2087"><state state="closed" reason="reset" reason_ttl="52"/><service name="eli" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2095"><state state="closed" reason="reset" reason_ttl="52"/><service name="nbx-ser" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2096"><state state="closed" reason="reset" reason_ttl="52"/><service name="nbx-dir" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="mysql" product="MySQL" version="5.0.95-log" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql:5.0.95-log</cpe></service><script id="banner" output="8\x00\x00\x00\x0A5.0.95-log\x00\xF2\x1D`\x01f7}1z6=l\x00,\xA2\x&#xa;08\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00,1S04U...&#xa;"/></port>
+<port protocol="tcp" portid="8090"><state state="closed" reason="reset" reason_ttl="52"/><service name="opsmessaging" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8091"><state state="closed" reason="reset" reason_ttl="52"/><service name="jamlink" method="table" conf="3"/></port>
+<port protocol="tcp" portid="9102"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="jetdirect" method="table" conf="3"/></port>
+<port protocol="tcp" portid="11444"><state state="closed" reason="reset" reason_ttl="52"/></port>
+<port protocol="tcp" portid="65443"><state state="closed" reason="reset" reason_ttl="52"/></port>
+</ports>
+<times srtt="68297" rttvar="10371" to="109781"/>
+</host>
+<runstats><finished time="1552704159" timestr="Sat Mar 16 04:42:39 2019" elapsed="3361.63" summary="Nmap done at Sat Mar 16 04:42:39 2019; 1 IP address (1 host up) scanned in 3361.63 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

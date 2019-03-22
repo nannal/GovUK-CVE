@@ -1,0 +1,453 @@
+# Nmap 7.70 scan initiated Sat Mar 16 07:28:40 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/eveshamtowncouncil.gov.uk eveshamtowncouncil.gov.uk
+Warning: 91.109.14.134 giving up on port because retransmission cap hit (6).
+Nmap scan report for eveshamtowncouncil.gov.uk (91.109.14.134)
+Host is up (0.063s latency).
+rDNS record for 91.109.14.134: mail.activwebdesign.com
+Not shown: 65410 closed ports, 103 filtered ports
+PORT     STATE SERVICE           VERSION
+21/tcp   open  ftp               Pure-FTPd
+| banner: 220---------- Welcome to Pure-FTPd [privsep] [TLS] ----------\x
+|_0D\x0A220-You are user number 1 of 50 allowed.\x0D\x0A220-Local time...
+22/tcp   open  ssh               OpenSSH 5.3 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_5.3
+53/tcp   open  domain            ISC BIND 9.8.2rc1 (RedHat Enterprise Linux 6)
+80/tcp   open  http              Apache httpd 2.2.31 ((Unix) mod_ssl/2.2.31 OpenSSL/1.0.1e-fips mod_bwlimited/1.4 PHP/5.3.29)
+110/tcp  open  pop3              Dovecot pop3d
+|_banner: +OK Dovecot ready.
+143/tcp  open  imap              Dovecot imapd
+| banner: * OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID 
+|_ENABLE IDLE NAMESPACE STARTTLS AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+443/tcp  open  ssl/https         Apache/2.2.31 (Unix) mod_ssl/2.2.31 OpenSSL/1.0.1e-fips mod_bwlimited/1.4 PHP/5.
+|_http-server-header: Apache/2.2.31 (Unix) mod_ssl/2.2.31 OpenSSL/1.0.1e-fips mod_bwlimited/1.4 PHP/5.3.29
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - C
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - C
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+465/tcp  open  ssl/smtps?
+| banner: 220-594446.vps-10.com ESMTP Exim 4.91 #1 Sat, 16 Mar 2019 05:52
+|_:43 +0000 \x0D\x0A220-We do not authorize the use of this system to ...
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+587/tcp  open  smtp              Exim smtpd 4.91
+| banner: 220-594446.vps-10.com ESMTP Exim 4.91 #1 Sat, 16 Mar 2019 05:52
+|_:43 +0000 \x0D\x0A220-We do not authorize the use of this system to ...
+993/tcp  open  ssl/imaps?
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (dh 1024) of lower strength than certificate key
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       Key exchange (dh 1024) of lower strength than certificate key
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_256_CBC_SHA and TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (dh 1024) of lower strength than certificate key
+|_  least strength: C
+995/tcp  open  ssl/pop3s?
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA - unknown
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (dh 1024) of lower strength than certificate key
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA - unknown
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_CBC_SHA and TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (dh 1024) of lower strength than certificate key
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA - unknown
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: unknown
+2077/tcp open  tsrmagt?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Sat, 16 Mar 2019 05:51:41 GMT
+|     Server: cPanel
+|     Persistent-Auth: false
+|     Host: 594446.vps-10.com:2077
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Connection: Keep-Alive
+|     Vary: Accept-Encoding
+|     Allow: MOVE, UNLOCK, OPTIONS, HEAD, MKCOL, PUT, PROPPATCH, POST, GET, COPY, DELETE, LOCK, PROPFIND
+|     Content-Length: 0
+|     Content-Type: text/plain
+|     Expires: Fri, 01 Jan 1990 00:00:00 GMT
+|     DAV: 1, 2
+|     Keep-Alive: timeout=15, max=96
+|_    MS-Author-Via: DAV
+2078/tcp open  tpcsrvr?
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+| 
+|     compressors: 
+| 
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 - unknown
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA - unknown
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 and TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+|_  least strength: unknown
+2079/tcp open  http              cPanel httpd (unauthorized)
+2080/tcp open  ssl/autodesk-nlm?
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA - unknown
+|     compressors: 
+| 
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_256_CBC_SHA and TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA and TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 - unknown
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 - unknown
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|     compressors: 
+| 
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 and TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+|_  least strength: unknown
+2082/tcp open  infowave?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 05:51:41 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082
+|     Set-Cookie: cpsession=%3ada4Xlp1Q0GMJA8oF%2cfbd6d47ab7b9a8be5c908e8323e62d64; HttpOnly; path=/; port=2082
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=594446.vps-10.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.594446.vps-10.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082
+|_    Set-Cookie: horde_secret_key=expired; HttpOnly; domain=.594446.vps-10.com; expires=Thu, 01-J
+2083/tcp open  ssl/radsec?
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+| 
+|     cipher preference: indeterminate
+|     cipher preference error: Too few ciphers supported
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA - unknown
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: unknown
+2086/tcp open  gnunet?
+2087/tcp open  ssl/eli?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 05:50:35 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="Web Host Manager"
+|     Set-Cookie: whostmgrrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: whostmgrsession=%3a0hb6mCKrKGfzyEI9%2cc2e085f682b6aef7eac679acfc7fa56d; HttpOnly; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=594446.vps-10.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.594446.vps-10.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|_    Set-Cookie: horde_secret_key=e
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|     compressors: 
+| 
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+| 
+|     cipher preference: server
+|_  least strength: A
+2095/tcp open  nbx-ser?
+2096/tcp open  ssl/nbx-dir?
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA - unknown
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA - unknown
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA - unknown
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 - unknown
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: unknown
+3306/tcp open  mysql             MySQL 5.5.61-cll
+| banner: N\x00\x00\x00\x0A5.5.61-cll\x00\xA6\xD7\x0F\x01=Si8yzxj\x00\xFF
+|_\xF7\x08\x02\x00\x0F\x80\x15\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...
+4949/tcp open  tcpwrapped
+3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2077-TCP:V=7.70%I=7%D=3/16%Time=5C8C8EF1%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,1E2,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2016\x20Mar
+SF:\x202019\x2005:51:41\x20GMT\r\nServer:\x20cPanel\r\nPersistent-Auth:\x2
+SF:0false\r\nHost:\x20594446\.vps-10\.com:2077\r\nCache-Control:\x20no-cac
+SF:he,\x20no-store,\x20must-revalidate,\x20private\r\nConnection:\x20Keep-
+SF:Alive\r\nVary:\x20Accept-Encoding\r\nAllow:\x20MOVE,\x20UNLOCK,\x20OPTI
+SF:ONS,\x20HEAD,\x20MKCOL,\x20PUT,\x20PROPPATCH,\x20POST,\x20GET,\x20COPY,
+SF:\x20DELETE,\x20LOCK,\x20PROPFIND\r\nContent-Length:\x200\r\nContent-Typ
+SF:e:\x20text/plain\r\nExpires:\x20Fri,\x2001\x20Jan\x201990\x2000:00:00\x
+SF:20GMT\r\nDAV:\x201,\x202\r\nKeep-Alive:\x20timeout=15,\x20max=96\r\nMS-
+SF:Author-Via:\x20DAV\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2082-TCP:V=7.70%I=7%D=3/16%Time=5C8C8EE9%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,2798,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConnection:
+SF:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\
+SF:x20Sat,\x2016\x20Mar\x202019\x2005:51:41\x20GMT\r\nCache-Control:\x20no
+SF:-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-ca
+SF:che\r\nWWW-Authenticate:\x20Basic\x20realm=\"cPanel\"\r\nSet-Cookie:\x2
+SF:0cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\
+SF:x20GMT;\x20path=/;\x20port=2082\r\nSet-Cookie:\x20cpsession=%3ada4Xlp1Q
+SF:0GMJA8oF%2cfbd6d47ab7b9a8be5c908e8323e62d64;\x20HttpOnly;\x20path=/;\x2
+SF:0port=2082\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20
+SF:expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2082
+SF:\r\nSet-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=5
+SF:94446\.vps-10\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\
+SF:x20path=/;\x20port=2082\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x
+SF:20domain=\.594446\.vps-10\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00
+SF::01\x20GMT;\x20path=/;\x20port=2082\r\nSet-Cookie:\x20horde_secret_key=
+SF:expired;\x20HttpOnly;\x20domain=\.594446\.vps-10\.com;\x20expires=Thu,\
+SF:x2001-J");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2087-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8C8EA8%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2005:50:35\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"Web\x20Host\x20Manag
+SF:er\"\r\nSet-Cookie:\x20whostmgrrelogin=no;\x20HttpOnly;\x20expires=Thu,
+SF:\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\
+SF:r\nSet-Cookie:\x20whostmgrsession=%3a0hb6mCKrKGfzyEI9%2cc2e085f682b6aef
+SF:7eac679acfc7fa56d;\x20HttpOnly;\x20path=/;\x20port=2087;\x20secure\r\nS
+SF:et-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2
+SF:001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\n
+SF:Set-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=59444
+SF:6\.vps-10\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20p
+SF:ath=/;\x20port=2087;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20Http
+SF:Only;\x20domain=\.594446\.vps-10\.com;\x20expires=Thu,\x2001-Jan-1970\x
+SF:2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\nSet-Cookie:\x2
+SF:0horde_secret_key=e");
+Service Info: Host: 594446.vps-10.com; OS: Linux; CPE: cpe:/o:redhat:enterprise_linux:6
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 07:54:17 2019 -- 1 IP address (1 host up) scanned in 1536.77 seconds

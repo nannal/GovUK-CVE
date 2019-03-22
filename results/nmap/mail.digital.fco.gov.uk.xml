@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 12:48:36 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/mail.digital.fco.gov.uk mail.digital.fco.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/mail.digital.fco.gov.uk mail.digital.fco.gov.uk" start="1552733316" startstr="Sat Mar 16 12:48:36 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552733317" endtime="1552733601"><status state="up" reason="syn-ack" reason_ttl="117"/>
+<address addr="62.232.86.103" addrtype="ipv4"/>
+<hostnames>
+<hostname name="mail.digital.fco.gov.uk" type="user"/>
+<hostname name="mail.digital.fco.gov.uk" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65533">
+<extrareasons reason="no-responses" count="65533"/>
+</extraports>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="http" product="Microsoft IIS httpd" ostype="Windows" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-enum-ciphers" output="&#xa;  SSLv3: &#xa;    ciphers: &#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    cipher preference error: Network error&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      CBC-mode cipher in SSLv3 (CVE-2014-3566)&#xa;      Ciphersuite uses MD5 for message integrity&#xa;  least strength: C"><table key="SSLv3">
+<table key="ciphers">
+<table>
+<elem key="strength">C</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">C</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+</table>
+<table>
+<elem key="strength">C</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<elem key="cipher preference error">Network error</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>CBC-mode cipher in SSLv3 (CVE-2014-3566)</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+</table>
+</table>
+<elem key="least strength">C</elem>
+</script></port>
+<port protocol="tcp" portid="587"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="smtp" product="Microsoft Exchange smtpd" hostname="mail.digital.fco.gov.uk" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:exchange_server</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="banner" output="220 mail.digital.fco.gov.uk Microsoft ESMTP MAIL Service ready &#xa;at Sat, 16 Mar 2019 10:53:04 +0000"/></port>
+<port protocol="tcp" portid="993"><state state="open" reason="syn-ack" reason_ttl="116"/><service name="imap" product="Microsoft Exchange 2007-2010 imapd" ostype="Windows" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:microsoft:exchange_server</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="banner" output="* OK The Microsoft Exchange IMAP4 service is ready."/></port>
+</ports>
+<times srtt="62956" rttvar="15526" to="125060"/>
+</host>
+<runstats><finished time="1552733601" timestr="Sat Mar 16 12:53:21 2019" elapsed="284.65" summary="Nmap done at Sat Mar 16 12:53:21 2019; 1 IP address (1 host up) scanned in 284.65 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

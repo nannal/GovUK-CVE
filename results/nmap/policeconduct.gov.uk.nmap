@@ -1,0 +1,79 @@
+# Nmap 7.70 scan initiated Sat Mar 16 15:34:26 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/policeconduct.gov.uk policeconduct.gov.uk
+Nmap scan report for policeconduct.gov.uk (151.139.245.15)
+Host is up (0.27s latency).
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE  VERSION
+80/tcp  open  http     Varnish
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 NOT found
+|     Date: Sat, 16 Mar 2019 13:55:55 GMT
+|     Server: Varnish
+|     X-Cache: MISS
+|     Content-Length: 0
+|     Connection: close
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 404 NOT found
+|     Date: Sat, 16 Mar 2019 13:55:49 GMT
+|     Server: Varnish
+|     X-Cache: MISS
+|     Content-Length: 0
+|     Connection: close
+|   RTSPRequest, SIPOptions: 
+|_    HTTP/1.1 400 Bad Request
+|_http-server-header: Varnish
+443/tcp open  ssl/http nginx
+|_http-server-header: nginx
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8D0061%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,86,"HTTP/1\.1\x20404\x20\x20NOT\x20found\r\nDate:\x20Sat,\x
+SF:2016\x20Mar\x202019\x2013:55:49\x20GMT\r\nServer:\x20Varnish\r\nX-Cache
+SF::\x20MISS\r\nContent-Length:\x200\r\nConnection:\x20close\r\n\r\n")%r(H
+SF:TTPOptions,86,"HTTP/1\.1\x20404\x20\x20NOT\x20found\r\nDate:\x20Sat,\x2
+SF:016\x20Mar\x202019\x2013:55:49\x20GMT\r\nServer:\x20Varnish\r\nX-Cache:
+SF:\x20MISS\r\nContent-Length:\x200\r\nConnection:\x20close\r\n\r\n")%r(RT
+SF:SPRequest,1C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n")%r(FourOhFour
+SF:Request,86,"HTTP/1\.1\x20404\x20\x20NOT\x20found\r\nDate:\x20Sat,\x2016
+SF:\x20Mar\x202019\x2013:55:55\x20GMT\r\nServer:\x20Varnish\r\nX-Cache:\x2
+SF:0MISS\r\nContent-Length:\x200\r\nConnection:\x20close\r\n\r\n")%r(SIPOp
+SF:tions,1C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 15:58:07 2019 -- 1 IP address (1 host up) scanned in 1420.73 seconds

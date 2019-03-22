@@ -1,0 +1,99 @@
+# Nmap 7.70 scan initiated Sat Mar 16 12:23:04 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/london-fire.gov.uk london-fire.gov.uk
+Nmap scan report for london-fire.gov.uk (51.141.44.139)
+Host is up (0.062s latency).
+Other addresses for london-fire.gov.uk (not scanned): 185.52.109.65
+Not shown: 65526 filtered ports
+PORT     STATE SERVICE         VERSION
+80/tcp   open  http            Microsoft IIS httpd 10.0
+443/tcp  open  ssl?            Microsoft SChannel TLS
+| fingerprint-strings: 
+|   TLSSessionReq: 
+|     \x8c
+|     SIql
+|     Washington1
+|     Redmond1
+|     Microsoft Corporation1
+|     Microsoft IT1
+|     Microsoft IT TLS CA 40
+|     171217124047Z
+|     191217124047Z0
+|     *.azurewebsites.net0
+|     g7w#
+|     /DUVeF&
+|     \x89
+|     }$dX
+|     *.azurewebsites.net
+|     *.scm.azurewebsites.net
+|     *.azure-mobile.net
+|     *.scm.azure-mobile.net
+|_    *.sso.azurewebsites.net0
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA and TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+|_  least strength: A
+454/tcp  open  contentserver?
+455/tcp  open  creativepartnr?
+1221/tcp open  http            Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-trane-info: Problem with XML parsing of /evox/about
+4020/tcp open  trap?
+4022/tcp open  dnox?
+4024/tcp open  tnp1-port?
+7654/tcp open  unknown
+|_banner: 78.58.49.144
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, NULL: 
+|_    78.58.49.144
+8172/tcp open  unknown
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%I=7%D=3/16%Time=5C8CCFE3%P=x86_64-unknown-linux-gnu%
+SF:r(TLSSessionReq,D39,"\x16\x03\x03\r4\x02\0\0M\x03\x03\\\x8c\xcf\xe2h\x0
+SF:2\xda\x83\xc6\x89\x8ba\x8dd\x15\x8b\x87J,\xe9\xd2\xc65\x89\xfaSIql\x86a
+SF:\x10\x20h\x0e\0\x006\xeeR\xf3\(\xb9\xc6A\xf9\*\xc1\x16\xa6l\x0c\xe9\xf1
+SF:\x8e\x94\0MM\xca\xdd\xad\xcd\x9a\x86\0/\0\0\x05\xff\x01\0\x01\0\x0b\0\x
+SF:0c\xdb\0\x0c\xd8\0\x07\x1a0\x82\x07\x160\x82\x04\xfe\xa0\x03\x02\x01\x0
+SF:2\x02\x13\x16\0\0p\x8dp\xa2\xa4\xcbc\xab\xa1\xc7\0\0\0\0p\x8d0\r\x06\t\
+SF:*\x86H\x86\xf7\r\x01\x01\x0b\x05\x000\x81\x8b1\x0b0\t\x06\x03U\x04\x06\
+SF:x13\x02US1\x130\x11\x06\x03U\x04\x08\x13\nWashington1\x100\x0e\x06\x03U
+SF:\x04\x07\x13\x07Redmond1\x1e0\x1c\x06\x03U\x04\n\x13\x15Microsoft\x20Co
+SF:rporation1\x150\x13\x06\x03U\x04\x0b\x13\x0cMicrosoft\x20IT1\x1e0\x1c\x
+SF:06\x03U\x04\x03\x13\x15Microsoft\x20IT\x20TLS\x20CA\x2040\x1e\x17\r1712
+SF:17124047Z\x17\r191217124047Z0\x1e1\x1c0\x1a\x06\x03U\x04\x03\x0c\x13\*\
+SF:.azurewebsites\.net0\x82\x01\"0\r\x06\t\*\x86H\x86\xf7\r\x01\x01\x01\x0
+SF:5\0\x03\x82\x01\x0f\x000\x82\x01\n\x02\x82\x01\x01\0\xbe\xb2\xa4g7w#\0\
+SF:x1f\xfe\xce\xd2\xdb\x82a:\x99\x99\xbd/DUVeF&\xe6\xf9t\xae\xe1K\xccy\xec
+SF:\x95\xe6C\x8a\x02\xd4\xc3\xf8\xbe\x96\xea\x9a\xb6\xc4\x1d\xf8\xb4\x81-\
+SF:xf0\xee0O\x86\xaa\xda\xfe\x1e\x9e\xb2\xbc\x06m\x11\x98\xd1\xb0\(\xaa\x0
+SF:3\xf4\x0b\xf0A\xdf\xaa\xe1\xf1q\xb4\xa9\xa4\[H\xb4\xfe5d\xd9#0\xb9\xd3\
+SF:x92\xd6Ht\xc2\x02\x82\\\x89\xdc\xd2L3\xbb\xd0\]\x19\xadc\xafy\xf9\xa7\x
+SF:aeDG\xb6\xc6_\xf2\xeb\xe1C\xd6\x14\x0c\x8f\xfb!\xb0ED4\x1f\xc6\x85p/\xa
+SF:9{\x193\x8f-\x98\xb4\xc2\x17\x0c\x9a\xd1\x1b\xe7\x9e\x12>\x9c\xa0\xc7\x
+SF:a1\x81\xc4\xd2\x05s\[\xa6!\x88\x06\xc0;\r\x19\xf0\xb4\xa2\x92\xed\?\xb3
+SF:\x8e}\$dX\xa3\xf3\xc1O\^R\xc7\xadeD\x8f\x91\xb9\xd5\xda>\xd3d\x18\(\xc9
+SF:\x19\xe0#k\xeb\xd8\xd76~\x0c\x98m\xb7\x16\nW\x9f\x9f3\xe3\xe0\x9eR\|\0s
+SF:T\x99mO\xd9\xa5\xed\xc4\x1c\xb7\xaegp\x94\xcb\x02\x03\x01\0\x01\xa3\x82
+SF:\x02\xdd0\x82\x02\xd90\x0b\x06\x03U\x1d\x0f\x04\x04\x03\x02\x04\xb00\x1
+SF:d\x06\x03U\x1d%\x04\x160\x14\x06\x08\+\x06\x01\x05\x05\x07\x03\x02\x06\
+SF:x08\+\x06\x01\x05\x05\x07\x03\x010\x1d\x06\x03U\x1d\x0e\x04\x16\x04\x14
+SF:\[\xe5\xd9z\x9dY\xc8\xfc\xfe\xccA\xf5\x9d\x9d\xe1\x0c_q\xf1\xd70\|\x06\
+SF:x03U\x1d\x11\x04u0s\x82\x13\*\.azurewebsites\.net\x82\x17\*\.scm\.azure
+SF:websites\.net\x82\x12\*\.azure-mobile\.net\x82\x16\*\.scm\.azure-mobile
+SF:\.net\x82\x17\*\.sso\.azurewebsites\.net0\x1f\x06\x03U\x1d#\x04\x180\x1
+SF:6\x80\x14z{\x8c\xc1\xcf\xe7\xa0\xca\x1c\xd4k\xfa\xfb\xe13\xc3\x0f\x1a\x
+SF:a2\x9d0\x81\xac\x06\x03U\x1d\x1f\x04\x81\xa40\x81");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port7654-TCP:V=7.70%I=7%D=3/16%Time=5C8CCFD1%P=x86_64-unknown-linux-gnu
+SF:%r(NULL,C,"78\.58\.49\.144")%r(DNSVersionBindReqTCP,C,"78\.58\.49\.144"
+SF:);
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 12:29:21 2019 -- 1 IP address (1 host up) scanned in 377.21 seconds

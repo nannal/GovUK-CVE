@@ -1,0 +1,538 @@
+# Nmap 7.70 scan initiated Sat Mar 16 20:19:37 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/upperbeeding-pc.gov.uk upperbeeding-pc.gov.uk
+Nmap scan report for upperbeeding-pc.gov.uk (173.254.28.93)
+Host is up (0.23s latency).
+rDNS record for 173.254.28.93: just93.justhost.com
+Not shown: 65510 filtered ports
+PORT     STATE  SERVICE       VERSION
+21/tcp   open   ftp           Pure-FTPd
+| banner: 220---------- Welcome to Pure-FTPd [privsep] [TLS] ----------\x
+|_0D\x0A220-You are user number 4 of 1000 allowed.\x0D\x0A220-Local ti...
+22/tcp   open   ssh           OpenSSH 5.3 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_5.3
+26/tcp   open   smtp          Exim smtpd 4.91
+80/tcp   open   http          nginx 1.14.1
+|_http-server-header: nginx/1.14.1
+110/tcp  open   pop3          Dovecot pop3d
+|_banner: +OK Dovecot ready.
+113/tcp  closed ident
+143/tcp  open   imap          Dovecot imapd
+| banner: * OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID 
+|_ENABLE IDLE STARTTLS AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+443/tcp  open   ssl/http      nginx 1.14.1
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+465/tcp  open   ssl/smtp      Exim smtpd 4.91
+587/tcp  open   smtp          Exim smtpd 4.91
+| banner: 220-just93.justhost.com ESMTP Exim 4.91 #1 Sat, 16 Mar 2019 12:
+|_35:31 -0600 \x0D\x0A220-We do not authorize the use of this system t...
+993/tcp  open   ssl/imap      Dovecot imapd
+| banner: * OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID 
+|_ENABLE IDLE AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_IDEA_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher IDEA vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp384r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_IDEA_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher IDEA vulnerable to SWEET32 attack
+|_  least strength: A
+995/tcp  open   ssl/pop3      Dovecot pop3d
+|_banner: +OK Dovecot ready.
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_IDEA_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher IDEA vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_IDEA_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher IDEA vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp384r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+1167/tcp closed cisco-ipsla
+2077/tcp open   tsrmagt?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Sat, 16 Mar 2019 18:33:50 GMT
+|     Server: cPanel
+|     Persistent-Auth: false
+|     Host: just93.justhost.com:2077
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Connection: Keep-Alive
+|     Vary: Accept-Encoding
+|     Allow: MOVE, PROPPATCH, GET, OPTIONS, HEAD, PROPFIND, COPY, PUT, UNLOCK, MKCOL, LOCK, DELETE, POST
+|     Content-Length: 0
+|     Content-Type: text/plain
+|     Expires: Fri, 01 Jan 1990 00:00:00 GMT
+|     DAV: 1, 2
+|     Keep-Alive: timeout=15, max=96
+|_    MS-Author-Via: DAV
+2078/tcp open   ssl/http      cPanel httpd (unauthorized)
+|_http-server-header: cPanel
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2079/tcp open   http          cPanel httpd (unauthorized)
+2080/tcp open   ssl/http      cPanel httpd (unauthorized)
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_CBC_SHA and TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2082/tcp open   infowave?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 18:33:57 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082
+|     Set-Cookie: cpsession=%3az0E7LU3dZ7xrxX1G%2cbae03b56ddbed110164a975c4d5d10ea; HttpOnly; path=/; port=2082
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=just93.justhost.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.just93.justhost.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082
+|_    Set-Cookie: horde_secret_key=expired; HttpOnly; domain=.just93.justhost.com; expires=Thu
+2083/tcp open   ssl/radsec?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 18:32:39 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=%3aBhwF7NepW1R408uV%2c1079274e33d359b3017d3d8c8bb29b0b; HttpOnly; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=just93.justhost.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.just93.justhost.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: horde_secret_key=expired; HttpOnly;
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 18:32:40 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=%3a7dxvXUqMthMMaNDW%2cea6e83efee655143415301aa2d435c62; HttpOnly; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=just93.justhost.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.just93.justhost.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|_    Set-Cookie: horde_secret_key=expired; HttpOnly;
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2084/tcp closed sunclustergeo
+2089/tcp closed sep
+2095/tcp open   nbx-ser?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 18:33:49 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095
+|     Set-Cookie: webmailsession=%3aMN593eDy_UvhsAfG%2cd6b70fb88d03493b533a749c766fdccb; HttpOnly; path=/; port=2095
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=just93.justhost.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.just93.justhost.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095
+|_    Set-Cookie: horde_secret_key=expired; HttpOnly; domain=.just93.justhost.com;
+2096/tcp open   ssl/nbx-dir?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 18:32:43 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=%3aYoUWNPiEvEffcthp%2cc69d5acf5727ba292c80c56244db9d0c; HttpOnly; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=just93.justhost.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.just93.justhost.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: horde_secret_key=expired;
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 18:32:44 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=%3aTDrdhNBG9UW7nYlR%2c15ad4f48b02f8d2ea6698721fda62400; HttpOnly; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=just93.justhost.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.just93.justhost.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|_    Set-Cookie: horde_secret_key=expired;
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|     compressors: 
+| 
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 and TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
+|_  least strength: A
+2626/tcp open   smtp          Exim smtpd 4.91
+| banner: 220-just93.justhost.com ESMTP Exim 4.91 #1 Sat, 16 Mar 2019 12:
+|_35:01 -0600 \x0D\x0A220-We do not authorize the use of this system t...
+8080/tcp open   http          nginx 1.14.1
+|_http-server-header: nginx/1.14.1
+8443/tcp open   ssl/http      nginx 1.14.1
+|_http-server-header: nginx/1.14.1
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_ARIA_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_ARIA_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+5 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2077-TCP:V=7.70%I=7%D=3/16%Time=5C8D4192%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,1E4,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2016\x20Mar
+SF:\x202019\x2018:33:50\x20GMT\r\nServer:\x20cPanel\r\nPersistent-Auth:\x2
+SF:0false\r\nHost:\x20just93\.justhost\.com:2077\r\nCache-Control:\x20no-c
+SF:ache,\x20no-store,\x20must-revalidate,\x20private\r\nConnection:\x20Kee
+SF:p-Alive\r\nVary:\x20Accept-Encoding\r\nAllow:\x20MOVE,\x20PROPPATCH,\x2
+SF:0GET,\x20OPTIONS,\x20HEAD,\x20PROPFIND,\x20COPY,\x20PUT,\x20UNLOCK,\x20
+SF:MKCOL,\x20LOCK,\x20DELETE,\x20POST\r\nContent-Length:\x200\r\nContent-T
+SF:ype:\x20text/plain\r\nExpires:\x20Fri,\x2001\x20Jan\x201990\x2000:00:00
+SF:\x20GMT\r\nDAV:\x201,\x202\r\nKeep-Alive:\x20timeout=15,\x20max=96\r\nM
+SF:S-Author-Via:\x20DAV\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2082-TCP:V=7.70%I=7%D=3/16%Time=5C8D4194%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,10F8,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConnection:
+SF:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\
+SF:x20Sat,\x2016\x20Mar\x202019\x2018:33:57\x20GMT\r\nCache-Control:\x20no
+SF:-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-ca
+SF:che\r\nWWW-Authenticate:\x20Basic\x20realm=\"cPanel\"\r\nSet-Cookie:\x2
+SF:0cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\
+SF:x20GMT;\x20path=/;\x20port=2082\r\nSet-Cookie:\x20cpsession=%3az0E7LU3d
+SF:Z7xrxX1G%2cbae03b56ddbed110164a975c4d5d10ea;\x20HttpOnly;\x20path=/;\x2
+SF:0port=2082\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20
+SF:expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2082
+SF:\r\nSet-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=j
+SF:ust93\.justhost\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT
+SF:;\x20path=/;\x20port=2082\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;
+SF:\x20domain=\.just93\.justhost\.com;\x20expires=Thu,\x2001-Jan-1970\x200
+SF:0:00:01\x20GMT;\x20path=/;\x20port=2082\r\nSet-Cookie:\x20horde_secret_
+SF:key=expired;\x20HttpOnly;\x20domain=\.just93\.justhost\.com;\x20expires
+SF:=Thu");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2083-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D4143%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2018:32:39\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"cPanel\"\r\nSet-Cook
+SF:ie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:
+SF:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20cpse
+SF:ssion=%3aBhwF7NepW1R408uV%2c1079274e33d359b3017d3d8c8bb29b0b;\x20HttpOn
+SF:ly;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_sess
+SF:id=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20
+SF:GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_ses
+SF:sauth=expired;\x20HttpOnly;\x20domain=just93\.justhost\.com;\x20expires
+SF:=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20se
+SF:cure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20domain=\.just93\.
+SF:justhost\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20pa
+SF:th=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20horde_secret_key=expire
+SF:d;\x20HttpOnly;\x20")%r(HTTPOptions,4000,"HTTP/1\.0\x20401\x20Access\x2
+SF:0Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20chars
+SF:et=\"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2018:32:40\x20GMT\r
+SF:\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20priva
+SF:te\r\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"cPan
+SF:el\"\r\nSet-Cookie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001
+SF:-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet
+SF:-Cookie:\x20cpsession=%3a7dxvXUqMthMMaNDW%2cea6e83efee655143415301aa2d4
+SF:35c62;\x20HttpOnly;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x
+SF:20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970
+SF:\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\
+SF:x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=just93\.justhost\
+SF:.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20
+SF:port=2083;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20d
+SF:omain=\.just93\.justhost\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:
+SF:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20horde_s
+SF:ecret_key=expired;\x20HttpOnly;\x20");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2095-TCP:V=7.70%I=7%D=3/16%Time=5C8D4188%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,3890,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConnection:
+SF:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\
+SF:x20Sat,\x2016\x20Mar\x202019\x2018:33:49\x20GMT\r\nCache-Control:\x20no
+SF:-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-ca
+SF:che\r\nWWW-Authenticate:\x20Basic\x20realm=\"WebMail\"\r\nSet-Cookie:\x
+SF:20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:
+SF:00:01\x20GMT;\x20path=/;\x20port=2095\r\nSet-Cookie:\x20webmailsession=
+SF:%3aMN593eDy_UvhsAfG%2cd6b70fb88d03493b533a749c766fdccb;\x20HttpOnly;\x2
+SF:0path=/;\x20port=2095\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20Ht
+SF:tpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x
+SF:20port=2095\r\nSet-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\
+SF:x20domain=just93\.justhost\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:0
+SF:0:01\x20GMT;\x20path=/;\x20port=2095\r\nSet-Cookie:\x20Horde=expired;\x
+SF:20HttpOnly;\x20domain=\.just93\.justhost\.com;\x20expires=Thu,\x2001-Ja
+SF:n-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2095\r\nSet-Cookie:\x20ho
+SF:rde_secret_key=expired;\x20HttpOnly;\x20domain=\.just93\.justhost\.com;
+SF:\x20");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2096-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D4147%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2018:32:43\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"WebMail\"\r\nSet-Coo
+SF:kie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\
+SF:x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x
+SF:20webmailsession=%3aYoUWNPiEvEffcthp%2cc69d5acf5727ba292c80c56244db9d0c
+SF:;\x20HttpOnly;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20rou
+SF:ndcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x200
+SF:0:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20ro
+SF:undcube_sessauth=expired;\x20HttpOnly;\x20domain=just93\.justhost\.com;
+SF:\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=
+SF:2096;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20domain
+SF:=\.just93\.justhost\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x2
+SF:0GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20horde_secret
+SF:_key=expired;")%r(HTTPOptions,4000,"HTTP/1\.0\x20401\x20Access\x20Denie
+SF:d\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"u
+SF:tf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2018:32:44\x20GMT\r\nCach
+SF:e-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\n
+SF:Pragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"WebMail\"\
+SF:r\nSet-Cookie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001
+SF:-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet
+SF:-Cookie:\x20webmailsession=%3aTDrdhNBG9UW7nYlR%2c15ad4f48b02f8d2ea66987
+SF:21fda62400;\x20HttpOnly;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cook
+SF:ie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan
+SF:-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Coo
+SF:kie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=just93\.just
+SF:host\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/
+SF:;\x20port=2096;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;
+SF:\x20domain=\.just93\.justhost\.com;\x20expires=Thu,\x2001-Jan-1970\x200
+SF:0:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20ho
+SF:rde_secret_key=expired;");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 20:36:13 2019 -- 1 IP address (1 host up) scanned in 995.62 seconds

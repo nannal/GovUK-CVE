@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 19:11:20 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/swansea-edunet.gov.uk swansea-edunet.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/swansea-edunet.gov.uk swansea-edunet.gov.uk" start="1552756280" startstr="Sat Mar 16 19:11:20 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552756285" endtime="1552756470"><status state="up" reason="syn-ack" reason_ttl="112"/>
+<address addr="194.81.160.33" addrtype="ipv4"/>
+<hostnames>
+<hostname name="swansea-edunet.gov.uk" type="user"/>
+</hostnames>
+<ports><extraports state="filtered" count="65534">
+<extrareasons reason="no-responses" count="65534"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="112"/><service name="http" product="Microsoft IIS httpd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="112"/><service name="https" tunnel="ssl" method="table" conf="3"/><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C&#xa;      TLS_RSA_EXPORT1024_WITH_RC4_56_SHA - D&#xa;      TLS_RSA_EXPORT1024_WITH_DES_CBC_SHA - D&#xa;      TLS_RSA_EXPORT_WITH_RC4_40_MD5 - E&#xa;    compressors: &#xa;&#xa;    cipher preference: server&#xa;    warnings: &#xa;      64-bit block cipher DES vulnerable to SWEET32 attack&#xa;      64-bit block cipher RC2 vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Ciphersuite uses MD5 for message integrity&#xa;  least strength: E"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+<elem key="strength">C</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="strength">C</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_EXPORT1024_WITH_RC4_56_SHA</elem>
+<elem key="strength">D</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_EXPORT1024_WITH_DES_CBC_SHA</elem>
+<elem key="strength">D</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_EXPORT_WITH_RC4_40_MD5</elem>
+<elem key="strength">E</elem>
+</table>
+</table>
+<table key="compressors">
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>64-bit block cipher DES vulnerable to SWEET32 attack</elem>
+<elem>64-bit block cipher RC2 vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+</table>
+</table>
+<elem key="least strength">E</elem>
+</script></port>
+</ports>
+<times srtt="60781" rttvar="11515" to="106841"/>
+</host>
+<runstats><finished time="1552756470" timestr="Sat Mar 16 19:14:30 2019" elapsed="190.39" summary="Nmap done at Sat Mar 16 19:14:30 2019; 1 IP address (1 host up) scanned in 190.39 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

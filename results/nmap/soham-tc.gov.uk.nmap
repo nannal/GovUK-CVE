@@ -1,0 +1,586 @@
+# Nmap 7.70 scan initiated Sat Mar 16 17:48:29 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/soham-tc.gov.uk soham-tc.gov.uk
+Warning: 109.169.39.131 giving up on port because retransmission cap hit (6).
+Nmap scan report for soham-tc.gov.uk (109.169.39.131)
+Host is up (0.065s latency).
+rDNS record for 109.169.39.131: sm01.logicdesign.co.uk
+Not shown: 65497 closed ports
+PORT      STATE    SERVICE          VERSION
+21/tcp    open     ftp              Pure-FTPd
+| banner: 220---------- Welcome to Pure-FTPd [privsep] [TLS] ----------\x
+|_0D\x0A220-You are user number 1 of 50 allowed.\x0D\x0A220-Local time...
+22/tcp    open     ssh              OpenSSH 7.4 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_7.4
+25/tcp    filtered smtp
+53/tcp    open     domain           ISC BIND 9.9.4 (RedHat Enterprise Linux 7)
+80/tcp    open     http             Apache httpd
+|_http-server-header: Apache
+111/tcp   open     rpcbind          2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|_  100000  2,3,4        111/udp  rpcbind
+443/tcp   open     ssl/http         Apache httpd
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+465/tcp   open     ssl/smtp         Exim smtpd 4.91
+| banner: 220-logic-mail.co.uk ESMTP Exim 4.91 #1 Sat, 16 Mar 2019 16:06:
+|_16 +0000 \x0D\x0A220-We do not authorize the use of this system to t...
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+587/tcp   open     smtp             Exim smtpd 4.91
+| banner: 220-logic-mail.co.uk ESMTP Exim 4.91 #1 Sat, 16 Mar 2019 16:05:
+|_52 +0000 \x0D\x0A220-We do not authorize the use of this system to t...
+2077/tcp  open     tsrmagt?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 302 Moved
+|     Date: Sat, 16 Mar 2019 16:04:47 GMT
+|     Server: cPanel
+|     Persistent-Auth: false
+|     Host: sm01.logicdesign.co.uk:2077
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Connection: close
+|     Location: https://sm01.logicdesign.co.uk:2078sip:nm
+|     Vary: Accept-Encoding
+|     Expires: Fri, 01 Jan 1990 00:00:00 GMT
+|_    X-Redirect-Reason: requiressl
+2078/tcp  open     ssl/http         cPanel httpd (unauthorized)
+|_http-server-header: cPanel
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2079/tcp  open     idware-router?
+2080/tcp  open     ssl/http         cPanel httpd (unauthorized)
+|_http-server-header: cPanel
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2082/tcp  open     infowave?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 301 Moved
+|     Content-length: 128
+|     Location: https://sm01.logicdesign.co.uk:2083/sip%3anm
+|     Content-type: text/html; charset="utf-8"
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|_    <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://sm01.logicdesign.co.uk:2083/sip%3anm"></head><body></body></html>
+2083/tcp  open     ssl/radsec?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 16:03:41 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=%3awm_tk2uBKu8P_1WZ%2cdd4dee6c3104c10f8e30041522ab231f; HttpOnly; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=sm01.logicdesign.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.sm01.logicdesign.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: horde_secret_key=expired; Http
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 16:03:41 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=%3aU0pTXecksoPcBnUv%2c4c96596c067dfd2370203218478ae995; HttpOnly; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=sm01.logicdesign.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.sm01.logicdesign.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|_    Set-Cookie: horde_secret_key=expired; Http
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     cipher preference error: Network error
+|_  least strength: A
+2086/tcp  open     gnunet?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 301 Moved
+|     Content-length: 128
+|     Location: https://sm01.logicdesign.co.uk:2087/sip%3anm
+|     Content-type: text/html; charset="utf-8"
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|_    <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://sm01.logicdesign.co.uk:2087/sip%3anm"></head><body></body></html>
+2087/tcp  open     ssl/eli?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 16:03:43 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="Web Host Manager"
+|     Set-Cookie: whostmgrrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: whostmgrsession=%3aXB0a7YR81bNlInyr%2c51731f95baa05e7acdcb55466d414575; HttpOnly; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=sm01.logicdesign.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.sm01.logicdesign.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: horde_se
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 16:03:44 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="Web Host Manager"
+|     Set-Cookie: whostmgrrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: whostmgrsession=%3a6WKONm8PAIbpyZ05%2cf2f96246ca32ae082e8055f3cd9fa2b0; HttpOnly; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=sm01.logicdesign.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.sm01.logicdesign.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|_    Set-Cookie: horde_se
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2095/tcp  open     nbx-ser?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 301 Moved
+|     Content-length: 128
+|     Location: https://sm01.logicdesign.co.uk:2096/sip%3anm
+|     Content-type: text/html; charset="utf-8"
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|_    <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://sm01.logicdesign.co.uk:2096/sip%3anm"></head><body></body></html>
+2096/tcp  open     ssl/nbx-dir?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 16:03:41 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=%3aS6cdsJeID3A5AZ9L%2c768f2c766cfd927014a2f0e964f89b4e; HttpOnly; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=sm01.logicdesign.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.sm01.logicdesign.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: horde_secret_key=ex
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 16:03:43 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=%3aOWyASXgX4m_bwQK8%2ce354a4ee330ce5a871c4d24bd3e16c62; HttpOnly; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=sm01.logicdesign.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.sm01.logicdesign.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|_    Set-Cookie: horde_secret_key=ex
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 and TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
+|_  least strength: A
+3306/tcp  open     mysql            MariaDB (unauthorized)
+| banner: W\x00\x00\x00\xFFj\x04Host '78-58-49-144.static.zebra.lt' is no
+|_t allowed to connect to this MariaDB server
+5202/tcp  filtered targus-getdata2
+5666/tcp  open     tcpwrapped
+5960/tcp  open     ssl/docker-swarm Docker Swarm
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+6556/tcp  open     tcpwrapped
+6841/tcp  filtered netmo-default
+9100/tcp  open     jetdirect?
+15400/tcp filtered unknown
+21425/tcp filtered unknown
+24160/tcp filtered unknown
+25814/tcp filtered unknown
+27615/tcp filtered unknown
+29736/tcp filtered unknown
+30376/tcp filtered unknown
+34112/tcp filtered unknown
+36767/tcp filtered unknown
+37430/tcp filtered unknown
+52781/tcp filtered unknown
+55772/tcp filtered unknown
+63213/tcp filtered unknown
+7 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2077-TCP:V=7.70%I=7%D=3/16%Time=5C8D1E9E%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,169,"HTTP/1\.1\x20302\x20Moved\r\nDate:\x20Sat,\x2016\x20
+SF:Mar\x202019\x2016:04:47\x20GMT\r\nServer:\x20cPanel\r\nPersistent-Auth:
+SF:\x20false\r\nHost:\x20sm01\.logicdesign\.co\.uk:2077\r\nCache-Control:\
+SF:x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nConnection:
+SF:\x20close\r\nLocation:\x20https://sm01\.logicdesign\.co\.uk:2078sip:nm\
+SF:r\nVary:\x20Accept-Encoding\r\nExpires:\x20Fri,\x2001\x20Jan\x201990\x2
+SF:000:00:00\x20GMT\r\nX-Redirect-Reason:\x20requiressl\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2082-TCP:V=7.70%I=7%D=3/16%Time=5C8D1E9C%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,14A,"HTTP/1\.1\x20301\x20Moved\r\nContent-length:\x20128\
+SF:r\nLocation:\x20https://sm01\.logicdesign\.co\.uk:2083/sip%3anm\r\nCont
+SF:ent-type:\x20text/html;\x20charset=\"utf-8\"\r\nCache-Control:\x20no-ca
+SF:che,\x20no-store,\x20must-revalidate,\x20private\r\n\r\n<html><head><ME
+SF:TA\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://sm01\.logicdesi
+SF:gn\.co\.uk:2083/sip%3anm\"></head><body></body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2083-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D1E59%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2016:03:41\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"cPanel\"\r\nSet-Cook
+SF:ie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:
+SF:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20cpse
+SF:ssion=%3awm_tk2uBKu8P_1WZ%2cdd4dee6c3104c10f8e30041522ab231f;\x20HttpOn
+SF:ly;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_sess
+SF:id=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20
+SF:GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_ses
+SF:sauth=expired;\x20HttpOnly;\x20domain=sm01\.logicdesign\.co\.uk;\x20exp
+SF:ires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x
+SF:20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20domain=\.sm01
+SF:\.logicdesign\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GM
+SF:T;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20horde_secret_ke
+SF:y=expired;\x20Http")%r(HTTPOptions,4000,"HTTP/1\.0\x20401\x20Access\x20
+SF:Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charse
+SF:t=\"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2016:03:41\x20GMT\r\
+SF:nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20privat
+SF:e\r\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"cPane
+SF:l\"\r\nSet-Cookie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-
+SF:Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-
+SF:Cookie:\x20cpsession=%3aU0pTXecksoPcBnUv%2c4c96596c067dfd2370203218478a
+SF:e995;\x20HttpOnly;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x2
+SF:0roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\
+SF:x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x
+SF:20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=sm01\.logicdesign\
+SF:.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\
+SF:x20port=2083;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x
+SF:20domain=\.sm01\.logicdesign\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2
+SF:000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20
+SF:horde_secret_key=expired;\x20Http");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2086-TCP:V=7.70%I=7%D=3/16%Time=5C8D1E9C%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,14A,"HTTP/1\.1\x20301\x20Moved\r\nContent-length:\x20128\
+SF:r\nLocation:\x20https://sm01\.logicdesign\.co\.uk:2087/sip%3anm\r\nCont
+SF:ent-type:\x20text/html;\x20charset=\"utf-8\"\r\nCache-Control:\x20no-ca
+SF:che,\x20no-store,\x20must-revalidate,\x20private\r\n\r\n<html><head><ME
+SF:TA\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://sm01\.logicdesi
+SF:gn\.co\.uk:2087/sip%3anm\"></head><body></body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2087-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D1E5B%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2016:03:43\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"Web\x20Host\x20Manag
+SF:er\"\r\nSet-Cookie:\x20whostmgrrelogin=no;\x20HttpOnly;\x20expires=Thu,
+SF:\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\
+SF:r\nSet-Cookie:\x20whostmgrsession=%3aXB0a7YR81bNlInyr%2c51731f95baa05e7
+SF:acdcb55466d414575;\x20HttpOnly;\x20path=/;\x20port=2087;\x20secure\r\nS
+SF:et-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2
+SF:001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\n
+SF:Set-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=sm01\
+SF:.logicdesign\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT
+SF:;\x20path=/;\x20port=2087;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x
+SF:20HttpOnly;\x20domain=\.sm01\.logicdesign\.co\.uk;\x20expires=Thu,\x200
+SF:1-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\nSe
+SF:t-Cookie:\x20horde_se")%r(HTTPOptions,4000,"HTTP/1\.0\x20401\x20Access\
+SF:x20Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20cha
+SF:rset=\"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2016:03:44\x20GMT
+SF:\r\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20pri
+SF:vate\r\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"We
+SF:b\x20Host\x20Manager\"\r\nSet-Cookie:\x20whostmgrrelogin=no;\x20HttpOnl
+SF:y;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20por
+SF:t=2087;\x20secure\r\nSet-Cookie:\x20whostmgrsession=%3a6WKONm8PAIbpyZ05
+SF:%2cf2f96246ca32ae082e8055f3cd9fa2b0;\x20HttpOnly;\x20path=/;\x20port=20
+SF:87;\x20secure\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\
+SF:x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2
+SF:087;\x20secure\r\nSet-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnl
+SF:y;\x20domain=sm01\.logicdesign\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\
+SF:x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\nSet-Cookie:\x
+SF:20Horde=expired;\x20HttpOnly;\x20domain=\.sm01\.logicdesign\.co\.uk;\x2
+SF:0expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=208
+SF:7;\x20secure\r\nSet-Cookie:\x20horde_se");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2095-TCP:V=7.70%I=7%D=3/16%Time=5C8D1E9C%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,14A,"HTTP/1\.1\x20301\x20Moved\r\nContent-length:\x20128\
+SF:r\nLocation:\x20https://sm01\.logicdesign\.co\.uk:2096/sip%3anm\r\nCont
+SF:ent-type:\x20text/html;\x20charset=\"utf-8\"\r\nCache-Control:\x20no-ca
+SF:che,\x20no-store,\x20must-revalidate,\x20private\r\n\r\n<html><head><ME
+SF:TA\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://sm01\.logicdesi
+SF:gn\.co\.uk:2096/sip%3anm\"></head><body></body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2096-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D1E5A%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2016:03:41\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"WebMail\"\r\nSet-Coo
+SF:kie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\
+SF:x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x
+SF:20webmailsession=%3aS6cdsJeID3A5AZ9L%2c768f2c766cfd927014a2f0e964f89b4e
+SF:;\x20HttpOnly;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20rou
+SF:ndcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x200
+SF:0:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20ro
+SF:undcube_sessauth=expired;\x20HttpOnly;\x20domain=sm01\.logicdesign\.co\
+SF:.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20p
+SF:ort=2096;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20do
+SF:main=\.sm01\.logicdesign\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:
+SF:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20hord
+SF:e_secret_key=ex")%r(HTTPOptions,4000,"HTTP/1\.0\x20401\x20Access\x20Den
+SF:ied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=\
+SF:"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2016:03:43\x20GMT\r\nCa
+SF:che-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r
+SF:\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"WebMail\
+SF:"\r\nSet-Cookie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x20
+SF:01-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nS
+SF:et-Cookie:\x20webmailsession=%3aOWyASXgX4m_bwQK8%2ce354a4ee330ce5a871c4
+SF:d24bd3e16c62;\x20HttpOnly;\x20path=/;\x20port=2096;\x20secure\r\nSet-Co
+SF:okie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-J
+SF:an-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-C
+SF:ookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=sm01\.logi
+SF:cdesign\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20
+SF:path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20Htt
+SF:pOnly;\x20domain=\.sm01\.logicdesign\.co\.uk;\x20expires=Thu,\x2001-Jan
+SF:-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Coo
+SF:kie:\x20horde_secret_key=ex");
+Service Info: Host: logic-mail.co.uk; OS: Linux; CPE: cpe:/o:redhat:enterprise_linux:7
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 18:06:40 2019 -- 1 IP address (1 host up) scanned in 1090.21 seconds

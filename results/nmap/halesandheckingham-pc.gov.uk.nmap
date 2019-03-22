@@ -1,0 +1,543 @@
+# Nmap 7.70 scan initiated Sat Mar 16 09:39:26 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/halesandheckingham-pc.gov.uk halesandheckingham-pc.gov.uk
+Nmap scan report for halesandheckingham-pc.gov.uk (87.247.244.225)
+Host is up (0.067s latency).
+rDNS record for 87.247.244.225: quasar.servers.prgn.misp.co.uk
+Not shown: 65513 filtered ports
+PORT     STATE  SERVICE        VERSION
+20/tcp   closed ftp-data
+21/tcp   open   ftp            Pure-FTPd
+| banner: 220---------- Welcome to Pure-FTPd [privsep] [TLS] ----------\x
+|_0D\x0A220-You are user number 3 of 50 allowed.\x0D\x0A220-Local time...
+22/tcp   closed ssh
+53/tcp   closed domain
+80/tcp   open   http           Apache httpd
+|_http-server-header: Apache
+110/tcp  open   pop3           Dovecot pop3d
+|_banner: +OK Dovecot ready.
+143/tcp  open   imap           Dovecot imapd
+| banner: * OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID 
+|_ENABLE IDLE NAMESPACE STARTTLS AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+443/tcp  open   ssl/http       Apache httpd
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+465/tcp  open   ssl/smtp       Exim smtpd 4.91
+| banner: 220-quasar.servers.prgn.misp.co.uk ESMTP Exim 4.91 #1 Sat, 16 M
+|_ar 2019 07:57:13 +0000 \x0D\x0A220-We do not authorize the use of th...
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+587/tcp  open   smtp           Exim smtpd 4.91
+| banner: 220-quasar.servers.prgn.misp.co.uk ESMTP Exim 4.91 #1 Sat, 16 M
+|_ar 2019 07:56:49 +0000 \x0D\x0A220-We do not authorize the use of th...
+993/tcp  open   ssl/imap       Dovecot imapd
+| banner: * OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID 
+|_ENABLE IDLE NAMESPACE AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp384r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+995/tcp  open   ssl/pop3       Dovecot pop3d
+|_banner: +OK Dovecot ready.
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp384r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+2077/tcp open   tsrmagt?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 302 Moved
+|     Date: Sat, 16 Mar 2019 07:55:33 GMT
+|     Server: cPanel
+|     Persistent-Auth: false
+|     Host: quasar.servers.prgn.misp.co.uk:2077
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Connection: close
+|     Location: https://quasar.servers.prgn.misp.co.uk:2078sip:nm
+|     Vary: Accept-Encoding
+|     Expires: Fri, 01 Jan 1990 00:00:00 GMT
+|_    X-Redirect-Reason: requiressl
+2078/tcp open   ssl/http       cPanel httpd (unauthorized)
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2079/tcp open   idware-router?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 302 Moved
+|     Date: Sat, 16 Mar 2019 07:55:37 GMT
+|     Server: cPanel
+|     Persistent-Auth: false
+|     Host: quasar.servers.prgn.misp.co.uk:2079
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Connection: close
+|     Location: https://quasar.servers.prgn.misp.co.uk:2080sip:nm
+|     Vary: Accept-Encoding
+|     Expires: Fri, 01 Jan 1990 00:00:00 GMT
+|_    X-Redirect-Reason: requiressl
+2080/tcp open   autodesk-nlm?
+2082/tcp open   infowave?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 301 Moved
+|     Content-length: 136
+|     Location: https://quasar.servers.prgn.misp.co.uk:2083/sip%3anm
+|     Content-type: text/html; charset="utf-8"
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|_    <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://quasar.servers.prgn.misp.co.uk:2083/sip%3anm"></head><body></body></html>
+2083/tcp open   ssl/radsec?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 07:54:30 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=%3awKJIqdB8SXBKPjOH%2c7ffb63c4d520aaf521dece4f5d4a27b1; HttpOnly; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=quasar.servers.prgn.misp.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.quasar.servers.prgn.misp.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: horde_secret_k
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 07:54:32 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=%3axWrZTmRdKX6B1oWg%2c42ec0dc50eb3650012f7f8735b63da5d; HttpOnly; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=quasar.servers.prgn.misp.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.quasar.servers.prgn.misp.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|_    Set-Cookie: horde_secret_k
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+2086/tcp open   gnunet?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 301 Moved
+|     Content-length: 136
+|     Location: https://quasar.servers.prgn.misp.co.uk:2087/sip%3anm
+|     Content-type: text/html; charset="utf-8"
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|_    <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://quasar.servers.prgn.misp.co.uk:2087/sip%3anm"></head><body></body></html>
+2087/tcp open   ssl/eli?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 07:54:26 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="Web Host Manager"
+|     Set-Cookie: whostmgrrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: whostmgrsession=%3aJO2gOljnV5N9gav5%2cc38a7498566754b52681979693f663b3; HttpOnly; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=quasar.servers.prgn.misp.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.quasar.servers.prgn.misp.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 07:54:27 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="Web Host Manager"
+|     Set-Cookie: whostmgrrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: whostmgrsession=%3abSDEvDx1zC3gnpBt%2c9265d3ae76ce21784d830803d063ca1a; HttpOnly; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=quasar.servers.prgn.misp.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.quasar.servers.prgn.misp.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|_    Set-
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+2095/tcp open   nbx-ser?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 301 Moved
+|     Content-length: 136
+|     Location: https://quasar.servers.prgn.misp.co.uk:2096/sip%3anm
+|     Content-type: text/html; charset="utf-8"
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|_    <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://quasar.servers.prgn.misp.co.uk:2096/sip%3anm"></head><body></body></html>
+2096/tcp open   ssl/nbx-dir?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 07:54:30 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=%3adPknFc9X7L3NWfAg%2cce8436d718493bf2b664eb549205dc15; HttpOnly; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=quasar.servers.prgn.misp.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.quasar.servers.prgn.misp.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: hor
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 07:54:34 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=%3a1hd6mqNbROMcVcvD%2c747129e89a78b24a11af0a1f790e116d; HttpOnly; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=quasar.servers.prgn.misp.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.quasar.servers.prgn.misp.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|_    Set-Cookie: hor
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+2510/tcp open   ssh            OpenSSH 7.4 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_7.4
+8 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2077-TCP:V=7.70%I=7%D=3/16%Time=5C8CABF2%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,179,"HTTP/1\.1\x20302\x20Moved\r\nDate:\x20Sat,\x2016\x20
+SF:Mar\x202019\x2007:55:33\x20GMT\r\nServer:\x20cPanel\r\nPersistent-Auth:
+SF:\x20false\r\nHost:\x20quasar\.servers\.prgn\.misp\.co\.uk:2077\r\nCache
+SF:-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nC
+SF:onnection:\x20close\r\nLocation:\x20https://quasar\.servers\.prgn\.misp
+SF:\.co\.uk:2078sip:nm\r\nVary:\x20Accept-Encoding\r\nExpires:\x20Fri,\x20
+SF:01\x20Jan\x201990\x2000:00:00\x20GMT\r\nX-Redirect-Reason:\x20requiress
+SF:l\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2079-TCP:V=7.70%I=7%D=3/16%Time=5C8CABF7%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,179,"HTTP/1\.1\x20302\x20Moved\r\nDate:\x20Sat,\x2016\x20
+SF:Mar\x202019\x2007:55:37\x20GMT\r\nServer:\x20cPanel\r\nPersistent-Auth:
+SF:\x20false\r\nHost:\x20quasar\.servers\.prgn\.misp\.co\.uk:2079\r\nCache
+SF:-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nC
+SF:onnection:\x20close\r\nLocation:\x20https://quasar\.servers\.prgn\.misp
+SF:\.co\.uk:2080sip:nm\r\nVary:\x20Accept-Encoding\r\nExpires:\x20Fri,\x20
+SF:01\x20Jan\x201990\x2000:00:00\x20GMT\r\nX-Redirect-Reason:\x20requiress
+SF:l\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2082-TCP:V=7.70%I=7%D=3/16%Time=5C8CABF2%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,15A,"HTTP/1\.1\x20301\x20Moved\r\nContent-length:\x20136\
+SF:r\nLocation:\x20https://quasar\.servers\.prgn\.misp\.co\.uk:2083/sip%3a
+SF:nm\r\nContent-type:\x20text/html;\x20charset=\"utf-8\"\r\nCache-Control
+SF::\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\n\r\n<html
+SF:><head><META\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://quasa
+SF:r\.servers\.prgn\.misp\.co\.uk:2083/sip%3anm\"></head><body></body></ht
+SF:ml>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2083-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CABB3%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2007:54:30\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"cPanel\"\r\nSet-Cook
+SF:ie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:
+SF:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20cpse
+SF:ssion=%3awKJIqdB8SXBKPjOH%2c7ffb63c4d520aaf521dece4f5d4a27b1;\x20HttpOn
+SF:ly;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_sess
+SF:id=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20
+SF:GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_ses
+SF:sauth=expired;\x20HttpOnly;\x20domain=quasar\.servers\.prgn\.misp\.co\.
+SF:uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20po
+SF:rt=2083;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20dom
+SF:ain=\.quasar\.servers\.prgn\.misp\.co\.uk;\x20expires=Thu,\x2001-Jan-19
+SF:70\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie
+SF::\x20horde_secret_k")%r(HTTPOptions,4000,"HTTP/1\.0\x20401\x20Access\x2
+SF:0Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20chars
+SF:et=\"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2007:54:32\x20GMT\r
+SF:\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20priva
+SF:te\r\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"cPan
+SF:el\"\r\nSet-Cookie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001
+SF:-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet
+SF:-Cookie:\x20cpsession=%3axWrZTmRdKX6B1oWg%2c42ec0dc50eb3650012f7f8735b6
+SF:3da5d;\x20HttpOnly;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x
+SF:20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970
+SF:\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\
+SF:x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=quasar\.servers\.
+SF:prgn\.misp\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\
+SF:x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20
+SF:HttpOnly;\x20domain=\.quasar\.servers\.prgn\.misp\.co\.uk;\x20expires=T
+SF:hu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secu
+SF:re\r\nSet-Cookie:\x20horde_secret_k");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2086-TCP:V=7.70%I=7%D=3/16%Time=5C8CABF7%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,15A,"HTTP/1\.1\x20301\x20Moved\r\nContent-length:\x20136\
+SF:r\nLocation:\x20https://quasar\.servers\.prgn\.misp\.co\.uk:2087/sip%3a
+SF:nm\r\nContent-type:\x20text/html;\x20charset=\"utf-8\"\r\nCache-Control
+SF::\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\n\r\n<html
+SF:><head><META\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://quasa
+SF:r\.servers\.prgn\.misp\.co\.uk:2087/sip%3anm\"></head><body></body></ht
+SF:ml>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2087-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CABAF%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2007:54:26\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"Web\x20Host\x20Manag
+SF:er\"\r\nSet-Cookie:\x20whostmgrrelogin=no;\x20HttpOnly;\x20expires=Thu,
+SF:\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\
+SF:r\nSet-Cookie:\x20whostmgrsession=%3aJO2gOljnV5N9gav5%2cc38a7498566754b
+SF:52681979693f663b3;\x20HttpOnly;\x20path=/;\x20port=2087;\x20secure\r\nS
+SF:et-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2
+SF:001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\n
+SF:Set-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=quasa
+SF:r\.servers\.prgn\.misp\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00
+SF::01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\nSet-Cookie:\x20Horde=
+SF:expired;\x20HttpOnly;\x20domain=\.quasar\.servers\.prgn\.misp\.co\.uk;\
+SF:x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2
+SF:087;\x20secure\r\nSet-")%r(HTTPOptions,4000,"HTTP/1\.0\x20401\x20Access
+SF:\x20Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20ch
+SF:arset=\"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2007:54:27\x20GM
+SF:T\r\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20pr
+SF:ivate\r\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"W
+SF:eb\x20Host\x20Manager\"\r\nSet-Cookie:\x20whostmgrrelogin=no;\x20HttpOn
+SF:ly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20po
+SF:rt=2087;\x20secure\r\nSet-Cookie:\x20whostmgrsession=%3abSDEvDx1zC3gnpB
+SF:t%2c9265d3ae76ce21784d830803d063ca1a;\x20HttpOnly;\x20path=/;\x20port=2
+SF:087;\x20secure\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;
+SF:\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=
+SF:2087;\x20secure\r\nSet-Cookie:\x20roundcube_sessauth=expired;\x20HttpOn
+SF:ly;\x20domain=quasar\.servers\.prgn\.misp\.co\.uk;\x20expires=Thu,\x200
+SF:1-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\nSe
+SF:t-Cookie:\x20Horde=expired;\x20HttpOnly;\x20domain=\.quasar\.servers\.p
+SF:rgn\.misp\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x
+SF:20path=/;\x20port=2087;\x20secure\r\nSet-");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2095-TCP:V=7.70%I=7%D=3/16%Time=5C8CABF2%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,15A,"HTTP/1\.1\x20301\x20Moved\r\nContent-length:\x20136\
+SF:r\nLocation:\x20https://quasar\.servers\.prgn\.misp\.co\.uk:2096/sip%3a
+SF:nm\r\nContent-type:\x20text/html;\x20charset=\"utf-8\"\r\nCache-Control
+SF::\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\n\r\n<html
+SF:><head><META\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://quasa
+SF:r\.servers\.prgn\.misp\.co\.uk:2096/sip%3anm\"></head><body></body></ht
+SF:ml>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2096-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CABB3%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2007:54:30\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"WebMail\"\r\nSet-Coo
+SF:kie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\
+SF:x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x
+SF:20webmailsession=%3adPknFc9X7L3NWfAg%2cce8436d718493bf2b664eb549205dc15
+SF:;\x20HttpOnly;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20rou
+SF:ndcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x200
+SF:0:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20ro
+SF:undcube_sessauth=expired;\x20HttpOnly;\x20domain=quasar\.servers\.prgn\
+SF:.misp\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20pa
+SF:th=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpO
+SF:nly;\x20domain=\.quasar\.servers\.prgn\.misp\.co\.uk;\x20expires=Thu,\x
+SF:2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\
+SF:nSet-Cookie:\x20hor")%r(HTTPOptions,4000,"HTTP/1\.0\x20401\x20Access\x2
+SF:0Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20chars
+SF:et=\"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2007:54:34\x20GMT\r
+SF:\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20priva
+SF:te\r\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"WebM
+SF:ail\"\r\nSet-Cookie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,
+SF:\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\
+SF:r\nSet-Cookie:\x20webmailsession=%3a1hd6mqNbROMcVcvD%2c747129e89a78b24a
+SF:11af0a1f790e116d;\x20HttpOnly;\x20path=/;\x20port=2096;\x20secure\r\nSe
+SF:t-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x20
+SF:01-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nS
+SF:et-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=quasar
+SF:\.servers\.prgn\.misp\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:
+SF:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20Horde=e
+SF:xpired;\x20HttpOnly;\x20domain=\.quasar\.servers\.prgn\.misp\.co\.uk;\x
+SF:20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=20
+SF:96;\x20secure\r\nSet-Cookie:\x20hor");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 09:57:30 2019 -- 1 IP address (1 host up) scanned in 1084.53 seconds

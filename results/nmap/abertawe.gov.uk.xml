@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 02:02:19 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/abertawe.gov.uk abertawe.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/abertawe.gov.uk abertawe.gov.uk" start="1552694539" startstr="Sat Mar 16 02:02:19 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552694540" endtime="1552697226"><status state="up" reason="syn-ack" reason_ttl="47"/>
+<address addr="212.104.147.59" addrtype="ipv4"/>
+<hostnames>
+<hostname name="abertawe.gov.uk" type="user"/>
+</hostnames>
+<ports><extraports state="filtered" count="65534">
+<extrareasons reason="no-responses" count="65534"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="http" tunnel="ssl" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="https" servicefp="SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8C4759%P=x86_64-unknown-linux-gnu%r(GetRequest,B1,&quot;HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2000:46:21\x20GMT\r\nLocation:\x20https://abertawe\.gov\.uk/preswylwyr\r\nConnection:\x20close\r\nContent-Type:\x20text/plain;\x20charset=UTF-8\r\n\r\n&quot;)%r(HTTPOptions,AF,&quot;HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2000:46:22\x20GMT\r\nAllow:\x20GET,\x20HEAD,\x20POST,\x20TRACE,\x20OPTIONS\r\nContent-Length:\x200\r\nConnection:\x20close\r\nContent-Type:\x20text/plain;\x20charset=UTF-8\r\n\r\n&quot;);" tunnel="ssl" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  GetRequest: &#xa;    HTTP/1.1 301 Moved Permanently&#xa;    Date: Sat, 16 Mar 2019 00:46:21 GMT&#xa;    Location: https://abertawe.gov.uk/preswylwyr&#xa;    Connection: close&#xa;    Content-Type: text/plain; charset=UTF-8&#xa;  HTTPOptions: &#xa;    HTTP/1.1 200 OK&#xa;    Date: Sat, 16 Mar 2019 00:46:22 GMT&#xa;    Allow: GET, HEAD, POST, TRACE, OPTIONS&#xa;    Content-Length: 0&#xa;    Connection: close&#xa;    Content-Type: text/plain; charset=UTF-8"><elem key="GetRequest">&#xa;    HTTP/1.1 301 Moved Permanently&#xa;    Date: Sat, 16 Mar 2019 00:46:21 GMT&#xa;    Location: https://abertawe.gov.uk/preswylwyr&#xa;    Connection: close&#xa;    Content-Type: text/plain; charset=UTF-8</elem>
+<elem key="HTTPOptions">&#xa;    HTTP/1.1 200 OK&#xa;    Date: Sat, 16 Mar 2019 00:46:22 GMT&#xa;    Allow: GET, HEAD, POST, TRACE, OPTIONS&#xa;    Content-Length: 0&#xa;    Connection: close&#xa;    Content-Type: text/plain; charset=UTF-8</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA - unknown&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 4096) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 4096) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;  least strength: unknown"><table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="strength">unknown</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+</table>
+<elem key="least strength">unknown</elem>
+</script></port>
+</ports>
+<times srtt="364045" rttvar="435182" to="1250000"/>
+</host>
+<runstats><finished time="1552697226" timestr="Sat Mar 16 02:47:06 2019" elapsed="2687.62" summary="Nmap done at Sat Mar 16 02:47:06 2019; 1 IP address (1 host up) scanned in 2687.62 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

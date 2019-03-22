@@ -1,0 +1,92 @@
+# Nmap 7.70 scan initiated Sat Mar 16 17:59:43 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/southhams.gov.uk southhams.gov.uk
+Nmap scan report for southhams.gov.uk (82.153.216.142)
+Host is up (0.068s latency).
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 404 Not Found
+|     Cache-Control: private
+|     Content-Type: text/html; charset=utf-8
+|     Server: 
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     X-Powered-By: ASP.NET
+|     Date: Sat, 16 Mar 2019 16:03:58 GMT
+|     Connection: close
+|     Content-Length: 1885
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <title>The resource cannot be found.</title>
+|     <meta name="viewport" content="width=device-width" />
+|     <style>
+|     body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+|     {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+|     {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+|     font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+|     font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+|_    {font-family:"Consolas","L
+|_http-server-header: <empty>
+443/tcp open  https
+|_http-server-header: <empty>
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp521r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp521r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     cipher preference error: Network error
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp521r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp521r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp521r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp521r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     cipher preference error: Network error
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8D1E6F%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,868,"HTTP/1\.1\x20404\x20Not\x20Found\r\nCache-Control:\x20
+SF:private\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nServer:\x20\
+SF:r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20
+SF:nosniff\r\nX-Powered-By:\x20ASP\.NET\r\nDate:\x20Sat,\x2016\x20Mar\x202
+SF:019\x2016:03:58\x20GMT\r\nConnection:\x20close\r\nContent-Length:\x2018
+SF:85\r\n\r\n<!DOCTYPE\x20html>\r\n<html>\r\n\x20\x20\x20\x20<head>\r\n\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20<title>The\x20resource\x20cannot\x20be\x20
+SF:found\.</title>\r\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20name=\"view
+SF:port\"\x20content=\"width=device-width\"\x20/>\r\n\x20\x20\x20\x20\x20\
+SF:x20\x20\x20<style>\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20body\x20{font
+SF:-family:\"Verdana\";font-weight:normal;font-size:\x20\.7em;color:black;
+SF:}\x20\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20p\x20{font-family:\"Verdan
+SF:a\";font-weight:normal;color:black;margin-top:\x20-5px}\r\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20b\x20{font-family:\"Verdana\";font-weight:bold;
+SF:color:black;margin-top:\x20-5px}\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0H1\x20{\x20font-family:\"Verdana\";font-weight:normal;font-size:18pt;c
+SF:olor:red\x20}\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20H2\x20{\x20font-fa
+SF:mily:\"Verdana\";font-weight:normal;font-size:14pt;color:maroon\x20}\r\
+SF:n\x20\x20\x20\x20\x20\x20\x20\x20\x20pre\x20{font-family:\"Consolas\",\
+SF:"L");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 18:04:26 2019 -- 1 IP address (1 host up) scanned in 283.52 seconds

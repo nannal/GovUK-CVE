@@ -1,0 +1,389 @@
+# Nmap 7.70 scan initiated Sat Mar 16 18:24:25 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/staffslc.gov.uk staffslc.gov.uk
+Warning: 84.18.208.50 giving up on port because retransmission cap hit (6).
+Nmap scan report for staffslc.gov.uk (84.18.208.50)
+Host is up (0.074s latency).
+rDNS record for 84.18.208.50: mail1-staffs.dedicated-solution.com
+Not shown: 63518 filtered ports, 2002 closed ports
+PORT     STATE SERVICE      VERSION
+21/tcp   open  ftp          Pure-FTPd
+| banner: 220---------- Welcome to Pure-FTPd [privsep] [TLS] ----------\x
+|_0D\x0A220-You are user number 2 of 50 allowed.\x0D\x0A220-Local time...
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+53/tcp   open  domain       NLnet Labs NSD 3.2.18
+80/tcp   open  http         Apache httpd
+|_http-server-header: Apache
+110/tcp  open  pop3         Dovecot pop3d
+|_banner: +OK Dovecot ready.
+143/tcp  open  imap         Dovecot imapd
+| banner: * OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE ID
+|_LE NAMESPACE LITERAL+ STARTTLS AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+443/tcp  open  ssl/http     Apache httpd
+|_http-server-header: Apache
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+465/tcp  open  ssl/smtp     Exim smtpd 4.91
+| banner: 220-mail1-staffs.dedicated-solution.com ESMTP Exim 4.91 #1 Sat,
+|_ 16 Mar 2019 17:34:14 +0000 \x0D\x0A220-We do not authorize the use ...
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+587/tcp  open  smtp         Exim smtpd 4.91
+| banner: 220-mail1-staffs.dedicated-solution.com ESMTP Exim 4.91 #1 Sat,
+|_ 16 Mar 2019 17:34:14 +0000 \x0D\x0A220-We do not authorize the use ...
+993/tcp  open  imaps?
+| banner: * OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE ID
+|_LE NAMESPACE LITERAL+ AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+995/tcp  open  pop3s?
+|_banner: +OK Dovecot ready.
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+2082/tcp open  infowave?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 301 Moved
+|     Content-length: 141
+|     Location: https://mail1-staffs.dedicated-solution.com:2083/sip%3anm
+|     Content-type: text/html; charset="utf-8"
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|_    <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://mail1-staffs.dedicated-solution.com:2083/sip%3anm"></head><body></body></html>
+2083/tcp open  ssl/radsec?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 17:31:56 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=%3aPYsYvYgC6CPX3KOU%2c53574ced1d78d609d2a735284da9a394; HttpOnly; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=mail1-staffs.dedicated-solution.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.mail1-staffs.dedicated-solution.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: hord
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 17:31:58 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=%3asF160ZjZcWV2Km_n%2caa2a583c321611ca3c768ddd5c15d310; HttpOnly; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=mail1-staffs.dedicated-solution.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.mail1-staffs.dedicated-solution.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|_    Set-Cookie: hord
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2086/tcp open  gnunet?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 301 Moved
+|     Content-length: 141
+|     Location: https://mail1-staffs.dedicated-solution.com:2087/sip%3anm
+|     Content-type: text/html; charset="utf-8"
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|_    <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://mail1-staffs.dedicated-solution.com:2087/sip%3anm"></head><body></body></html>
+2087/tcp open  ssl/eli?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 17:31:55 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="Web Host Manager"
+|     Set-Cookie: whostmgrrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: whostmgrsession=%3akY0La6MTGwC2dIzl%2c781d2dd6064b6fa8519f2b0d5c007417; HttpOnly; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=mail1-staffs.dedicated-solution.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.mail1-staffs.dedicated-solution.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; se
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 17:32:01 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="Web Host Manager"
+|     Set-Cookie: whostmgrrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: whostmgrsession=%3aOfFn47219A9ThMWT%2c5df92902ee4114669ec76bb2c9bd1133; HttpOnly; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=mail1-staffs.dedicated-solution.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|_    Set-Cookie: Horde=expired; HttpOnly; domain=.mail1-staffs.dedicated-solution.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; se
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2095/tcp open  nbx-ser?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 301 Moved
+|     Content-length: 141
+|     Location: https://mail1-staffs.dedicated-solution.com:2096/sip%3anm
+|     Content-type: text/html; charset="utf-8"
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|_    <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://mail1-staffs.dedicated-solution.com:2096/sip%3anm"></head><body></body></html>
+2096/tcp open  ssl/nbx-dir?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 17:32:06 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=%3aJ8OtGs2BTlM6bVDK%2c35a85d6cca8bacc20d556a4676028298; HttpOnly; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=mail1-staffs.dedicated-solution.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.mail1-staffs.dedicated-solution.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-C
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 17:32:08 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=%3aztF28EtjwpdNjUCy%2c0adb4644ba1a7eb6a16c0d36af0e7fb3; HttpOnly; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=mail1-staffs.dedicated-solution.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.mail1-staffs.dedicated-solution.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|_    Set-C
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+6 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2082-TCP:V=7.70%I=7%D=3/16%Time=5C8D3351%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,164,"HTTP/1\.1\x20301\x20Moved\r\nContent-length:\x20141\
+SF:r\nLocation:\x20https://mail1-staffs\.dedicated-solution\.com:2083/sip%
+SF:3anm\r\nContent-type:\x20text/html;\x20charset=\"utf-8\"\r\nCache-Contr
+SF:ol:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\n\r\n<ht
+SF:ml><head><META\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://mai
+SF:l1-staffs\.dedicated-solution\.com:2083/sip%3anm\"></head><body></body>
+SF:</html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2083-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D330A%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2017:31:56\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"cPanel\"\r\nSet-Cook
+SF:ie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:
+SF:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20cpse
+SF:ssion=%3aPYsYvYgC6CPX3KOU%2c53574ced1d78d609d2a735284da9a394;\x20HttpOn
+SF:ly;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_sess
+SF:id=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20
+SF:GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_ses
+SF:sauth=expired;\x20HttpOnly;\x20domain=mail1-staffs\.dedicated-solution\
+SF:.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20
+SF:port=2083;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20d
+SF:omain=\.mail1-staffs\.dedicated-solution\.com;\x20expires=Thu,\x2001-Ja
+SF:n-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Co
+SF:okie:\x20hord")%r(HTTPOptions,4000,"HTTP/1\.0\x20401\x20Access\x20Denie
+SF:d\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"u
+SF:tf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2017:31:58\x20GMT\r\nCach
+SF:e-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\n
+SF:Pragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"cPanel\"\r
+SF:\nSet-Cookie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1
+SF:970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cooki
+SF:e:\x20cpsession=%3asF160ZjZcWV2Km_n%2caa2a583c321611ca3c768ddd5c15d310;
+SF:\x20HttpOnly;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roun
+SF:dcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000
+SF::00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20rou
+SF:ndcube_sessauth=expired;\x20HttpOnly;\x20domain=mail1-staffs\.dedicated
+SF:-solution\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20p
+SF:ath=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20Http
+SF:Only;\x20domain=\.mail1-staffs\.dedicated-solution\.com;\x20expires=Thu
+SF:,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure
+SF:\r\nSet-Cookie:\x20hord");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2086-TCP:V=7.70%I=7%D=3/16%Time=5C8D334B%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,164,"HTTP/1\.1\x20301\x20Moved\r\nContent-length:\x20141\
+SF:r\nLocation:\x20https://mail1-staffs\.dedicated-solution\.com:2087/sip%
+SF:3anm\r\nContent-type:\x20text/html;\x20charset=\"utf-8\"\r\nCache-Contr
+SF:ol:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\n\r\n<ht
+SF:ml><head><META\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://mai
+SF:l1-staffs\.dedicated-solution\.com:2087/sip%3anm\"></head><body></body>
+SF:</html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2087-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D330A%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2017:31:55\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"Web\x20Host\x20Manag
+SF:er\"\r\nSet-Cookie:\x20whostmgrrelogin=no;\x20HttpOnly;\x20expires=Thu,
+SF:\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\
+SF:r\nSet-Cookie:\x20whostmgrsession=%3akY0La6MTGwC2dIzl%2c781d2dd6064b6fa
+SF:8519f2b0d5c007417;\x20HttpOnly;\x20path=/;\x20port=2087;\x20secure\r\nS
+SF:et-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2
+SF:001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\n
+SF:Set-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=mail1
+SF:-staffs\.dedicated-solution\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:
+SF:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\nSet-Cookie:\x20Hord
+SF:e=expired;\x20HttpOnly;\x20domain=\.mail1-staffs\.dedicated-solution\.c
+SF:om;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20po
+SF:rt=2087;\x20se")%r(HTTPOptions,4000,"HTTP/1\.0\x20401\x20Access\x20Deni
+SF:ed\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"
+SF:utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2017:32:01\x20GMT\r\nCac
+SF:he-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\
+SF:nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"Web\x20Ho
+SF:st\x20Manager\"\r\nSet-Cookie:\x20whostmgrrelogin=no;\x20HttpOnly;\x20e
+SF:xpires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;
+SF:\x20secure\r\nSet-Cookie:\x20whostmgrsession=%3aOfFn47219A9ThMWT%2c5df9
+SF:2902ee4114669ec76bb2c9bd1133;\x20HttpOnly;\x20path=/;\x20port=2087;\x20
+SF:secure\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expi
+SF:res=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x2
+SF:0secure\r\nSet-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20d
+SF:omain=mail1-staffs\.dedicated-solution\.com;\x20expires=Thu,\x2001-Jan-
+SF:1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\nSet-Cook
+SF:ie:\x20Horde=expired;\x20HttpOnly;\x20domain=\.mail1-staffs\.dedicated-
+SF:solution\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20pa
+SF:th=/;\x20port=2087;\x20se");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2095-TCP:V=7.70%I=7%D=3/16%Time=5C8D334C%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,164,"HTTP/1\.1\x20301\x20Moved\r\nContent-length:\x20141\
+SF:r\nLocation:\x20https://mail1-staffs\.dedicated-solution\.com:2096/sip%
+SF:3anm\r\nContent-type:\x20text/html;\x20charset=\"utf-8\"\r\nCache-Contr
+SF:ol:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\n\r\n<ht
+SF:ml><head><META\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://mai
+SF:l1-staffs\.dedicated-solution\.com:2096/sip%3anm\"></head><body></body>
+SF:</html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2096-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D3314%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2017:32:06\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"WebMail\"\r\nSet-Coo
+SF:kie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\
+SF:x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x
+SF:20webmailsession=%3aJ8OtGs2BTlM6bVDK%2c35a85d6cca8bacc20d556a4676028298
+SF:;\x20HttpOnly;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20rou
+SF:ndcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x200
+SF:0:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20ro
+SF:undcube_sessauth=expired;\x20HttpOnly;\x20domain=mail1-staffs\.dedicate
+SF:d-solution\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20
+SF:path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20Htt
+SF:pOnly;\x20domain=\.mail1-staffs\.dedicated-solution\.com;\x20expires=Th
+SF:u,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secur
+SF:e\r\nSet-C")%r(HTTPOptions,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r
+SF:\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-
+SF:8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2017:32:08\x20GMT\r\nCache-C
+SF:ontrol:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPra
+SF:gma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"WebMail\"\r\n
+SF:Set-Cookie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Ja
+SF:n-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Co
+SF:okie:\x20webmailsession=%3aztF28EtjwpdNjUCy%2c0adb4644ba1a7eb6a16c0d36a
+SF:f0e7fb3;\x20HttpOnly;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:
+SF:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-19
+SF:70\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie
+SF::\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=mail1-staffs\.d
+SF:edicated-solution\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20G
+SF:MT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20Horde=expired;
+SF:\x20HttpOnly;\x20domain=\.mail1-staffs\.dedicated-solution\.com;\x20exp
+SF:ires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x
+SF:20secure\r\nSet-C");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 19:34:59 2019 -- 1 IP address (1 host up) scanned in 4233.52 seconds

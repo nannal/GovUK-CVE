@@ -1,0 +1,475 @@
+# Nmap 7.70 scan initiated Sat Mar 16 11:52:39 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/leistontowncouncil.gov.uk leistontowncouncil.gov.uk
+Warning: 35.178.144.173 giving up on port because retransmission cap hit (6).
+Nmap scan report for leistontowncouncil.gov.uk (35.178.144.173)
+Host is up (0.069s latency).
+rDNS record for 35.178.144.173: ec2-35-178-144-173.eu-west-2.compute.amazonaws.com
+Not shown: 49158 filtered ports, 16358 closed ports
+PORT     STATE SERVICE        VERSION
+21/tcp   open  ftp            Pure-FTPd
+| banner: 220---------- Welcome to Pure-FTPd [privsep] [TLS] ----------\x
+|_0D\x0A220-You are user number 1 of 50 allowed.\x0D\x0A220-Local time...
+22/tcp   open  ssh?
+53/tcp   open  domain         ISC BIND 9.9.4 (RedHat Enterprise Linux 7)
+80/tcp   open  http           Apache httpd
+|_http-server-header: Apache
+110/tcp  open  pop3           Dovecot pop3d
+|_banner: +OK Dovecot ready.
+143/tcp  open  imap           Dovecot imapd
+| banner: * OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE ID
+|_LE NAMESPACE LITERAL+ STARTTLS AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+443/tcp  open  ssl/http       Apache httpd
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+465/tcp  open  ssl/smtp       Exim smtpd 4.91
+| banner: 220-cp4.ebe.co ESMTP Exim 4.91 #1 Sat, 16 Mar 2019 11:09:23 +00
+|_00 \x0D\x0A220-We do not authorize the use of this system to transpo...
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+993/tcp  open  imaps?
+| banner: * OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE ID
+|_LE NAMESPACE LITERAL+ AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+995/tcp  open  pop3s?
+|_banner: +OK Dovecot ready.
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+2077/tcp open  tsrmagt?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 302 Moved
+|     Date: Sat, 16 Mar 2019 11:07:59 GMT
+|     Server: cPanel
+|     Persistent-Auth: false
+|     Host: cp4.ebe.co:2077
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Connection: close
+|     Location: https://cp4.ebe.co:2078sip:nm
+|     Vary: Accept-Encoding
+|     Expires: Fri, 01 Jan 1990 00:00:00 GMT
+|_    X-Redirect-Reason: requiressl
+2078/tcp open  ssl/http       cPanel httpd (unauthorized)
+|_http-server-header: cPanel
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+| 
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2079/tcp open  idware-router?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 302 Moved
+|     Date: Sat, 16 Mar 2019 11:07:53 GMT
+|     Server: cPanel
+|     Persistent-Auth: false
+|     Host: cp4.ebe.co:2079
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Connection: close
+|     Location: https://cp4.ebe.co:2080sip:nm
+|     Vary: Accept-Encoding
+|     Expires: Fri, 01 Jan 1990 00:00:00 GMT
+|_    X-Redirect-Reason: requiressl
+2080/tcp open  ssl/http       cPanel httpd (unauthorized)
+|_http-server-header: cPanel
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2082/tcp open  infowave?
+| banner: HTTP/1.0 401 Access Denied\x0D\x0AConnection: close\x0D\x0ACont
+|_ent-Type: text/html; charset="utf-8"\x0D\x0ADate: Sat, 16 Mar 2019 1...
+| fingerprint-strings: 
+|   GenericLines, NULL: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 11:06:13 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     X-Error-Message: Access Denied
+|     Content-Length: 5081
+|     <!DOCTYPE html>
+|     <html lang="en" dir="ltr">
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+|     <meta name="google" content="notranslate" />
+|     <meta name="apple-itunes-app" content="app-id=1188352635" />
+|     <title>cPanel Login</title>
+|_    <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAICAAAAEAIADSAgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAAplJREFUWIXt1j2IHGUYB/DfOzdnjIKFkECIVWIKvUFsIkRExa9KJCLaWAgWJx4DilZWgpDDiI0wiViIoGATP1CCEDYHSeCwUBBkgiiKURQJFiLo4d0eOxYzC8nsO9m9XcXC+8MW+3z+9/l6l2383xH+iSBp
+2083/tcp open  ssl/radsec?
+| banner: HTTP/1.0 401 Access Denied\x0D\x0AConnection: close\x0D\x0ACont
+|_ent-Type: text/html; charset="utf-8"\x0D\x0ADate: Sat, 16 Mar 2019 1...
+| fingerprint-strings: 
+|   GenericLines, NULL: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 11:06:34 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     X-Error-Message: Access Denied
+|     Content-Length: 5081
+|     <!DOCTYPE html>
+|     <html lang="en" dir="ltr">
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+|     <meta name="google" content="notranslate" />
+|     <meta name="apple-itunes-app" content="app-id=1188352635" />
+|     <title>cPanel Login</title>
+|_    <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAICAAAAEAIADSAgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAAplJREFUWIXt1j2IHGUYB/DfOzdnjIKFkECIVWIKvUFsIkRExa9KJCLaWAgWJx4DilZWgpDDiI0wiViIoGATP1CCEDYHSeCwUBBkgiiKURQJFiLo4d0eOxYzC8nsO9m9XcXC+8MW+3z+9/l6l2383xH+iSBp
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2086/tcp open  gnunet?
+| banner: HTTP/1.0 401 Access Denied\x0D\x0AConnection: close\x0D\x0ACont
+|_ent-Type: text/html; charset="utf-8"\x0D\x0ADate: Sat, 16 Mar 2019 1...
+| fingerprint-strings: 
+|   GenericLines, NULL: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 11:06:13 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     X-Error-Message: Access Denied
+|     Content-Length: 5079
+|     <!DOCTYPE html>
+|     <html lang="en" dir="ltr">
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+|     <meta name="google" content="notranslate" />
+|     <meta name="apple-itunes-app" content="app-id=1188352635" />
+|     <title>WHM Login</title>
+|_    <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAICAAAAEAIADSAgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAAplJREFUWIXt1j2IHGUYB/DfOzdnjIKFkECIVWIKvUFsIkRExa9KJCLaWAgWJx4DilZWgpDDiI0wiViIoGATP1CCEDYHSeCwUBBkgiiKURQJFiLo4d0eOxYzC8nsO9m9XcXC+8MW+3z+9/l6l2383xH+iSBpEly
+2087/tcp open  ssl/eli?
+| banner: HTTP/1.0 401 Access Denied\x0D\x0AConnection: close\x0D\x0ACont
+|_ent-Type: text/html; charset="utf-8"\x0D\x0ADate: Sat, 16 Mar 2019 1...
+| fingerprint-strings: 
+|   GenericLines, NULL: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 11:06:34 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     X-Error-Message: Access Denied
+|     Content-Length: 5079
+|     <!DOCTYPE html>
+|     <html lang="en" dir="ltr">
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+|     <meta name="google" content="notranslate" />
+|     <meta name="apple-itunes-app" content="app-id=1188352635" />
+|     <title>WHM Login</title>
+|_    <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAICAAAAEAIADSAgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAAplJREFUWIXt1j2IHGUYB/DfOzdnjIKFkECIVWIKvUFsIkRExa9KJCLaWAgWJx4DilZWgpDDiI0wiViIoGATP1CCEDYHSeCwUBBkgiiKURQJFiLo4d0eOxYzC8nsO9m9XcXC+8MW+3z+9/l6l2383xH+iSBpEly
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2095/tcp open  nbx-ser?
+2096/tcp open  ssl/nbx-dir?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 11:06:46 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=%3aOfnCBKngtuKsZdpx%2c571d6886b40ba93e01ce6df2919b2fc1; HttpOnly; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=cp4.ebe.co; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.cp4.ebe.co; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: horde_secret_key=expired; HttpOnly; domain=
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 11:06:49 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=%3aUOFNkH5vKSG_tHCZ%2c0391d49c77bd43dffab1d3b476242000; HttpOnly; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=cp4.ebe.co; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.cp4.ebe.co; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|_    Set-Cookie: horde_secret_key=expired; HttpOnly; domain=
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+7 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2077-TCP:V=7.70%I=7%D=3/16%Time=5C8CD90B%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,151,"HTTP/1\.1\x20302\x20Moved\r\nDate:\x20Sat,\x2016\x20
+SF:Mar\x202019\x2011:07:59\x20GMT\r\nServer:\x20cPanel\r\nPersistent-Auth:
+SF:\x20false\r\nHost:\x20cp4\.ebe\.co:2077\r\nCache-Control:\x20no-cache,\
+SF:x20no-store,\x20must-revalidate,\x20private\r\nConnection:\x20close\r\n
+SF:Location:\x20https://cp4\.ebe\.co:2078sip:nm\r\nVary:\x20Accept-Encodin
+SF:g\r\nExpires:\x20Fri,\x2001\x20Jan\x201990\x2000:00:00\x20GMT\r\nX-Redi
+SF:rect-Reason:\x20requiressl\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2079-TCP:V=7.70%I=7%D=3/16%Time=5C8CD905%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,151,"HTTP/1\.1\x20302\x20Moved\r\nDate:\x20Sat,\x2016\x20
+SF:Mar\x202019\x2011:07:53\x20GMT\r\nServer:\x20cPanel\r\nPersistent-Auth:
+SF:\x20false\r\nHost:\x20cp4\.ebe\.co:2079\r\nCache-Control:\x20no-cache,\
+SF:x20no-store,\x20must-revalidate,\x20private\r\nConnection:\x20close\r\n
+SF:Location:\x20https://cp4\.ebe\.co:2080sip:nm\r\nVary:\x20Accept-Encodin
+SF:g\r\nExpires:\x20Fri,\x2001\x20Jan\x201990\x2000:00:00\x20GMT\r\nX-Redi
+SF:rect-Reason:\x20requiressl\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2082-TCP:V=7.70%I=7%D=3/16%Time=5C8CD8A1%P=x86_64-unknown-linux-gnu
+SF:%r(NULL,10F8,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConnection:\x20cl
+SF:ose\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\x20Sat
+SF:,\x2016\x20Mar\x202019\x2011:06:13\x20GMT\r\nCache-Control:\x20no-cache
+SF:,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-cache\r\
+SF:nX-Error-Message:\x20Access\x20Denied\r\nContent-Length:\x205081\r\n\r\
+SF:n\n<!DOCTYPE\x20html>\n<html\x20lang=\"en\"\x20dir=\"ltr\">\n<head>\n\x
+SF:20\x20\x20\x20<meta\x20http-equiv=\"Content-Type\"\x20content=\"text/ht
+SF:ml;\x20charset=utf-8\"\x20/>\n\x20\x20\x20\x20<meta\x20name=\"viewport\
+SF:"\x20content=\"width=device-width,\x20initial-scale=1\.0\">\n\x20\x20\x
+SF:20\x20<meta\x20name=\"google\"\x20content=\"notranslate\"\x20/>\n\x20\x
+SF:20\x20\x20<meta\x20name=\"apple-itunes-app\"\x20content=\"app-id=118835
+SF:2635\"\x20/>\n\x20\x20\x20\x20<title>cPanel\x20Login</title>\n\x20\x20\
+SF:x20\x20<link\x20rel=\"shortcut\x20icon\"\x20href=\"data:image/x-icon;ba
+SF:se64,AAABAAEAICAAAAEAIADSAgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAA
+SF:AAc3p69AAAAplJREFUWIXt1j2IHGUYB/DfOzdnjIKFkECIVWIKvUFsIkRExa9KJCLaWAgWJ
+SF:x4DilZWgpDDiI0wiViIoGATP1CCEDYHSeCwUBBkgiiKURQJFiLo4d0eOxYzC8nsO9m9XcXC
+SF:\+8MW\+3z\+9/l6l2383xH\+iSBp")%r(GenericLines,14DE,"HTTP/1\.0\x20401\x2
+SF:0Access\x20Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html
+SF:;\x20charset=\"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2011:06:1
+SF:3\x20GMT\r\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate
+SF:,\x20private\r\nPragma:\x20no-cache\r\nX-Error-Message:\x20Access\x20De
+SF:nied\r\nContent-Length:\x205081\r\n\r\n\n<!DOCTYPE\x20html>\n<html\x20l
+SF:ang=\"en\"\x20dir=\"ltr\">\n<head>\n\x20\x20\x20\x20<meta\x20http-equiv
+SF:=\"Content-Type\"\x20content=\"text/html;\x20charset=utf-8\"\x20/>\n\x2
+SF:0\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=device-width
+SF:,\x20initial-scale=1\.0\">\n\x20\x20\x20\x20<meta\x20name=\"google\"\x2
+SF:0content=\"notranslate\"\x20/>\n\x20\x20\x20\x20<meta\x20name=\"apple-i
+SF:tunes-app\"\x20content=\"app-id=1188352635\"\x20/>\n\x20\x20\x20\x20<ti
+SF:tle>cPanel\x20Login</title>\n\x20\x20\x20\x20<link\x20rel=\"shortcut\x2
+SF:0icon\"\x20href=\"data:image/x-icon;base64,AAABAAEAICAAAAEAIADSAgAAFgAA
+SF:AIlQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAAplJREFUWIXt1j2IHGUYB/D
+SF:fOzdnjIKFkECIVWIKvUFsIkRExa9KJCLaWAgWJx4DilZWgpDDiI0wiViIoGATP1CCEDYHSe
+SF:CwUBBkgiiKURQJFiLo4d0eOxYzC8nsO9m9XcXC\+8MW\+3z\+9/l6l2383xH\+iSBp");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2083-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CD8B6%P=x86_64-unknown-lin
+SF:ux-gnu%r(NULL,14DE,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConnection:
+SF:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\
+SF:x20Sat,\x2016\x20Mar\x202019\x2011:06:34\x20GMT\r\nCache-Control:\x20no
+SF:-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-ca
+SF:che\r\nX-Error-Message:\x20Access\x20Denied\r\nContent-Length:\x205081\
+SF:r\n\r\n\n<!DOCTYPE\x20html>\n<html\x20lang=\"en\"\x20dir=\"ltr\">\n<hea
+SF:d>\n\x20\x20\x20\x20<meta\x20http-equiv=\"Content-Type\"\x20content=\"t
+SF:ext/html;\x20charset=utf-8\"\x20/>\n\x20\x20\x20\x20<meta\x20name=\"vie
+SF:wport\"\x20content=\"width=device-width,\x20initial-scale=1\.0\">\n\x20
+SF:\x20\x20\x20<meta\x20name=\"google\"\x20content=\"notranslate\"\x20/>\n
+SF:\x20\x20\x20\x20<meta\x20name=\"apple-itunes-app\"\x20content=\"app-id=
+SF:1188352635\"\x20/>\n\x20\x20\x20\x20<title>cPanel\x20Login</title>\n\x2
+SF:0\x20\x20\x20<link\x20rel=\"shortcut\x20icon\"\x20href=\"data:image/x-i
+SF:con;base64,AAABAAEAICAAAAEAIADSAgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAgAAAA
+SF:IAgGAAAAc3p69AAAAplJREFUWIXt1j2IHGUYB/DfOzdnjIKFkECIVWIKvUFsIkRExa9KJCL
+SF:aWAgWJx4DilZWgpDDiI0wiViIoGATP1CCEDYHSeCwUBBkgiiKURQJFiLo4d0eOxYzC8nsO9
+SF:m9XcXC\+8MW\+3z\+9/l6l2383xH\+iSBp")%r(GenericLines,14DE,"HTTP/1\.0\x20
+SF:401\x20Access\x20Denied\r\nConnection:\x20close\r\nContent-Type:\x20tex
+SF:t/html;\x20charset=\"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x201
+SF:1:06:34\x20GMT\r\nCache-Control:\x20no-cache,\x20no-store,\x20must-reva
+SF:lidate,\x20private\r\nPragma:\x20no-cache\r\nX-Error-Message:\x20Access
+SF:\x20Denied\r\nContent-Length:\x205081\r\n\r\n\n<!DOCTYPE\x20html>\n<htm
+SF:l\x20lang=\"en\"\x20dir=\"ltr\">\n<head>\n\x20\x20\x20\x20<meta\x20http
+SF:-equiv=\"Content-Type\"\x20content=\"text/html;\x20charset=utf-8\"\x20/
+SF:>\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=device
+SF:-width,\x20initial-scale=1\.0\">\n\x20\x20\x20\x20<meta\x20name=\"googl
+SF:e\"\x20content=\"notranslate\"\x20/>\n\x20\x20\x20\x20<meta\x20name=\"a
+SF:pple-itunes-app\"\x20content=\"app-id=1188352635\"\x20/>\n\x20\x20\x20\
+SF:x20<title>cPanel\x20Login</title>\n\x20\x20\x20\x20<link\x20rel=\"short
+SF:cut\x20icon\"\x20href=\"data:image/x-icon;base64,AAABAAEAICAAAAEAIADSAg
+SF:AAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAAplJREFUWIXt1j2IH
+SF:GUYB/DfOzdnjIKFkECIVWIKvUFsIkRExa9KJCLaWAgWJx4DilZWgpDDiI0wiViIoGATP1CC
+SF:EDYHSeCwUBBkgiiKURQJFiLo4d0eOxYzC8nsO9m9XcXC\+8MW\+3z\+9/l6l2383xH\+iSB
+SF:p");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2086-TCP:V=7.70%I=7%D=3/16%Time=5C8CD8A1%P=x86_64-unknown-linux-gnu
+SF:%r(NULL,14DC,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConnection:\x20cl
+SF:ose\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\x20Sat
+SF:,\x2016\x20Mar\x202019\x2011:06:13\x20GMT\r\nCache-Control:\x20no-cache
+SF:,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-cache\r\
+SF:nX-Error-Message:\x20Access\x20Denied\r\nContent-Length:\x205079\r\n\r\
+SF:n\n<!DOCTYPE\x20html>\n<html\x20lang=\"en\"\x20dir=\"ltr\">\n<head>\n\x
+SF:20\x20\x20\x20<meta\x20http-equiv=\"Content-Type\"\x20content=\"text/ht
+SF:ml;\x20charset=utf-8\"\x20/>\n\x20\x20\x20\x20<meta\x20name=\"viewport\
+SF:"\x20content=\"width=device-width,\x20initial-scale=1\.0\">\n\x20\x20\x
+SF:20\x20<meta\x20name=\"google\"\x20content=\"notranslate\"\x20/>\n\x20\x
+SF:20\x20\x20<meta\x20name=\"apple-itunes-app\"\x20content=\"app-id=118835
+SF:2635\"\x20/>\n\x20\x20\x20\x20<title>WHM\x20Login</title>\n\x20\x20\x20
+SF:\x20<link\x20rel=\"shortcut\x20icon\"\x20href=\"data:image/x-icon;base6
+SF:4,AAABAAEAICAAAAEAIADSAgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc
+SF:3p69AAAAplJREFUWIXt1j2IHGUYB/DfOzdnjIKFkECIVWIKvUFsIkRExa9KJCLaWAgWJx4D
+SF:ilZWgpDDiI0wiViIoGATP1CCEDYHSeCwUBBkgiiKURQJFiLo4d0eOxYzC8nsO9m9XcXC\+8
+SF:MW\+3z\+9/l6l2383xH\+iSBpEly")%r(GenericLines,14DC,"HTTP/1\.0\x20401\x2
+SF:0Access\x20Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html
+SF:;\x20charset=\"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2011:06:1
+SF:3\x20GMT\r\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate
+SF:,\x20private\r\nPragma:\x20no-cache\r\nX-Error-Message:\x20Access\x20De
+SF:nied\r\nContent-Length:\x205079\r\n\r\n\n<!DOCTYPE\x20html>\n<html\x20l
+SF:ang=\"en\"\x20dir=\"ltr\">\n<head>\n\x20\x20\x20\x20<meta\x20http-equiv
+SF:=\"Content-Type\"\x20content=\"text/html;\x20charset=utf-8\"\x20/>\n\x2
+SF:0\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=device-width
+SF:,\x20initial-scale=1\.0\">\n\x20\x20\x20\x20<meta\x20name=\"google\"\x2
+SF:0content=\"notranslate\"\x20/>\n\x20\x20\x20\x20<meta\x20name=\"apple-i
+SF:tunes-app\"\x20content=\"app-id=1188352635\"\x20/>\n\x20\x20\x20\x20<ti
+SF:tle>WHM\x20Login</title>\n\x20\x20\x20\x20<link\x20rel=\"shortcut\x20ic
+SF:on\"\x20href=\"data:image/x-icon;base64,AAABAAEAICAAAAEAIADSAgAAFgAAAIl
+SF:QTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAAplJREFUWIXt1j2IHGUYB/DfOz
+SF:dnjIKFkECIVWIKvUFsIkRExa9KJCLaWAgWJx4DilZWgpDDiI0wiViIoGATP1CCEDYHSeCwU
+SF:BBkgiiKURQJFiLo4d0eOxYzC8nsO9m9XcXC\+8MW\+3z\+9/l6l2383xH\+iSBpEly");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2087-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CD8B6%P=x86_64-unknown-lin
+SF:ux-gnu%r(NULL,14DC,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConnection:
+SF:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\
+SF:x20Sat,\x2016\x20Mar\x202019\x2011:06:34\x20GMT\r\nCache-Control:\x20no
+SF:-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-ca
+SF:che\r\nX-Error-Message:\x20Access\x20Denied\r\nContent-Length:\x205079\
+SF:r\n\r\n\n<!DOCTYPE\x20html>\n<html\x20lang=\"en\"\x20dir=\"ltr\">\n<hea
+SF:d>\n\x20\x20\x20\x20<meta\x20http-equiv=\"Content-Type\"\x20content=\"t
+SF:ext/html;\x20charset=utf-8\"\x20/>\n\x20\x20\x20\x20<meta\x20name=\"vie
+SF:wport\"\x20content=\"width=device-width,\x20initial-scale=1\.0\">\n\x20
+SF:\x20\x20\x20<meta\x20name=\"google\"\x20content=\"notranslate\"\x20/>\n
+SF:\x20\x20\x20\x20<meta\x20name=\"apple-itunes-app\"\x20content=\"app-id=
+SF:1188352635\"\x20/>\n\x20\x20\x20\x20<title>WHM\x20Login</title>\n\x20\x
+SF:20\x20\x20<link\x20rel=\"shortcut\x20icon\"\x20href=\"data:image/x-icon
+SF:;base64,AAABAAEAICAAAAEAIADSAgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAgAAAAIAg
+SF:GAAAAc3p69AAAAplJREFUWIXt1j2IHGUYB/DfOzdnjIKFkECIVWIKvUFsIkRExa9KJCLaWA
+SF:gWJx4DilZWgpDDiI0wiViIoGATP1CCEDYHSeCwUBBkgiiKURQJFiLo4d0eOxYzC8nsO9m9X
+SF:cXC\+8MW\+3z\+9/l6l2383xH\+iSBpEly")%r(GenericLines,14DC,"HTTP/1\.0\x20
+SF:401\x20Access\x20Denied\r\nConnection:\x20close\r\nContent-Type:\x20tex
+SF:t/html;\x20charset=\"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x201
+SF:1:06:34\x20GMT\r\nCache-Control:\x20no-cache,\x20no-store,\x20must-reva
+SF:lidate,\x20private\r\nPragma:\x20no-cache\r\nX-Error-Message:\x20Access
+SF:\x20Denied\r\nContent-Length:\x205079\r\n\r\n\n<!DOCTYPE\x20html>\n<htm
+SF:l\x20lang=\"en\"\x20dir=\"ltr\">\n<head>\n\x20\x20\x20\x20<meta\x20http
+SF:-equiv=\"Content-Type\"\x20content=\"text/html;\x20charset=utf-8\"\x20/
+SF:>\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=device
+SF:-width,\x20initial-scale=1\.0\">\n\x20\x20\x20\x20<meta\x20name=\"googl
+SF:e\"\x20content=\"notranslate\"\x20/>\n\x20\x20\x20\x20<meta\x20name=\"a
+SF:pple-itunes-app\"\x20content=\"app-id=1188352635\"\x20/>\n\x20\x20\x20\
+SF:x20<title>WHM\x20Login</title>\n\x20\x20\x20\x20<link\x20rel=\"shortcut
+SF:\x20icon\"\x20href=\"data:image/x-icon;base64,AAABAAEAICAAAAEAIADSAgAAF
+SF:gAAAIlQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAAplJREFUWIXt1j2IHGUY
+SF:B/DfOzdnjIKFkECIVWIKvUFsIkRExa9KJCLaWAgWJx4DilZWgpDDiI0wiViIoGATP1CCEDY
+SF:HSeCwUBBkgiiKURQJFiLo4d0eOxYzC8nsO9m9XcXC\+8MW\+3z\+9/l6l2383xH\+iSBpEl
+SF:y");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2096-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CD8C4%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2011:06:46\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"WebMail\"\r\nSet-Coo
+SF:kie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\
+SF:x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x
+SF:20webmailsession=%3aOfnCBKngtuKsZdpx%2c571d6886b40ba93e01ce6df2919b2fc1
+SF:;\x20HttpOnly;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20rou
+SF:ndcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x200
+SF:0:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20ro
+SF:undcube_sessauth=expired;\x20HttpOnly;\x20domain=cp4\.ebe\.co;\x20expir
+SF:es=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20
+SF:secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20domain=\.cp4\.e
+SF:be\.co;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x
+SF:20port=2096;\x20secure\r\nSet-Cookie:\x20horde_secret_key=expired;\x20H
+SF:ttpOnly;\x20domain=")%r(HTTPOptions,4000,"HTTP/1\.0\x20401\x20Access\x2
+SF:0Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20chars
+SF:et=\"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2011:06:49\x20GMT\r
+SF:\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20priva
+SF:te\r\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"WebM
+SF:ail\"\r\nSet-Cookie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,
+SF:\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\
+SF:r\nSet-Cookie:\x20webmailsession=%3aUOFNkH5vKSG_tHCZ%2c0391d49c77bd43df
+SF:fab1d3b476242000;\x20HttpOnly;\x20path=/;\x20port=2096;\x20secure\r\nSe
+SF:t-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x20
+SF:01-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nS
+SF:et-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=cp4\.e
+SF:be\.co;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x
+SF:20port=2096;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x2
+SF:0domain=\.cp4\.ebe\.co;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20G
+SF:MT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20horde_secret_k
+SF:ey=expired;\x20HttpOnly;\x20domain=");
+Service Info: Host: cp4.ebe.co; OS: Linux; CPE: cpe:/o:redhat:enterprise_linux:7
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 13:09:39 2019 -- 1 IP address (1 host up) scanned in 4620.51 seconds

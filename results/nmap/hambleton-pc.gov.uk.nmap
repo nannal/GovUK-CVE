@@ -1,0 +1,169 @@
+# Nmap 7.70 scan initiated Sat Mar 16 09:42:11 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/hambleton-pc.gov.uk hambleton-pc.gov.uk
+Nmap scan report for hambleton-pc.gov.uk (31.6.76.190)
+Host is up (0.13s latency).
+rDNS record for 31.6.76.190: advansys.com
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Sat, 16 Mar 2019 08:28:58 GMT
+|     Server: 
+|     Vary: Accept-Encoding
+|     Content-Length: 880
+|     Connection: close
+|     Content-Type: text/html; charset=UTF-8
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+|     <html>
+|     <head>
+|     <title>Advansys</title>
+|     <style>
+|     body {
+|     background: #224466; /* Old browsers */
+|     background: -moz-linear-gradient(top, #335577 0%, #224466 100%); /* FF3.6-15 */
+|     background: -webkit-linear-gradient(top, #335577 0%,#224466 100%); /* Chrome10-25,Safari5.1-6 */
+|     background: linear-gradient(to bottom, #335577 0%,#224466 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+|     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#335577', endColorstr='#224466',GradientType=0 ); /* IE6-9 */
+|     {font-family: Arial; font-weight: bold; font-size: 16px; color: #c0c0c0;}
+|     </style>
+|     <body>
+|     <table width="100%" height="100%">
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Sat, 16 Mar 2019 08:29:00 GMT
+|     Server: 
+|     Vary: Accept-Encoding
+|     Content-Length: 880
+|     Connection: close
+|     Content-Type: text/html; charset=UTF-8
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+|     <html>
+|     <head>
+|     <title>Advansys</title>
+|     <style>
+|     body {
+|     background: #224466; /* Old browsers */
+|     background: -moz-linear-gradient(top, #335577 0%, #224466 100%); /* FF3.6-15 */
+|     background: -webkit-linear-gradient(top, #335577 0%,#224466 100%); /* Chrome10-25,Safari5.1-6 */
+|     background: linear-gradient(to bottom, #335577 0%,#224466 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+|     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#335577', endColorstr='#224466',GradientType=0 ); /* IE6-9 */
+|     {font-family: Arial; font-weight: bold; font-size: 16px; color: #c0c0c0;}
+|     </style>
+|     <body>
+|_    <table width="100%" height="100%">
+|_http-server-header: <empty>
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest, HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 16 Mar 2019 08:29:10 GMT
+|     Server: 
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|     </body></html>
+|   GetRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 16 Mar 2019 08:29:09 GMT
+|     Server: 
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|_    </body></html>
+|_http-server-header: <empty>
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8CB27F%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,41A,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2016\x20Mar\x
+SF:202019\x2008:28:58\x20GMT\r\nServer:\x20\x20\r\nVary:\x20Accept-Encodin
+SF:g\r\nContent-Length:\x20880\r\nConnection:\x20close\r\nContent-Type:\x2
+SF:0text/html;\x20charset=UTF-8\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-/
+SF:/W3C//DTD\x20HTML\x204\.0\x20Transitional//EN\">\r\n<html>\r\n<head>\r\
+SF:n<title>Advansys</title>\r\n<style>\r\nbody\x20{\r\nbackground:\x20#224
+SF:466;\x20/\*\x20Old\x20browsers\x20\*/\r\nbackground:\x20-moz-linear-gra
+SF:dient\(top,\x20\x20#335577\x200%,\x20#224466\x20100%\);\x20/\*\x20FF3\.
+SF:6-15\x20\*/\r\nbackground:\x20-webkit-linear-gradient\(top,\x20\x20#335
+SF:577\x200%,#224466\x20100%\);\x20/\*\x20Chrome10-25,Safari5\.1-6\x20\*/\
+SF:r\nbackground:\x20linear-gradient\(to\x20bottom,\x20\x20#335577\x200%,#
+SF:224466\x20100%\);\x20/\*\x20W3C,\x20IE10\+,\x20FF16\+,\x20Chrome26\+,\x
+SF:20Opera12\+,\x20Safari7\+\x20\*/\r\nfilter:\x20progid:DXImageTransform\
+SF:.Microsoft\.gradient\(\x20startColorstr='#335577',\x20endColorstr='#224
+SF:466',GradientType=0\x20\);\x20/\*\x20IE6-9\x20\*/\r\n}\r\np\x20{font-fa
+SF:mily:\x20Arial;\x20font-weight:\x20bold;\x20font-size:\x2016px;\x20colo
+SF:r:\x20#c0c0c0;}\r\n</style>\r\n<body>\r\n<table\x20width=\"100%\"\x20he
+SF:ight=\"100%\">\r\n")%r(HTTPOptions,41A,"HTTP/1\.1\x20200\x20OK\r\nDate:
+SF:\x20Sat,\x2016\x20Mar\x202019\x2008:29:00\x20GMT\r\nServer:\x20\x20\r\n
+SF:Vary:\x20Accept-Encoding\r\nContent-Length:\x20880\r\nConnection:\x20cl
+SF:ose\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\n\r\n<!DOCTYPE\x2
+SF:0HTML\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.0\x20Transitional//EN\">
+SF:\r\n<html>\r\n<head>\r\n<title>Advansys</title>\r\n<style>\r\nbody\x20{
+SF:\r\nbackground:\x20#224466;\x20/\*\x20Old\x20browsers\x20\*/\r\nbackgro
+SF:und:\x20-moz-linear-gradient\(top,\x20\x20#335577\x200%,\x20#224466\x20
+SF:100%\);\x20/\*\x20FF3\.6-15\x20\*/\r\nbackground:\x20-webkit-linear-gra
+SF:dient\(top,\x20\x20#335577\x200%,#224466\x20100%\);\x20/\*\x20Chrome10-
+SF:25,Safari5\.1-6\x20\*/\r\nbackground:\x20linear-gradient\(to\x20bottom,
+SF:\x20\x20#335577\x200%,#224466\x20100%\);\x20/\*\x20W3C,\x20IE10\+,\x20F
+SF:F16\+,\x20Chrome26\+,\x20Opera12\+,\x20Safari7\+\x20\*/\r\nfilter:\x20p
+SF:rogid:DXImageTransform\.Microsoft\.gradient\(\x20startColorstr='#335577
+SF:',\x20endColorstr='#224466',GradientType=0\x20\);\x20/\*\x20IE6-9\x20\*
+SF:/\r\n}\r\np\x20{font-family:\x20Arial;\x20font-weight:\x20bold;\x20font
+SF:-size:\x2016px;\x20color:\x20#c0c0c0;}\r\n</style>\r\n<body>\r\n<table\
+SF:x20width=\"100%\"\x20height=\"100%\">\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CB289%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,183,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20
+SF:Sat,\x2016\x20Mar\x202019\x2008:29:09\x20GMT\r\nServer:\x20\x20\r\nCont
+SF:ent-Length:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/htm
+SF:l;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IET
+SF:F//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Reque
+SF:st</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\
+SF:x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x20not\x20un
+SF:derstand\.<br\x20/>\n</p>\n</body></html>\n")%r(HTTPOptions,183,"HTTP/1
+SF:\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x200
+SF:8:29:10\x20GMT\r\nServer:\x20\x20\r\nContent-Length:\x20226\r\nConnecti
+SF:on:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r
+SF:\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\
+SF:n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head><body>\n<h1
+SF:>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\x20tha
+SF:t\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>\n</p>\n</b
+SF:ody></html>\n")%r(FourOhFourRequest,183,"HTTP/1\.1\x20400\x20Bad\x20Req
+SF:uest\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2008:29:10\x20GMT\r\nServer
+SF::\x20\x20\r\nContent-Length:\x20226\r\nConnection:\x20close\r\nContent-
+SF:Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20P
+SF:UBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>40
+SF:0\x20Bad\x20Request</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p
+SF:>Your\x20browser\x20sent\x20a\x20request\x20that\x20this\x20server\x20c
+SF:ould\x20not\x20understand\.<br\x20/>\n</p>\n</body></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 10:25:10 2019 -- 1 IP address (1 host up) scanned in 2579.71 seconds

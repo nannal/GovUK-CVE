@@ -1,0 +1,172 @@
+# Nmap 7.70 scan initiated Sat Mar 16 14:06:54 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/nifca.gov.uk nifca.gov.uk
+Nmap scan report for nifca.gov.uk (81.201.129.45)
+Host is up (0.070s latency).
+rDNS record for 81.201.129.45: 81.201.129.45.srvlist.ukfast.net
+Not shown: 65421 filtered ports, 108 closed ports
+PORT     STATE SERVICE       VERSION
+21/tcp   open  ftp           ProFTPD 1.3.5d
+|_banner: 220 ProFTPD 1.3.5d Server (ProFTPD) [192.168.1.32]
+80/tcp   open  http          nginx
+110/tcp  open  pop3          Courier pop3d
+|_banner: +OK Hello there. <40715.1552738977@localhost.localdomain>
+443/tcp  open  ssl/http      nginx
+|_http-server-header: nginx
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2020/tcp open  ssh           OpenSSH 5.3 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_5.3
+8443/tcp open  ssl/https-alt sw-cp-server
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Server: sw-cp-server
+|     Date: Sat, 16 Mar 2019 12:22:33 GMT
+|     Content-Type: text/html; charset=UTF-8
+|     Connection: close
+|     Expires: Fri, 28 May 1999 00:00:00 GMT
+|     Last-Modified: Sat, 16 Mar 2019 12:22:33 GMT
+|     Cache-Control: no-store, no-cache, must-revalidate
+|     Cache-Control: post-check=0, pre-check=0
+|     Pragma: no-cache
+|     P3P: CP="NON COR CURa ADMa OUR NOR UNI COM NAV STA"
+|     <html><head>
+|     <meta charset="utf-8">
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+|     <meta name="plesk-build" content="1705170317.16">
+|     <title>Urban River | Plesk</title>
+|     <script language="javascript" type="text/javascript" src="/javascript/common.js?1489742387"/></script>
+|     <script language="javascript" type="text/javascript" src="/javascript/prototype.js?1489742387"/></script>
+|     </head><body onLoad=";top.location='/login.ph
+|   HTTPOptions: 
+|     HTTP/1.1 405 Not Allowed
+|     Server: sw-cp-server
+|     Date: Sat, 16 Mar 2019 12:22:33 GMT
+|     Content-Type: text/html
+|     Content-Length: 2654
+|     Connection: close
+|     ETag: "58cbaa33-a5e"
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <meta charset="utf-8">
+|     <meta http-equiv="x-ua-compatible" content="ie=edge">
+|     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+|     <title>405 Method Not Allowed</title>
+|     <link rel="stylesheet" href="/error_docs/styles.css">
+|     </head>
+|     <body>
+|     <div class="page">
+|     <div class="main">
+|     <div class="error-description">
+|     <h1>Server Error</h1>
+|     <div class="error-code">405</div>
+|     <h2>Method Not Allowed</h2>
+|     class="lead">The HTTP verb used to access this page is not allowed.</p>
+|     <hr/>
+|_    <p>If you think this is an error, please <a href="https://www.plesk.com/bug
+|_http-server-header: sw-cp-server
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+| 
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+9102/tcp open  jetdirect?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CEA85%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,6CB,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20sw-cp-ser
+SF:ver\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2012:22:33\x20GMT\r\nContent
+SF:-Type:\x20text/html;\x20charset=UTF-8\r\nConnection:\x20close\r\nExpire
+SF:s:\x20Fri,\x2028\x20May\x201999\x2000:00:00\x20GMT\r\nLast-Modified:\x2
+SF:0Sat,\x2016\x20Mar\x202019\x2012:22:33\x20GMT\r\nCache-Control:\x20no-s
+SF:tore,\x20no-cache,\x20must-revalidate\r\nCache-Control:\x20post-check=0
+SF:,\x20pre-check=0\r\nPragma:\x20no-cache\r\nP3P:\x20CP=\"NON\x20COR\x20C
+SF:URa\x20ADMa\x20OUR\x20NOR\x20UNI\x20COM\x20NAV\x20STA\"\r\n\r\n\n\x20\x
+SF:20\x20\x20\x20\x20\x20\x20<html><head>\n\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0<meta\x20charset=\"utf-8\">\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20
+SF:http-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge,chrome=1\">\n\x20\x
+SF:20\x20\x20\x20\x20\x20\x20<meta\x20name=\"plesk-build\"\x20content=\"17
+SF:05170317\.16\">\n\x20\x20\x20\x20\x20\x20\x20\x20<title>Urban\x20River\
+SF:x20\|\x20Plesk</title>\n\x20\x20\x20\x20\x20\x20\x20\x20<script\x20lang
+SF:uage=\"javascript\"\x20type=\"text/javascript\"\x20src=\"/javascript/co
+SF:mmon\.js\?1489742387\"/></script>\n\x20\x20\x20\x20\x20\x20\x20\x20<scr
+SF:ipt\x20language=\"javascript\"\x20type=\"text/javascript\"\x20src=\"/ja
+SF:vascript/prototype\.js\?1489742387\"/></script>\n\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\n\x20\x20\x20\x20\x20\x20\x20\x20</head><body\x20onLoad=\";t
+SF:op\.location='/login\.ph")%r(HTTPOptions,B0D,"HTTP/1\.1\x20405\x20Not\x
+SF:20Allowed\r\nServer:\x20sw-cp-server\r\nDate:\x20Sat,\x2016\x20Mar\x202
+SF:019\x2012:22:33\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:
+SF:\x202654\r\nConnection:\x20close\r\nETag:\x20\"58cbaa33-a5e\"\r\n\r\n<!
+SF:DOCTYPE\x20html>\n<html\x20lang=\"en\">\n\x20\x20<head>\n\x20\x20\x20\x
+SF:20<meta\x20charset=\"utf-8\">\n\x20\x20\x20\x20<meta\x20http-equiv=\"x-
+SF:ua-compatible\"\x20content=\"ie=edge\">\n\x20\x20\x20\x20<meta\x20name=
+SF:\"viewport\"\x20content=\"width=device-width,\x20initial-scale=1,\x20sh
+SF:rink-to-fit=no\">\n\x20\x20\x20\x20<title>405\x20Method\x20Not\x20Allow
+SF:ed</title>\n\x20\x20\x20\x20<link\x20rel=\"stylesheet\"\x20href=\"/erro
+SF:r_docs/styles\.css\">\n\x20\x20</head>\n\x20\x20<body>\n\x20\x20\x20\x2
+SF:0<div\x20class=\"page\">\n\x20\x20\x20\x20\x20\x20<div\x20class=\"main\
+SF:">\n\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\"error-description\"
+SF:>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h1>Server\x20Error</h1>\n\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\"error-code\">405<
+SF:/div>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h2>Method\x20Not\x20All
+SF:owed</h2>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\"lead\"
+SF:>The\x20HTTP\x20verb\x20used\x20to\x20access\x20this\x20page\x20is\x20n
+SF:ot\x20allowed\.</p>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<hr/>\n\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>If\x20you\x20think\x20this\x20i
+SF:s\x20an\x20error,\x20please\x20<a\x20href=\"https://www\.plesk\.com/bug
+SF:");
+Service Info: Host: localhost.localdomain; OS: Unix
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 14:23:24 2019 -- 1 IP address (1 host up) scanned in 989.44 seconds

@@ -1,0 +1,26 @@
+# Nmap 7.70 scan initiated Sat Mar 16 04:56:10 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/clayton-pc.gov.uk clayton-pc.gov.uk
+Warning: 82.219.4.32 giving up on port because retransmission cap hit (6).
+Nmap scan report for clayton-pc.gov.uk (82.219.4.32)
+Host is up (0.057s latency).
+rDNS record for 82.219.4.32: unixweb1.exa-networks.co.uk
+Not shown: 65426 closed ports, 107 filtered ports
+PORT    STATE SERVICE  VERSION
+21/tcp  open  ftp      ProFTPD
+|_banner: 220 FTP Service [UNIXWEB1] FTP Server Ready.
+80/tcp  open  http     nginx 1.4.6 (Ubuntu)
+|_http-server-header: nginx/1.4.6 (Ubuntu)
+443/tcp open  ssl/http nginx 1.4.6 (Ubuntu)
+|_http-server-header: nginx/1.4.6 (Ubuntu)
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 4096) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 05:18:38 2019 -- 1 IP address (1 host up) scanned in 1348.48 seconds

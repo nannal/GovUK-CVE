@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 05:02:04 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/coastalwight.gov.uk coastalwight.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/coastalwight.gov.uk coastalwight.gov.uk" start="1552705324" startstr="Sat Mar 16 05:02:04 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552705325" endtime="1552705906"><status state="up" reason="syn-ack" reason_ttl="52"/>
+<address addr="78.157.217.4" addrtype="ipv4"/>
+<hostnames>
+<hostname name="coastalwight.gov.uk" type="user"/>
+<hostname name="relay.netzoomi.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65522">
+<extrareasons reason="no-responses" count="65522"/>
+</extraports>
+<port protocol="tcp" portid="20"><state state="closed" reason="reset" reason_ttl="52"/><service name="ftp-data" method="table" conf="3"/></port>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="ftp" product="vsftpd" version="2.0.8 or later" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd</cpe></service><script id="banner" output="220 Hello."/></port>
+<port protocol="tcp" portid="53"><state state="closed" reason="reset" reason_ttl="52"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="http" product="Apache httpd" version="2.2.15" extrainfo="(CentOS)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.15</cpe></service></port>
+<port protocol="tcp" portid="110"><state state="closed" reason="reset" reason_ttl="52"/><service name="pop3" method="table" conf="3"/></port>
+<port protocol="tcp" portid="143"><state state="closed" reason="reset" reason_ttl="52"/><service name="imap" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="https" product="Apache/2.2.15 (CentOS)" tunnel="ssl" method="probed" conf="10"/><script id="http-server-header" output="Apache/2.2.15 (CentOS)"><elem>Apache/2.2.15 (CentOS)</elem>
+</script></port>
+<port protocol="tcp" portid="465"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="smtp" product="Postfix smtpd" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:postfix:postfix</cpe></service><script id="ssl-enum-ciphers" output="&#xa;  SSLv3: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A&#xa;      TLS_DH_anon_WITH_3DES_EDE_CBC_SHA - F&#xa;      TLS_DH_anon_WITH_AES_128_CBC_SHA - F&#xa;      TLS_DH_anon_WITH_AES_256_CBC_SHA - F&#xa;      TLS_DH_anon_WITH_CAMELLIA_128_CBC_SHA - F&#xa;      TLS_DH_anon_WITH_CAMELLIA_256_CBC_SHA - F&#xa;      TLS_DH_anon_WITH_RC4_128_MD5 - F&#xa;    compressors: &#xa;&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      CBC-mode cipher in SSLv3 (CVE-2014-3566)&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Key exchange (dh 1024) of lower strength than certificate key&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A&#xa;      TLS_DH_anon_WITH_3DES_EDE_CBC_SHA - F&#xa;      TLS_DH_anon_WITH_AES_128_CBC_SHA - F&#xa;      TLS_DH_anon_WITH_AES_256_CBC_SHA - F&#xa;      TLS_DH_anon_WITH_CAMELLIA_128_CBC_SHA - F&#xa;      TLS_DH_anon_WITH_CAMELLIA_256_CBC_SHA - F&#xa;      TLS_DH_anon_WITH_RC4_128_MD5 - F&#xa;      TLS_DH_anon_WITH_SEED_CBC_SHA - F&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference error: Error when comparing TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA and TLS_DHE_RSA_WITH_AES_128_CBC_SHA&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Key exchange (dh 1024) of lower strength than certificate key&#xa;  least strength: F"><table key="SSLv3">
+<table key="ciphers">
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">D</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DH_anon_WITH_3DES_EDE_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DH_anon_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DH_anon_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DH_anon_WITH_CAMELLIA_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DH_anon_WITH_CAMELLIA_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DH_anon_WITH_RC4_128_MD5</elem>
+</table>
+</table>
+<table key="compressors">
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>CBC-mode cipher in SSLv3 (CVE-2014-3566)</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Key exchange (dh 1024) of lower strength than certificate key</elem>
+</table>
+</table>
+<table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">D</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DH_anon_WITH_3DES_EDE_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DH_anon_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DH_anon_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DH_anon_WITH_CAMELLIA_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DH_anon_WITH_CAMELLIA_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DH_anon_WITH_RC4_128_MD5</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DH_anon_WITH_SEED_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">C</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference error">Error when comparing TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA and TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Key exchange (dh 1024) of lower strength than certificate key</elem>
+</table>
+</table>
+<elem key="least strength">F</elem>
+</script></port>
+<port protocol="tcp" portid="587"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="smtp" product="Postfix smtpd" hostname="relay.netzoomi.net" method="probed" conf="10"><cpe>cpe:/a:postfix:postfix</cpe></service><script id="banner" output="220 relay.netzoomi.net ESMTP"/></port>
+<port protocol="tcp" portid="993"><state state="closed" reason="reset" reason_ttl="52"/><service name="imaps" method="table" conf="3"/></port>
+<port protocol="tcp" portid="995"><state state="closed" reason="reset" reason_ttl="52"/><service name="pop3s" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2302"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="ssh" product="OpenSSH" version="5.3" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:5.3</cpe></service><script id="banner" output="SSH-2.0-OpenSSH_5.3"/></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="mysql" product="MySQL" version="5.1.73" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql:5.1.73</cpe></service><script id="banner" output="4\x00\x00\x00\x0A5.1.73\x00\xF9\xB1[\x00l4[OYSrf\x00\xFF\xF7\x0&#xa;8\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00+?;KGa5...&#xa;"/></port>
+<port protocol="tcp" portid="5666"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+</ports>
+<times srtt="79022" rttvar="20226" to="159926"/>
+</host>
+<runstats><finished time="1552705906" timestr="Sat Mar 16 05:11:46 2019" elapsed="581.40" summary="Nmap done at Sat Mar 16 05:11:46 2019; 1 IP address (1 host up) scanned in 581.40 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

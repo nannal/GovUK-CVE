@@ -1,0 +1,47 @@
+# Nmap 7.70 scan initiated Sat Mar 16 06:31:47 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/dorsetcouncil.gov.uk dorsetcouncil.gov.uk
+Nmap scan report for dorsetcouncil.gov.uk (185.18.139.95)
+Host is up (0.59s latency).
+Not shown: 65533 filtered ports
+PORT    STATE SERVICE        VERSION
+80/tcp  open  http-proxy     HAProxy http proxy 1.3.1 or later
+443/tcp open  ssl/http-proxy HAProxy http proxy 1.3.1 or later
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       Key exchange (secp256r1) of lower strength than certificate key
+|_  least strength: A
+990/tcp open  ssl/ftp        FileZilla ftpd
+| banner: 220-FileZilla Server 0.9.60 beta\x0D\x0A220-written by Tim Koss
+|_e (tim.kosse@filezilla-project.org)\x0D\x0A220 Please visit https://...
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 4096) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       Key exchange (dh 2048) of lower strength than certificate key
+|       Key exchange (secp256r1) of lower strength than certificate key
+|_  least strength: A
+Service Info: OS: Windows; Device: load balancer; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 07:12:28 2019 -- 1 IP address (1 host up) scanned in 2441.39 seconds

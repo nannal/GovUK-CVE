@@ -1,0 +1,192 @@
+# Nmap 7.70 scan initiated Sat Mar 16 20:14:37 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/ukho.gov.uk ukho.gov.uk
+Nmap scan report for ukho.gov.uk (137.135.243.254)
+Host is up (0.067s latency).
+Not shown: 65402 filtered ports, 130 closed ports
+PORT     STATE SERVICE   VERSION
+21/tcp   open  ftp       IIS ftpd 7
+|_banner: 220
+80/tcp   open  http
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 302 Redirect
+|     Content-Type: text/html; charset=UTF-8
+|     Location: http://172.16.2.15/Pages/home.aspx
+|     MicrosoftSharePointTeamServices: 12.0.0.6679
+|     Date: Sat, 16 Mar 2019 18:56:47 GMT
+|     Set-Cookie: BNI_persistence=YAQNdP17UKgwaoiEY25vho-j01EpCuSNiSNNWwdQiqZ2VqB5Td2C_OY7UOIKrk-NtJ3K_W24LIkY0d5ZT4SVPA==; Path=/
+|     X-FRAME-OPTIONS: SAMEORIGIN
+|     <head><title>Document Moved</title></head>
+|     <body><h1>Object Moved</h1>This document may be found <a HREF="http://172.16.2.15/Pages/home.aspx">here</a></body>
+|   HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 404 Not Found
+|     Connection: Close
+|     Content-Type: text/html
+|     <head>
+|     <title>UKHO Page Not Found</title>
+|     <style type="text/css">
+|     body {
+|     font-family: arial;
+|     padding-top: 1cm; 
+|     padding-left: 1cm;
+|     </style>
+|     </head>
+|     <body>
+|_    <img alt="UKHO Logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACRCAMAAABOgHVYAAAAllBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUMloAAAAAAAAUMloAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACBgsUMloAAAAUMloyoT/yAAAAMHRSTlMA/gkDARQa+QUlj1RBNg70pOlpdUfhL2+VvK0M2WDAnMyBiCrwWzwgfE3TtWTFwP277VtRAAAXxElEQVR42uzbXXOlNADG8cdAsuQNsyElnFjkkAiEA+zo9/9y2tXR6W63rtfxf9Xp5W+SNm/gt99+/gn/1mqMSATF9x1YREyLzuasUXr/jkWG4+jmcAsepffvWDp24zq7eTmKn4jvYzVVRWQ37dfNuE4Q2lJWodzexaIxZ+GuqO7GyHhfg7ndZNOg1L6NVbld0NjbMFzj3HX2kwlLL7YwxWKn47exuI1upSPLxk/D1ImcMzvb3sVZotC+jb
+443/tcp  open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Connection: Close
+|     Content-Type: text/html
+|     <div style="border: 3px solid #4991C5; font:1.5em; font-family:tahoma,calibri,arial; font-weight:bold; color:#1A4369; padding:5px; margin:10px; text-align:center"> The specified URL cannot be found. </div><!--0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234-->
+|   GetRequest: 
+|     HTTP/1.1 302 Redirect
+|     Content-Type: text/html; charset=UTF-8
+|     Location: http://172.16.2.15/Pages/home.aspx
+|     MicrosoftSharePointTeamServices: 12.0.0.6679
+|     Date: Sat, 16 Mar 2019 18:56:53 GMT
+|     Set-Cookie: BNI_persistence=YAQNdP17UKgwaoiEY25vho-j01EpCuSNiSNNWwdQiqZ2VqB5Td2C_OY7UOIKrk-NtJ3K_W24LIkY0d5ZT4SVPA==; Path=/
+|     X-FRAME-OPTIONS: SAMEORIGIN
+|     <head><title>Document Moved</title></head>
+|     <body><h1>Object Moved</h1>This document may be found <a HREF="http://172.16.2.15/Pages/home.aspx">here</a></body>
+|   HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Connection: Close
+|     Content-Type: text/html
+|     <head>
+|     <title>UKHO Page Not Found</title>
+|     <style type="text/css">
+|     body {
+|     font-family: arial;
+|     padding-top: 1cm; 
+|     padding-left: 1cm;
+|     </style>
+|     </head>
+|     <body>
+|_    <img alt="UKHO Logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACRCAMAAABOgHVYAAAAllBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUMloAAAAAAAAUMloAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACBgsUMloAAAAUMloyoT/yAAAAMHRSTlMA/gkDARQa+QUlj1RBNg70pOlpdUfhL2+VvK0M2WDAnMyBiCrwWzwgfE3TtWTFwP277VtRAAAXxElEQVR42uzbXXOlNADG8cdAsuQNsyElnFjkkAiEA+zo9/9y2tXR6W63rtfxf9Xp5W+SNm/gt99+/gn/1mqMSATF9x1YREyLzuasUXr/jkWG4+jmcAsepffvWDp24zq7eTmKn4jvYzVVRWQ37dfNuE4Q2lJWodzexaIxZ+GuqO7GyHhfg7ndZNOg1L6NVbld0NjbMFzj3HX2kwlLL7YwxWKn47exuI1upSPLxk/D1ImcMzvb3sVZotC+jb
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_IDEA_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     cipher preference error: Network error
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       64-bit block cipher IDEA vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+2121/tcp open  ftp       Microsoft ftpd
+|_banner: 220 Microsoft FTP Service
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8D46EA%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,1FA,"HTTP/1\.1\x20302\x20Redirect\r\nContent-Type:\x20text/
+SF:html;\x20charset=UTF-8\r\nLocation:\x20http://172\.16\.2\.15/Pages/home
+SF:\.aspx\r\nMicrosoftSharePointTeamServices:\x2012\.0\.0\.6679\r\nDate:\x
+SF:20Sat,\x2016\x20Mar\x202019\x2018:56:47\x20GMT\r\nSet-Cookie:\x20BNI_pe
+SF:rsistence=YAQNdP17UKgwaoiEY25vho-j01EpCuSNiSNNWwdQiqZ2VqB5Td2C_OY7UOIKr
+SF:k-NtJ3K_W24LIkY0d5ZT4SVPA==;\x20Path=/\r\nX-FRAME-OPTIONS:\x20SAMEORIGI
+SF:N\r\n\r\n<head><title>Document\x20Moved</title></head>\n<body><h1>Objec
+SF:t\x20Moved</h1>This\x20document\x20may\x20be\x20found\x20<a\x20HREF=\"h
+SF:ttp://172\.16\.2\.15/Pages/home\.aspx\">here</a></body>")%r(HTTPOptions
+SF:,10F8,"HTTP/1\.1\x20404\x20Not\x20Found\r\nConnection:\x20Close\r\nCont
+SF:ent-Type:\x20text/html\r\n\r\n<head>\r\n<title>UKHO\x20Page\x20Not\x20F
+SF:ound</title>\r\n<style\x20type=\"text/css\">\r\n\x20\x20body\x20{\r\n\x
+SF:20\x20\x20\x20\tfont-family:\x20arial;\r\n\tpadding-top:\x20\x201cm;\t\
+SF:r\n\x20\x20\x20\x20\tpadding-left:\x201cm;\r\n\r\n}\r\n\x20\x20</style>
+SF:\r\n</head>\r\n<body>\r\n\r\n<img\x20alt=\"UKHO\x20Logo\"\x20src=\"data
+SF::image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACRCAMAAABOgHVYAAAAllBMV
+SF:EUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+SF:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUMloAAAAAAAAUMloAAAAAAAAAAAAAAAA
+SF:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACBgsUMloAAAAUMloyoT/yAAAAMH
+SF:RSTlMA/gkDARQa\+QUlj1RBNg70pOlpdUfhL2\+VvK0M2WDAnMyBiCrwWzwgfE3TtWTFwP2
+SF:77VtRAAAXxElEQVR42uzbXXOlNADG8cdAsuQNsyElnFjkkAiEA\+zo9/9y2tXR6W63rtfxf
+SF:9Xp5W\+SNm/gt99\+/gn/1mqMSATF9x1YREyLzuasUXr/jkWG4\+jmcAsepffvWDp24zq7e
+SF:TmKn4jvYzVVRWQ37dfNuE4Q2lJWodzexaIxZ\+GuqO7GyHhfg7ndZNOg1L6NVbld0NjbMFz
+SF:j3HX2kwlLL7YwxWKn47exuI1upSPLxk/D1ImcMzvb3sVZotC\+jb")%r(RTSPRequest,16
+SF:A0,"HTTP/1\.1\x20404\x20Not\x20Found\r\nConnection:\x20Close\r\nContent
+SF:-Type:\x20text/html\r\n\r\n<head>\r\n<title>UKHO\x20Page\x20Not\x20Foun
+SF:d</title>\r\n<style\x20type=\"text/css\">\r\n\x20\x20body\x20{\r\n\x20\
+SF:x20\x20\x20\tfont-family:\x20arial;\r\n\tpadding-top:\x20\x201cm;\t\r\n
+SF:\x20\x20\x20\x20\tpadding-left:\x201cm;\r\n\r\n}\r\n\x20\x20</style>\r\
+SF:n</head>\r\n<body>\r\n\r\n<img\x20alt=\"UKHO\x20Logo\"\x20src=\"data:im
+SF:age/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACRCAMAAABOgHVYAAAAllBMVEUA
+SF:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+SF:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUMloAAAAAAAAUMloAAAAAAAAAAAAAAAAAAA
+SF:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACBgsUMloAAAAUMloyoT/yAAAAMHRST
+SF:lMA/gkDARQa\+QUlj1RBNg70pOlpdUfhL2\+VvK0M2WDAnMyBiCrwWzwgfE3TtWTFwP277V
+SF:tRAAAXxElEQVR42uzbXXOlNADG8cdAsuQNsyElnFjkkAiEA\+zo9/9y2tXR6W63rtfxf9Xp
+SF:5W\+SNm/gt99\+/gn/1mqMSATF9x1YREyLzuasUXr/jkWG4\+jmcAsepffvWDp24zq7eTmK
+SF:n4jvYzVVRWQ37dfNuE4Q2lJWodzexaIxZ\+GuqO7GyHhfg7ndZNOg1L6NVbld0NjbMFzj3H
+SF:X2kwlLL7YwxWKn47exuI1upSPLxk/D1ImcMzvb3sVZotC\+jb");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D46F1%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,1FA,"HTTP/1\.1\x20302\x20Redirect\r\nContent-Type:\x
+SF:20text/html;\x20charset=UTF-8\r\nLocation:\x20http://172\.16\.2\.15/Pag
+SF:es/home\.aspx\r\nMicrosoftSharePointTeamServices:\x2012\.0\.0\.6679\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2018:56:53\x20GMT\r\nSet-Cookie:\x2
+SF:0BNI_persistence=YAQNdP17UKgwaoiEY25vho-j01EpCuSNiSNNWwdQiqZ2VqB5Td2C_O
+SF:Y7UOIKrk-NtJ3K_W24LIkY0d5ZT4SVPA==;\x20Path=/\r\nX-FRAME-OPTIONS:\x20SA
+SF:MEORIGIN\r\n\r\n<head><title>Document\x20Moved</title></head>\n<body><h
+SF:1>Object\x20Moved</h1>This\x20document\x20may\x20be\x20found\x20<a\x20H
+SF:REF=\"http://172\.16\.2\.15/Pages/home\.aspx\">here</a></body>")%r(HTTP
+SF:Options,2732,"HTTP/1\.1\x20404\x20Not\x20Found\r\nConnection:\x20Close\
+SF:r\nContent-Type:\x20text/html\r\n\r\n<head>\r\n<title>UKHO\x20Page\x20N
+SF:ot\x20Found</title>\r\n<style\x20type=\"text/css\">\r\n\x20\x20body\x20
+SF:{\r\n\x20\x20\x20\x20\tfont-family:\x20arial;\r\n\tpadding-top:\x20\x20
+SF:1cm;\t\r\n\x20\x20\x20\x20\tpadding-left:\x201cm;\r\n\r\n}\r\n\x20\x20<
+SF:/style>\r\n</head>\r\n<body>\r\n\r\n<img\x20alt=\"UKHO\x20Logo\"\x20src
+SF:=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACRCAMAAABOgHVYAA
+SF:AAllBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA
+SF:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUMloAAAAAAAAUMloAAAAAAAAA
+SF:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACBgsUMloAAAAUMloyoT/
+SF:yAAAAMHRSTlMA/gkDARQa\+QUlj1RBNg70pOlpdUfhL2\+VvK0M2WDAnMyBiCrwWzwgfE3T
+SF:tWTFwP277VtRAAAXxElEQVR42uzbXXOlNADG8cdAsuQNsyElnFjkkAiEA\+zo9/9y2tXR6W
+SF:63rtfxf9Xp5W\+SNm/gt99\+/gn/1mqMSATF9x1YREyLzuasUXr/jkWG4\+jmcAsepffvWD
+SF:p24zq7eTmKn4jvYzVVRWQ37dfNuE4Q2lJWodzexaIxZ\+GuqO7GyHhfg7ndZNOg1L6NVbld
+SF:0NjbMFzj3HX2kwlLL7YwxWKn47exuI1upSPLxk/D1ImcMzvb3sVZotC\+jb")%r(FourOhF
+SF:ourRequest,316,"HTTP/1\.1\x20404\x20Not\x20Found\r\nConnection:\x20Clos
+SF:e\r\nContent-Type:\x20text/html\r\n\r\n<div\x20style=\"border:\x203px\x
+SF:20solid\x20#4991C5;\x20font:1\.5em;\x20font-family:tahoma,calibri,arial
+SF:;\x20font-weight:bold;\x20color:#1A4369;\x20padding:5px;\x20margin:10px
+SF:;\x20text-align:center\">\x20\x20The\x20specified\x20URL\x20cannot\x20b
+SF:e\x20found\.\x20</div><!--012345678901234567890123456789012345678901234
+SF:56789012345678901234567890123456789012345678901234567890123456789012345
+SF:67890123456789012345678901234567890123456789012345678901234567890123456
+SF:78901234567890123456789012345678901234567890123456789012345678901234567
+SF:89012345678901234567890123456789012345678901234567890123456789012345678
+SF:90123456789012345678901234567890123456789012345678901234567890123456789
+SF:01234567890123456789012345678901234567890123456789012345678901234567890
+SF:1234567890123456789012345678901234-->\r\n");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 20:57:34 2019 -- 1 IP address (1 host up) scanned in 2577.83 seconds

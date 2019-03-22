@@ -1,0 +1,42 @@
+# Nmap 7.70 scan initiated Sat Mar 16 10:27:10 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/hmcpsi.gov.uk hmcpsi.gov.uk
+Warning: 94.136.40.100 giving up on port because retransmission cap hit (6).
+Nmap scan report for hmcpsi.gov.uk (94.136.40.100)
+Host is up (0.060s latency).
+rDNS record for 94.136.40.100: outbound-traffic.linweb.ahost.me
+Not shown: 65246 closed ports, 286 filtered ports
+PORT    STATE SERVICE    VERSION
+21/tcp  open  ftp        ProFTPD
+|_banner: 220 ATLAS/WebFusion FTP server
+22/tcp  open  ssh        (protocol 2.0)
+| banner: SSH-2.0-ATLAS/WebFusion FTP server\x0D\x0A\x00\x00\x01\xA4\x08\
+|_x14\xDCV\xAA\xB1\xC6\xA9dx\x93\xDAH%\x97XY\xB2\x00\x00\x00\xC4ecdh-s...
+| fingerprint-strings: 
+|   NULL: 
+|     SSH-2.0-ATLAS/WebFusion FTP server
+|     ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,rsa1024-sha1
+|     ssh-rsa
+|     -aes256-ctr,aes192-ctr,aes128-ctr,blowfish-ctr
+|     -aes256-ctr,aes192-ctr,aes128-ctr,blowfish-ctr
+|     hmac-sha1,hmac-ripemd160
+|     hmac-sha1,hmac-ripemd160
+|     none
+|_    none
+80/tcp  open  http       Apache httpd
+|_http-server-header: Apache
+443/tcp open  tcpwrapped
+|_http-server-header: BigIP
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port22-TCP:V=7.70%I=7%D=3/16%Time=5C8CBAA4%P=x86_64-unknown-linux-gnu%r
+SF:(NULL,1CC,"SSH-2\.0-ATLAS/WebFusion\x20FTP\x20server\r\n\0\0\x01\xa4\x0
+SF:8\x14\xdcV\xaa\xb1\xc6\xa9dx\x93\xdaH%\x97XY\xb2\0\0\0\xc4ecdh-sha2-nis
+SF:tp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchan
+SF:ge-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha
+SF:1,diffie-hellman-group1-sha1,rsa1024-sha1\0\0\0\x07ssh-rsa\0\0\0-aes256
+SF:-ctr,aes192-ctr,aes128-ctr,blowfish-ctr\0\0\0-aes256-ctr,aes192-ctr,aes
+SF:128-ctr,blowfish-ctr\0\0\0\x18hmac-sha1,hmac-ripemd160\0\0\0\x18hmac-sh
+SF:a1,hmac-ripemd160\0\0\0\x04none\0\0\0\x04none\0\0\0\0\0\0\0\0\0\0\0\0\0
+SF:\xdb\xf1\xab\[\xfa@v\xdd");
+Service Info: Host: 02-webfusion
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 10:58:38 2019 -- 1 IP address (1 host up) scanned in 1887.91 seconds

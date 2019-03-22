@@ -1,0 +1,42 @@
+# Nmap 7.70 scan initiated Sat Mar 16 06:27:09 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/docs.payments.service.gov.uk docs.payments.service.gov.uk
+Nmap scan report for docs.payments.service.gov.uk (13.33.47.111)
+Host is up (0.039s latency).
+Other addresses for docs.payments.service.gov.uk (not scanned): 13.33.47.131 13.33.47.165 13.33.47.172 2600:9000:2074:7c00:16:581f:8f00:93a1 2600:9000:2074:8800:16:581f:8f00:93a1 2600:9000:2074:9800:16:581f:8f00:93a1 2600:9000:2074:a000:16:581f:8f00:93a1 2600:9000:2074:b000:16:581f:8f00:93a1 2600:9000:2074:1000:16:581f:8f00:93a1 2600:9000:2074:6a00:16:581f:8f00:93a1 2600:9000:2074:6c00:16:581f:8f00:93a1
+rDNS record for 13.33.47.111: server-13-33-47-111.arn53.r.cloudfront.net
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE  VERSION
+80/tcp  open  http     Amazon CloudFront httpd
+|_http-server-header: CloudFront
+443/tcp open  ssl/http Amazon CloudFront httpd
+| http-server-header: 
+|   CloudFront
+|_  nginx
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 06:31:21 2019 -- 1 IP address (1 host up) scanned in 252.56 seconds

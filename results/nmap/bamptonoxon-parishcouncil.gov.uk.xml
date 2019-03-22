@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 02:38:37 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/bamptonoxon-parishcouncil.gov.uk bamptonoxon-parishcouncil.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/bamptonoxon-parishcouncil.gov.uk bamptonoxon-parishcouncil.gov.uk" start="1552696717" startstr="Sat Mar 16 02:38:37 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552696717" endtime="1552697337"><status state="up" reason="echo-reply" reason_ttl="117"/>
+<address addr="84.18.198.200" addrtype="ipv4"/>
+<hostnames>
+<hostname name="bamptonoxon-parishcouncil.gov.uk" type="user"/>
+<hostname name="enterprise1.hosting.123connect.co.uk" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65524">
+<extrareasons reason="no-responses" count="65524"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="ftp" product="Microsoft ftpd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:ftp_service</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="banner" output="220 Microsoft FTP Service"/><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp521r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp521r1) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;  least strength: A"><table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp521r1</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp521r1</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+</table>
+</table>
+<elem key="least strength">A</elem>
+</script></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="domain" product="Microsoft DNS" version="6.1.7601 (1DB15EC5)" extrainfo="Windows Server 2008 R2 SP1" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:dns</cpe><cpe>cpe:/o:microsoft:windows_server_2008:r2:sp1</cpe></service></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="http" product="Microsoft IIS httpd" version="7.5" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:7.5</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-IIS/7.5"><elem>Microsoft-IIS/7.5</elem>
+</script></port>
+<port protocol="tcp" portid="110"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="pop3" product="SmarterMail pop3d" hostname="enterprise1.hosting.123connect.co.uk" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:smartertools:smartermail</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="banner" output="+OK POP3 server ready &lt;0d450125-fccb-4644-a7a4-f99b6303663e@ent&#xa;erprise1.hosting.123connect.co.uk&gt;"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="54"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="143"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="imap" product="SmarterMail imapd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:smartertools:smartermail</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="https" method="table" conf="3"/><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp521r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp521r1) - A&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    cipher preference error: Network error&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;  least strength: C"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp521r1</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp521r1</elem>
+</table>
+<table>
+<elem key="strength">C</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<elem key="cipher preference error">Network error</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+</table>
+</table>
+<elem key="least strength">C</elem>
+</script></port>
+<port protocol="tcp" portid="465"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="smtps" method="table" conf="3"/><script id="banner" output="220 enterprise1.hosting.123connect.co.uk"/></port>
+<port protocol="tcp" portid="587"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="smtp" product="IA Mailserver smtpd" hostname="enterprise1.hosting.123connect.co.uk" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="995"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="pop3s" method="table" conf="3"/><script id="banner" output="+OK POP3 server ready &lt;d21cb989-46fd-42f7-9b4f-55ea7bda5f86@ent&#xa;erprise1.hosting.123connect.co.uk&gt;"/></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="mysql" product="MySQL" version="5.6.43" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql:5.6.43</cpe></service></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="https-alt" product="Microsoft-IIS/7.5" method="probed" conf="10"/><script id="http-server-header" output="Microsoft-IIS/7.5"><elem>Microsoft-IIS/7.5</elem>
+</script></port>
+</ports>
+<times srtt="76386" rttvar="11964" to="124242"/>
+</host>
+<runstats><finished time="1552697337" timestr="Sat Mar 16 02:48:57 2019" elapsed="620.52" summary="Nmap done at Sat Mar 16 02:48:57 2019; 1 IP address (1 host up) scanned in 620.52 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

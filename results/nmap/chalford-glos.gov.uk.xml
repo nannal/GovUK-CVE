@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 04:21:44 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/chalford-glos.gov.uk chalford-glos.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/chalford-glos.gov.uk chalford-glos.gov.uk" start="1552702904" startstr="Sat Mar 16 04:21:44 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552702904" endtime="1552706431"><status state="up" reason="syn-ack" reason_ttl="49"/>
+<address addr="94.126.40.41" addrtype="ipv4"/>
+<hostnames>
+<hostname name="chalford-glos.gov.uk" type="user"/>
+<hostname name="webpool-d9.lcn.com" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65533">
+<extrareasons reason="no-responses" count="65533"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="49"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="50"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="49"/><service name="https" tunnel="ssl" method="table" conf="3"/></port>
+</ports>
+<times srtt="64075" rttvar="8897" to="100000"/>
+</host>
+<runstats><finished time="1552706431" timestr="Sat Mar 16 05:20:31 2019" elapsed="3527.25" summary="Nmap done at Sat Mar 16 05:20:31 2019; 1 IP address (1 host up) scanned in 3527.25 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

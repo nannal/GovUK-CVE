@@ -1,0 +1,455 @@
+# Nmap 7.70 scan initiated Sat Mar 16 08:44:08 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/fairfieldparishcouncil.gov.uk fairfieldparishcouncil.gov.uk
+Nmap scan report for fairfieldparishcouncil.gov.uk (77.104.134.187)
+Host is up (0.070s latency).
+rDNS record for 77.104.134.187: ip-77-104-134-187.siteground.com
+Not shown: 65291 filtered ports, 228 closed ports
+PORT      STATE SERVICE     VERSION
+21/tcp    open  ftp         Pure-FTPd
+| banner: 220-#########################################################\x
+|_0D\x0A220-Please upload your web files to the public_html directory....
+53/tcp    open  domain      ISC BIND 9.10.6
+80/tcp    open  http        nginx
+110/tcp   open  pop3        Dovecot pop3d
+|_banner: +OK Dovecot ready.
+143/tcp   open  imap        Dovecot imapd
+| banner: * OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID 
+|_ENABLE IDLE NAMESPACE STARTTLS AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+443/tcp   open  ssl/http    nginx
+|_http-server-header: nginx
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CCM (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CCM_8 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CCM (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CCM_8 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_ARIA_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_ARIA_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_ARIA_128_GCM_SHA256 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_ARIA_256_GCM_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (secp384r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CCM (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CCM_8 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CCM (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CCM_8 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_ARIA_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_ARIA_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA256 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     cipher preference error: Network error
+|_  least strength: A
+465/tcp   open  ssl/smtp?
+| banner: 220-uk50.siteground.eu ESMTP #148 Sat, 16 Mar 2019 07:45:36 +00
+|_00 \x0D\x0A220-We do not authorize the use of this system to transpo...
+| fingerprint-strings: 
+|   Hello, NULL: 
+|     220-uk50.siteground.eu ESMTP #148 Sat, 16 Mar 2019 07:45:36 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|_    and/or bulk e-mail.
+587/tcp   open  smtp?
+| banner: 220-uk50.siteground.eu ESMTP #148 Sat, 16 Mar 2019 07:45:30 +00
+|_00 \x0D\x0A220-We do not authorize the use of this system to transpo...
+| fingerprint-strings: 
+|   GenericLines: 
+|     220-uk50.siteground.eu ESMTP #148 Sat, 16 Mar 2019 07:45:30 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|     and/or bulk e-mail.
+|     unrecognized command
+|     unrecognized command
+|   Hello: 
+|     220-uk50.siteground.eu ESMTP #148 Sat, 16 Mar 2019 07:45:41 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|     and/or bulk e-mail.
+|     550-You can not sent a blank HELO/EHLO request. 78.58.49.144 sent [] EHLO/HELO
+|     greeting. Please see RFC 2821 section 4.1.1.1
+|   NULL: 
+|     220-uk50.siteground.eu ESMTP #148 Sat, 16 Mar 2019 07:45:30 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|_    and/or bulk e-mail.
+993/tcp   open  ssl/imap    Dovecot imapd
+| banner: * OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID 
+|_ENABLE IDLE NAMESPACE AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp384r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+995/tcp   open  ssl/pop3    Dovecot pop3d
+|_banner: +OK Dovecot ready.
+2082/tcp  open  infowave?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 07:47:08 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082
+|     Set-Cookie: cpsession=%3aUfVlPT2JSEKPOd6W%2cc4efa885b2babd64fc6d217c4a95679b; HttpOnly; path=/; port=2082
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=uk50.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.uk50.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082
+|_    Set-Cookie: horde_secret_key=expired; HttpOnly; domain=.uk50.siteground.eu; expires=Thu, 0
+2083/tcp  open  ssl/radsec?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 07:46:02 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=%3a_a1WK8JLOZsgDwND%2c82eab0402264d1be6423485836a7a68b; HttpOnly; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=uk50.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.uk50.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: horde_secret_key=expired; HttpOnly; do
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 07:46:04 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=%3aQ8b6hROy4wRMBcp5%2c5f94c04a41952dd0c317e4920f322eed; HttpOnly; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=uk50.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.uk50.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|_    Set-Cookie: horde_secret_key=expired; HttpOnly; do
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 - unknown
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: unknown
+2095/tcp  open  nbx-ser?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 07:47:12 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095
+|     Set-Cookie: webmailsession=%3a3b5gXaL_0wUJfwp6%2c5b3b07449c2ad46effc945edcc34008c; HttpOnly; path=/; port=2095
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=uk50.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.uk50.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095
+|_    Set-Cookie: horde_secret_key=expired; HttpOnly; domain=.uk50.siteground.eu; exp
+2096/tcp  open  nbx-dir?
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2525/tcp  open  smtp?
+| banner: 220-uk50.siteground.eu ESMTP #148 Sat, 16 Mar 2019 07:45:30 +00
+|_00 \x0D\x0A220-We do not authorize the use of this system to transpo...
+| fingerprint-strings: 
+|   GenericLines: 
+|     220-uk50.siteground.eu ESMTP #148 Sat, 16 Mar 2019 07:45:41 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|     and/or bulk e-mail.
+|     unrecognized command
+|     unrecognized command
+|   GetRequest: 
+|     220-uk50.siteground.eu ESMTP #148 Sat, 16 Mar 2019 07:45:30 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|     and/or bulk e-mail.
+|     unrecognized command
+|     unrecognized command
+|   NULL: 
+|     220-uk50.siteground.eu ESMTP #148 Sat, 16 Mar 2019 07:45:30 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|_    and/or bulk e-mail.
+3306/tcp  open  mysql       MySQL 5.6.40-84.0-log
+| banner: S\x00\x00\x00\x0A5.6.40-84.0-log\x00\xAE\xDBb\x06RR$]'Hu6\x00\x
+|_FF\xF7!\x02\x00\x7F\x80\x15\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00J...
+18765/tcp open  ssh         Linksys WRT45G modified dropbear sshd (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH
+6 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port465-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CA9A2%P=x86_64-unknown-linu
+SF:x-gnu%r(NULL,A8,"220-uk50\.siteground\.eu\x20ESMTP\x20#148\x20Sat,\x201
+SF:6\x20Mar\x202019\x2007:45:36\x20\+0000\x20\r\n220-We\x20do\x20not\x20au
+SF:thorize\x20the\x20use\x20of\x20this\x20system\x20to\x20transport\x20uns
+SF:olicited,\x20\r\n220\x20and/or\x20bulk\x20e-mail\.\r\n")%r(Hello,A8,"22
+SF:0-uk50\.siteground\.eu\x20ESMTP\x20#148\x20Sat,\x2016\x20Mar\x202019\x2
+SF:007:45:36\x20\+0000\x20\r\n220-We\x20do\x20not\x20authorize\x20the\x20u
+SF:se\x20of\x20this\x20system\x20to\x20transport\x20unsolicited,\x20\r\n22
+SF:0\x20and/or\x20bulk\x20e-mail\.\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port587-TCP:V=7.70%I=7%D=3/16%Time=5C8CA99C%P=x86_64-unknown-linux-gnu%
+SF:r(NULL,A8,"220-uk50\.siteground\.eu\x20ESMTP\x20#148\x20Sat,\x2016\x20M
+SF:ar\x202019\x2007:45:30\x20\+0000\x20\r\n220-We\x20do\x20not\x20authoriz
+SF:e\x20the\x20use\x20of\x20this\x20system\x20to\x20transport\x20unsolicit
+SF:ed,\x20\r\n220\x20and/or\x20bulk\x20e-mail\.\r\n")%r(GenericLines,DC,"2
+SF:20-uk50\.siteground\.eu\x20ESMTP\x20#148\x20Sat,\x2016\x20Mar\x202019\x
+SF:2007:45:30\x20\+0000\x20\r\n220-We\x20do\x20not\x20authorize\x20the\x20
+SF:use\x20of\x20this\x20system\x20to\x20transport\x20unsolicited,\x20\r\n2
+SF:20\x20and/or\x20bulk\x20e-mail\.\r\n500\x20unrecognized\x20command\r\n5
+SF:00\x20unrecognized\x20command\r\n")%r(Hello,12B,"220-uk50\.siteground\.
+SF:eu\x20ESMTP\x20#148\x20Sat,\x2016\x20Mar\x202019\x2007:45:41\x20\+0000\
+SF:x20\r\n220-We\x20do\x20not\x20authorize\x20the\x20use\x20of\x20this\x20
+SF:system\x20to\x20transport\x20unsolicited,\x20\r\n220\x20and/or\x20bulk\
+SF:x20e-mail\.\r\n550-You\x20can\x20not\x20sent\x20a\x20blank\x20HELO/EHLO
+SF:\x20request\.\x2078\.58\.49\.144\x20sent\x20\[\]\x20EHLO/HELO\r\n550\x2
+SF:0greeting\.\x20Please\x20see\x20RFC\x202821\x20section\x204\.1\.1\.1\r\
+SF:n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2082-TCP:V=7.70%I=7%D=3/16%Time=5C8CA9F9%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,111C,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConnection:
+SF:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\
+SF:x20Sat,\x2016\x20Mar\x202019\x2007:47:08\x20GMT\r\nCache-Control:\x20no
+SF:-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-ca
+SF:che\r\nWWW-Authenticate:\x20Basic\x20realm=\"cPanel\"\r\nSet-Cookie:\x2
+SF:0cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\
+SF:x20GMT;\x20path=/;\x20port=2082\r\nSet-Cookie:\x20cpsession=%3aUfVlPT2J
+SF:SEKPOd6W%2cc4efa885b2babd64fc6d217c4a95679b;\x20HttpOnly;\x20path=/;\x2
+SF:0port=2082\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20
+SF:expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2082
+SF:\r\nSet-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=u
+SF:k50\.siteground\.eu;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;
+SF:\x20path=/;\x20port=2082\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\
+SF:x20domain=\.uk50\.siteground\.eu;\x20expires=Thu,\x2001-Jan-1970\x2000:
+SF:00:01\x20GMT;\x20path=/;\x20port=2082\r\nSet-Cookie:\x20horde_secret_ke
+SF:y=expired;\x20HttpOnly;\x20domain=\.uk50\.siteground\.eu;\x20expires=Th
+SF:u,\x200");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2083-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CA9B8%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2007:46:02\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"cPanel\"\r\nSet-Cook
+SF:ie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:
+SF:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20cpse
+SF:ssion=%3a_a1WK8JLOZsgDwND%2c82eab0402264d1be6423485836a7a68b;\x20HttpOn
+SF:ly;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_sess
+SF:id=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20
+SF:GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_ses
+SF:sauth=expired;\x20HttpOnly;\x20domain=uk50\.siteground\.eu;\x20expires=
+SF:Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20sec
+SF:ure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20domain=\.uk50\.sit
+SF:eground\.eu;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path
+SF:=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20horde_secret_key=expired;
+SF:\x20HttpOnly;\x20do")%r(HTTPOptions,4000,"HTTP/1\.0\x20401\x20Access\x2
+SF:0Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20chars
+SF:et=\"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2007:46:04\x20GMT\r
+SF:\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20priva
+SF:te\r\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"cPan
+SF:el\"\r\nSet-Cookie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001
+SF:-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet
+SF:-Cookie:\x20cpsession=%3aQ8b6hROy4wRMBcp5%2c5f94c04a41952dd0c317e4920f3
+SF:22eed;\x20HttpOnly;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x
+SF:20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970
+SF:\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\
+SF:x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=uk50\.siteground\
+SF:.eu;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20p
+SF:ort=2083;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20do
+SF:main=\.uk50\.siteground\.eu;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01
+SF:\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20horde_sec
+SF:ret_key=expired;\x20HttpOnly;\x20do");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2095-TCP:V=7.70%I=7%D=3/16%Time=5C8CA9FC%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,111C,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConnection:
+SF:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\
+SF:x20Sat,\x2016\x20Mar\x202019\x2007:47:12\x20GMT\r\nCache-Control:\x20no
+SF:-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-ca
+SF:che\r\nWWW-Authenticate:\x20Basic\x20realm=\"WebMail\"\r\nSet-Cookie:\x
+SF:20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:
+SF:00:01\x20GMT;\x20path=/;\x20port=2095\r\nSet-Cookie:\x20webmailsession=
+SF:%3a3b5gXaL_0wUJfwp6%2c5b3b07449c2ad46effc945edcc34008c;\x20HttpOnly;\x2
+SF:0path=/;\x20port=2095\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20Ht
+SF:tpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x
+SF:20port=2095\r\nSet-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\
+SF:x20domain=uk50\.siteground\.eu;\x20expires=Thu,\x2001-Jan-1970\x2000:00
+SF::01\x20GMT;\x20path=/;\x20port=2095\r\nSet-Cookie:\x20Horde=expired;\x2
+SF:0HttpOnly;\x20domain=\.uk50\.siteground\.eu;\x20expires=Thu,\x2001-Jan-
+SF:1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2095\r\nSet-Cookie:\x20hord
+SF:e_secret_key=expired;\x20HttpOnly;\x20domain=\.uk50\.siteground\.eu;\x2
+SF:0exp");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2525-TCP:V=7.70%I=7%D=3/16%Time=5C8CA99C%P=x86_64-unknown-linux-gnu
+SF:%r(NULL,A8,"220-uk50\.siteground\.eu\x20ESMTP\x20#148\x20Sat,\x2016\x20
+SF:Mar\x202019\x2007:45:30\x20\+0000\x20\r\n220-We\x20do\x20not\x20authori
+SF:ze\x20the\x20use\x20of\x20this\x20system\x20to\x20transport\x20unsolici
+SF:ted,\x20\r\n220\x20and/or\x20bulk\x20e-mail\.\r\n")%r(GetRequest,DC,"22
+SF:0-uk50\.siteground\.eu\x20ESMTP\x20#148\x20Sat,\x2016\x20Mar\x202019\x2
+SF:007:45:30\x20\+0000\x20\r\n220-We\x20do\x20not\x20authorize\x20the\x20u
+SF:se\x20of\x20this\x20system\x20to\x20transport\x20unsolicited,\x20\r\n22
+SF:0\x20and/or\x20bulk\x20e-mail\.\r\n500\x20unrecognized\x20command\r\n50
+SF:0\x20unrecognized\x20command\r\n")%r(GenericLines,DC,"220-uk50\.sitegro
+SF:und\.eu\x20ESMTP\x20#148\x20Sat,\x2016\x20Mar\x202019\x2007:45:41\x20\+
+SF:0000\x20\r\n220-We\x20do\x20not\x20authorize\x20the\x20use\x20of\x20thi
+SF:s\x20system\x20to\x20transport\x20unsolicited,\x20\r\n220\x20and/or\x20
+SF:bulk\x20e-mail\.\r\n500\x20unrecognized\x20command\r\n500\x20unrecogniz
+SF:ed\x20command\r\n");
+Service Info: Device: router
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 09:49:19 2019 -- 1 IP address (1 host up) scanned in 3911.87 seconds

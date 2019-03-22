@@ -1,0 +1,67 @@
+# Nmap 7.70 scan initiated Sat Mar 16 02:33:25 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/aylesburyvaledc.gov.uk aylesburyvaledc.gov.uk
+Nmap scan report for aylesburyvaledc.gov.uk (109.73.113.119)
+Host is up (0.41s latency).
+rDNS record for 109.73.113.119: test.edsight.co.uk
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http-proxy Varnish http accelerator
+|_http-server-header: Varnish
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.0 200 Found
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>404 Not Found</h1>
+|     Your request didn't return a valid result
+|     </body></html>
+|   tor-versions: 
+|     HTTP/1.0 400 Bad request
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|_    </body></html>
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 - unknown
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: unknown
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8C4F3C%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,B2,"HTTP/1\.0\x20200\x20Found\nCache-Control:\x20no-
+SF:cache\nConnection:\x20close\nContent-Type:\x20text/html\n\n<html><body>
+SF:<h1>404\x20Not\x20Found</h1>\nYour\x20request\x20didn't\x20return\x20a\
+SF:x20valid\x20result\n</body></html>\n")%r(HTTPOptions,B2,"HTTP/1\.0\x202
+SF:00\x20Found\nCache-Control:\x20no-cache\nConnection:\x20close\nContent-
+SF:Type:\x20text/html\n\n<html><body><h1>404\x20Not\x20Found</h1>\nYour\x2
+SF:0request\x20didn't\x20return\x20a\x20valid\x20result\n</body></html>\n"
+SF:)%r(FourOhFourRequest,B2,"HTTP/1\.0\x20200\x20Found\nCache-Control:\x20
+SF:no-cache\nConnection:\x20close\nContent-Type:\x20text/html\n\n<html><bo
+SF:dy><h1>404\x20Not\x20Found</h1>\nYour\x20request\x20didn't\x20return\x2
+SF:0a\x20valid\x20result\n</body></html>\n")%r(tor-versions,BC,"HTTP/1\.0\
+SF:x20400\x20Bad\x20request\r\nCache-Control:\x20no-cache\r\nConnection:\x
+SF:20close\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad
+SF:\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.
+SF:\n</body></html>\n\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 03:21:36 2019 -- 1 IP address (1 host up) scanned in 2891.17 seconds

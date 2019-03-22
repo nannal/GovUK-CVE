@@ -1,0 +1,62 @@
+# Nmap 7.70 scan initiated Sat Mar 16 09:15:22 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/gmita.gov.uk gmita.gov.uk
+Warning: 185.25.241.22 giving up on port because retransmission cap hit (6).
+Nmap scan report for gmita.gov.uk (185.25.241.22)
+Host is up (0.073s latency).
+rDNS record for 185.25.241.22: plesk4.srv.phonecoop.coop
+Not shown: 64529 filtered ports, 999 closed ports
+PORT     STATE SERVICE    VERSION
+21/tcp   open  ftp        ProFTPD
+|_banner: 220 ProFTPD Server (ProFTPD) [185.25.241.22]
+22/tcp   open  ssh        OpenSSH 5.3 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_5.3
+80/tcp   open  http       Apache httpd (PleskLin)
+443/tcp  open  ssl/http   Apache httpd
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+1167/tcp open  r1soft-cdp R1Soft Continuous Data Protection Agent (name: VMwareVMware)
+| banner: \x00\x00\x012R\xAF\x02\x0A\x18\x08\xA3\x80\x04\x10\x01\x18\x00 
+|_\x01*\x0CVMwareVMware\x10\x00\x1A\x90\x02-----BEGIN PUBLIC KEY-----\...
+5666/tcp open  tcpwrapped
+8443/tcp open  ssl/http   sw-cp-server httpd (Plesk Onyx 17.8.11)
+|_http-server-header: sw-cp-server
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+8880/tcp open  http       sw-cp-server httpd (Plesk Onyx 17.8.11)
+Service Info: Host: default-185_25_241_22
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 11:10:14 2019 -- 1 IP address (1 host up) scanned in 6891.54 seconds

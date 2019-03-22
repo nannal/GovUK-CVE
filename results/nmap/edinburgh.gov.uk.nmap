@@ -1,0 +1,149 @@
+# Nmap 7.70 scan initiated Sat Mar 16 07:05:36 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/edinburgh.gov.uk edinburgh.gov.uk
+Nmap scan report for edinburgh.gov.uk (95.138.142.88)
+Host is up (0.065s latency).
+rDNS record for 95.138.142.88: www.edinburgh.gov.uk
+Not shown: 65534 filtered ports
+PORT     STATE SERVICE    VERSION
+443/tcp  open  ssl/https  Web Server
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 403 Forbidden
+|     Date: Sat, 16 Mar 2019 05:10:22 GMT
+|     Server: Web Server
+|     Content-Length: 202
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>403 Forbidden</title>
+|     </head><body>
+|     <h1>Forbidden</h1>
+|     <p>You don't have permission to access /
+|     this server.</p>
+|     </body></html>
+|   HTTPOptions: 
+|     HTTP/1.1 403 Forbidden
+|     Date: Sat, 16 Mar 2019 05:10:23 GMT
+|     Server: Web Server
+|     Content-Length: 202
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>403 Forbidden</title>
+|     </head><body>
+|     <h1>Forbidden</h1>
+|     <p>You don't have permission to access /
+|     this server.</p>
+|_    </body></html>
+|_http-server-header: Web Server
+8080/tcp open  http-proxy Web Server
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Date: Sat, 16 Mar 2019 05:10:14 GMT
+|     Server: Web Server
+|     Content-Length: 225
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>404 Not Found</title>
+|     </head><body>
+|     <h1>Not Found</h1>
+|     <p>The requested URL /nice ports,/Trinity.txt.bak was not found on this server.</p>
+|     </body></html>
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Sat, 16 Mar 2019 05:10:14 GMT
+|     Server: Web Server
+|     Last-Modified: Thu, 14 Feb 2013 18:11:06 GMT
+|     ETag: "8018b8-25-4d5b32eb02280"
+|     Accept-Ranges: bytes
+|     Content-Length: 37
+|     Node: web-3
+|     Connection: close
+|     Content-Type: text/html; charset=UTF-8
+|     This is a server. Thanks for looking
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Sat, 16 Mar 2019 05:10:14 GMT
+|     Server: Web Server
+|     Allow: GET,HEAD,POST,OPTIONS
+|     Node: web-2
+|     Content-Length: 0
+|     Connection: close
+|     Content-Type: text/html; charset=UTF-8
+|   RTSPRequest, Socks5: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 16 Mar 2019 05:10:14 GMT
+|     Server: Web Server
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|_    </body></html>
+|_http-server-header: Web Server
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8C853B%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,172,"HTTP/1\.1\x20403\x20Forbidden\r\nDate:\x20Sat,\
+SF:x2016\x20Mar\x202019\x2005:10:22\x20GMT\r\nServer:\x20Web\x20Server\r\n
+SF:Content-Length:\x20202\r\nConnection:\x20close\r\nContent-Type:\x20text
+SF:/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-/
+SF:/IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>403\x20Forbidde
+SF:n</title>\n</head><body>\n<h1>Forbidden</h1>\n<p>You\x20don't\x20have\x
+SF:20permission\x20to\x20access\x20/\non\x20this\x20server\.</p>\n</body><
+SF:/html>\n")%r(HTTPOptions,172,"HTTP/1\.1\x20403\x20Forbidden\r\nDate:\x2
+SF:0Sat,\x2016\x20Mar\x202019\x2005:10:23\x20GMT\r\nServer:\x20Web\x20Serv
+SF:er\r\nContent-Length:\x20202\r\nConnection:\x20close\r\nContent-Type:\x
+SF:20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x
+SF:20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>403\x20Fo
+SF:rbidden</title>\n</head><body>\n<h1>Forbidden</h1>\n<p>You\x20don't\x20
+SF:have\x20permission\x20to\x20access\x20/\non\x20this\x20server\.</p>\n</
+SF:body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8080-TCP:V=7.70%I=7%D=3/16%Time=5C8C8532%P=x86_64-unknown-linux-gnu
+SF:%r(GetRequest,132,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2016\x20Mar
+SF:\x202019\x2005:10:14\x20GMT\r\nServer:\x20Web\x20Server\r\nLast-Modifie
+SF:d:\x20Thu,\x2014\x20Feb\x202013\x2018:11:06\x20GMT\r\nETag:\x20\"8018b8
+SF:-25-4d5b32eb02280\"\r\nAccept-Ranges:\x20bytes\r\nContent-Length:\x2037
+SF:\r\nNode:\x20web-3\r\nConnection:\x20close\r\nContent-Type:\x20text/htm
+SF:l;\x20charset=UTF-8\r\n\r\nThis\x20is\x20a\x20server\.\x20Thanks\x20for
+SF:\x20looking\n")%r(HTTPOptions,C5,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sa
+SF:t,\x2016\x20Mar\x202019\x2005:10:14\x20GMT\r\nServer:\x20Web\x20Server\
+SF:r\nAllow:\x20GET,HEAD,POST,OPTIONS\r\nNode:\x20web-2\r\nContent-Length:
+SF:\x200\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset
+SF:=UTF-8\r\n\r\n")%r(RTSPRequest,18C,"HTTP/1\.1\x20400\x20Bad\x20Request\
+SF:r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2005:10:14\x20GMT\r\nServer:\x20
+SF:Web\x20Server\r\nContent-Length:\x20226\r\nConnection:\x20close\r\nCont
+SF:ent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\
+SF:x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<titl
+SF:e>400\x20Bad\x20Request</title>\n</head><body>\n<h1>Bad\x20Request</h1>
+SF:\n<p>Your\x20browser\x20sent\x20a\x20request\x20that\x20this\x20server\
+SF:x20could\x20not\x20understand\.<br\x20/>\n</p>\n</body></html>\n")%r(Fo
+SF:urOhFourRequest,189,"HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:\x20Sat,\
+SF:x2016\x20Mar\x202019\x2005:10:14\x20GMT\r\nServer:\x20Web\x20Server\r\n
+SF:Content-Length:\x20225\r\nConnection:\x20close\r\nContent-Type:\x20text
+SF:/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-/
+SF:/IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>404\x20Not\x20F
+SF:ound</title>\n</head><body>\n<h1>Not\x20Found</h1>\n<p>The\x20requested
+SF:\x20URL\x20/nice\x20ports,/Trinity\.txt\.bak\x20was\x20not\x20found\x20
+SF:on\x20this\x20server\.</p>\n</body></html>\n")%r(Socks5,18C,"HTTP/1\.1\
+SF:x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2005:10
+SF::14\x20GMT\r\nServer:\x20Web\x20Server\r\nContent-Length:\x20226\r\nCon
+SF:nection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\
+SF:r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//E
+SF:N\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head><body>
+SF:\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\x
+SF:20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>\n</p>
+SF:\n</body></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 07:11:15 2019 -- 1 IP address (1 host up) scanned in 338.65 seconds

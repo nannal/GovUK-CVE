@@ -1,0 +1,41 @@
+# Nmap 7.70 scan initiated Sat Mar 16 04:13:52 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/castlethorpe-pc.gov.uk castlethorpe-pc.gov.uk
+Nmap scan report for castlethorpe-pc.gov.uk (212.69.40.200)
+Host is up (0.078s latency).
+Other addresses for castlethorpe-pc.gov.uk (not scanned): 2a02:390:2::63:7038
+rDNS record for 212.69.40.200: cpanel8.idnet.net
+Not shown: 65528 filtered ports
+PORT     STATE  SERVICE  VERSION
+20/tcp   closed ftp-data
+21/tcp   open   ftp      Pure-FTPd
+| banner: 220---------- Welcome to Pure-FTPd [privsep] [TLS] ----------\x
+|_0D\x0A220-You are user number 1 of 50 allowed.\x0D\x0A220-Local time...
+22/tcp   open   ssh      OpenSSH 7.4 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_7.4
+53/tcp   closed domain
+80/tcp   open   http     Apache httpd
+443/tcp  open   ssl/ssl  Apache httpd (SSL-only mode)
+|_http-server-header: Apache
+2083/tcp open   radsec?
+| fingerprint-strings: 
+|   TerminalServer: 
+|     HTTP/1.1 301 Moved
+|     Content-length: 114
+|     Location: https://cpanel8.idnet.net:2083
+|     Content-type: text/html; charset="utf-8"
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|_    <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://cpanel8.idnet.net:2083"></head><body></body></html>
+3306/tcp open   mysql    MySQL 5.7.25
+| banner: J\x00\x00\x00\x0A5.7.25\x00\x82#\x0E\x00O^?4\x0972\x17\x00\xFF\
+|_xF7\x08\x02\x00\xFF\x81\x15\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\...
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port2083-TCP:V=7.70%I=7%D=3/16%Time=5C8C5D94%P=x86_64-unknown-linux-gnu
+SF:%r(TerminalServer,140,"HTTP/1\.1\x20301\x20Moved\r\nContent-length:\x20
+SF:114\r\nLocation:\x20https://cpanel8\.idnet\.net:2083\r\nContent-type:\x
+SF:20text/html;\x20charset=\"utf-8\"\r\nCache-Control:\x20no-cache,\x20no-
+SF:store,\x20must-revalidate,\x20private\r\nPragma:\x20no-cache\r\n\r\n<ht
+SF:ml><head><META\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://cpa
+SF:nel8\.idnet\.net:2083\"></head><body></body></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 04:21:39 2019 -- 1 IP address (1 host up) scanned in 467.79 seconds

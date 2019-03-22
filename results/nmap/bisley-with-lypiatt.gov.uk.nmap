@@ -1,0 +1,60 @@
+# Nmap 7.70 scan initiated Sat Mar 16 03:06:05 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/bisley-with-lypiatt.gov.uk bisley-with-lypiatt.gov.uk
+Warning: 77.92.64.117 giving up on port because retransmission cap hit (6).
+Nmap scan report for bisley-with-lypiatt.gov.uk (77.92.64.117)
+Host is up (0.064s latency).
+Not shown: 65460 closed ports, 67 filtered ports
+PORT     STATE SERVICE    VERSION
+80/tcp   open  http       Apache httpd 2.2.22 ((Ubuntu))
+90/tcp   open  http       Apache httpd 2.2.14
+91/tcp   open  http       Apache httpd 2.2.14 ((Ubuntu))
+110/tcp  open  pop3       Dovecot pop3d
+|_banner: +OK The NEW CIX collective is listening on mail1...
+143/tcp  open  imap       Dovecot imapd
+| banner: * OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID 
+|_ENABLE IDLE STARTTLS AUTH=PLAIN] The NEW CIX collective is listening...
+443/tcp  open  ssl/https?
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_256_CBC_SHA and TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+|     warnings: 
+|       Key exchange (dh 2048) of lower strength than certificate key
+|       Key exchange (secp256r1) of lower strength than certificate key
+|   TLSv1.1: 
+|     ciphers: 
+| 
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       Key exchange (dh 2048) of lower strength than certificate key
+|       Key exchange (secp256r1) of lower strength than certificate key
+|   TLSv1.2: 
+|     ciphers: 
+| 
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       Key exchange (dh 2048) of lower strength than certificate key
+|       Key exchange (secp256r1) of lower strength than certificate key
+|_  least strength: A
+587/tcp  open  smtp       netqmail smtpd 1.04
+|_banner: 220 smtp1.cix.co.uk ESMTP
+2500/tcp open  smtp       netqmail smtpd 1.04
+|_banner: 220 smtp2.cix.co.uk ESMTP
+4743/tcp open  openhpid?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port4743-TCP:V=7.70%I=7%D=3/16%Time=5C8C5104%P=x86_64-unknown-linux-gnu
+SF:%r(DNSVersionBindReqTCP,C,"\x02\x11\0\x06\x01\0\0\x01\0\0\0\0");
+Service Info: Host: lb2.mail.cix.co.uk; OS: Unix
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 03:28:57 2019 -- 1 IP address (1 host up) scanned in 1371.85 seconds

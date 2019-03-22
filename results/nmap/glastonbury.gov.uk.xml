@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 09:13:45 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/glastonbury.gov.uk glastonbury.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/glastonbury.gov.uk glastonbury.gov.uk" start="1552720425" startstr="Sat Mar 16 09:13:45 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552720426" endtime="1552728208"><status state="up" reason="syn-ack" reason_ttl="51"/>
+<address addr="185.123.97.177" addrtype="ipv4"/>
+<hostnames>
+<hostname name="glastonbury.gov.uk" type="user"/>
+<hostname name="ns1.uk13.siteground.eu" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65290">
+<extrareasons reason="no-responses" count="65288"/>
+<extrareasons reason="proto-unreaches" count="2"/>
+</extraports>
+<extraports state="closed" count="228">
+<extrareasons reason="resets" count="228"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="ftp" product="Pure-FTPd" method="probed" conf="10"><cpe>cpe:/a:pureftpd:pure-ftpd</cpe></service><script id="banner" output="220-#########################################################\x&#xa;0D\x0A220-Please upload your web files to the public_html directory....&#xa;"/></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="domain" product="ISC BIND" version="9.10.6" method="probed" conf="10"><cpe>cpe:/a:isc:bind:9.10.6</cpe></service></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="http" product="nginx" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx</cpe></service><script id="http-server-header" output="nginx"><elem>nginx</elem>
+</script></port>
+<port protocol="tcp" portid="110"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="pop3" product="Dovecot pop3d" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="banner" output="+OK Dovecot ready."/></port>
+<port protocol="tcp" portid="143"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="imap" product="Dovecot imapd" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="banner" output="* OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID &#xa;ENABLE IDLE NAMESPACE STARTTLS AUTH=PLAIN AUTH=LOGIN] Dovecot ready."/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="http" product="nginx" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx</cpe></service><script id="http-server-header" output="nginx"><elem>nginx</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  least strength: A"><table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp384r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp384r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<elem key="least strength">A</elem>
+</script></port>
+<port protocol="tcp" portid="465"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="smtp" servicefp="SF-Port465-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CBFCC%P=x86_64-unknown-linux-gnu%r(NULL,A8,&quot;220-uk13\.siteground\.eu\x20ESMTP\x20#148\x20Sat,\x2016\x20Mar\x202019\x2009:20:08\x20\+0000\x20\r\n220-We\x20do\x20not\x20authorize\x20the\x20use\x20of\x20this\x20system\x20to\x20transport\x20unsolicited,\x20\r\n220\x20and/or\x20bulk\x20e-mail\.\r\n&quot;)%r(Hello,A8,&quot;220-uk13\.siteground\.eu\x20ESMTP\x20#148\x20Sat,\x2016\x20Mar\x202019\x2009:20:08\x20\+0000\x20\r\n220-We\x20do\x20not\x20authorize\x20the\x20use\x20of\x20this\x20system\x20to\x20transport\x20unsolicited,\x20\r\n220\x20and/or\x20bulk\x20e-mail\.\r\n&quot;);" tunnel="ssl" method="table" conf="3"/><script id="banner" output="220-uk13.siteground.eu ESMTP #148 Sat, 16 Mar 2019 09:20:08 +00&#xa;00 \x0D\x0A220-We do not authorize the use of this system to transpo...&#xa;"/><script id="fingerprint-strings" output="&#xa;  Hello, NULL: &#xa;    220-uk13.siteground.eu ESMTP #148 Sat, 16 Mar 2019 09:20:08 +0000 &#xa;    220-We do not authorize the use of this system to transport unsolicited, &#xa;    and/or bulk e-mail."><elem key="Hello, NULL">&#xa;    220-uk13.siteground.eu ESMTP #148 Sat, 16 Mar 2019 09:20:08 +0000 &#xa;    220-We do not authorize the use of this system to transport unsolicited, &#xa;    and/or bulk e-mail.</elem>
+</script></port>
+<port protocol="tcp" portid="587"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="smtp" servicefp="SF-Port587-TCP:V=7.70%I=7%D=3/16%Time=5C8CBFC4%P=x86_64-unknown-linux-gnu%r(NULL,A8,&quot;220-uk13\.siteground\.eu\x20ESMTP\x20#148\x20Sat,\x2016\x20Mar\x202019\x2009:20:02\x20\+0000\x20\r\n220-We\x20do\x20not\x20authorize\x20the\x20use\x20of\x20this\x20system\x20to\x20transport\x20unsolicited,\x20\r\n220\x20and/or\x20bulk\x20e-mail\.\r\n&quot;)%r(GenericLines,DC,&quot;220-uk13\.siteground\.eu\x20ESMTP\x20#148\x20Sat,\x2016\x20Mar\x202019\x2009:20:02\x20\+0000\x20\r\n220-We\x20do\x20not\x20authorize\x20the\x20use\x20of\x20this\x20system\x20to\x20transport\x20unsolicited,\x20\r\n220\x20and/or\x20bulk\x20e-mail\.\r\n500\x20unrecognized\x20command\r\n500\x20unrecognized\x20command\r\n&quot;)%r(Hello,12B,&quot;220-uk13\.siteground\.eu\x20ESMTP\x20#148\x20Sat,\x2016\x20Mar\x202019\x2009:20:14\x20\+0000\x20\r\n220-We\x20do\x20not\x20authorize\x20the\x20use\x20of\x20this\x20system\x20to\x20transport\x20unsolicited,\x20\r\n220\x20and/or\x20bulk\x20e-mail\.\r\n550-You\x20can\x20not\x20sent\x20a\x20blank\x20HELO/EHLO\x20request\.\x2078\.58\.49\.144\x20sent\x20\[\]\x20EHLO/HELO\r\n550\x20greeting\.\x20Please\x20see\x20RFC\x202821\x20section\x204\.1\.1\.1\r\n&quot;);" method="table" conf="3"/><script id="banner" output="220-uk13.siteground.eu ESMTP #148 Sat, 16 Mar 2019 09:20:02 +00&#xa;00 \x0D\x0A220-We do not authorize the use of this system to transpo...&#xa;"/><script id="fingerprint-strings" output="&#xa;  GenericLines: &#xa;    220-uk13.siteground.eu ESMTP #148 Sat, 16 Mar 2019 09:20:02 +0000 &#xa;    220-We do not authorize the use of this system to transport unsolicited, &#xa;    and/or bulk e-mail.&#xa;    unrecognized command&#xa;    unrecognized command&#xa;  Hello: &#xa;    220-uk13.siteground.eu ESMTP #148 Sat, 16 Mar 2019 09:20:14 +0000 &#xa;    220-We do not authorize the use of this system to transport unsolicited, &#xa;    and/or bulk e-mail.&#xa;    550-You can not sent a blank HELO/EHLO request. 78.58.49.144 sent [] EHLO/HELO&#xa;    greeting. Please see RFC 2821 section 4.1.1.1&#xa;  NULL: &#xa;    220-uk13.siteground.eu ESMTP #148 Sat, 16 Mar 2019 09:20:02 +0000 &#xa;    220-We do not authorize the use of this system to transport unsolicited, &#xa;    and/or bulk e-mail."><elem key="GenericLines">&#xa;    220-uk13.siteground.eu ESMTP #148 Sat, 16 Mar 2019 09:20:02 +0000 &#xa;    220-We do not authorize the use of this system to transport unsolicited, &#xa;    and/or bulk e-mail.&#xa;    unrecognized command&#xa;    unrecognized command</elem>
+<elem key="Hello">&#xa;    220-uk13.siteground.eu ESMTP #148 Sat, 16 Mar 2019 09:20:14 +0000 &#xa;    220-We do not authorize the use of this system to transport unsolicited, &#xa;    and/or bulk e-mail.&#xa;    550-You can not sent a blank HELO/EHLO request. 78.58.49.144 sent [] EHLO/HELO&#xa;    greeting. Please see RFC 2821 section 4.1.1.1</elem>
+<elem key="NULL">&#xa;    220-uk13.siteground.eu ESMTP #148 Sat, 16 Mar 2019 09:20:02 +0000 &#xa;    220-We do not authorize the use of this system to transport unsolicited, &#xa;    and/or bulk e-mail.</elem>
+</script></port>
+<port protocol="tcp" portid="993"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="imap" product="Dovecot imapd" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="banner" output="* OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID &#xa;ENABLE IDLE NAMESPACE AUTH=PLAIN AUTH=LOGIN] Dovecot ready."/><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    cipher preference error: Network error&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    cipher preference error: Network error&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp384r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp384r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp384r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp384r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  least strength: A"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp384r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp384r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<elem key="cipher preference error">Network error</elem>
+</table>
+<table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp384r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp384r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<elem key="cipher preference error">Network error</elem>
+</table>
+<table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">secp384r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">secp384r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">secp384r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp384r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+<elem key="kex_info">secp384r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp384r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<elem key="least strength">A</elem>
+</script></port>
+<port protocol="tcp" portid="995"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="pop3" product="Dovecot pop3d" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp384r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp384r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp384r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp384r1) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    cipher preference error: Network error&#xa;  least strength: A"><table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp384r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp384r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp384r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">secp384r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">secp384r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+<elem key="kex_info">secp384r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">secp384r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<elem key="cipher preference error">Network error</elem>
+</table>
+<elem key="least strength">A</elem>
+</script></port>
+<port protocol="tcp" portid="2082"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="infowave" servicefp="SF-Port2082-TCP:V=7.70%I=7%D=3/16%Time=5C8CC022%P=x86_64-unknown-linux-gnu%r(SIPOptions,111C,&quot;HTTP/1\.0\x20401\x20Access\x20Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=\&quot;utf-8\&quot;\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2009:21:42\x20GMT\r\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\&quot;cPanel\&quot;\r\nSet-Cookie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2082\r\nSet-Cookie:\x20cpsession=%3asXIQLZ8vKguhYwGC%2c45503357f396347441fe316615d3d446;\x20HttpOnly;\x20path=/;\x20port=2082\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2082\r\nSet-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=uk13\.siteground\.eu;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2082\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20domain=\.uk13\.siteground\.eu;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2082\r\nSet-Cookie:\x20horde_secret_key=expired;\x20HttpOnly;\x20domain=\.uk13\.siteground\.eu;\x20expires=Thu,\x200&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  SIPOptions: &#xa;    HTTP/1.0 401 Access Denied&#xa;    Connection: close&#xa;    Content-Type: text/html; charset=&quot;utf-8&quot;&#xa;    Date: Sat, 16 Mar 2019 09:21:42 GMT&#xa;    Cache-Control: no-cache, no-store, must-revalidate, private&#xa;    Pragma: no-cache&#xa;    WWW-Authenticate: Basic realm=&quot;cPanel&quot;&#xa;    Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082&#xa;    Set-Cookie: cpsession=%3asXIQLZ8vKguhYwGC%2c45503357f396347441fe316615d3d446; HttpOnly; path=/; port=2082&#xa;    Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082&#xa;    Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082&#xa;    Set-Cookie: Horde=expired; HttpOnly; domain=.uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082&#xa;    Set-Cookie: horde_secret_key=expired; HttpOnly; domain=.uk13.siteground.eu; expires=Thu, 0"><elem key="SIPOptions">&#xa;    HTTP/1.0 401 Access Denied&#xa;    Connection: close&#xa;    Content-Type: text/html; charset=&quot;utf-8&quot;&#xa;    Date: Sat, 16 Mar 2019 09:21:42 GMT&#xa;    Cache-Control: no-cache, no-store, must-revalidate, private&#xa;    Pragma: no-cache&#xa;    WWW-Authenticate: Basic realm=&quot;cPanel&quot;&#xa;    Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082&#xa;    Set-Cookie: cpsession=%3asXIQLZ8vKguhYwGC%2c45503357f396347441fe316615d3d446; HttpOnly; path=/; port=2082&#xa;    Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082&#xa;    Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082&#xa;    Set-Cookie: Horde=expired; HttpOnly; domain=.uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082&#xa;    Set-Cookie: horde_secret_key=expired; HttpOnly; domain=.uk13.siteground.eu; expires=Thu, 0</elem>
+</script></port>
+<port protocol="tcp" portid="2083"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="radsec" servicefp="SF-Port2083-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CBFDA%P=x86_64-unknown-linux-gnu%r(GetRequest,4000,&quot;HTTP/1\.0\x20401\x20Access\x20Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=\&quot;utf-8\&quot;\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2009:20:30\x20GMT\r\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\&quot;cPanel\&quot;\r\nSet-Cookie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20cpsession=%3aC5rH3YRtDmfXrS1S%2cfe715cb45e12b2816d68f31a7d8c17f2;\x20HttpOnly;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=uk13\.siteground\.eu;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20domain=\.uk13\.siteground\.eu;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20horde_secret_key=expired;\x20HttpOnly;\x20do&quot;)%r(HTTPOptions,4000,&quot;HTTP/1\.0\x20401\x20Access\x20Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=\&quot;utf-8\&quot;\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2009:20:31\x20GMT\r\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\&quot;cPanel\&quot;\r\nSet-Cookie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20cpsession=%3aSbUI7PnAJ1kK9i7B%2c4755b9ffd43a1d7c715b8a44969ad130;\x20HttpOnly;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=uk13\.siteground\.eu;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20domain=\.uk13\.siteground\.eu;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20horde_secret_key=expired;\x20HttpOnly;\x20do&quot;);" tunnel="ssl" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  GetRequest: &#xa;    HTTP/1.0 401 Access Denied&#xa;    Connection: close&#xa;    Content-Type: text/html; charset=&quot;utf-8&quot;&#xa;    Date: Sat, 16 Mar 2019 09:20:30 GMT&#xa;    Cache-Control: no-cache, no-store, must-revalidate, private&#xa;    Pragma: no-cache&#xa;    WWW-Authenticate: Basic realm=&quot;cPanel&quot;&#xa;    Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure&#xa;    Set-Cookie: cpsession=%3aC5rH3YRtDmfXrS1S%2cfe715cb45e12b2816d68f31a7d8c17f2; HttpOnly; path=/; port=2083; secure&#xa;    Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure&#xa;    Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure&#xa;    Set-Cookie: Horde=expired; HttpOnly; domain=.uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure&#xa;    Set-Cookie: horde_secret_key=expired; HttpOnly; do&#xa;  HTTPOptions: &#xa;    HTTP/1.0 401 Access Denied&#xa;    Connection: close&#xa;    Content-Type: text/html; charset=&quot;utf-8&quot;&#xa;    Date: Sat, 16 Mar 2019 09:20:31 GMT&#xa;    Cache-Control: no-cache, no-store, must-revalidate, private&#xa;    Pragma: no-cache&#xa;    WWW-Authenticate: Basic realm=&quot;cPanel&quot;&#xa;    Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure&#xa;    Set-Cookie: cpsession=%3aSbUI7PnAJ1kK9i7B%2c4755b9ffd43a1d7c715b8a44969ad130; HttpOnly; path=/; port=2083; secure&#xa;    Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure&#xa;    Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure&#xa;    Set-Cookie: Horde=expired; HttpOnly; domain=.uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure&#xa;    Set-Cookie: horde_secret_key=expired; HttpOnly; do"><elem key="GetRequest">&#xa;    HTTP/1.0 401 Access Denied&#xa;    Connection: close&#xa;    Content-Type: text/html; charset=&quot;utf-8&quot;&#xa;    Date: Sat, 16 Mar 2019 09:20:30 GMT&#xa;    Cache-Control: no-cache, no-store, must-revalidate, private&#xa;    Pragma: no-cache&#xa;    WWW-Authenticate: Basic realm=&quot;cPanel&quot;&#xa;    Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure&#xa;    Set-Cookie: cpsession=%3aC5rH3YRtDmfXrS1S%2cfe715cb45e12b2816d68f31a7d8c17f2; HttpOnly; path=/; port=2083; secure&#xa;    Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure&#xa;    Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure&#xa;    Set-Cookie: Horde=expired; HttpOnly; domain=.uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure&#xa;    Set-Cookie: horde_secret_key=expired; HttpOnly; do</elem>
+<elem key="HTTPOptions">&#xa;    HTTP/1.0 401 Access Denied&#xa;    Connection: close&#xa;    Content-Type: text/html; charset=&quot;utf-8&quot;&#xa;    Date: Sat, 16 Mar 2019 09:20:31 GMT&#xa;    Cache-Control: no-cache, no-store, must-revalidate, private&#xa;    Pragma: no-cache&#xa;    WWW-Authenticate: Basic realm=&quot;cPanel&quot;&#xa;    Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure&#xa;    Set-Cookie: cpsession=%3aSbUI7PnAJ1kK9i7B%2c4755b9ffd43a1d7c715b8a44969ad130; HttpOnly; path=/; port=2083; secure&#xa;    Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure&#xa;    Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure&#xa;    Set-Cookie: Horde=expired; HttpOnly; domain=.uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure&#xa;    Set-Cookie: horde_secret_key=expired; HttpOnly; do</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  least strength: A"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<elem key="least strength">A</elem>
+</script></port>
+<port protocol="tcp" portid="2095"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="nbx-ser" servicefp="SF-Port2095-TCP:V=7.70%I=7%D=3/16%Time=5C8CC022%P=x86_64-unknown-linux-gnu%r(SIPOptions,111C,&quot;HTTP/1\.0\x20401\x20Access\x20Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=\&quot;utf-8\&quot;\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2009:21:42\x20GMT\r\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\&quot;WebMail\&quot;\r\nSet-Cookie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2095\r\nSet-Cookie:\x20webmailsession=%3aUWbL6h0emZbrQQgO%2caab6652fe1442aa00d230f517c94dc6e;\x20HttpOnly;\x20path=/;\x20port=2095\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2095\r\nSet-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=uk13\.siteground\.eu;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2095\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20domain=\.uk13\.siteground\.eu;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2095\r\nSet-Cookie:\x20horde_secret_key=expired;\x20HttpOnly;\x20domain=\.uk13\.siteground\.eu;\x20exp&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  SIPOptions: &#xa;    HTTP/1.0 401 Access Denied&#xa;    Connection: close&#xa;    Content-Type: text/html; charset=&quot;utf-8&quot;&#xa;    Date: Sat, 16 Mar 2019 09:21:42 GMT&#xa;    Cache-Control: no-cache, no-store, must-revalidate, private&#xa;    Pragma: no-cache&#xa;    WWW-Authenticate: Basic realm=&quot;WebMail&quot;&#xa;    Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095&#xa;    Set-Cookie: webmailsession=%3aUWbL6h0emZbrQQgO%2caab6652fe1442aa00d230f517c94dc6e; HttpOnly; path=/; port=2095&#xa;    Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095&#xa;    Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095&#xa;    Set-Cookie: Horde=expired; HttpOnly; domain=.uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095&#xa;    Set-Cookie: horde_secret_key=expired; HttpOnly; domain=.uk13.siteground.eu; exp"><elem key="SIPOptions">&#xa;    HTTP/1.0 401 Access Denied&#xa;    Connection: close&#xa;    Content-Type: text/html; charset=&quot;utf-8&quot;&#xa;    Date: Sat, 16 Mar 2019 09:21:42 GMT&#xa;    Cache-Control: no-cache, no-store, must-revalidate, private&#xa;    Pragma: no-cache&#xa;    WWW-Authenticate: Basic realm=&quot;WebMail&quot;&#xa;    Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095&#xa;    Set-Cookie: webmailsession=%3aUWbL6h0emZbrQQgO%2caab6652fe1442aa00d230f517c94dc6e; HttpOnly; path=/; port=2095&#xa;    Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095&#xa;    Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095&#xa;    Set-Cookie: Horde=expired; HttpOnly; domain=.uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095&#xa;    Set-Cookie: horde_secret_key=expired; HttpOnly; domain=.uk13.siteground.eu; exp</elem>
+</script></port>
+<port protocol="tcp" portid="2096"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="nbx-dir" servicefp="SF-Port2096-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CBFDC%P=x86_64-unknown-linux-gnu%r(GetRequest,4000,&quot;HTTP/1\.0\x20401\x20Access\x20Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=\&quot;utf-8\&quot;\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2009:20:32\x20GMT\r\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\&quot;WebMail\&quot;\r\nSet-Cookie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20webmailsession=%3aO9cRV_PJ0cOAY8FW%2c58ae10ca58020f46a3e6c9ff2dcc79e7;\x20HttpOnly;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=uk13\.siteground\.eu;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20domain=\.uk13\.siteground\.eu;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20horde_secret_key=expired;\x20H&quot;)%r(HTTPOptions,4000,&quot;HTTP/1\.0\x20401\x20Access\x20Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=\&quot;utf-8\&quot;\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2009:20:34\x20GMT\r\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\&quot;WebMail\&quot;\r\nSet-Cookie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20webmailsession=%3aJzJjyRR68ARg38Re%2c2cac4111d6dc7ce134a1937f01fad523;\x20HttpOnly;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=uk13\.siteground\.eu;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20domain=\.uk13\.siteground\.eu;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20horde_secret_key=expired;\x20H&quot;);" tunnel="ssl" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  GetRequest: &#xa;    HTTP/1.0 401 Access Denied&#xa;    Connection: close&#xa;    Content-Type: text/html; charset=&quot;utf-8&quot;&#xa;    Date: Sat, 16 Mar 2019 09:20:32 GMT&#xa;    Cache-Control: no-cache, no-store, must-revalidate, private&#xa;    Pragma: no-cache&#xa;    WWW-Authenticate: Basic realm=&quot;WebMail&quot;&#xa;    Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure&#xa;    Set-Cookie: webmailsession=%3aO9cRV_PJ0cOAY8FW%2c58ae10ca58020f46a3e6c9ff2dcc79e7; HttpOnly; path=/; port=2096; secure&#xa;    Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure&#xa;    Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure&#xa;    Set-Cookie: Horde=expired; HttpOnly; domain=.uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure&#xa;    Set-Cookie: horde_secret_key=expired; H&#xa;  HTTPOptions: &#xa;    HTTP/1.0 401 Access Denied&#xa;    Connection: close&#xa;    Content-Type: text/html; charset=&quot;utf-8&quot;&#xa;    Date: Sat, 16 Mar 2019 09:20:34 GMT&#xa;    Cache-Control: no-cache, no-store, must-revalidate, private&#xa;    Pragma: no-cache&#xa;    WWW-Authenticate: Basic realm=&quot;WebMail&quot;&#xa;    Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure&#xa;    Set-Cookie: webmailsession=%3aJzJjyRR68ARg38Re%2c2cac4111d6dc7ce134a1937f01fad523; HttpOnly; path=/; port=2096; secure&#xa;    Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure&#xa;    Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure&#xa;    Set-Cookie: Horde=expired; HttpOnly; domain=.uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure&#xa;    Set-Cookie: horde_secret_key=expired; H"><elem key="GetRequest">&#xa;    HTTP/1.0 401 Access Denied&#xa;    Connection: close&#xa;    Content-Type: text/html; charset=&quot;utf-8&quot;&#xa;    Date: Sat, 16 Mar 2019 09:20:32 GMT&#xa;    Cache-Control: no-cache, no-store, must-revalidate, private&#xa;    Pragma: no-cache&#xa;    WWW-Authenticate: Basic realm=&quot;WebMail&quot;&#xa;    Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure&#xa;    Set-Cookie: webmailsession=%3aO9cRV_PJ0cOAY8FW%2c58ae10ca58020f46a3e6c9ff2dcc79e7; HttpOnly; path=/; port=2096; secure&#xa;    Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure&#xa;    Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure&#xa;    Set-Cookie: Horde=expired; HttpOnly; domain=.uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure&#xa;    Set-Cookie: horde_secret_key=expired; H</elem>
+<elem key="HTTPOptions">&#xa;    HTTP/1.0 401 Access Denied&#xa;    Connection: close&#xa;    Content-Type: text/html; charset=&quot;utf-8&quot;&#xa;    Date: Sat, 16 Mar 2019 09:20:34 GMT&#xa;    Cache-Control: no-cache, no-store, must-revalidate, private&#xa;    Pragma: no-cache&#xa;    WWW-Authenticate: Basic realm=&quot;WebMail&quot;&#xa;    Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure&#xa;    Set-Cookie: webmailsession=%3aJzJjyRR68ARg38Re%2c2cac4111d6dc7ce134a1937f01fad523; HttpOnly; path=/; port=2096; secure&#xa;    Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure&#xa;    Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure&#xa;    Set-Cookie: Horde=expired; HttpOnly; domain=.uk13.siteground.eu; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure&#xa;    Set-Cookie: horde_secret_key=expired; H</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  least strength: A"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<elem key="least strength">A</elem>
+</script></port>
+<port protocol="tcp" portid="2525"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="smtp" servicefp="SF-Port2525-TCP:V=7.70%I=7%D=3/16%Time=5C8CBFC4%P=x86_64-unknown-linux-gnu%r(NULL,A8,&quot;220-uk13\.siteground\.eu\x20ESMTP\x20#148\x20Sat,\x2016\x20Mar\x202019\x2009:20:02\x20\+0000\x20\r\n220-We\x20do\x20not\x20authorize\x20the\x20use\x20of\x20this\x20system\x20to\x20transport\x20unsolicited,\x20\r\n220\x20and/or\x20bulk\x20e-mail\.\r\n&quot;)%r(GetRequest,DC,&quot;220-uk13\.siteground\.eu\x20ESMTP\x20#148\x20Sat,\x2016\x20Mar\x202019\x2009:20:02\x20\+0000\x20\r\n220-We\x20do\x20not\x20authorize\x20the\x20use\x20of\x20this\x20system\x20to\x20transport\x20unsolicited,\x20\r\n220\x20and/or\x20bulk\x20e-mail\.\r\n500\x20unrecognized\x20command\r\n500\x20unrecognized\x20command\r\n&quot;)%r(GenericLines,DC,&quot;220-uk13\.siteground\.eu\x20ESMTP\x20#148\x20Sat,\x2016\x20Mar\x202019\x2009:20:14\x20\+0000\x20\r\n220-We\x20do\x20not\x20authorize\x20the\x20use\x20of\x20this\x20system\x20to\x20transport\x20unsolicited,\x20\r\n220\x20and/or\x20bulk\x20e-mail\.\r\n500\x20unrecognized\x20command\r\n500\x20unrecognized\x20command\r\n&quot;);" method="table" conf="3"/><script id="banner" output="220-uk13.siteground.eu ESMTP #148 Sat, 16 Mar 2019 09:20:02 +00&#xa;00 \x0D\x0A220-We do not authorize the use of this system to transpo...&#xa;"/><script id="fingerprint-strings" output="&#xa;  GenericLines: &#xa;    220-uk13.siteground.eu ESMTP #148 Sat, 16 Mar 2019 09:20:14 +0000 &#xa;    220-We do not authorize the use of this system to transport unsolicited, &#xa;    and/or bulk e-mail.&#xa;    unrecognized command&#xa;    unrecognized command&#xa;  GetRequest: &#xa;    220-uk13.siteground.eu ESMTP #148 Sat, 16 Mar 2019 09:20:02 +0000 &#xa;    220-We do not authorize the use of this system to transport unsolicited, &#xa;    and/or bulk e-mail.&#xa;    unrecognized command&#xa;    unrecognized command&#xa;  NULL: &#xa;    220-uk13.siteground.eu ESMTP #148 Sat, 16 Mar 2019 09:20:02 +0000 &#xa;    220-We do not authorize the use of this system to transport unsolicited, &#xa;    and/or bulk e-mail."><elem key="GenericLines">&#xa;    220-uk13.siteground.eu ESMTP #148 Sat, 16 Mar 2019 09:20:14 +0000 &#xa;    220-We do not authorize the use of this system to transport unsolicited, &#xa;    and/or bulk e-mail.&#xa;    unrecognized command&#xa;    unrecognized command</elem>
+<elem key="GetRequest">&#xa;    220-uk13.siteground.eu ESMTP #148 Sat, 16 Mar 2019 09:20:02 +0000 &#xa;    220-We do not authorize the use of this system to transport unsolicited, &#xa;    and/or bulk e-mail.&#xa;    unrecognized command&#xa;    unrecognized command</elem>
+<elem key="NULL">&#xa;    220-uk13.siteground.eu ESMTP #148 Sat, 16 Mar 2019 09:20:02 +0000 &#xa;    220-We do not authorize the use of this system to transport unsolicited, &#xa;    and/or bulk e-mail.</elem>
+</script></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="mysql" product="MySQL" version="5.6.40-84.0-log" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql:5.6.40-84.0-log</cpe></service><script id="banner" output="S\x00\x00\x00\x0A5.6.40-84.0-log\x00\x9E*\xCC\x00e*&gt;7:^LB\x00\x&#xa;FF\xF7!\x02\x00\x7F\x80\x15\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00E...&#xa;"/></port>
+<port protocol="tcp" portid="8301"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="amberon" servicefp="SF-Port8301-TCP:V=7.70%I=7%D=3/16%Time=5C8CBFC8%P=x86_64-unknown-linux-gnu%r(GenericLines,75,&quot;\n\0\0\0p\x01\x80j\rKC\x97\xd7U\0\t\*\x01\xfc\x8eY\xfeS\xe2\xc7_X\xf6\xe8\xea0\xe3\x8a\xc0b0\xd9d!LDP\x135\x08\xb6Z@\x94\x86\x99\x8et\x02\x13\x8f\xf5}\xef\x01\xe9\x07\xb6Pz@\xc9\]\xcciK\x1b\xfc\x9f\x02!{\xadw\x8d\x99v\xfb8=K\x03\x1aG5o\xcb2\xe2@\xe3\xcd\xdb\xfc&lt;\xda\x8c\)\x92\|\xa1\x03uV\xc4\xe0F\x82\xfdu\xa1\?&quot;)%r(GetRequest,75,&quot;\n\0\0\0p\x01\x07\x88\xca\xa1\xcf\xab\xa9\x96\x95\xeb\$R\xfc}\|\x19\xd9\xbe\xc36\xb4\xb0_\xc8\x9d\xfe!\xa7\xb7\+#X\x9d/\xccb\xb2:\|W\x90\x06\xa7\xbf=q\x02A\x80\xd3\)\xd3\x1e\x10\x8c\xeeJ\xfca-\xddF&amp;\x93\x19\x8f\xc19\xe6\x20w\xc9\x7f\xb3Atp4\x7f\x17\xc4\xbcM\xda\xfek\x86\x15R\x13-I\x13\x10_a\xe9A\x87\xafP\xc7\x06B\xb5\xb0\xb4\xb0\xb4\x0c\x15&quot;)%r(HTTPOptions,75,&quot;\n\0\0\0p\x01\?;\xd6\r;\x8e\xcdc\x1f\xb1\xd3\xf7\xeb\xb7\0\xab\.\xeco\xc2b\x7f\)-\xfau\x1a}\x03\x0c\x8e\xd2\xc9\xd1/E#\0\x9a\xebi\x83A\x85\xc9Pm\xe6i\xfb\x0e\xc3\xae\xcb\]\xef\x10\x13\xac\xd9\xc0\xb3\x04k\xc0\x7f\xb9\xb3\x07\xcf\xe3u\x97\xd7\x816\xe3&apos;G8\xa32\x17\xfa2\xcc2K\xdba\x10\xee\xc4F;\x13`\x80\xc1A\x8f\xacB\x17\xee\xd4\x06\?&amp;S=&quot;)%r(RTSPRequest,75,&quot;\n\0\0\0p\x01\xf0\xeb\x91\x14\x19\x89\x82\xe1=\x1e#\xcaUO/\xb8\x91H\xa6t\xec\xcb\x07Zi\xc0\xdd\xb2D\xa9\xd4\xa3\xbc\[h\$\xa2\(\x8c\xb9\xa22\xe7\xac\xda\xfe7Qd\xd9y\+&apos;l\xbf\|\xbc\xca\x0e\xe9\r\xf6M\x85\]\xc1\xbd\xe2\x9d\x03`\x7fV_\x87C\x90n@\xf0tx#\x15\x20f@\xa3\\D\xda\xe6\x01@\xcaE\x07\xa1\xc13\x91\x93\x7f\x87\r\xee\xd6\xe4\x95%\x8b&quot;)%r(RPCCheck,75,&quot;\n\0\0\0p\x01\x19N\xdf\xa4&amp;`\x18\x9d\xae\xd8Q\x95\xab\x1a=w\xbaa\x16YO\xe0M\x92-\x04\xe7\^\x0bM\xba\x0e\xa9T\xf9k\xdc\x1c\x9a\xbc3\xa1\xcd{\xdeWd\xfe\]\x07itP\xb1B\xb3\x83\x90\x03\xf9\xff\x91;\+\xc7\xc2\xc9\x8b\xccb\xdc\xc8H\x90P6\x80\xad\x054\x1f\x9a\xfe\xe7\xa5\xfe\xe7\.\xeb\|\xcc\xc0\xd0\xc3\xa9\xac~&apos;\xbd\xef\xa5\xf7\x17\x99kG\x01\xdb\xa2Ga&quot;)%r(DNSVersionBindReqTCP,75,&quot;\n\0\0\0p\x01\(\x0c\x8e\xfd9\xbe\x9a\x7f\xd2\x81B\xa5l\x02\xefu\xed\x14zm\xf3\$\xd4/\xc1;\xc9\|v\x95\xac\x04\x12\xbe&lt;\xaa\xaf\\-\xefFx\xe1o2\xbfK\xdc\xf8%\xc5\xbdWn\x01\x12\xe7\x9d~J\xb6Y\x14\xe7\xc7\xbc\x9ckj\xfc\x04\xd8S\x96\xca\xf5\xcf=\xd1\xa1O3\xc2\xfe\x8d\xff\xec\xafC\xc1\xbd\x16\xf0\xcc2\xfegk\x08\xab4\&quot;,\xaa&gt;\xdd\xe9\x87\x1c\xd2Z&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  GenericLines: &#xa;    d!LDP&#xa;  GetRequest: &#xa;    Atp4&#xa;  HTTPOptions: &#xa;    ?&amp;S=&#xa;  RTSPRequest: &#xa;    y+&apos;l"><elem key="GenericLines">&#xa;    d!LDP</elem>
+<elem key="GetRequest">&#xa;    Atp4</elem>
+<elem key="HTTPOptions">&#xa;    ?&amp;S=</elem>
+<elem key="RTSPRequest">&#xa;    y+&apos;l</elem>
+</script></port>
+<port protocol="tcp" portid="18765"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="ssh" product="Linksys WRT45G modified dropbear sshd" extrainfo="protocol 2.0" devicetype="router" method="probed" conf="10"/><script id="banner" output="SSH-2.0-OpenSSH"/></port>
+</ports>
+<times srtt="57936" rttvar="13617" to="112404"/>
+</host>
+<runstats><finished time="1552728208" timestr="Sat Mar 16 11:23:28 2019" elapsed="7782.95" summary="Nmap done at Sat Mar 16 11:23:28 2019; 1 IP address (1 host up) scanned in 7782.95 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

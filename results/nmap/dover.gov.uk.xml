@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 06:35:01 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/dover.gov.uk dover.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/dover.gov.uk dover.gov.uk" start="1552710901" startstr="Sat Mar 16 06:35:01 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552710907" endtime="1552713566"><status state="up" reason="syn-ack" reason_ttl="51"/>
+<address addr="185.18.139.99" addrtype="ipv4"/>
+<hostnames>
+<hostname name="dover.gov.uk" type="user"/>
+</hostnames>
+<ports><extraports state="filtered" count="65533">
+<extrareasons reason="no-responses" count="65533"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="http-proxy" product="HAProxy http proxy" version="1.3.1 or later" devicetype="load balancer" method="probed" conf="10"><cpe>cpe:/a:haproxy:haproxy</cpe></service></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="http-proxy" product="HAProxy http proxy" version="1.3.1 or later" devicetype="load balancer" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:haproxy:haproxy</cpe></service><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      Key exchange (secp256r1) of lower strength than certificate key&#xa;  least strength: A"><table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>Key exchange (secp256r1) of lower strength than certificate key</elem>
+</table>
+</table>
+<elem key="least strength">A</elem>
+</script></port>
+<port protocol="tcp" portid="990"><state state="open" reason="syn-ack" reason_ttl="115"/><service name="ftps" servicefp="SF-Port990-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8C8733%P=x86_64-unknown-linux-gnu%r(NULL,8F,&quot;220-FileZilla\x20Server\x200\.9\.54\x20beta\r\n220-written\x20by\x20Tim\x20Kosse\x20\(tim\.kosse@filezilla-project\.org\)\r\n220\x20Please\x20visit\x20https://filezilla-project\.org/\r\n&quot;)%r(GenericLines,8F,&quot;220-FileZilla\x20Server\x200\.9\.54\x20beta\r\n220-written\x20by\x20Tim\x20Kosse\x20\(tim\.kosse@filezilla-project\.org\)\r\n220\x20Please\x20visit\x20https://filezilla-project\.org/\r\n&quot;);" tunnel="ssl" method="table" conf="3"/><script id="banner" output="220-FileZilla Server 0.9.54 beta\x0D\x0A220-written by Tim Koss&#xa;e (tim.kosse@filezilla-project.org)\x0D\x0A220 Please visit https://...&#xa;"/><script id="fingerprint-strings" output="&#xa;  GenericLines, NULL: &#xa;    220-FileZilla Server 0.9.54 beta&#xa;    220-written by Tim Kosse (tim.kosse@filezilla-project.org)&#xa;    Please visit https://filezilla-project.org/"><elem key="GenericLines, NULL">&#xa;    220-FileZilla Server 0.9.54 beta&#xa;    220-written by Tim Kosse (tim.kosse@filezilla-project.org)&#xa;    Please visit https://filezilla-project.org/</elem>
+</script></port>
+</ports>
+<times srtt="439400" rttvar="584338" to="1250000"/>
+</host>
+<runstats><finished time="1552713566" timestr="Sat Mar 16 07:19:26 2019" elapsed="2664.37" summary="Nmap done at Sat Mar 16 07:19:26 2019; 1 IP address (1 host up) scanned in 2664.37 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

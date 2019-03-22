@@ -1,0 +1,214 @@
+# Nmap 7.70 scan initiated Sat Mar 16 14:22:11 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/northingtonparishcouncil.gov.uk northingtonparishcouncil.gov.uk
+Nmap scan report for northingtonparishcouncil.gov.uk (91.224.26.11)
+Host is up (0.26s latency).
+Not shown: 65525 filtered ports
+PORT     STATE SERVICE      VERSION
+21/tcp   open  ftp          ProFTPD
+53/tcp   open  domain       ISC BIND 9.8.2rc1 (RedHat Enterprise Linux 6)
+80/tcp   open  http         Apache httpd
+110/tcp  open  pop3         Dovecot pop3d
+|_banner: +OK Dovecot ready.
+443/tcp  open  ssl/http     Apache httpd
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_RC4_128_SHA (secp256r1) - C
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+| 
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_RC4_128_SHA (secp256r1) - C
+|     compressors: 
+|       NULL
+|     cipher preference: indeterminate
+|     cipher preference error: Too few ciphers supported
+|     warnings: 
+|       Broken cipher RC4 is deprecated by RFC 7465
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 - unknown
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: unknown
+465/tcp  open  ssl/smtp     Exim smtpd 4.91
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|     compressors: 
+| 
+|     cipher preference error: Error when comparing TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA and TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+995/tcp  open  ssl/pop3     Dovecot pop3d
+|_banner: +OK Dovecot ready.
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_RC4_128_SHA (secp384r1) - C
+|       TLS_ECDH_anon_WITH_3DES_EDE_CBC_SHA - F
+|       TLS_ECDH_anon_WITH_AES_128_CBC_SHA - F
+|     compressors: 
+| 
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA and TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Key exchange (dh 1024) of lower strength than certificate key
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_RC4_128_SHA (secp384r1) - C
+|       TLS_ECDH_anon_WITH_3DES_EDE_CBC_SHA - F
+|       TLS_ECDH_anon_WITH_AES_128_CBC_SHA - F
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA - unknown
+|     compressors: 
+| 
+|     cipher preference error: Error when comparing TLS_ECDHE_RSA_WITH_RC4_128_SHA and TLS_ECDH_anon_WITH_3DES_EDE_CBC_SHA
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+| 
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA and TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: unknown
+2082/tcp open  infowave?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 301 Moved
+|     Content-length: 129
+|     Location: https://whslcpl001.hants.gov.uk:2083/sip%3anm
+|     Content-type: text/html; charset="utf-8"
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|_    <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://whslcpl001.hants.gov.uk:2083/sip%3anm"></head><body></body></html>
+2083/tcp open  ssl/radsec?
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+| 
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_CBC_SHA and TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_CBC_SHA and TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|     compressors: 
+| 
+|     cipher preference: server
+|_  least strength: A
+2095/tcp open  nbx-ser?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 301 Moved
+|     Content-length: 129
+|     Location: https://whslcpl001.hants.gov.uk:2096/sip%3anm
+|     Content-type: text/html; charset="utf-8"
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|_    <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://whslcpl001.hants.gov.uk:2096/sip%3anm"></head><body></body></html>
+2096/tcp open  ssl/nbx-dir?
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+| 
+|     cipher preference error: Error when comparing TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA and TLS_RSA_WITH_AES_128_CBC_SHA
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_CBC_SHA and TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2082-TCP:V=7.70%I=7%D=3/16%Time=5C8CF27F%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,14C,"HTTP/1\.1\x20301\x20Moved\r\nContent-length:\x20129\
+SF:r\nLocation:\x20https://whslcpl001\.hants\.gov\.uk:2083/sip%3anm\r\nCon
+SF:tent-type:\x20text/html;\x20charset=\"utf-8\"\r\nCache-Control:\x20no-c
+SF:ache,\x20no-store,\x20must-revalidate,\x20private\r\n\r\n<html><head><M
+SF:ETA\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://whslcpl001\.ha
+SF:nts\.gov\.uk:2083/sip%3anm\"></head><body></body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2095-TCP:V=7.70%I=7%D=3/16%Time=5C8CF281%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,14C,"HTTP/1\.1\x20301\x20Moved\r\nContent-length:\x20129\
+SF:r\nLocation:\x20https://whslcpl001\.hants\.gov\.uk:2096/sip%3anm\r\nCon
+SF:tent-type:\x20text/html;\x20charset=\"utf-8\"\r\nCache-Control:\x20no-c
+SF:ache,\x20no-store,\x20must-revalidate,\x20private\r\n\r\n<html><head><M
+SF:ETA\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://whslcpl001\.ha
+SF:nts\.gov\.uk:2096/sip%3anm\"></head><body></body></html>\n");
+Service Info: Host: whslcpl001.hants.gov.uk; OS: Linux; CPE: cpe:/o:redhat:enterprise_linux:6
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 14:59:12 2019 -- 1 IP address (1 host up) scanned in 2221.00 seconds

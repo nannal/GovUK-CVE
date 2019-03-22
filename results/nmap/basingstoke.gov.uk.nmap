@@ -1,0 +1,151 @@
+# Nmap 7.70 scan initiated Sat Mar 16 02:44:34 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/basingstoke.gov.uk basingstoke.gov.uk
+Nmap scan report for basingstoke.gov.uk (86.12.189.1)
+Host is up (0.083s latency).
+rDNS record for 86.12.189.1: www.basingstoke.gov.uk
+Not shown: 65533 filtered ports
+PORT     STATE SERVICE  VERSION
+80/tcp   open  http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 302 Object Moved
+|     Date: Sat, 16 Mar 2019 02:03:00 GMT
+|     Location: https://www.basingstoke.gov.uk/nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Content-Type: text/html
+|     Cache-Control: private
+|     Connection: close
+|     <head><body> This object may be found <a HREF="https://www.basingstoke.gov.uk/nice%20ports%2C/Tri%6Eity.txt%2ebak">here</a> </body>
+|   GetRequest: 
+|     HTTP/1.0 302 Object Moved
+|     Date: Sat, 16 Mar 2019 02:02:53 GMT
+|     Location: https://www.basingstoke.gov.uk/
+|     Content-Type: text/html
+|     Cache-Control: private
+|     Connection: close
+|     <head><body> This object may be found <a HREF="https://www.basingstoke.gov.uk/">here</a> </body>
+|   HTTPOptions: 
+|     HTTP/1.0 307 Temporary Redirect
+|     Date: Sat, 16 Mar 2019 02:02:54 GMT
+|     Location: https://www.basingstoke.gov.uk/
+|     Content-Type: text/html
+|     Cache-Control: private
+|     Connection: close
+|     <head><body> This object may be found <a HREF="https://www.basingstoke.gov.uk/">here</a> </body>
+|   Help, SSLSessionReq: 
+|     HTTP/1.1 307 Temporary Redirect
+|     Location: https://www.basingstoke.gov.uk
+|     Content-Type: text/html
+|     Cache-Control: private
+|     Connection: close
+|     <head><body> This object may be found <a HREF="https://www.basingstoke.gov.uk">here</a> </body>
+|   RTSPRequest: 
+|     HTTP/1.1 307 Temporary Redirect
+|     Location: https://www.basingstoke.gov.uk/
+|     Content-Type: text/html
+|     Cache-Control: private
+|     Connection: close
+|_    <head><body> This object may be found <a HREF="https://www.basingstoke.gov.uk/">here</a> </body>
+443/tcp  open  ssl/http Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+8008/tcp open  http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 302 Found
+|     Location: https://:8010/nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Connection: close
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Content-Security-Policy: frame-ancestors
+|   GenericLines, HTTPOptions, RTSPRequest, SIPOptions: 
+|     HTTP/1.1 302 Found
+|     Location: https://:8010
+|     Connection: close
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Content-Security-Policy: frame-ancestors
+|   GetRequest: 
+|     HTTP/1.1 302 Found
+|     Location: https://:8010/
+|     Connection: close
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|_    Content-Security-Policy: frame-ancestors
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8C5949%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,111,"HTTP/1\.0\x20302\x20Object\x20Moved\r\nDate:\x20Sat,\x
+SF:2016\x20Mar\x202019\x2002:02:53\x20GMT\r\nLocation:\x20https://www\.bas
+SF:ingstoke\.gov\.uk/\r\nContent-Type:\x20text/html\r\nCache-Control:\x20p
+SF:rivate\r\nConnection:\x20close\r\n\r\n<head><body>\x20This\x20object\x2
+SF:0may\x20be\x20found\x20<a\x20HREF=\"https://www\.basingstoke\.gov\.uk/\
+SF:">here</a>\x20</body>")%r(HTTPOptions,117,"HTTP/1\.0\x20307\x20Temporar
+SF:y\x20Redirect\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2002:02:54\x20GMT\
+SF:r\nLocation:\x20https://www\.basingstoke\.gov\.uk/\r\nContent-Type:\x20
+SF:text/html\r\nCache-Control:\x20private\r\nConnection:\x20close\r\n\r\n<
+SF:head><body>\x20This\x20object\x20may\x20be\x20found\x20<a\x20HREF=\"htt
+SF:ps://www\.basingstoke\.gov\.uk/\">here</a>\x20</body>")%r(RTSPRequest,F
+SF:2,"HTTP/1\.1\x20307\x20Temporary\x20Redirect\r\nLocation:\x20https://ww
+SF:w\.basingstoke\.gov\.uk/\r\nContent-Type:\x20text/html\r\nCache-Control
+SF::\x20private\r\nConnection:\x20close\r\n\r\n<head><body>\x20This\x20obj
+SF:ect\x20may\x20be\x20found\x20<a\x20HREF=\"https://www\.basingstoke\.gov
+SF:\.uk/\">here</a>\x20</body>")%r(FourOhFourRequest,157,"HTTP/1\.0\x20302
+SF:\x20Object\x20Moved\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2002:03:00\x
+SF:20GMT\r\nLocation:\x20https://www\.basingstoke\.gov\.uk/nice%20ports%2C
+SF:/Tri%6Eity\.txt%2ebak\r\nContent-Type:\x20text/html\r\nCache-Control:\x
+SF:20private\r\nConnection:\x20close\r\n\r\n<head><body>\x20This\x20object
+SF:\x20may\x20be\x20found\x20<a\x20HREF=\"https://www\.basingstoke\.gov\.u
+SF:k/nice%20ports%2C/Tri%6Eity\.txt%2ebak\">here</a>\x20</body>")%r(Help,F
+SF:0,"HTTP/1\.1\x20307\x20Temporary\x20Redirect\r\nLocation:\x20https://ww
+SF:w\.basingstoke\.gov\.uk\r\nContent-Type:\x20text/html\r\nCache-Control:
+SF:\x20private\r\nConnection:\x20close\r\n\r\n<head><body>\x20This\x20obje
+SF:ct\x20may\x20be\x20found\x20<a\x20HREF=\"https://www\.basingstoke\.gov\
+SF:.uk\">here</a>\x20</body>")%r(SSLSessionReq,F0,"HTTP/1\.1\x20307\x20Tem
+SF:porary\x20Redirect\r\nLocation:\x20https://www\.basingstoke\.gov\.uk\r\
+SF:nContent-Type:\x20text/html\r\nCache-Control:\x20private\r\nConnection:
+SF:\x20close\r\n\r\n<head><body>\x20This\x20object\x20may\x20be\x20found\x
+SF:20<a\x20HREF=\"https://www\.basingstoke\.gov\.uk\">here</a>\x20</body>"
+SF:);
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8008-TCP:V=7.70%I=7%D=3/16%Time=5C8C5949%P=x86_64-unknown-linux-gnu
+SF:%r(GetRequest,CC,"HTTP/1\.1\x20302\x20Found\r\nLocation:\x20https://:80
+SF:10/\r\nConnection:\x20close\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-
+SF:Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r
+SF:\nContent-Security-Policy:\x20frame-ancestors\r\n\r\n")%r(FourOhFourReq
+SF:uest,EF,"HTTP/1\.1\x20302\x20Found\r\nLocation:\x20https://:8010/nice%2
+SF:0ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:\x20close\r\nX-Frame-Optio
+SF:ns:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content
+SF:-Type-Options:\x20nosniff\r\nContent-Security-Policy:\x20frame-ancestor
+SF:s\r\n\r\n")%r(GenericLines,CB,"HTTP/1\.1\x20302\x20Found\r\nLocation:\x
+SF:20https://:8010\r\nConnection:\x20close\r\nX-Frame-Options:\x20SAMEORIG
+SF:IN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\
+SF:x20nosniff\r\nContent-Security-Policy:\x20frame-ancestors\r\n\r\n")%r(H
+SF:TTPOptions,CB,"HTTP/1\.1\x20302\x20Found\r\nLocation:\x20https://:8010\
+SF:r\nConnection:\x20close\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Prot
+SF:ection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nCo
+SF:ntent-Security-Policy:\x20frame-ancestors\r\n\r\n")%r(RTSPRequest,CB,"H
+SF:TTP/1\.1\x20302\x20Found\r\nLocation:\x20https://:8010\r\nConnection:\x
+SF:20close\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x2
+SF:0mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nContent-Security-P
+SF:olicy:\x20frame-ancestors\r\n\r\n")%r(SIPOptions,CB,"HTTP/1\.1\x20302\x
+SF:20Found\r\nLocation:\x20https://:8010\r\nConnection:\x20close\r\nX-Fram
+SF:e-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-
+SF:Content-Type-Options:\x20nosniff\r\nContent-Security-Policy:\x20frame-a
+SF:ncestors\r\n\r\n");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 04:05:32 2019 -- 1 IP address (1 host up) scanned in 4857.96 seconds

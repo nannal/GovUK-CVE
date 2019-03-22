@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 18:07:18 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/southwest-ra.gov.uk southwest-ra.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/southwest-ra.gov.uk southwest-ra.gov.uk" start="1552752438" startstr="Sat Mar 16 18:07:18 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552752439" endtime="1552752716"><status state="up" reason="echo-reply" reason_ttl="113"/>
+<address addr="217.199.174.174" addrtype="ipv4"/>
+<hostnames>
+<hostname name="southwest-ra.gov.uk" type="user"/>
+<hostname name="ds10020.dedicated.turbodns.co.uk" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65524">
+<extrareasons reason="no-responses" count="65524"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="ftp" product="Microsoft ftpd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:ftp_service</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="banner" output="220 Microsoft FTP Service"/><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Ciphersuite uses MD5 for message integrity&#xa;  least strength: C"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">C</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">C</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">C</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+</table>
+</table>
+<elem key="least strength">C</elem>
+</script></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="domain" servicefp="SF-Port53-TCP:V=7.70%I=7%D=3/16%Time=5C8D2029%P=x86_64-unknown-linux-gnu%r(DNSVersionBindReqTCP,20,&quot;\0\x1e\0\x06\x81\x04\0\x01\0\0\0\0\0\0\x07version\x04bind\0\0\x10\0\x03&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  DNSVersionBindReqTCP: &#xa;    version&#xa;    bind"><elem key="DNSVersionBindReqTCP">&#xa;    version&#xa;    bind</elem>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="http" product="Microsoft IIS httpd" version="8.5" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:8.5</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="110"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="pop3" product="MailEnable POP3 Server" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:mailenable:mailenable</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="banner" output="+OK Welcome to MailEnable POP3 Server"/></port>
+<port protocol="tcp" portid="143"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="imap" product="MailEnable imapd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:mailenable:mailenable</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="banner" output="* OK IMAP4rev1 server ready at 03/16/19 16:11:36"/></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="ssl" product="Microsoft SChannel TLS" ostype="Windows" servicefp="SF-Port3389-TCP:V=7.70%I=7%D=3/16%Time=5C8D2029%P=x86_64-unknown-linux-gnu%r(TLSSessionReq,34A,&quot;\x16\x03\x03\x03E\x02\0\0M\x03\x03\\\x8d\x20&amp;\x01\x8bS\x9a3\x92\xf3\xa4\xd4\]\xf7}\xa7\x87\x05S\x1c\x94{NJ\x18\x1b\xfb\xaf\xca\xf2H\x20\x01K\0\0m\xbd\xcd\[G\x1c\xbe\xbb\xa2\xeb\xfd\x1f\x97\x8aGhu\x99\x99\]\\\xb0\x0c\xb0w\xac`\xf1\0/\0\0\x05\xff\x01\0\x01\0\x0b\0\x02\xec\0\x02\xe9\0\x02\xe60\x82\x02\xe20\x82\x01\xca\xa0\x03\x02\x01\x02\x02\x10m\x18\xf6;N\xdar\xa0@\x8e\xdc\x11\xf2\xeaI\xbc0\r\x06\t\*\x86H\x86\xf7\r\x01\x01\x0b\x05\x000\x1a1\x180\x16\x06\x03U\x04\x03\x13\x0fWIN-4UH24GUJG450\x1e\x17\r190303024309Z\x17\r190902024309Z0\x1a1\x180\x16\x06\x03U\x04\x03\x13\x0fWIN-4UH24GUJG450\x82\x01\&quot;0\r\x06\t\*\x86H\x86\xf7\r\x01\x01\x01\x05\0\x03\x82\x01\x0f\x000\x82\x01\n\x02\x82\x01\x01\0\x9d\xebh\x9b\x82hD&apos;Y\x9c\x89nN\xd1E\xaa\xc2\xc6\x04\x8d\xd3\xe2\x05\xa4&amp;\x89\xcc\xcf\x80dV85_9\xdc\]\xdd\xc6n\xbdPF\x8e\xf5\xbei\x8a\xecS\x0c\x8aH\xe5\x83\xedd\x9e\x1f\xa6k\x07e\x94&apos;C\xfe\xd1\xaa\xe1\xfc\xe7\xec&lt;\x81\x8e=\^\^I\xe51&apos;\xear\xb5\xfbk\xa4\xbe\x8b\x98\xbb\xbcx\xb0d\x90\]\$\xbf\xb2\xdd\xe3s\x90\]\x0e\xb2\xc5\x90\x1f\x07\xe7\xdb\x84\xa5\xbak\x01\x16\xb2\xd7\xbf5\&quot;\x80\xb1\xaf\xeb\x9b8\xea\xaa\x1fF\x10Y\xc7L\xf8\xaf\xcba%i\xc6\xf7\x1eY\xc6\xbc\xbe\(\xb1\x02\xdc\x14\xf8\x9c\x1f\xbf\x95\xf5\|\xe5\x80\xd3\xcc\xaer\xd9\&quot;opAF\xc4y\xf9`u&gt;I\xf9\xf5\xcb#~\xd4\xbf\x1a\xdd\xe16\\\xac\x82&lt;\x86\xfd\xe2\xe1\xb5\x1cOjE\$\x91\xc6\xe7Z\xa2\xac\)\r\?\x9d/\xee\xbe\xae\x13=\xb7\x97`y/\xca\x86\xed\xe2\xe3\xcb\xda\x91\xd2\x8a\xd3\x99\x9a\x8d\xea\x85\xa5Z3A\xaf\xa0\xd0\x92\*K\x02\x03\x01\0\x01\xa3\$0\&quot;0\x13\x06\x03U\x1d%\x04\x0c0\n\x06\x08\+\x06\x01\x05\x05\x07\x03\x010\x0b\x06\x03U\x1d\x0f\x04\x04\x03\x02\x0400\r\x06\t\*\x86H\x86\xf7\r\x01\x01\x0b\x05\0\x03\x82\x01\x01\0y#06\x7f\xee\xc9{k5\xdb\xe2\[\+\xfb/\xee@\x7f}\xad\xca\x1b-!-\xd6\x03t\xff\x94\xc2\xd2C\x05\xc7\x0c-\xcb\xce\xd9\xd8/\x0f\0\x0f\xc7\xae\xd3k\xf1G\x16B\x80\x85\xbe\0Z\x80\xe7P\xc32\x14ME\xf2\x19\xf8\x80\&quot;\x99\x01\x8aQ5\xf9\.\x8a\xe4\x14\xc5\x07\t\xe1\x90V\xb8\x14\xd2x\xf0\x87VU\xd0\xbd\xf6_\xddk47\xb4b15aS&amp;\xf3\x9b\+\xac\xb1\x84\x18\xa1\xd3\x01\xdeYY\xf2\xd2i\xe2g\xfe4d\xaa\xfb\xde\xd5\xf0\x02\xbb\x02\xaa~\x95Z\x1c\xe1\xf0\xb8\xe3\xaev&amp;eJgLw\x84\x99\xfb\x99!\x95U\xaf\xc8\xbd\+\xa3\xe6\xfa`\xf4\xfa\xc8\xa9\|\xc9b9\xd6\x8f\xb3\(\xa3\xa9\x1d&gt;\xba\x0c\xee\xf1pH\x91v\x9f%w\xf6\xd1\x0b\xde\xda\xe3\xdc2\x01X\]\xb0\xe9\x9aV\xee\xe9\xef\xa2N\0/\xd8\xf1\x1c=\xab\xc8\xe3\xaf\xecE\xe5\xc4\?\xfc\xca\xafiQF\x1d\x17L\x82j\xa8\x84L\xb5\xb5!:\?\xc7\xaf\xa8\x0e\0\0\0&quot;);" method="table" conf="3"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="fingerprint-strings" output="&#xa;  TLSSessionReq: &#xa;    \x8d &amp;&#xa;    ]\xb0&#xa;    WIN-4UH24GUJG450&#xa;    190303024309Z&#xa;    190902024309Z0&#xa;    WIN-4UH24GUJG450&#xa;    hD&apos;Y&#xa;    dV85_9&#xa;    =^^I&#xa;    &quot;opAF&#xa;    `u&gt;I&#xa;    6\xac&#xa;    OjE$&#xa;    $0&quot;0&#xa;    y#06&#xa;    b15aS&amp;&#xa;    v&amp;eJgLw"><elem key="TLSSessionReq">&#xa;    \x8d &amp;&#xa;    ]\xb0&#xa;    WIN-4UH24GUJG450&#xa;    190303024309Z&#xa;    190902024309Z0&#xa;    WIN-4UH24GUJG450&#xa;    hD&apos;Y&#xa;    dV85_9&#xa;    =^^I&#xa;    &quot;opAF&#xa;    `u&gt;I&#xa;    6\xac&#xa;    OjE$&#xa;    $0&quot;0&#xa;    y#06&#xa;    b15aS&amp;&#xa;    v&amp;eJgLw</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Ciphersuite uses MD5 for message integrity&#xa;  least strength: C"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">C</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">C</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">C</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+</table>
+</table>
+<elem key="least strength">C</elem>
+</script></port>
+<port protocol="tcp" portid="5986"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 4096) - C&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 4096) - C&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 4096) - C&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    cipher preference error: Network error&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Key exchange (secp256r1) of lower strength than certificate key&#xa;      Weak certificate signature: SHA1&#xa;  least strength: C"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">C</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">C</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">C</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<elem key="cipher preference error">Network error</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Key exchange (secp256r1) of lower strength than certificate key</elem>
+<elem>Weak certificate signature: SHA1</elem>
+</table>
+</table>
+<elem key="least strength">C</elem>
+</script></port>
+<port protocol="tcp" portid="8401"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="sabarsd" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="http" product="Microsoft IIS httpd" version="8.5" ostype="Windows" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:8.5</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-IIS/8.5"><elem>Microsoft-IIS/8.5</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  SSLv3: &#xa;    ciphers: &#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      CBC-mode cipher in SSLv3 (CVE-2014-3566)&#xa;      Ciphersuite uses MD5 for message integrity&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Ciphersuite uses MD5 for message integrity&#xa;  least strength: C"><table key="SSLv3">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">C</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">C</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">C</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>CBC-mode cipher in SSLv3 (CVE-2014-3566)</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+</table>
+</table>
+<table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">C</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">C</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">C</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+</table>
+</table>
+<elem key="least strength">C</elem>
+</script></port>
+<port protocol="tcp" portid="8880"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="http" product="Microsoft IIS httpd" version="8.5" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:8.5</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49154"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="49157"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="unknown" method="table" conf="3"/></port>
+</ports>
+<times srtt="60295" rttvar="14395" to="117875"/>
+</host>
+<runstats><finished time="1552752716" timestr="Sat Mar 16 18:11:56 2019" elapsed="278.00" summary="Nmap done at Sat Mar 16 18:11:56 2019; 1 IP address (1 host up) scanned in 278.00 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

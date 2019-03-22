@@ -1,0 +1,79 @@
+# Nmap 7.70 scan initiated Sat Mar 16 17:33:32 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/sidmouth.gov.uk sidmouth.gov.uk
+Nmap scan report for sidmouth.gov.uk (94.236.110.162)
+Host is up (0.054s latency).
+Other addresses for sidmouth.gov.uk (not scanned): 2a00:1a48:1881:101:7459:ef:6c80:faaa
+rDNS record for 94.236.110.162: web1.lon5.rs.uk.netenergy.net
+Not shown: 65532 filtered ports
+PORT    STATE SERVICE   VERSION
+21/tcp  open  ftp       IIS ftpd 7
+|_banner: 220 FTP server ready
+80/tcp  open  http      Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest: 
+|     HTTP/1.1 302 Redirect
+|     Content-Type: text/html; charset=UTF-8
+|     Location: https://web1.netenergy.uk/
+|     Date: Sat, 16 Mar 2019 15:39:19 GMT
+|     Connection: close
+|     Content-Length: 149
+|     <head><title>Document Moved</title></head>
+|     <body><h1>Object Moved</h1>This document may be found <a HREF="https://web1.netenergy.uk/">here</a></body>
+|   HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Content-Type: text/html
+|     Date: Sat, 16 Mar 2019 15:39:19 GMT
+|     Connection: close
+|     Content-Length: 1245
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml">
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+|     <title>404 - File or directory not found.</title>
+|     <style type="text/css">
+|     <!--
+|     body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
+|     fieldset{padding:0 15px 10px 15px;} 
+|     h1{font-size:2.4em;margin:0;color:#FFF;}
+|     h2{font-size:1.7em;margin:0;color:#CC0000;} 
+|     h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
+|     #header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;
+|     background-color:#555555;}
+|_    #content{margin:0 0 0 2%
+990/tcp open  ssl/ftp   IIS ftpd 7
+|_banner: 220 FTP server ready
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D18A3%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,149,"HTTP/1\.1\x20302\x20Redirect\r\nContent-Type:\x
+SF:20text/html;\x20charset=UTF-8\r\nLocation:\x20https://web1\.netenergy\.
+SF:uk/\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2015:39:19\x20GMT\r\nConnect
+SF:ion:\x20close\r\nContent-Length:\x20149\r\n\r\n<head><title>Document\x2
+SF:0Moved</title></head>\n<body><h1>Object\x20Moved</h1>This\x20document\x
+SF:20may\x20be\x20found\x20<a\x20HREF=\"https://web1\.netenergy\.uk/\">her
+SF:e</a></body>")%r(HTTPOptions,55E,"HTTP/1\.1\x20404\x20Not\x20Found\r\nC
+SF:ontent-Type:\x20text/html\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2015:3
+SF:9:19\x20GMT\r\nConnection:\x20close\r\nContent-Length:\x201245\r\n\r\n<
+SF:!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x20Strict/
+SF:/EN\"\x20\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-strict\.dtd\">\r\n<
+SF:html\x20xmlns=\"http://www\.w3\.org/1999/xhtml\">\r\n<head>\r\n<meta\x2
+SF:0http-equiv=\"Content-Type\"\x20content=\"text/html;\x20charset=iso-885
+SF:9-1\"/>\r\n<title>404\x20-\x20File\x20or\x20directory\x20not\x20found\.
+SF:</title>\r\n<style\x20type=\"text/css\">\r\n<!--\r\nbody{margin:0;font-
+SF:size:\.7em;font-family:Verdana,\x20Arial,\x20Helvetica,\x20sans-serif;b
+SF:ackground:#EEEEEE;}\r\nfieldset{padding:0\x2015px\x2010px\x2015px;}\x20
+SF:\r\nh1{font-size:2\.4em;margin:0;color:#FFF;}\r\nh2{font-size:1\.7em;ma
+SF:rgin:0;color:#CC0000;}\x20\r\nh3{font-size:1\.2em;margin:10px\x200\x200
+SF:\x200;color:#000000;}\x20\r\n#header{width:96%;margin:0\x200\x200\x200;
+SF:padding:6px\x202%\x206px\x202%;font-family:\"trebuchet\x20MS\",\x20Verd
+SF:ana,\x20sans-serif;color:#FFF;\r\nbackground-color:#555555;}\r\n#conten
+SF:t{margin:0\x200\x200\x202%")%r(FourOhFourRequest,149,"HTTP/1\.1\x20302\
+SF:x20Redirect\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nLocation
+SF::\x20https://web1\.netenergy\.uk/\r\nDate:\x20Sat,\x2016\x20Mar\x202019
+SF:\x2015:39:19\x20GMT\r\nConnection:\x20close\r\nContent-Length:\x20149\r
+SF:\n\r\n<head><title>Document\x20Moved</title></head>\n<body><h1>Object\x
+SF:20Moved</h1>This\x20document\x20may\x20be\x20found\x20<a\x20HREF=\"http
+SF:s://web1\.netenergy\.uk/\">here</a></body>");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 17:39:44 2019 -- 1 IP address (1 host up) scanned in 371.81 seconds

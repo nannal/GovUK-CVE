@@ -1,0 +1,137 @@
+# Nmap 7.70 scan initiated Sat Mar 16 03:06:54 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/blackpool.gov.uk blackpool.gov.uk
+Nmap scan report for blackpool.gov.uk (91.240.226.142)
+Host is up (0.76s latency).
+rDNS record for 91.240.226.142: enforcements.blackpool.gov.uk
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Cache-Control: public
+|     Content-Type: text/html
+|     Expires: Tue, 01 Jan 1980 15:00:00 GMT
+|     Location: /Home.aspx
+|     x-contensis-viewer-groups: 0
+|     Date: Sat, 16 Mar 2019 01:48:04 GMT
+|     Connection: close
+|     Content-Length: 0
+|_    Set-Cookie: cookiesession1=0DA43C8DEFJZWAQR8CPAVA0PRV3JDDBC;Path=/;HttpOnly
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 200 OK
+|     Cache-Control: no-cache, no-store, must-revalidate
+|     Pragma: no-cache
+|     Content-Type: text/html; charset=utf-8
+|     Expires: -1
+|     x-contensis-viewer-groups: 0
+|     Set-Cookie: ASP.NET_SessionId=a2er2mnokzo24mvnnhfvxgx1; path=/; HttpOnly
+|     x-node: 21709
+|     x-depends: 54004
+|     Date: Sat, 16 Mar 2019 01:48:13 GMT
+|     Connection: close
+|     Content-Length: 35749
+|     Set-Cookie: cookiesession1=0DA43C8D6PPML1LJRH8RF1MCEYFM772A;Path=/;HttpOnly
+|     <!DOCTYPE html>
+|     <html lang="en-GB">
+|     <head>
+|     <meta charset="utf-8">
+|     <title>
+|     error page
+|     </title><meta name="GENERATOR" content="Contensis CMS Version 11.3" /><meta name="Description" content="404 error page" /><meta name="PageTitle" content="404 error page" /><link href="/SiteElements/ChannelShift/Content/styles/bundles/base.min.css" rel="stylesheet" type="text/css" />
+|     <script type="text/javascript" src="/WebResource.axd?d=PjUm9HYMtFaBv1w8LgD13UX
+|   GetRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Cache-Control: public
+|     Content-Type: text/html
+|     Expires: Tue, 01 Jan 1980 15:00:00 GMT
+|     Location: /Home.aspx
+|     x-contensis-viewer-groups: 0
+|     Date: Sat, 16 Mar 2019 01:48:11 GMT
+|     Connection: close
+|     Content-Length: 0
+|     Set-Cookie: cookiesession1=0DA43C8DN0DS4H26CPMS0IGZ180VCE6A;Path=/;HttpOnly
+|   HTTPOptions: 
+|     HTTP/1.1 405 Method Not Allowed
+|     Cache-Control: public
+|     Allow: GET, HEAD, OPTIONS, TRACE
+|     Content-Type: text/html
+|     x-contensis-viewer-groups: 0
+|     Date: Sat, 16 Mar 2019 01:48:11 GMT
+|     Connection: close
+|     Content-Length: 101
+|     Set-Cookie: cookiesession1=0DA43C8DLWCFKGKATDGV3YNMFNBX9B64;Path=/;HttpOnly
+|_    page you are looking for cannot be displayed because an invalid method (HTTP verb) is being used.
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA - unknown
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: unknown
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8C55D1%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,146,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nCache-Cont
+SF:rol:\x20public\r\nContent-Type:\x20text/html\r\nExpires:\x20Tue,\x2001\
+SF:x20Jan\x201980\x2015:00:00\x20GMT\r\nLocation:\x20/Home\.aspx\r\nx-cont
+SF:ensis-viewer-groups:\x200\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2001:4
+SF:8:04\x20GMT\r\nConnection:\x20close\r\nContent-Length:\x200\r\nSet-Cook
+SF:ie:\x20cookiesession1=0DA43C8DEFJZWAQR8CPAVA0PRV3JDDBC;Path=/;HttpOnly\
+SF:r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8C55D8%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,146,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nCac
+SF:he-Control:\x20public\r\nContent-Type:\x20text/html\r\nExpires:\x20Tue,
+SF:\x2001\x20Jan\x201980\x2015:00:00\x20GMT\r\nLocation:\x20/Home\.aspx\r\
+SF:nx-contensis-viewer-groups:\x200\r\nDate:\x20Sat,\x2016\x20Mar\x202019\
+SF:x2001:48:11\x20GMT\r\nConnection:\x20close\r\nContent-Length:\x200\r\nS
+SF:et-Cookie:\x20cookiesession1=0DA43C8DN0DS4H26CPMS0IGZ180VCE6A;Path=/;Ht
+SF:tpOnly\r\n\r\n")%r(HTTPOptions,192,"HTTP/1\.1\x20405\x20Method\x20Not\x
+SF:20Allowed\r\nCache-Control:\x20public\r\nAllow:\x20GET,\x20HEAD,\x20OPT
+SF:IONS,\x20TRACE\r\nContent-Type:\x20text/html\r\nx-contensis-viewer-grou
+SF:ps:\x200\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2001:48:11\x20GMT\r\nCo
+SF:nnection:\x20close\r\nContent-Length:\x20101\r\nSet-Cookie:\x20cookiese
+SF:ssion1=0DA43C8DLWCFKGKATDGV3YNMFNBX9B64;Path=/;HttpOnly\r\n\r\nThe\x20p
+SF:age\x20you\x20are\x20looking\x20for\x20cannot\x20be\x20displayed\x20bec
+SF:ause\x20an\x20invalid\x20method\x20\(HTTP\x20verb\)\x20is\x20being\x20u
+SF:sed\.")%r(FourOhFourRequest,1FDD,"HTTP/1\.1\x20200\x20OK\r\nCache-Contr
+SF:ol:\x20no-cache,\x20no-store,\x20must-revalidate\r\nPragma:\x20no-cache
+SF:\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nExpires:\x20-1\r\nx
+SF:-contensis-viewer-groups:\x200\r\nSet-Cookie:\x20ASP\.NET_SessionId=a2e
+SF:r2mnokzo24mvnnhfvxgx1;\x20path=/;\x20HttpOnly\r\nx-node:\x2021709\r\nx-
+SF:depends:\x2054004\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2001:48:13\x20
+SF:GMT\r\nConnection:\x20close\r\nContent-Length:\x2035749\r\nSet-Cookie:\
+SF:x20cookiesession1=0DA43C8D6PPML1LJRH8RF1MCEYFM772A;Path=/;HttpOnly\r\n\
+SF:r\n<!DOCTYPE\x20html>\r\n\x20\r\n<html\x20lang=\"en-GB\">\r\n<head>\r\n
+SF:<meta\x20charset=\"utf-8\">\r\n<title>\r\n\t404\x20error\x20page\r\n</t
+SF:itle><meta\x20name=\"GENERATOR\"\x20content=\"Contensis\x20CMS\x20Versi
+SF:on\x2011\.3\"\x20/><meta\x20name=\"Description\"\x20content=\"404\x20er
+SF:ror\x20page\"\x20/><meta\x20name=\"PageTitle\"\x20content=\"404\x20erro
+SF:r\x20page\"\x20/><link\x20href=\"/SiteElements/ChannelShift/Content/sty
+SF:les/bundles/base\.min\.css\"\x20rel=\"stylesheet\"\x20type=\"text/css\"
+SF:\x20/>\r\n\t\t<script\x20\x20type=\"text/javascript\"\x20src=\"/WebReso
+SF:urce\.axd\?d=PjUm9HYMtFaBv1w8LgD13UX");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 03:49:41 2019 -- 1 IP address (1 host up) scanned in 2567.06 seconds

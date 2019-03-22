@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 16:13:50 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/repton-pc.gov.uk repton-pc.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/repton-pc.gov.uk repton-pc.gov.uk" start="1552745630" startstr="Sat Mar 16 16:13:50 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552745630" endtime="1552749769"><status state="up" reason="timestamp-reply" reason_ttl="52"/>
+<address addr="80.76.216.90" addrtype="ipv4"/>
+<hostnames>
+<hostname name="repton-pc.gov.uk" type="user"/>
+<hostname name="cpanel06.hosting.astutium.com" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="45300">
+<extrareasons reason="no-responses" count="45300"/>
+</extraports>
+<extraports state="closed" count="20214">
+<extrareasons reason="resets" count="20214"/>
+</extraports>
+<port protocol="tcp" portid="1"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="ftp" product="Pure-FTPd" method="probed" conf="10"><cpe>cpe:/a:pureftpd:pure-ftpd</cpe></service><script id="banner" output="220-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; Welcome to Pure-FTPd [privsep] [TLS] -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\x&#xa;0D\x0A220-You are user number 1 of 50 allowed.\x0D\x0A220-Local time...&#xa;"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="ssh" product="OpenSSH" version="4.3" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:4.3</cpe></service><script id="banner" output="SSH-2.0-OpenSSH_4.3"/></port>
+<port protocol="tcp" portid="26"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="smtp" product="Exim smtpd" version="4.87" hostname="cpanel06.hosting.astutium.com" method="probed" conf="10"><cpe>cpe:/a:exim:exim:4.87</cpe></service><script id="banner" output="220-cpanel06.hosting.astutium.com ESMTP Exim 4.87 #1 Sat, 16 Ma&#xa;r 2019 15:21:32 +0000 \x0D\x0A220-We do not authorize the use of thi...&#xa;"/></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="domain" product="ISC BIND" version="9.3.6-P1" extrainfo="RedHat Enterprise Linux 5" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:isc:bind:9.3.6-p1</cpe><cpe>cpe:/o:redhat:enterprise_linux:5</cpe></service></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="http" product="Apache httpd" version="2.4.23" extrainfo="(Unix) OpenSSL/0.9.8e-fips-rhel5 mod_bwlimited/1.4 PHP/5.6.23" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.23</cpe></service><script id="http-server-header" output="Apache/2.4.23 (Unix) OpenSSL/0.9.8e-fips-rhel5 mod_bwlimited/1.4 PHP/5.6.23"><elem>Apache/2.4.23 (Unix) OpenSSL/0.9.8e-fips-rhel5 mod_bwlimited/1.4 PHP/5.6.23</elem>
+</script></port>
+<port protocol="tcp" portid="110"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="pop3" product="Dovecot pop3d" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="banner" output="+OK Dovecot ready."/></port>
+<port protocol="tcp" portid="143"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="imap" product="Dovecot imapd" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="banner" output="* OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID &#xa;ENABLE IDLE NAMESPACE STARTTLS AUTH=PLAIN AUTH=LOGIN] Dovecot ready."/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="http" product="Apache httpd" version="2.4.23" extrainfo="(Unix) OpenSSL/0.9.8e-fips-rhel5 mod_bwlimited/1.4 PHP/5.6.23" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.23</cpe></service><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - C&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_CBC_SHA and TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;  least strength: C"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">C</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">C</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference error">Error when comparing TLS_DHE_RSA_WITH_AES_128_CBC_SHA and TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+</table>
+</table>
+<elem key="least strength">C</elem>
+</script></port>
+<port protocol="tcp" portid="465"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="smtp" product="Exim smtpd" version="4.87" hostname="cpanel06.hosting.astutium.com" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:exim:exim:4.87</cpe></service><script id="banner" output="220-cpanel06.hosting.astutium.com ESMTP Exim 4.87 #1 Sat, 16 Ma&#xa;r 2019 15:21:54 +0000 \x0D\x0A220-We do not authorize the use of thi...&#xa;"/><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;  least strength: C"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">C</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+</table>
+</table>
+<elem key="least strength">C</elem>
+</script></port>
+<port protocol="tcp" portid="587"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="smtp" product="Exim smtpd" version="4.87" hostname="cpanel06.hosting.astutium.com" method="probed" conf="10"><cpe>cpe:/a:exim:exim:4.87</cpe></service><script id="banner" output="220-cpanel06.hosting.astutium.com ESMTP Exim 4.87 #1 Sat, 16 Ma&#xa;r 2019 15:21:40 +0000 \x0D\x0A220-We do not authorize the use of thi...&#xa;"/></port>
+<port protocol="tcp" portid="993"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="imap" product="Dovecot imapd" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA - unknown&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_CBC_SHA and TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Key exchange (dh 1024) of lower strength than certificate key&#xa;  least strength: unknown"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">D</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">unknown</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference error">Error when comparing TLS_DHE_RSA_WITH_AES_128_CBC_SHA and TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Key exchange (dh 1024) of lower strength than certificate key</elem>
+</table>
+</table>
+<elem key="least strength">unknown</elem>
+</script></port>
+<port protocol="tcp" portid="995"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="pop3s" tunnel="ssl" method="table" conf="3"/><script id="banner" output="+OK Dovecot ready."/><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C&#xa;    compressors: &#xa;&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Key exchange (dh 1024) of lower strength than certificate key&#xa;  least strength: D"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">D</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">C</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+<elem key="strength">C</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="strength">C</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Key exchange (dh 1024) of lower strength than certificate key</elem>
+</table>
+</table>
+<elem key="least strength">D</elem>
+</script></port>
+<port protocol="tcp" portid="2077"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="webdav" product="cPanel webdav" ostype="Linux" method="probed" conf="10"><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="2078"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="webdav" product="cPanel webdav" ostype="Linux" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="2082"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="infowave" servicefp="SF-Port2082-TCP:V=7.70%I=7%D=3/16%Time=5C8D145F%P=x86_64-unknown-linux-gnu%r(SIPOptions,10F8,&quot;HTTP/1\.0\x20401\x20Access\x20Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=\&quot;utf-8\&quot;\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2015:20:32\x20GMT\r\nWWW-Authenticate:\x20Basic\x20realm=\&quot;cPanel\&quot;\r\nSet-Cookie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2082\r\nSet-Cookie:\x20cpsession=%3arYFsoIys365cVZMe%2cfc7c14bb6ea219e33e19c0bda9c5b356;\x20HttpOnly;\x20path=/;\x20port=2082\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2082\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/horde;\x20port=2082\r\nSet-Cookie:\x20PPA_ID=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2082\r\nSet-Cookie:\x20imp_key=expired;\x20HttpOnly;\x20domain=cpanel06\.hosting\.astutium\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/horde;\x20port=2082\r\nSet-Cookie:\x20key=expired;\x20HttpOnly;\x20domain=cpanel06\.hosting\.astutium\.com;\x20expires=Thu,\x2001-Ja&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  SIPOptions: &#xa;    HTTP/1.0 401 Access Denied&#xa;    Connection: close&#xa;    Content-Type: text/html; charset=&quot;utf-8&quot;&#xa;    Date: Sat, 16 Mar 2019 15:20:32 GMT&#xa;    WWW-Authenticate: Basic realm=&quot;cPanel&quot;&#xa;    Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082&#xa;    Set-Cookie: cpsession=%3arYFsoIys365cVZMe%2cfc7c14bb6ea219e33e19c0bda9c5b356; HttpOnly; path=/; port=2082&#xa;    Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082&#xa;    Set-Cookie: Horde=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2082&#xa;    Set-Cookie: PPA_ID=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082&#xa;    Set-Cookie: imp_key=expired; HttpOnly; domain=cpanel06.hosting.astutium.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2082&#xa;    Set-Cookie: key=expired; HttpOnly; domain=cpanel06.hosting.astutium.com; expires=Thu, 01-Ja"><elem key="SIPOptions">&#xa;    HTTP/1.0 401 Access Denied&#xa;    Connection: close&#xa;    Content-Type: text/html; charset=&quot;utf-8&quot;&#xa;    Date: Sat, 16 Mar 2019 15:20:32 GMT&#xa;    WWW-Authenticate: Basic realm=&quot;cPanel&quot;&#xa;    Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082&#xa;    Set-Cookie: cpsession=%3arYFsoIys365cVZMe%2cfc7c14bb6ea219e33e19c0bda9c5b356; HttpOnly; path=/; port=2082&#xa;    Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082&#xa;    Set-Cookie: Horde=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2082&#xa;    Set-Cookie: PPA_ID=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082&#xa;    Set-Cookie: imp_key=expired; HttpOnly; domain=cpanel06.hosting.astutium.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2082&#xa;    Set-Cookie: key=expired; HttpOnly; domain=cpanel06.hosting.astutium.com; expires=Thu, 01-Ja</elem>
+</script></port>
+<port protocol="tcp" portid="2083"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="http" product="cPanel httpd" version="11.56.0.52" ostype="Unix" method="probed" conf="10"/><script id="http-server-header" output="cpsrvd/11.56.0.52"><elem>cpsrvd/11.56.0.52</elem>
+</script></port>
+<port protocol="tcp" portid="2086"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="gnunet" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2087"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="http" product="cPanel httpd" version="11.56.0.52" ostype="Unix" method="probed" conf="10"/><script id="http-server-header" output="cpsrvd/11.56.0.52"><elem>cpsrvd/11.56.0.52</elem>
+</script></port>
+<port protocol="tcp" portid="2095"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="nbx-ser" servicefp="SF-Port2095-TCP:V=7.70%I=7%D=3/16%Time=5C8D1462%P=x86_64-unknown-linux-gnu%r(SIPOptions,10F8,&quot;HTTP/1\.0\x20401\x20Access\x20Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=\&quot;utf-8\&quot;\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2015:20:35\x20GMT\r\nWWW-Authenticate:\x20Basic\x20realm=\&quot;WebMail\&quot;\r\nSet-Cookie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2095\r\nSet-Cookie:\x20webmailsession=%3a13h3RKdyWphmjQoO%2cf19c63e87d4b802f6d096564042b0175;\x20HttpOnly;\x20path=/;\x20port=2095\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2095\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/horde;\x20port=2095\r\nSet-Cookie:\x20PPA_ID=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2095\r\nSet-Cookie:\x20imp_key=expired;\x20HttpOnly;\x20domain=cpanel06\.hosting\.astutium\.com;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/horde;\x20port=2095\r\nSet-Cookie:\x20key=expired;\x20HttpOnly;\x20domain=cpanel06\.hosting\.astutium\.com;\x20expires&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  SIPOptions: &#xa;    HTTP/1.0 401 Access Denied&#xa;    Connection: close&#xa;    Content-Type: text/html; charset=&quot;utf-8&quot;&#xa;    Date: Sat, 16 Mar 2019 15:20:35 GMT&#xa;    WWW-Authenticate: Basic realm=&quot;WebMail&quot;&#xa;    Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095&#xa;    Set-Cookie: webmailsession=%3a13h3RKdyWphmjQoO%2cf19c63e87d4b802f6d096564042b0175; HttpOnly; path=/; port=2095&#xa;    Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095&#xa;    Set-Cookie: Horde=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2095&#xa;    Set-Cookie: PPA_ID=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095&#xa;    Set-Cookie: imp_key=expired; HttpOnly; domain=cpanel06.hosting.astutium.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2095&#xa;    Set-Cookie: key=expired; HttpOnly; domain=cpanel06.hosting.astutium.com; expires"><elem key="SIPOptions">&#xa;    HTTP/1.0 401 Access Denied&#xa;    Connection: close&#xa;    Content-Type: text/html; charset=&quot;utf-8&quot;&#xa;    Date: Sat, 16 Mar 2019 15:20:35 GMT&#xa;    WWW-Authenticate: Basic realm=&quot;WebMail&quot;&#xa;    Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095&#xa;    Set-Cookie: webmailsession=%3a13h3RKdyWphmjQoO%2cf19c63e87d4b802f6d096564042b0175; HttpOnly; path=/; port=2095&#xa;    Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095&#xa;    Set-Cookie: Horde=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2095&#xa;    Set-Cookie: PPA_ID=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095&#xa;    Set-Cookie: imp_key=expired; HttpOnly; domain=cpanel06.hosting.astutium.com; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2095&#xa;    Set-Cookie: key=expired; HttpOnly; domain=cpanel06.hosting.astutium.com; expires</elem>
+</script></port>
+<port protocol="tcp" portid="2096"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="http" product="cPanel httpd" version="11.56.0.52" ostype="Unix" method="probed" conf="10"/><script id="http-server-header" output="cpsrvd/11.56.0.52"><elem>cpsrvd/11.56.0.52</elem>
+</script></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="mysql" product="MySQL" version="5.5.52-cll" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql:5.5.52-cll</cpe></service><script id="banner" output="N\x00\x00\x00\x0A5.5.52-cll\x00B\xC7\xDA\x000FP@1o`t\x00\xFF\xF&#xa;7\x08\x02\x00\x0F\x80\x15\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00E90...&#xa;"/></port>
+</ports>
+<times srtt="50930" rttvar="8410" to="100000"/>
+</host>
+<runstats><finished time="1552749769" timestr="Sat Mar 16 17:22:49 2019" elapsed="4139.69" summary="Nmap done at Sat Mar 16 17:22:49 2019; 1 IP address (1 host up) scanned in 4139.69 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

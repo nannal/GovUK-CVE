@@ -1,0 +1,39 @@
+# Nmap 7.70 scan initiated Sat Mar 16 06:30:39 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/dorchester-tc.gov.uk dorchester-tc.gov.uk
+Nmap scan report for dorchester-tc.gov.uk (191.239.218.156)
+Host is up (0.072s latency).
+Not shown: 65529 filtered ports
+PORT      STATE SERVICE  VERSION
+21/tcp    open  ftp      FileZilla ftpd
+| banner: 220 FileZilla Server 0.9.52 beta written by Tim Kosse (tim.koss
+|_e@filezilla-project.org) Please visit http
+80/tcp    open  http     Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+| http-server-header: 
+|   Microsoft-HTTPAPI/2.0
+|_  Microsoft-IIS/8.5
+443/tcp   open  https?
+5986/tcp  open  wsmans?
+9003/tcp  open  http     Microsoft IIS httpd 8.5
+|_http-server-header: Microsoft-IIS/8.5
+50003/tcp open  remoting MS .NET Remoting services
+55764/tcp open  unknown
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp521r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp521r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp521r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp521r1) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 06:39:47 2019 -- 1 IP address (1 host up) scanned in 548.79 seconds

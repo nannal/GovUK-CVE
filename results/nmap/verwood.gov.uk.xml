@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 20:29:42 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/verwood.gov.uk verwood.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/verwood.gov.uk verwood.gov.uk" start="1552760982" startstr="Sat Mar 16 20:29:42 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552760987" endtime="1552764833"><status state="up" reason="syn-ack" reason_ttl="55"/>
+<address addr="217.160.122.115" addrtype="ipv4"/>
+<hostnames>
+<hostname name="verwood.gov.uk" type="user"/>
+<hostname name="clienthosting.eu" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="49005">
+<extrareasons reason="no-responses" count="45793"/>
+<extrareasons reason="port-unreaches" count="3212"/>
+</extraports>
+<extraports state="closed" count="16526">
+<extrareasons reason="resets" count="16526"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="55"/><service name="ftp" product="ProFTPD or KnFTPD" ostype="Unix" method="probed" conf="10"/><script id="banner" output="220 FTP Server ready."/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="55"/><service name="ssh" product="OpenSSH" version="6.7p1 Debian 5+deb8u7~ui80+1" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:6.7p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="banner" output="SSH-2.0-OpenSSH_6.7p1 Debian-5+deb8u7~ui80+1"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="55"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+<port protocol="tcp" portid="81"><state state="open" reason="syn-ack" reason_ttl="55"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="55"/><service name="https" product="nginx" tunnel="ssl" method="probed" conf="10"/><script id="http-server-header" output="nginx"><elem>nginx</elem>
+</script></port>
+</ports>
+<times srtt="45845" rttvar="11915" to="100000"/>
+</host>
+<runstats><finished time="1552764833" timestr="Sat Mar 16 21:33:53 2019" elapsed="3850.93" summary="Nmap done at Sat Mar 16 21:33:53 2019; 1 IP address (1 host up) scanned in 3850.93 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

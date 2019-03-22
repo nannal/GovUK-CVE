@@ -1,0 +1,36 @@
+# Nmap 7.70 scan initiated Sat Mar 16 21:57:28 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/wsm-tc.gov.uk wsm-tc.gov.uk
+Nmap scan report for wsm-tc.gov.uk (54.72.180.132)
+Host is up (0.069s latency).
+rDNS record for 54.72.180.132: ec2-54-72-180-132.eu-west-1.compute.amazonaws.com
+Not shown: 65528 filtered ports
+PORT     STATE  SERVICE        VERSION
+80/tcp   open   http           nginx 1.12.2
+|_http-server-header: nginx/1.12.2
+110/tcp  closed pop3
+143/tcp  closed imap
+443/tcp  open   ssl/http       nginx 1.12.2
+|_http-server-header: nginx/1.12.2
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 4096) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 4096) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 4096) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 4096) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+465/tcp  closed smtps
+587/tcp  closed submission
+995/tcp  closed pop3s
+9443/tcp closed tungsten-https
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 22:01:40 2019 -- 1 IP address (1 host up) scanned in 251.64 seconds

@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 17:33:28 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/shropshire.gov.uk shropshire.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/shropshire.gov.uk shropshire.gov.uk" start="1552750408" startstr="Sat Mar 16 17:33:28 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552750416" endtime="1552750961"><status state="up" reason="syn-ack" reason_ttl="47"/>
+<address addr="194.81.126.59" addrtype="ipv4"/>
+<hostnames>
+<hostname name="shropshire.gov.uk" type="user"/>
+<hostname name="shropshire.gov.uk" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65529">
+<extrareasons reason="no-responses" count="65529"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="45"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="&#xa;  Apache&#xa;  uk_gov_shropshire"><elem>Apache</elem>
+<elem>uk_gov_shropshire</elem>
+</script></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="48"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="179"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="ssl" product="Apache httpd" extrainfo="SSL-only mode" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp521r1) - A&#xa;      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256-draft (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256-draft (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp521r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp521r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 4096) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A&#xa;      TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 4096) - A&#xa;      TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 4096) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 4096) - A&#xa;      TLS_RSA_WITH_SEED_CBC_SHA (rsa 4096) - A&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 4096) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 4096) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256 (rsa 4096) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (dh 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA256 (rsa 4096) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256 (dh 2048) - A&#xa;      TLS_RSA_WITH_ARIA_128_CBC_SHA256 (rsa 4096) - A&#xa;      TLS_DHE_RSA_WITH_ARIA_128_CBC_SHA256 (dh 2048) - A&#xa;      TLS_RSA_WITH_ARIA_256_CBC_SHA384 (rsa 4096) - A&#xa;      TLS_DHE_RSA_WITH_ARIA_256_CBC_SHA384 (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_ARIA_256_CBC_SHA384 (secp521r1) - A&#xa;      TLS_ECDHE_RSA_WITH_ARIA_128_CBC_SHA256 (secp256r1) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      Key exchange (dh 2048) of lower strength than certificate key&#xa;      Key exchange (secp256r1) of lower strength than certificate key&#xa;  least strength: A"><table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">secp521r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256-draft</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256-draft</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">secp521r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">secp521r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_GCM_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_GCM_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_SEED_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_ARIA_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_ARIA_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_ARIA_256_CBC_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_ARIA_256_CBC_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">secp521r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_ARIA_256_CBC_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_ARIA_128_CBC_SHA256</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>Key exchange (dh 2048) of lower strength than certificate key</elem>
+<elem>Key exchange (secp256r1) of lower strength than certificate key</elem>
+</table>
+</table>
+<elem key="least strength">A</elem>
+</script></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="48"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="48"/><service name="sip" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8085"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp521r1) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A&#xa;      TLS_RSA_WITH_SEED_CBC_SHA (rsa 4096) - A&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 4096) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 4096) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      Key exchange (dh 2048) of lower strength than certificate key&#xa;      Key exchange (secp256r1) of lower strength than certificate key&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp521r1) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A&#xa;      TLS_RSA_WITH_SEED_CBC_SHA (rsa 4096) - A&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 4096) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 4096) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      Key exchange (dh 2048) of lower strength than certificate key&#xa;      Key exchange (secp256r1) of lower strength than certificate key&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp521r1) - A&#xa;      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256-draft (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256-draft (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp521r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp521r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 4096) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A&#xa;      TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 4096) - A&#xa;      TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 4096) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 4096) - A&#xa;      TLS_RSA_WITH_SEED_CBC_SHA (rsa 4096) - A&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 4096) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 4096) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256 (rsa 4096) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (dh 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA256 (rsa 4096) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256 (dh 2048) - A&#xa;      TLS_RSA_WITH_ARIA_128_CBC_SHA256 (rsa 4096) - A&#xa;      TLS_DHE_RSA_WITH_ARIA_128_CBC_SHA256 (dh 2048) - A&#xa;      TLS_RSA_WITH_ARIA_256_CBC_SHA384 (rsa 4096) - A&#xa;      TLS_DHE_RSA_WITH_ARIA_256_CBC_SHA384 (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_ARIA_256_CBC_SHA384 (secp521r1) - A&#xa;      TLS_ECDHE_RSA_WITH_ARIA_128_CBC_SHA256 (secp256r1) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      Key exchange (dh 2048) of lower strength than certificate key&#xa;      Key exchange (secp256r1) of lower strength than certificate key&#xa;  least strength: A"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">secp521r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_SEED_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>Key exchange (dh 2048) of lower strength than certificate key</elem>
+<elem>Key exchange (secp256r1) of lower strength than certificate key</elem>
+</table>
+</table>
+<table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">secp521r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_SEED_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>Key exchange (dh 2048) of lower strength than certificate key</elem>
+<elem>Key exchange (secp256r1) of lower strength than certificate key</elem>
+</table>
+</table>
+<table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">secp521r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256-draft</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256-draft</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">secp521r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">secp521r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_GCM_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_GCM_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_SEED_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_ARIA_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_ARIA_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 4096</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_ARIA_256_CBC_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_ARIA_256_CBC_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">secp521r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_ARIA_256_CBC_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_ARIA_128_CBC_SHA256</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>Key exchange (dh 2048) of lower strength than certificate key</elem>
+<elem>Key exchange (secp256r1) of lower strength than certificate key</elem>
+</table>
+</table>
+<elem key="least strength">A</elem>
+</script></port>
+</ports>
+<times srtt="58516" rttvar="9336" to="100000"/>
+</host>
+<runstats><finished time="1552750961" timestr="Sat Mar 16 17:42:41 2019" elapsed="552.50" summary="Nmap done at Sat Mar 16 17:42:41 2019; 1 IP address (1 host up) scanned in 552.50 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

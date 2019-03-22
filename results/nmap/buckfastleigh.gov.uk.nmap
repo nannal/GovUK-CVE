@@ -1,0 +1,368 @@
+# Nmap 7.70 scan initiated Sat Mar 16 03:41:32 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/buckfastleigh.gov.uk buckfastleigh.gov.uk
+Warning: 109.203.109.8 giving up on port because retransmission cap hit (6).
+Nmap scan report for buckfastleigh.gov.uk (109.203.109.8)
+Host is up (0.079s latency).
+rDNS record for 109.203.109.8: interxmedia.co.uk
+Not shown: 65422 closed ports, 97 filtered ports
+PORT      STATE SERVICE    VERSION
+21/tcp    open  ftp        Pure-FTPd
+| banner: 220---------- Welcome to Pure-FTPd [privsep] [TLS] ----------\x
+|_0D\x0A220-You are user number 1 of 50 allowed.\x0D\x0A220-Local time...
+22/tcp    open  ssh        OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2.13
+53/tcp    open  domain     ISC BIND 9.9.5-3ubuntu0.19 (Ubuntu Linux)
+80/tcp    open  ssl/http   Apache/2.4.7 (Ubuntu)
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+110/tcp   open  pop3       Dovecot pop3d
+|_banner: +OK Dovecot (Ubuntu) ready.
+143/tcp   open  imap       Dovecot imapd (Ubuntu)
+| banner: * OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID 
+|_ENABLE IDLE STARTTLS AUTH=PLAIN AUTH=LOGIN] Dovecot (Ubuntu) ready.
+389/tcp   open  ldap       OpenLDAP 2.2.X - 2.3.X
+443/tcp   open  ssl/ssl    Apache httpd (SSL-only mode)
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+|_http-trane-info: Problem with XML parsing of /evox/about
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - C
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+465/tcp   open  ssl/smtp   Postfix smtpd
+|_banner: 220 interxmedia.com ESMTP Postfix (Ubuntu)
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 4096) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 4096) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (dh 1024) of lower strength than certificate key
+|       Key exchange (secp256r1) of lower strength than certificate key
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 4096) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 4096) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (dh 1024) of lower strength than certificate key
+|       Key exchange (secp256r1) of lower strength than certificate key
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 4096) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 4096) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 4096) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (dh 1024) of lower strength than certificate key
+|       Key exchange (secp256r1) of lower strength than certificate key
+|_  least strength: D
+587/tcp   open  smtp       Postfix smtpd
+|_banner: 220 interxmedia.com ESMTP Postfix (Ubuntu)
+993/tcp   open  ssl/imap   Dovecot imapd (Ubuntu)
+| banner: * OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID 
+|_ENABLE IDLE AUTH=PLAIN AUTH=LOGIN] Dovecot (Ubuntu) ready.
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp384r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_RC4_128_SHA (secp384r1) - C
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 4096) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 4096) - C
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 4096) - C
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 4096) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Key exchange (dh 1024) of lower strength than certificate key
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp384r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_RC4_128_SHA (secp384r1) - C
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 4096) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 4096) - C
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 4096) - C
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 4096) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Key exchange (dh 1024) of lower strength than certificate key
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp384r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_RC4_128_SHA (secp384r1) - C
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 4096) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 4096) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 4096) - C
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 4096) - C
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 4096) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Key exchange (dh 1024) of lower strength than certificate key
+|_  least strength: D
+995/tcp   open  ssl/pop3   Dovecot pop3d
+|_banner: +OK Dovecot (Ubuntu) ready.
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp384r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_RC4_128_SHA (secp384r1) - C
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 4096) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 4096) - C
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 4096) - C
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 4096) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Key exchange (dh 1024) of lower strength than certificate key
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp384r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_RC4_128_SHA (secp384r1) - C
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 4096) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 4096) - C
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 4096) - C
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 4096) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Key exchange (dh 1024) of lower strength than certificate key
+|_  least strength: D
+1167/tcp  open  r1soft-cdp R1Soft Continuous Data Protection Agent (name: XenVMMXenVMM)
+| banner: \x00\x00\x012R\xAF\x02\x0A\x18\x08\xA3\x80\x04\x10\x01\x18\x00 
+|_\x01*\x0CXenVMMXenVMM\x10\x00\x1A\x90\x02-----BEGIN PUBLIC KEY-----\...
+3306/tcp  open  mysql      MySQL 5.5.62-0ubuntu0.14.04.1
+| banner: [\x00\x00\x00\x0A5.5.62-0ubuntu0.14.04.1\x00\x14\xDA\x07\x00[o:
+|_rR"NG\x00\xFF\xF7\x08\x02\x00\x0F\x80\x15\x00\x00\x00\x00\x00\x00\x0...
+8080/tcp  open  ssl/ssl    Apache httpd (SSL-only mode)
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 4096) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 4096) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 4096) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_CBC_SHA and TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (secp256r1) of lower strength than certificate key
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 4096) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 4096) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 4096) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 4096) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 4096) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 4096) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 4096) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (secp256r1) of lower strength than certificate key
+|_  least strength: C
+8081/tcp  open  http       Apache httpd 2.4.7
+10050/tcp open  tcpwrapped
+Service Info: Hosts:  interxmedia.com, interxmedia.com; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 04:05:58 2019 -- 1 IP address (1 host up) scanned in 1465.86 seconds

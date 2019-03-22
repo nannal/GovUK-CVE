@@ -1,0 +1,205 @@
+# Nmap 7.70 scan initiated Sat Mar 16 15:11:10 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/passport.service.gov.uk passport.service.gov.uk
+Nmap scan report for passport.service.gov.uk (54.76.117.138)
+Host is up (0.21s latency).
+rDNS record for 54.76.117.138: ec2-54-76-117-138.eu-west-1.compute.amazonaws.com
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 302 Found
+|     Cache-Control: no-cache
+|     Content-length: 0
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Connection: close
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 302 Found
+|     Cache-Control: no-cache
+|     Content-length: 0
+|     Location: https:///
+|     Connection: close
+|   RPCCheck, X11Probe: 
+|     HTTP/1.0 400 Bad Request
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <!DOCTYPE html>
+|     <!--[if lt IE 9]><html class="lte-ie8" lang=""><![endif]-->
+|     <!--[if gt IE 8]><!--><html lang=""><!--<![endif]-->
+|     <head>
+|     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+|     <title> Service not available &ndash; Renew your passport &ndash; GOV.UK</title>
+|     <script type="text/javascript">
+|     (function(){if(navigator.userAgent.match(/IEMobile/10\.0/)){var d=document,c="appendChild",a=d.createElement("style");a[c](d.createTextNode("@-ms-viewport{width:auto!important}"));d.getElementsByTagName("head")[0][c](a);}})();
+|     </script>
+|     <!--[if gt IE 8]><!--><link href="/error-assets/stylesheets/govuk-template.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+|_    <!--[if IE 6]><link href="/error-assets/stylesheets/govuk-
+443/tcp open  ssl/https?
+| fingerprint-strings: 
+|   RPCCheck, tor-versions: 
+|     HTTP/1.0 400 Bad Request
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <!DOCTYPE html>
+|     <!--[if lt IE 9]><html class="lte-ie8" lang=""><![endif]-->
+|     <!--[if gt IE 8]><!--><html lang=""><!--<![endif]-->
+|     <head>
+|     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+|     <title> Service not available &ndash; Renew your passport &ndash; GOV.UK</title>
+|     <script type="text/javascript">
+|     (function(){if(navigator.userAgent.match(/IEMobile/10\.0/)){var d=document,c="appendChild",a=d.createElement("style");a[c](d.createTextNode("@-ms-viewport{width:auto!important}"));d.getElementsByTagName("head")[0][c](a);}})();
+|     </script>
+|     <!--[if gt IE 8]><!--><link href="/error-assets/stylesheets/govuk-template.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+|_    <!--[if IE 6]><link href="/error-assets/stylesheets/govuk-
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - C
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - C
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - C
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8CFAE7%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,6A,"HTTP/1\.1\x20302\x20Found\r\nCache-Control:\x20no-cache
+SF:\r\nContent-length:\x200\r\nLocation:\x20https:///\r\nConnection:\x20cl
+SF:ose\r\n\r\n")%r(HTTPOptions,6A,"HTTP/1\.1\x20302\x20Found\r\nCache-Cont
+SF:rol:\x20no-cache\r\nContent-length:\x200\r\nLocation:\x20https:///\r\nC
+SF:onnection:\x20close\r\n\r\n")%r(RTSPRequest,6A,"HTTP/1\.1\x20302\x20Fou
+SF:nd\r\nCache-Control:\x20no-cache\r\nContent-length:\x200\r\nLocation:\x
+SF:20https:///\r\nConnection:\x20close\r\n\r\n")%r(X11Probe,10F8,"HTTP/1\.
+SF:0\x20400\x20Bad\x20Request\nCache-Control:\x20no-cache\nConnection:\x20
+SF:close\nContent-Type:\x20text/html\n\n\n<!DOCTYPE\x20html>\n<!--\[if\x20
+SF:lt\x20IE\x209\]><html\x20class=\"lte-ie8\"\x20lang=\"\"><!\[endif\]-->\
+SF:n<!--\[if\x20gt\x20IE\x208\]><!--><html\x20lang=\"\"><!--<!\[endif\]-->
+SF:\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x20http-equiv=\"content-type\"\
+SF:x20content=\"text/html;\x20charset=UTF-8\"\x20/>\n\n\x20\x20\x20\x20<ti
+SF:tle>\x20\x20\x20\x20Service\x20not\x20available\x20&ndash;\x20Renew\x20
+SF:your\x20passport\x20&ndash;\x20GOV\.UK</title>\n\n\x20\x20\x20\x20<scri
+SF:pt\x20type=\"text/javascript\">\n\x20\x20\x20\x20\x20\x20\(function\(\)
+SF:{if\(navigator\.userAgent\.match\(/IEMobile\\/10\\\.0/\)\){var\x20d=doc
+SF:ument,c=\"appendChild\",a=d\.createElement\(\"style\"\);a\[c\]\(d\.crea
+SF:teTextNode\(\"@-ms-viewport{width:auto!important}\"\)\);d\.getElementsB
+SF:yTagName\(\"head\"\)\[0\]\[c\]\(a\);}}\)\(\);\n\x20\x20\x20\x20</script
+SF:>\n\n\x20\x20\x20\x20<!--\[if\x20gt\x20IE\x208\]><!--><link\x20href=\"/
+SF:error-assets/stylesheets/govuk-template\.css\?0\.12\.0\"\x20media=\"scr
+SF:een\"\x20rel=\"stylesheet\"\x20type=\"text/css\"\x20/><!--<!\[endif\]--
+SF:>\n\x20\x20\x20\x20<!--\[if\x20IE\x206\]><link\x20href=\"/error-assets/
+SF:stylesheets/govuk-")%r(FourOhFourRequest,8D,"HTTP/1\.1\x20302\x20Found\
+SF:r\nCache-Control:\x20no-cache\r\nContent-length:\x200\r\nLocation:\x20h
+SF:ttps:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:\x20close\r\
+SF:n\r\n")%r(RPCCheck,1AFD,"HTTP/1\.0\x20400\x20Bad\x20Request\nCache-Cont
+SF:rol:\x20no-cache\nConnection:\x20close\nContent-Type:\x20text/html\n\n\
+SF:n<!DOCTYPE\x20html>\n<!--\[if\x20lt\x20IE\x209\]><html\x20class=\"lte-i
+SF:e8\"\x20lang=\"\"><!\[endif\]-->\n<!--\[if\x20gt\x20IE\x208\]><!--><htm
+SF:l\x20lang=\"\"><!--<!\[endif\]-->\n\x20\x20<head>\n\x20\x20\x20\x20<met
+SF:a\x20http-equiv=\"content-type\"\x20content=\"text/html;\x20charset=UTF
+SF:-8\"\x20/>\n\n\x20\x20\x20\x20<title>\x20\x20\x20\x20Service\x20not\x20
+SF:available\x20&ndash;\x20Renew\x20your\x20passport\x20&ndash;\x20GOV\.UK
+SF:</title>\n\n\x20\x20\x20\x20<script\x20type=\"text/javascript\">\n\x20\
+SF:x20\x20\x20\x20\x20\(function\(\){if\(navigator\.userAgent\.match\(/IEM
+SF:obile\\/10\\\.0/\)\){var\x20d=document,c=\"appendChild\",a=d\.createEle
+SF:ment\(\"style\"\);a\[c\]\(d\.createTextNode\(\"@-ms-viewport{width:auto
+SF:!important}\"\)\);d\.getElementsByTagName\(\"head\"\)\[0\]\[c\]\(a\);}}
+SF:\)\(\);\n\x20\x20\x20\x20</script>\n\n\x20\x20\x20\x20<!--\[if\x20gt\x2
+SF:0IE\x208\]><!--><link\x20href=\"/error-assets/stylesheets/govuk-templat
+SF:e\.css\?0\.12\.0\"\x20media=\"screen\"\x20rel=\"stylesheet\"\x20type=\"
+SF:text/css\"\x20/><!--<!\[endif\]-->\n\x20\x20\x20\x20<!--\[if\x20IE\x206
+SF:\]><link\x20href=\"/error-assets/stylesheets/govuk-");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CFAEF%P=x86_64-unknown-linu
+SF:x-gnu%r(tor-versions,1AFD,"HTTP/1\.0\x20400\x20Bad\x20Request\nCache-Co
+SF:ntrol:\x20no-cache\nConnection:\x20close\nContent-Type:\x20text/html\n\
+SF:n\n<!DOCTYPE\x20html>\n<!--\[if\x20lt\x20IE\x209\]><html\x20class=\"lte
+SF:-ie8\"\x20lang=\"\"><!\[endif\]-->\n<!--\[if\x20gt\x20IE\x208\]><!--><h
+SF:tml\x20lang=\"\"><!--<!\[endif\]-->\n\x20\x20<head>\n\x20\x20\x20\x20<m
+SF:eta\x20http-equiv=\"content-type\"\x20content=\"text/html;\x20charset=U
+SF:TF-8\"\x20/>\n\n\x20\x20\x20\x20<title>\x20\x20\x20\x20Service\x20not\x
+SF:20available\x20&ndash;\x20Renew\x20your\x20passport\x20&ndash;\x20GOV\.
+SF:UK</title>\n\n\x20\x20\x20\x20<script\x20type=\"text/javascript\">\n\x2
+SF:0\x20\x20\x20\x20\x20\(function\(\){if\(navigator\.userAgent\.match\(/I
+SF:EMobile\\/10\\\.0/\)\){var\x20d=document,c=\"appendChild\",a=d\.createE
+SF:lement\(\"style\"\);a\[c\]\(d\.createTextNode\(\"@-ms-viewport{width:au
+SF:to!important}\"\)\);d\.getElementsByTagName\(\"head\"\)\[0\]\[c\]\(a\);
+SF:}}\)\(\);\n\x20\x20\x20\x20</script>\n\n\x20\x20\x20\x20<!--\[if\x20gt\
+SF:x20IE\x208\]><!--><link\x20href=\"/error-assets/stylesheets/govuk-templ
+SF:ate\.css\?0\.12\.0\"\x20media=\"screen\"\x20rel=\"stylesheet\"\x20type=
+SF:\"text/css\"\x20/><!--<!\[endif\]-->\n\x20\x20\x20\x20<!--\[if\x20IE\x2
+SF:06\]><link\x20href=\"/error-assets/stylesheets/govuk-")%r(RPCCheck,1AFD
+SF:,"HTTP/1\.0\x20400\x20Bad\x20Request\nCache-Control:\x20no-cache\nConne
+SF:ction:\x20close\nContent-Type:\x20text/html\n\n\n<!DOCTYPE\x20html>\n<!
+SF:--\[if\x20lt\x20IE\x209\]><html\x20class=\"lte-ie8\"\x20lang=\"\"><!\[e
+SF:ndif\]-->\n<!--\[if\x20gt\x20IE\x208\]><!--><html\x20lang=\"\"><!--<!\[
+SF:endif\]-->\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x20http-equiv=\"conte
+SF:nt-type\"\x20content=\"text/html;\x20charset=UTF-8\"\x20/>\n\n\x20\x20\
+SF:x20\x20<title>\x20\x20\x20\x20Service\x20not\x20available\x20&ndash;\x2
+SF:0Renew\x20your\x20passport\x20&ndash;\x20GOV\.UK</title>\n\n\x20\x20\x2
+SF:0\x20<script\x20type=\"text/javascript\">\n\x20\x20\x20\x20\x20\x20\(fu
+SF:nction\(\){if\(navigator\.userAgent\.match\(/IEMobile\\/10\\\.0/\)\){va
+SF:r\x20d=document,c=\"appendChild\",a=d\.createElement\(\"style\"\);a\[c\
+SF:]\(d\.createTextNode\(\"@-ms-viewport{width:auto!important}\"\)\);d\.ge
+SF:tElementsByTagName\(\"head\"\)\[0\]\[c\]\(a\);}}\)\(\);\n\x20\x20\x20\x
+SF:20</script>\n\n\x20\x20\x20\x20<!--\[if\x20gt\x20IE\x208\]><!--><link\x
+SF:20href=\"/error-assets/stylesheets/govuk-template\.css\?0\.12\.0\"\x20m
+SF:edia=\"screen\"\x20rel=\"stylesheet\"\x20type=\"text/css\"\x20/><!--<!\
+SF:[endif\]-->\n\x20\x20\x20\x20<!--\[if\x20IE\x206\]><link\x20href=\"/err
+SF:or-assets/stylesheets/govuk-");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 15:33:09 2019 -- 1 IP address (1 host up) scanned in 1319.14 seconds

@@ -1,0 +1,193 @@
+# Nmap 7.70 scan initiated Sat Mar 16 04:37:34 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/childcarechoices.gov.uk childcarechoices.gov.uk
+Warning: 134.213.236.178 giving up on port because retransmission cap hit (6).
+Nmap scan report for childcarechoices.gov.uk (134.213.236.178)
+Host is up (0.071s latency).
+Not shown: 65394 closed ports, 140 filtered ports
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Kerberos, RPCCheck, SMBProgNeg, SSLSessionReq, TLSSessionReq, X11Probe: 
+|     HTTP/1.0 400 Bad request
+|     Content-Type: text/html
+|     <h2>Client sent a bad request.</h2>
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Content-Type: text/html
+|     Date: Sat, 16 Mar 2019 02:59:06 GMT
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Connection: close
+|     Content-Length: 0
+|   GetRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Content-Type: text/html
+|     Date: Sat, 16 Mar 2019 02:58:58 GMT
+|     Location: https:///
+|     Connection: close
+|     Content-Length: 0
+|   HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Content-Type: text/html
+|     Date: Sat, 16 Mar 2019 02:58:59 GMT
+|     Location: https:///
+|     Connection: close
+|     Content-Length: 0
+|   RTSPRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Content-Type: text/html
+|     Date: Sat, 16 Mar 2019 02:58:59 GMT
+|     Location: https:///
+|     Connection: Keep-Alive
+|_    Content-Length: 0
+443/tcp open  ssl/https nginx/1.12.2
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, RPCCheck, tor-versions: 
+|     HTTP/1.0 400 Bad request
+|     Content-Type: text/html
+|     <h2>Client sent a bad request.</h2>
+|   FourOhFourRequest: 
+|     HTTP/1.1 503 Backend fetch failed
+|     Date: Sat, 16 Mar 2019 02:59:06 GMT
+|     Connection: close
+|     Set-Cookie: X-Mapping-fjhppofk=075014826BF1CA850D57EC2394828B28; path=/
+|     Age: 0
+|     Content-Length: 0
+|   GenericLines: 
+|     HTTP/1.1 400 Bad Request
+|     Server: nginx/1.12.2
+|     Date: Sat, 16 Mar 2019 02:59:08 GMT
+|     Content-Type: text/html
+|     Content-Length: 173
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>nginx/1.12.2</center>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.1 503 Backend fetch failed
+|     Date: Sat, 16 Mar 2019 02:59:05 GMT
+|     Connection: close
+|     Set-Cookie: X-Mapping-fjhppofk=075014826BF1CA850D57EC2394828B28; path=/
+|     Age: 0
+|     Content-Length: 0
+|   HTTPOptions: 
+|     HTTP/1.1 503 Backend fetch failed
+|     Date: Sat, 16 Mar 2019 02:59:05 GMT
+|     Connection: close
+|     Set-Cookie: X-Mapping-fjhppofk=107D4289491C3C7C667BB1A2A35A4767; path=/
+|     Age: 0
+|     Content-Length: 0
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|_    Set-Cookie: X-Mapping-fjhppofk=075014826BF1CA850D57EC2394828B28; path=/
+|_http-server-header: nginx/1.12.2
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA and TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: C
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8C666F%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,9B,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nContent-Typ
+SF:e:\x20text/html\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2002:58:58\x20GM
+SF:T\r\nLocation:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\
+SF:x200\r\n\r\n")%r(HTTPOptions,9B,"HTTP/1\.1\x20301\x20Moved\x20Permanent
+SF:ly\r\nContent-Type:\x20text/html\r\nDate:\x20Sat,\x2016\x20Mar\x202019\
+SF:x2002:58:59\x20GMT\r\nLocation:\x20https:///\r\nConnection:\x20close\r\
+SF:nContent-Length:\x200\r\n\r\n")%r(RTSPRequest,A0,"HTTP/1\.1\x20301\x20M
+SF:oved\x20Permanently\r\nContent-Type:\x20text/html\r\nDate:\x20Sat,\x201
+SF:6\x20Mar\x202019\x2002:58:59\x20GMT\r\nLocation:\x20https:///\r\nConnec
+SF:tion:\x20Keep-Alive\r\nContent-Length:\x200\r\n\r\n")%r(X11Probe,59,"HT
+SF:TP/1\.0\x20400\x20Bad\x20request\r\nContent-Type:\x20text/html\r\n\r\n<
+SF:h2>Client\x20sent\x20a\x20bad\x20request\.</h2>\n")%r(FourOhFourRequest
+SF:,BE,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nContent-Type:\x20text/
+SF:html\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2002:59:06\x20GMT\r\nLocati
+SF:on:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:\x20
+SF:close\r\nContent-Length:\x200\r\n\r\n")%r(RPCCheck,59,"HTTP/1\.0\x20400
+SF:\x20Bad\x20request\r\nContent-Type:\x20text/html\r\n\r\n<h2>Client\x20s
+SF:ent\x20a\x20bad\x20request\.</h2>\n")%r(DNSVersionBindReqTCP,59,"HTTP/1
+SF:\.0\x20400\x20Bad\x20request\r\nContent-Type:\x20text/html\r\n\r\n<h2>C
+SF:lient\x20sent\x20a\x20bad\x20request\.</h2>\n")%r(DNSStatusRequestTCP,5
+SF:9,"HTTP/1\.0\x20400\x20Bad\x20request\r\nContent-Type:\x20text/html\r\n
+SF:\r\n<h2>Client\x20sent\x20a\x20bad\x20request\.</h2>\n")%r(SSLSessionRe
+SF:q,59,"HTTP/1\.0\x20400\x20Bad\x20request\r\nContent-Type:\x20text/html\
+SF:r\n\r\n<h2>Client\x20sent\x20a\x20bad\x20request\.</h2>\n")%r(TLSSessio
+SF:nReq,59,"HTTP/1\.0\x20400\x20Bad\x20request\r\nContent-Type:\x20text/ht
+SF:ml\r\n\r\n<h2>Client\x20sent\x20a\x20bad\x20request\.</h2>\n")%r(Kerber
+SF:os,59,"HTTP/1\.0\x20400\x20Bad\x20request\r\nContent-Type:\x20text/html
+SF:\r\n\r\n<h2>Client\x20sent\x20a\x20bad\x20request\.</h2>\n")%r(SMBProgN
+SF:eg,59,"HTTP/1\.0\x20400\x20Bad\x20request\r\nContent-Type:\x20text/html
+SF:\r\n\r\n<h2>Client\x20sent\x20a\x20bad\x20request\.</h2>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8C6675%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,C1,"HTTP/1\.1\x20503\x20Backend\x20fetch\x20failed\r
+SF:\nDate:\x20Sat,\x2016\x20Mar\x202019\x2002:59:05\x20GMT\r\nConnection:\
+SF:x20close\r\nSet-Cookie:\x20X-Mapping-fjhppofk=075014826BF1CA850D57EC239
+SF:4828B28;\x20path=/\r\nAge:\x200\r\nContent-Length:\x200\r\n\r\n")%r(HTT
+SF:POptions,C1,"HTTP/1\.1\x20503\x20Backend\x20fetch\x20failed\r\nDate:\x2
+SF:0Sat,\x2016\x20Mar\x202019\x2002:59:05\x20GMT\r\nConnection:\x20close\r
+SF:\nSet-Cookie:\x20X-Mapping-fjhppofk=107D4289491C3C7C667BB1A2A35A4767;\x
+SF:20path=/\r\nAge:\x200\r\nContent-Length:\x200\r\n\r\n")%r(FourOhFourReq
+SF:uest,C1,"HTTP/1\.1\x20503\x20Backend\x20fetch\x20failed\r\nDate:\x20Sat
+SF:,\x2016\x20Mar\x202019\x2002:59:06\x20GMT\r\nConnection:\x20close\r\nSe
+SF:t-Cookie:\x20X-Mapping-fjhppofk=075014826BF1CA850D57EC2394828B28;\x20pa
+SF:th=/\r\nAge:\x200\r\nContent-Length:\x200\r\n\r\n")%r(tor-versions,59,"
+SF:HTTP/1\.0\x20400\x20Bad\x20request\r\nContent-Type:\x20text/html\r\n\r\
+SF:n<h2>Client\x20sent\x20a\x20bad\x20request\.</h2>\n")%r(GenericLines,14
+SF:5,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20nginx/1\.12\.2\r\nD
+SF:ate:\x20Sat,\x2016\x20Mar\x202019\x2002:59:08\x20GMT\r\nContent-Type:\x
+SF:20text/html\r\nContent-Length:\x20173\r\nConnection:\x20close\r\n\r\n<h
+SF:tml>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<body\x20b
+SF:gcolor=\"white\">\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\
+SF:n<hr><center>nginx/1\.12\.2</center>\r\n</body>\r\n</html>\r\n")%r(RTSP
+SF:Request,78,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\
+SF:r\nSet-Cookie:\x20X-Mapping-fjhppofk=075014826BF1CA850D57EC2394828B28;\
+SF:x20path=/\r\n\r\n")%r(RPCCheck,59,"HTTP/1\.0\x20400\x20Bad\x20request\r
+SF:\nContent-Type:\x20text/html\r\n\r\n<h2>Client\x20sent\x20a\x20bad\x20r
+SF:equest\.</h2>\n")%r(DNSVersionBindReqTCP,59,"HTTP/1\.0\x20400\x20Bad\x2
+SF:0request\r\nContent-Type:\x20text/html\r\n\r\n<h2>Client\x20sent\x20a\x
+SF:20bad\x20request\.</h2>\n")%r(DNSStatusRequestTCP,59,"HTTP/1\.0\x20400\
+SF:x20Bad\x20request\r\nContent-Type:\x20text/html\r\n\r\n<h2>Client\x20se
+SF:nt\x20a\x20bad\x20request\.</h2>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 05:00:20 2019 -- 1 IP address (1 host up) scanned in 1366.12 seconds

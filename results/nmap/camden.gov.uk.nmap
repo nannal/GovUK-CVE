@@ -1,0 +1,40 @@
+# Nmap 7.70 scan initiated Sat Mar 16 04:04:18 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/camden.gov.uk camden.gov.uk
+Nmap scan report for camden.gov.uk (195.191.66.170)
+Host is up (0.069s latency).
+Not shown: 65528 filtered ports
+PORT     STATE  SERVICE     VERSION
+80/tcp   open   http        Apache httpd
+|_http-server-header: Apache
+443/tcp  open   ssl/http    Apache httpd
+| ssl-enum-ciphers: 
+|   SSLv3: 
+|     ciphers: 
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       CBC-mode cipher in SSLv3 (CVE-2014-3566)
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+1645/tcp closed sightline
+4545/tcp closed worldscores
+8080/tcp closed http-proxy
+8443/tcp closed https-alt
+8530/tcp closed unknown
+8531/tcp closed unknown
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 04:09:56 2019 -- 1 IP address (1 host up) scanned in 338.41 seconds

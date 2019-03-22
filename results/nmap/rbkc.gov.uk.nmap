@@ -1,0 +1,194 @@
+# Nmap 7.70 scan initiated Sat Mar 16 16:05:36 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/rbkc.gov.uk rbkc.gov.uk
+Nmap scan report for rbkc.gov.uk (193.36.20.125)
+Host is up (0.056s latency).
+Not shown: 65469 filtered ports, 64 closed ports
+PORT     STATE SERVICE   VERSION
+80/tcp   open  http
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Kerberos, RPCCheck, SMBProgNeg, SSLSessionReq, TLSSessionReq, X11Probe: 
+|     HTTP/1.0 400 Bad request
+|     Content-Type: text/html
+|     <h2>Client sent a bad request.</h2>
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Content-Type: text/html
+|     Date: Sat, 16 Mar 2019 14:25:16 GMT
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Connection: close
+|     Content-Length: 0
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Content-Type: text/html
+|     Date: Sat, 16 Mar 2019 14:25:10 GMT
+|     Location: https:///
+|     Connection: close
+|     Content-Length: 0
+|   RTSPRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Content-Type: text/html
+|     Date: Sat, 16 Mar 2019 14:25:10 GMT
+|     Location: https:///
+|     Connection: Keep-Alive
+|_    Content-Length: 0
+443/tcp  open  ssl/https
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Vary: Accept-Encoding
+|     Cache-Control: no-cache, must-revalidate
+|     Content-Type: text/html; charset=utf-8
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     Date: Sat, 16 Mar 2019 14:25:17 GMT
+|     Link: <https://193.36.170.225/>; rel="canonical",<https://193.36.170.225/>; rel="shortlink"
+|     Expires: Sun, 19 Nov 1978 05:00:00 GMT
+|     X-XSS-Protection: 1; mode=block
+|     Content-Language: en
+|     Access-Control-Allow-Origin: *
+|     X-Content-Type-Options: nosniff
+|     X-Content-Type-Options: nosniff
+|     Connection: close
+|     Set-Cookie: CHOCOLATECHIPSSL=deleted; domain=.rbkc.gov.uk; path=/; expires=Thu, 01-Jan-1970 00:00:01 GMT; secure; HttpOnly
+|     Set-Cookie: CHOCOLATECHIPSSL=deleted; domain=.rbkc.gov.uk; path=/; expires=Thu, 01-Jan-1970 00:00:01 GMT; secure; HttpOnly
+|     X-Frame-Options: SAMEORIGIN
+|     X-UA-Compatible: IE=edge
+|     Content-Length: 10258
+|     <!DOCTYPE html>
+|     <html class="no-js" lang=
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Vary: Accept-Encoding
+|     Cache-Control: no-cache, must-revalidate
+|     Content-Type: text/html; charset=utf-8
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     Date: Sat, 16 Mar 2019 14:25:18 GMT
+|     Link: <https://193.36.170.225/>; rel="canonical",<https://193.36.170.225/>; rel="shortlink"
+|     Expires: Sun, 19 Nov 1978 05:00:00 GMT
+|     X-XSS-Protection: 1; mode=block
+|     Content-Language: en
+|     Access-Control-Allow-Origin: *
+|     X-Content-Type-Options: nosniff
+|     X-Content-Type-Options: nosniff
+|     Connection: close
+|     Set-Cookie: CHOCOLATECHIPSSL=deleted; domain=.rbkc.gov.uk; path=/; expires=Thu, 01-Jan-1970 00:00:01 GMT; secure; HttpOnly
+|     Set-Cookie: CHOCOLATECHIPSSL=deleted; domain=.rbkc.gov.uk; path=/; expires=Thu, 01-Jan-1970 00:00:01 GMT; secure; HttpOnly
+|     X-Frame-Options: SAMEORIGIN
+|     X-UA-Compatible: IE=edge
+|     Content-Length: 10258
+|     <!DOCTYPE html>
+|_    <html class="no-js" lang=
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       Key exchange (dh 2048) of lower strength than certificate key
+|       Key exchange (secp256r1) of lower strength than certificate key
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       Key exchange (dh 2048) of lower strength than certificate key
+|       Key exchange (secp256r1) of lower strength than certificate key
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       Key exchange (dh 2048) of lower strength than certificate key
+|       Key exchange (secp256r1) of lower strength than certificate key
+|_  least strength: A
+1720/tcp open  h323q931?
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8D0743%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,9B,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nContent-Typ
+SF:e:\x20text/html\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2014:25:10\x20GM
+SF:T\r\nLocation:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\
+SF:x200\r\n\r\n")%r(HTTPOptions,9B,"HTTP/1\.1\x20301\x20Moved\x20Permanent
+SF:ly\r\nContent-Type:\x20text/html\r\nDate:\x20Sat,\x2016\x20Mar\x202019\
+SF:x2014:25:10\x20GMT\r\nLocation:\x20https:///\r\nConnection:\x20close\r\
+SF:nContent-Length:\x200\r\n\r\n")%r(RTSPRequest,A0,"HTTP/1\.1\x20301\x20M
+SF:oved\x20Permanently\r\nContent-Type:\x20text/html\r\nDate:\x20Sat,\x201
+SF:6\x20Mar\x202019\x2014:25:10\x20GMT\r\nLocation:\x20https:///\r\nConnec
+SF:tion:\x20Keep-Alive\r\nContent-Length:\x200\r\n\r\n")%r(X11Probe,59,"HT
+SF:TP/1\.0\x20400\x20Bad\x20request\r\nContent-Type:\x20text/html\r\n\r\n<
+SF:h2>Client\x20sent\x20a\x20bad\x20request\.</h2>\n")%r(FourOhFourRequest
+SF:,BE,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nContent-Type:\x20text/
+SF:html\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2014:25:16\x20GMT\r\nLocati
+SF:on:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:\x20
+SF:close\r\nContent-Length:\x200\r\n\r\n")%r(RPCCheck,59,"HTTP/1\.0\x20400
+SF:\x20Bad\x20request\r\nContent-Type:\x20text/html\r\n\r\n<h2>Client\x20s
+SF:ent\x20a\x20bad\x20request\.</h2>\n")%r(DNSVersionBindReqTCP,59,"HTTP/1
+SF:\.0\x20400\x20Bad\x20request\r\nContent-Type:\x20text/html\r\n\r\n<h2>C
+SF:lient\x20sent\x20a\x20bad\x20request\.</h2>\n")%r(DNSStatusRequestTCP,5
+SF:9,"HTTP/1\.0\x20400\x20Bad\x20request\r\nContent-Type:\x20text/html\r\n
+SF:\r\n<h2>Client\x20sent\x20a\x20bad\x20request\.</h2>\n")%r(SSLSessionRe
+SF:q,59,"HTTP/1\.0\x20400\x20Bad\x20request\r\nContent-Type:\x20text/html\
+SF:r\n\r\n<h2>Client\x20sent\x20a\x20bad\x20request\.</h2>\n")%r(TLSSessio
+SF:nReq,59,"HTTP/1\.0\x20400\x20Bad\x20request\r\nContent-Type:\x20text/ht
+SF:ml\r\n\r\n<h2>Client\x20sent\x20a\x20bad\x20request\.</h2>\n")%r(Kerber
+SF:os,59,"HTTP/1\.0\x20400\x20Bad\x20request\r\nContent-Type:\x20text/html
+SF:\r\n\r\n<h2>Client\x20sent\x20a\x20bad\x20request\.</h2>\n")%r(SMBProgN
+SF:eg,59,"HTTP/1\.0\x20400\x20Bad\x20request\r\nContent-Type:\x20text/html
+SF:\r\n\r\n<h2>Client\x20sent\x20a\x20bad\x20request\.</h2>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D074A%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,2B6C,"HTTP/1\.1\x20200\x20OK\r\nVary:\x20Accept-Enco
+SF:ding\r\nCache-Control:\x20no-cache,\x20must-revalidate\r\nContent-Type:
+SF:\x20text/html;\x20charset=utf-8\r\nStrict-Transport-Security:\x20max-ag
+SF:e=31536000;\x20includeSubDomains\r\nDate:\x20Sat,\x2016\x20Mar\x202019\
+SF:x2014:25:17\x20GMT\r\nLink:\x20<https://193\.36\.170\.225/>;\x20rel=\"c
+SF:anonical\",<https://193\.36\.170\.225/>;\x20rel=\"shortlink\"\r\nExpire
+SF:s:\x20Sun,\x2019\x20Nov\x201978\x2005:00:00\x20GMT\r\nX-XSS-Protection:
+SF:\x201;\x20mode=block\r\nContent-Language:\x20en\r\nAccess-Control-Allow
+SF:-Origin:\x20\*\r\nX-Content-Type-Options:\x20nosniff\r\nX-Content-Type-
+SF:Options:\x20nosniff\r\nConnection:\x20close\r\nSet-Cookie:\x20CHOCOLATE
+SF:CHIPSSL=deleted;\x20domain=\.rbkc\.gov\.uk;\x20path=/;\x20expires=Thu,\
+SF:x2001-Jan-1970\x2000:00:01\x20GMT;\x20\x20secure;\x20HttpOnly\r\nSet-Co
+SF:okie:\x20CHOCOLATECHIPSSL=deleted;\x20domain=\.rbkc\.gov\.uk;\x20path=/
+SF:;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20\x20secure;\x20
+SF:HttpOnly\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-UA-Compatible:\x20IE=ed
+SF:ge\r\nContent-Length:\x2010258\r\n\r\n\n<!DOCTYPE\x20html>\n<html\x20cl
+SF:ass=\"no-js\"\x20lang=")%r(HTTPOptions,2B6C,"HTTP/1\.1\x20200\x20OK\r\n
+SF:Vary:\x20Accept-Encoding\r\nCache-Control:\x20no-cache,\x20must-revalid
+SF:ate\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nStrict-Transport
+SF:-Security:\x20max-age=31536000;\x20includeSubDomains\r\nDate:\x20Sat,\x
+SF:2016\x20Mar\x202019\x2014:25:18\x20GMT\r\nLink:\x20<https://193\.36\.17
+SF:0\.225/>;\x20rel=\"canonical\",<https://193\.36\.170\.225/>;\x20rel=\"s
+SF:hortlink\"\r\nExpires:\x20Sun,\x2019\x20Nov\x201978\x2005:00:00\x20GMT\
+SF:r\nX-XSS-Protection:\x201;\x20mode=block\r\nContent-Language:\x20en\r\n
+SF:Access-Control-Allow-Origin:\x20\*\r\nX-Content-Type-Options:\x20nosnif
+SF:f\r\nX-Content-Type-Options:\x20nosniff\r\nConnection:\x20close\r\nSet-
+SF:Cookie:\x20CHOCOLATECHIPSSL=deleted;\x20domain=\.rbkc\.gov\.uk;\x20path
+SF:=/;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20\x20secure;\x
+SF:20HttpOnly\r\nSet-Cookie:\x20CHOCOLATECHIPSSL=deleted;\x20domain=\.rbkc
+SF:\.gov\.uk;\x20path=/;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT
+SF:;\x20\x20secure;\x20HttpOnly\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-UA-
+SF:Compatible:\x20IE=edge\r\nContent-Length:\x2010258\r\n\r\n\n<!DOCTYPE\x
+SF:20html>\n<html\x20class=\"no-js\"\x20lang=");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 16:27:59 2019 -- 1 IP address (1 host up) scanned in 1342.94 seconds

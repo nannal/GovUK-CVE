@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 17:03:42 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/scotweb.rcahms.gov.uk scotweb.rcahms.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/scotweb.rcahms.gov.uk scotweb.rcahms.gov.uk" start="1552748622" startstr="Sat Mar 16 17:03:42 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552748623" endtime="1552749825"><status state="up" reason="echo-reply" reason_ttl="44"/>
+<address addr="193.63.89.11" addrtype="ipv4"/>
+<hostnames>
+<hostname name="scotweb.rcahms.gov.uk" type="user"/>
+<hostname name="liveweb1.rcahms.gov.uk" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65534">
+<extrareasons reason="no-responses" count="64809"/>
+<extrareasons reason="port-unreaches" count="725"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="43"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="43"/><service name="http" product="Apache httpd" hostname="liveweb1.rcahms.gov.uk" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+</ports>
+<times srtt="69917" rttvar="12532" to="120045"/>
+</host>
+<runstats><finished time="1552749825" timestr="Sat Mar 16 17:23:45 2019" elapsed="1202.44" summary="Nmap done at Sat Mar 16 17:23:45 2019; 1 IP address (1 host up) scanned in 1202.44 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

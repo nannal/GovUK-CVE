@@ -1,0 +1,61 @@
+# Nmap 7.70 scan initiated Sat Mar 16 17:50:27 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/sonning-pc.gov.uk sonning-pc.gov.uk
+Warning: 82.71.204.24 giving up on port because retransmission cap hit (6).
+Nmap scan report for sonning-pc.gov.uk (82.71.204.24)
+Host is up (0.071s latency).
+rDNS record for 82.71.204.24: cp14.hosting.zen.net.uk
+Not shown: 59523 filtered ports, 6000 closed ports
+PORT     STATE SERVICE      VERSION
+21/tcp   open  ftp          Pure-FTPd
+80/tcp   open  http         Apache httpd
+110/tcp  open  pop3         Dovecot pop3d
+143/tcp  open  imap         Dovecot imapd
+443/tcp  open  ssl/http     Apache httpd (PHP 5.6.40)
+|_http-server-header: Apache
+465/tcp  open  ssl/smtp     Exim smtpd 4.91
+587/tcp  open  smtp         Exim smtpd 4.91
+993/tcp  open  ssl/imap     Dovecot imapd
+995/tcp  open  ssl/pop3     Dovecot pop3d
+2082/tcp open  infowave?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 301 Moved
+|     Server: cpsrvd
+|     Content-length: 129
+|     Location: https://cp14.hosting.zen.net.uk:2083/sip%3anm
+|     Content-type: text/html; charset="utf-8"
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|_    <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://cp14.hosting.zen.net.uk:2083/sip%3anm"></head><body></body></html>
+2083/tcp open  ssl/radsec?
+2095/tcp open  nbx-ser?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 301 Moved
+|     Server: cpsrvd
+|     Content-length: 129
+|     Location: https://cp14.hosting.zen.net.uk:2096/sip%3anm
+|     Content-type: text/html; charset="utf-8"
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|_    <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://cp14.hosting.zen.net.uk:2096/sip%3anm"></head><body></body></html>
+2096/tcp open  ssl/nbx-dir?
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2082-TCP:V=7.70%I=7%D=3/16%Time=5C8D2E6A%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,15C,"HTTP/1\.1\x20301\x20Moved\r\nServer:\x20cpsrvd\r\nCo
+SF:ntent-length:\x20129\r\nLocation:\x20https://cp14\.hosting\.zen\.net\.u
+SF:k:2083/sip%3anm\r\nContent-type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Cache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private
+SF:\r\n\r\n<html><head><META\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=
+SF:https://cp14\.hosting\.zen\.net\.uk:2083/sip%3anm\"></head><body></body
+SF:></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2095-TCP:V=7.70%I=7%D=3/16%Time=5C8D2E6A%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,15C,"HTTP/1\.1\x20301\x20Moved\r\nServer:\x20cpsrvd\r\nCo
+SF:ntent-length:\x20129\r\nLocation:\x20https://cp14\.hosting\.zen\.net\.u
+SF:k:2096/sip%3anm\r\nContent-type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Cache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private
+SF:\r\n\r\n<html><head><META\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=
+SF:https://cp14\.hosting\.zen\.net\.uk:2096/sip%3anm\"></head><body></body
+SF:></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 19:13:36 2019 -- 1 IP address (1 host up) scanned in 4988.55 seconds

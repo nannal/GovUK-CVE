@@ -1,0 +1,841 @@
+# Nmap 7.70 scan initiated Sat Mar 16 18:45:53 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/stivestowncouncil-cornwall.gov.uk stivestowncouncil-cornwall.gov.uk
+Warning: 185.145.156.18 giving up on port because retransmission cap hit (6).
+Nmap scan report for stivestowncouncil-cornwall.gov.uk (185.145.156.18)
+Host is up (0.048s latency).
+rDNS record for 185.145.156.18: soul.blue-earth.co.uk
+Not shown: 35515 closed ports, 29993 filtered ports
+PORT      STATE SERVICE      VERSION
+21/tcp    open  ftp          Pure-FTPd
+| banner: 220---------- Welcome to Pure-FTPd [privsep] [TLS] ----------\x
+|_0D\x0A220-You are user number 1 of 50 allowed.\x0D\x0A220-Local time...
+22/tcp    open  ssh          OpenSSH 7.4 (protocol 2.0)
+80/tcp    open  http         LiteSpeed httpd
+|_http-server-header: LiteSpeed
+110/tcp   open  pop3         Dovecot pop3d
+143/tcp   open  imap         Dovecot imapd
+443/tcp   open  ssl/http     LiteSpeed httpd
+|_http-server-header: LiteSpeed
+|_http-trane-info: Problem with XML parsing of /evox/about
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: C
+465/tcp   open  ssl/smtp     Exim smtpd 4.91
+| banner: 220-big.blue-earth.co.uk ESMTP Exim 4.91 #1 Sat, 16 Mar 2019 17
+|_:33:16 +0000 \x0D\x0A220-We do not authorize the use of this system ...
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+587/tcp   open  smtp         Exim smtpd 4.91
+| banner: 220-big.blue-earth.co.uk ESMTP Exim 4.91 #1 Sat, 16 Mar 2019 17
+|_:33:36 +0000 \x0D\x0A220-We do not authorize the use of this system ...
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+993/tcp   open  ssl/imap     Dovecot imapd
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (dh 1024) of lower strength than certificate key
+|_  least strength: D
+995/tcp   open  ssl/pop3     Dovecot pop3d
+|_banner: +OK Dovecot ready.
+2077/tcp  open  tsrmagt?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 302 Moved
+|     Date: Sat, 16 Mar 2019 17:32:18 GMT
+|     Server: cPanel
+|     Persistent-Auth: false
+|     Host: big.blue-earth.co.uk:2077
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Connection: close
+|     Location: https://big.blue-earth.co.uk:2078sip:nm
+|     Vary: Accept-Encoding
+|     Expires: Fri, 01 Jan 1990 00:00:00 GMT
+|_    X-Redirect-Reason: requiressl
+2078/tcp  open  ssl/http     cPanel httpd (unauthorized)
+|_http-server-header: cPanel
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_256_CBC_SHA and TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+|_  least strength: A
+2080/tcp  open  ssl/http     cPanel httpd (unauthorized)
+|_http-server-header: cPanel
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2082/tcp  open  infowave?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 301 Moved
+|     Content-length: 126
+|     Location: https://big.blue-earth.co.uk:2083/sip%3anm
+|     Content-type: text/html; charset="utf-8"
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|_    <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://big.blue-earth.co.uk:2083/sip%3anm"></head><body></body></html>
+2083/tcp  open  ssl/radsec?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 17:31:08 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=%3aOWPwpf6GcF_eZSq0%2c285558ef20470d54f34285a13ec12e46; HttpOnly; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=big.blue-earth.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.big.blue-earth.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: horde_secret_key=expired; HttpOnly
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 17:31:09 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=%3a0K6ZYRorxz3KSkUE%2cd6a1d685f4ae5f0145dc71b1340fbc0c; HttpOnly; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=big.blue-earth.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.big.blue-earth.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|_    Set-Cookie: horde_secret_key=expired; HttpOnly
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+2086/tcp  open  gnunet?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 301 Moved
+|     Content-length: 126
+|     Location: https://big.blue-earth.co.uk:2087/sip%3anm
+|     Content-type: text/html; charset="utf-8"
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|_    <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://big.blue-earth.co.uk:2087/sip%3anm"></head><body></body></html>
+2087/tcp  open  ssl/eli?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 17:31:10 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="Web Host Manager"
+|     Set-Cookie: whostmgrrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: whostmgrsession=%3ag89HZshLrXoTRzRc%2c1135b6a5a4c0f786774ac2bac91c82af; HttpOnly; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=big.blue-earth.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.big.blue-earth.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: horde_secret
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 17:31:11 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="Web Host Manager"
+|     Set-Cookie: whostmgrrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: whostmgrsession=%3atj3XaD6m0HuZb64I%2cf5b3191e5d75a241842bd6f1484452e5; HttpOnly; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=big.blue-earth.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.big.blue-earth.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|_    Set-Cookie: horde_secret
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+2095/tcp  open  nbx-ser?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 301 Moved
+|     Content-length: 126
+|     Location: https://big.blue-earth.co.uk:2096/sip%3anm
+|     Content-type: text/html; charset="utf-8"
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|_    <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://big.blue-earth.co.uk:2096/sip%3anm"></head><body></body></html>
+2096/tcp  open  ssl/nbx-dir?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 17:31:08 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=%3aLbfvhKWZ9kKW1fMU%2ce8fcedc8f0f3432129f2bb41935d24d2; HttpOnly; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=big.blue-earth.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.big.blue-earth.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: horde_secret_key=expire
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 17:31:09 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=%3ai2FHnNT0UiA7rYwi%2c1ac5e33eb9b491717cdc9a332035b4f0; HttpOnly; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=big.blue-earth.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.big.blue-earth.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|_    Set-Cookie: horde_secret_key=expire
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+7080/tcp  open  ssl/http     LiteSpeed httpd
+|_http-server-header: LiteSpeed
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     cipher preference error: Network error
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+52227/tcp open  ssl/http     nginx
+|_http-server-header: imunify360-webshield/1.6
+52228/tcp open  unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 16 Mar 2019 17:30:58 GMT
+|     Content-Type: text/html
+|     Content-Length: 170
+|     Connection: close
+|     Server: imunify360-webshield/1.6
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.1 301 Moved
+|     Date: Sat, 16 Mar 2019 17:30:52 GMT
+|     Content-Type: text/html; charset="utf-8"
+|     Content-Length: 118
+|     Connection: close
+|     Location: https://big.blue-earth.co.uk:2087/
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Server: imunify360-webshield/1.6
+|     Expires: Sat, 16 Mar 2019 17:30:51 GMT
+|     <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://big.blue-earth.co.uk:2087/"></head><body></body></html>
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|_    </html>
+52229/tcp open  ssl/http     nginx
+|_http-server-header: imunify360-webshield/1.6
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+52230/tcp open  unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 16 Mar 2019 17:30:58 GMT
+|     Content-Type: text/html
+|     Content-Length: 170
+|     Connection: close
+|     Server: imunify360-webshield/1.6
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.1 301 Moved
+|     Date: Sat, 16 Mar 2019 17:30:52 GMT
+|     Content-Type: text/html; charset="utf-8"
+|     Content-Length: 118
+|     Connection: close
+|     Location: https://big.blue-earth.co.uk:2083/
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Server: imunify360-webshield/1.6
+|     Expires: Sat, 16 Mar 2019 17:30:51 GMT
+|     <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://big.blue-earth.co.uk:2083/"></head><body></body></html>
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|_    </html>
+52231/tcp open  ssl/http     nginx
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+52232/tcp open  unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 16 Mar 2019 17:31:01 GMT
+|     Content-Type: text/html
+|     Content-Length: 170
+|     Connection: close
+|     Server: imunify360-webshield/1.6
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.1 301 Moved
+|     Date: Sat, 16 Mar 2019 17:30:52 GMT
+|     Content-Type: text/html; charset="utf-8"
+|     Content-Length: 118
+|     Connection: close
+|     Location: https://big.blue-earth.co.uk:2096/
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Server: imunify360-webshield/1.6
+|     Expires: Sat, 16 Mar 2019 17:30:51 GMT
+|     <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://big.blue-earth.co.uk:2096/"></head><body></body></html>
+|   RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 16 Mar 2019 17:30:58 GMT
+|     Content-Type: text/html
+|     Content-Length: 170
+|     Connection: close
+|     Server: imunify360-webshield/1.6
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|     </html>
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|_    </html>
+52233/tcp open  ssl/http     nginx
+|_http-server-header: imunify360-webshield/1.6
+52234/tcp open  http-proxy   (bad gateway)
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 502 Bad Gateway
+|     Date: Sat, 16 Mar 2019 17:30:58 GMT
+|     Content-Type: text/html
+|     Content-Length: 170
+|     Connection: close
+|     Server: imunify360-webshield/1.6
+|     <html>
+|     <head><title>502 Bad Gateway</title></head>
+|     <body bgcolor="white">
+|     <center><h1>502 Bad Gateway</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.1 502 Bad Gateway
+|     Date: Sat, 16 Mar 2019 17:30:52 GMT
+|     Content-Type: text/html
+|     Content-Length: 170
+|     Connection: close
+|     Server: imunify360-webshield/1.6
+|     <html>
+|     <head><title>502 Bad Gateway</title></head>
+|     <body bgcolor="white">
+|     <center><h1>502 Bad Gateway</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|     </html>
+|   Help, NessusTPv10, SSLSessionReq: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 16 Mar 2019 17:30:58 GMT
+|     Content-Type: text/html
+|     Content-Length: 170
+|     Connection: close
+|     Server: imunify360-webshield/1.6
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|     </html>
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|_    </html>
+|_http-server-header: imunify360-webshield/1.6
+9 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2077-TCP:V=7.70%I=7%D=3/16%Time=5C8D331F%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,165,"HTTP/1\.1\x20302\x20Moved\r\nDate:\x20Sat,\x2016\x20
+SF:Mar\x202019\x2017:32:18\x20GMT\r\nServer:\x20cPanel\r\nPersistent-Auth:
+SF:\x20false\r\nHost:\x20big\.blue-earth\.co\.uk:2077\r\nCache-Control:\x2
+SF:0no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nConnection:\x
+SF:20close\r\nLocation:\x20https://big\.blue-earth\.co\.uk:2078sip:nm\r\nV
+SF:ary:\x20Accept-Encoding\r\nExpires:\x20Fri,\x2001\x20Jan\x201990\x2000:
+SF:00:00\x20GMT\r\nX-Redirect-Reason:\x20requiressl\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2082-TCP:V=7.70%I=7%D=3/16%Time=5C8D331F%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,146,"HTTP/1\.1\x20301\x20Moved\r\nContent-length:\x20126\
+SF:r\nLocation:\x20https://big\.blue-earth\.co\.uk:2083/sip%3anm\r\nConten
+SF:t-type:\x20text/html;\x20charset=\"utf-8\"\r\nCache-Control:\x20no-cach
+SF:e,\x20no-store,\x20must-revalidate,\x20private\r\n\r\n<html><head><META
+SF:\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://big\.blue-earth\.
+SF:co\.uk:2083/sip%3anm\"></head><body></body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2083-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D32D9%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2017:31:08\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"cPanel\"\r\nSet-Cook
+SF:ie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:
+SF:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20cpse
+SF:ssion=%3aOWPwpf6GcF_eZSq0%2c285558ef20470d54f34285a13ec12e46;\x20HttpOn
+SF:ly;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_sess
+SF:id=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20
+SF:GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_ses
+SF:sauth=expired;\x20HttpOnly;\x20domain=big\.blue-earth\.co\.uk;\x20expir
+SF:es=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20
+SF:secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20domain=\.big\.b
+SF:lue-earth\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x
+SF:20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20horde_secret_key=ex
+SF:pired;\x20HttpOnly")%r(HTTPOptions,4000,"HTTP/1\.0\x20401\x20Access\x20
+SF:Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charse
+SF:t=\"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2017:31:09\x20GMT\r\
+SF:nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20privat
+SF:e\r\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"cPane
+SF:l\"\r\nSet-Cookie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-
+SF:Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-
+SF:Cookie:\x20cpsession=%3a0K6ZYRorxz3KSkUE%2cd6a1d685f4ae5f0145dc71b1340f
+SF:bc0c;\x20HttpOnly;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x2
+SF:0roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\
+SF:x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x
+SF:20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=big\.blue-earth\.c
+SF:o\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x2
+SF:0port=2083;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20
+SF:domain=\.big\.blue-earth\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:
+SF:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20hord
+SF:e_secret_key=expired;\x20HttpOnly");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2086-TCP:V=7.70%I=7%D=3/16%Time=5C8D331F%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,146,"HTTP/1\.1\x20301\x20Moved\r\nContent-length:\x20126\
+SF:r\nLocation:\x20https://big\.blue-earth\.co\.uk:2087/sip%3anm\r\nConten
+SF:t-type:\x20text/html;\x20charset=\"utf-8\"\r\nCache-Control:\x20no-cach
+SF:e,\x20no-store,\x20must-revalidate,\x20private\r\n\r\n<html><head><META
+SF:\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://big\.blue-earth\.
+SF:co\.uk:2087/sip%3anm\"></head><body></body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2087-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D32DB%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2017:31:10\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"Web\x20Host\x20Manag
+SF:er\"\r\nSet-Cookie:\x20whostmgrrelogin=no;\x20HttpOnly;\x20expires=Thu,
+SF:\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\
+SF:r\nSet-Cookie:\x20whostmgrsession=%3ag89HZshLrXoTRzRc%2c1135b6a5a4c0f78
+SF:6774ac2bac91c82af;\x20HttpOnly;\x20path=/;\x20port=2087;\x20secure\r\nS
+SF:et-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2
+SF:001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\n
+SF:Set-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=big\.
+SF:blue-earth\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\
+SF:x20path=/;\x20port=2087;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20
+SF:HttpOnly;\x20domain=\.big\.blue-earth\.co\.uk;\x20expires=Thu,\x2001-Ja
+SF:n-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\nSet-Co
+SF:okie:\x20horde_secret")%r(HTTPOptions,4000,"HTTP/1\.0\x20401\x20Access\
+SF:x20Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20cha
+SF:rset=\"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2017:31:11\x20GMT
+SF:\r\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20pri
+SF:vate\r\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"We
+SF:b\x20Host\x20Manager\"\r\nSet-Cookie:\x20whostmgrrelogin=no;\x20HttpOnl
+SF:y;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20por
+SF:t=2087;\x20secure\r\nSet-Cookie:\x20whostmgrsession=%3atj3XaD6m0HuZb64I
+SF:%2cf5b3191e5d75a241842bd6f1484452e5;\x20HttpOnly;\x20path=/;\x20port=20
+SF:87;\x20secure\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\
+SF:x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2
+SF:087;\x20secure\r\nSet-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnl
+SF:y;\x20domain=big\.blue-earth\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2
+SF:000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\nSet-Cookie:\x20
+SF:Horde=expired;\x20HttpOnly;\x20domain=\.big\.blue-earth\.co\.uk;\x20exp
+SF:ires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x
+SF:20secure\r\nSet-Cookie:\x20horde_secret");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2095-TCP:V=7.70%I=7%D=3/16%Time=5C8D331F%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,146,"HTTP/1\.1\x20301\x20Moved\r\nContent-length:\x20126\
+SF:r\nLocation:\x20https://big\.blue-earth\.co\.uk:2096/sip%3anm\r\nConten
+SF:t-type:\x20text/html;\x20charset=\"utf-8\"\r\nCache-Control:\x20no-cach
+SF:e,\x20no-store,\x20must-revalidate,\x20private\r\n\r\n<html><head><META
+SF:\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://big\.blue-earth\.
+SF:co\.uk:2096/sip%3anm\"></head><body></body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2096-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D32D9%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2017:31:08\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"WebMail\"\r\nSet-Coo
+SF:kie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\
+SF:x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x
+SF:20webmailsession=%3aLbfvhKWZ9kKW1fMU%2ce8fcedc8f0f3432129f2bb41935d24d2
+SF:;\x20HttpOnly;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20rou
+SF:ndcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x200
+SF:0:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20ro
+SF:undcube_sessauth=expired;\x20HttpOnly;\x20domain=big\.blue-earth\.co\.u
+SF:k;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20por
+SF:t=2096;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20doma
+SF:in=\.big\.blue-earth\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:0
+SF:1\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20horde_se
+SF:cret_key=expire")%r(HTTPOptions,4000,"HTTP/1\.0\x20401\x20Access\x20Den
+SF:ied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=\
+SF:"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2017:31:09\x20GMT\r\nCa
+SF:che-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r
+SF:\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"WebMail\
+SF:"\r\nSet-Cookie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x20
+SF:01-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nS
+SF:et-Cookie:\x20webmailsession=%3ai2FHnNT0UiA7rYwi%2c1ac5e33eb9b491717cdc
+SF:9a332035b4f0;\x20HttpOnly;\x20path=/;\x20port=2096;\x20secure\r\nSet-Co
+SF:okie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-J
+SF:an-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-C
+SF:ookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=big\.blue-
+SF:earth\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20pa
+SF:th=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpO
+SF:nly;\x20domain=\.big\.blue-earth\.co\.uk;\x20expires=Thu,\x2001-Jan-197
+SF:0\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:
+SF:\x20horde_secret_key=expire");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port52228-TCP:V=7.70%I=7%D=3/16%Time=5C8D32C9%P=x86_64-unknown-linux-gn
+SF:u%r(GetRequest,1A6,"HTTP/1\.1\x20301\x20Moved\r\nDate:\x20Sat,\x2016\x2
+SF:0Mar\x202019\x2017:30:52\x20GMT\r\nContent-Type:\x20text/html;\x20chars
+SF:et=\"utf-8\"\r\nContent-Length:\x20118\r\nConnection:\x20close\r\nLocat
+SF:ion:\x20https://big\.blue-earth\.co\.uk:2087/\r\nCache-Control:\x20no-c
+SF:ache\r\nPragma:\x20no-cache\r\nServer:\x20imunify360-webshield/1\.6\r\n
+SF:Expires:\x20Sat,\x2016\x20Mar\x202019\x2017:30:51\x20GMT\r\n\r\n<html><
+SF:head><META\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://big\.bl
+SF:ue-earth\.co\.uk:2087/\"></head><body></body></html>\n")%r(RTSPRequest,
+SF:AA,"<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<bod
+SF:y\x20bgcolor=\"white\">\r\n<center><h1>400\x20Bad\x20Request</h1></cent
+SF:er>\r\n<hr><center>openresty</center>\r\n</body>\r\n</html>\r\n")%r(RPC
+SF:Check,14E,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2016\x2
+SF:0Mar\x202019\x2017:30:58\x20GMT\r\nContent-Type:\x20text/html\r\nConten
+SF:t-Length:\x20170\r\nConnection:\x20close\r\nServer:\x20imunify360-websh
+SF:ield/1\.6\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></
+SF:head>\r\n<body\x20bgcolor=\"white\">\r\n<center><h1>400\x20Bad\x20Reque
+SF:st</h1></center>\r\n<hr><center>openresty</center>\r\n</body>\r\n</html
+SF:>\r\n")%r(DNSVersionBindReqTCP,14E,"HTTP/1\.1\x20400\x20Bad\x20Request\
+SF:r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2017:30:58\x20GMT\r\nContent-Typ
+SF:e:\x20text/html\r\nContent-Length:\x20170\r\nConnection:\x20close\r\nSe
+SF:rver:\x20imunify360-webshield/1\.6\r\n\r\n<html>\r\n<head><title>400\x2
+SF:0Bad\x20Request</title></head>\r\n<body\x20bgcolor=\"white\">\r\n<cente
+SF:r><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>openresty</cen
+SF:ter>\r\n</body>\r\n</html>\r\n")%r(DNSStatusRequestTCP,14E,"HTTP/1\.1\x
+SF:20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2017:30:
+SF:58\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20170\r\nCo
+SF:nnection:\x20close\r\nServer:\x20imunify360-webshield/1\.6\r\n\r\n<html
+SF:>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<body\x20bgco
+SF:lor=\"white\">\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<h
+SF:r><center>openresty</center>\r\n</body>\r\n</html>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port52230-TCP:V=7.70%I=7%D=3/16%Time=5C8D32C9%P=x86_64-unknown-linux-gn
+SF:u%r(GetRequest,1A6,"HTTP/1\.1\x20301\x20Moved\r\nDate:\x20Sat,\x2016\x2
+SF:0Mar\x202019\x2017:30:52\x20GMT\r\nContent-Type:\x20text/html;\x20chars
+SF:et=\"utf-8\"\r\nContent-Length:\x20118\r\nConnection:\x20close\r\nLocat
+SF:ion:\x20https://big\.blue-earth\.co\.uk:2083/\r\nCache-Control:\x20no-c
+SF:ache\r\nPragma:\x20no-cache\r\nServer:\x20imunify360-webshield/1\.6\r\n
+SF:Expires:\x20Sat,\x2016\x20Mar\x202019\x2017:30:51\x20GMT\r\n\r\n<html><
+SF:head><META\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://big\.bl
+SF:ue-earth\.co\.uk:2083/\"></head><body></body></html>\n")%r(RTSPRequest,
+SF:AA,"<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<bod
+SF:y\x20bgcolor=\"white\">\r\n<center><h1>400\x20Bad\x20Request</h1></cent
+SF:er>\r\n<hr><center>openresty</center>\r\n</body>\r\n</html>\r\n")%r(RPC
+SF:Check,14E,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2016\x2
+SF:0Mar\x202019\x2017:30:58\x20GMT\r\nContent-Type:\x20text/html\r\nConten
+SF:t-Length:\x20170\r\nConnection:\x20close\r\nServer:\x20imunify360-websh
+SF:ield/1\.6\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></
+SF:head>\r\n<body\x20bgcolor=\"white\">\r\n<center><h1>400\x20Bad\x20Reque
+SF:st</h1></center>\r\n<hr><center>openresty</center>\r\n</body>\r\n</html
+SF:>\r\n")%r(DNSVersionBindReqTCP,14E,"HTTP/1\.1\x20400\x20Bad\x20Request\
+SF:r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2017:30:58\x20GMT\r\nContent-Typ
+SF:e:\x20text/html\r\nContent-Length:\x20170\r\nConnection:\x20close\r\nSe
+SF:rver:\x20imunify360-webshield/1\.6\r\n\r\n<html>\r\n<head><title>400\x2
+SF:0Bad\x20Request</title></head>\r\n<body\x20bgcolor=\"white\">\r\n<cente
+SF:r><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>openresty</cen
+SF:ter>\r\n</body>\r\n</html>\r\n")%r(DNSStatusRequestTCP,14E,"HTTP/1\.1\x
+SF:20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2017:30:
+SF:58\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20170\r\nCo
+SF:nnection:\x20close\r\nServer:\x20imunify360-webshield/1\.6\r\n\r\n<html
+SF:>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<body\x20bgco
+SF:lor=\"white\">\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<h
+SF:r><center>openresty</center>\r\n</body>\r\n</html>\r\n");
+Service Info: Host: big.blue-earth.co.uk
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 19:34:11 2019 -- 1 IP address (1 host up) scanned in 2898.46 seconds

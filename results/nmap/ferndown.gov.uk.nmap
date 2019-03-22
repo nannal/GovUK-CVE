@@ -1,0 +1,331 @@
+# Nmap 7.70 scan initiated Sat Mar 16 08:49:51 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/ferndown.gov.uk ferndown.gov.uk
+Warning: 88.99.171.140 giving up on port because retransmission cap hit (6).
+Nmap scan report for ferndown.gov.uk (88.99.171.140)
+Host is up (0.042s latency).
+rDNS record for 88.99.171.140: web1.rejuvenate-systems.co.uk
+Not shown: 65424 closed ports, 99 filtered ports
+PORT     STATE SERVICE       VERSION
+21/tcp   open  ftp           ProFTPD
+|_banner: 220 ProFTPD Server (ProFTPD) [88.99.171.140]
+22/tcp   open  ssh           OpenSSH 6.6.1 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_6.6.1
+53/tcp   open  domain        (unknown banner: none)
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|     bind
+|_    none
+80/tcp   open  ssl/http      Apache
+|_http-server-header: Apache
+106/tcp  open  pop3pw        poppassd
+|_banner: 200 poppassd hello, who are you?
+110/tcp  open  pop3          Courier pop3d
+|_banner: +OK Hello there. <1216662.1552720287@localhost.localdomain>
+143/tcp  open  imap          Courier Imapd (released 2017)
+| banner: * OK [CAPABILITY IMAP4rev1 UIDPLUS CHILDREN NAMESPACE THREAD=OR
+|_DEREDSUBJECT THREAD=REFERENCES SORT QUOTA AUTH=CRAM-MD5 AUTH=CRAM-SH...
+443/tcp  open  ssl/ssl       Apache httpd (SSL-only mode)
+|_http-server-header: Apache
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+465/tcp  open  ssl/smtp      Postfix smtpd
+|_banner: 220 web1.rejuvenate-systems.co.uk ESMTP Postfix
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       Key exchange (dh 1024) of lower strength than certificate key
+|_  least strength: A
+993/tcp  open  ssl/imaps?
+| banner: * OK [CAPABILITY IMAP4rev1 UIDPLUS CHILDREN NAMESPACE THREAD=OR
+|_DEREDSUBJECT THREAD=REFERENCES SORT QUOTA AUTH=CRAM-MD5 AUTH=CRAM-SH...
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       Key exchange (dh 1024) of lower strength than certificate key
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       Key exchange (dh 1024) of lower strength than certificate key
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       Key exchange (dh 1024) of lower strength than certificate key
+|_  least strength: A
+995/tcp  open  ssl/pop3      Courier pop3d
+|_banner: +OK Hello there. <1216364.1552720273@localhost.localdomain>
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       Key exchange (dh 1024) of lower strength than certificate key
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       Key exchange (dh 1024) of lower strength than certificate key
+|_  least strength: A
+8443/tcp open  ssl/https-alt sw-cp-server
+|_http-server-header: sw-cp-server
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+8880/tcp open  cddbp-alt?
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Server: sw-cp-server
+|     Date: Sat, 16 Mar 2019 07:10:51 GMT
+|     Content-Type: text/html
+|     Content-Length: 2644
+|     Connection: close
+|     ETag: "5965c92a-a54"
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <meta charset="utf-8">
+|     <meta http-equiv="x-ua-compatible" content="ie=edge">
+|     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+|     <title>404 Not Found</title>
+|     <link rel="stylesheet" href="/error_docs/styles.css">
+|     </head>
+|     <body>
+|     <div class="page">
+|     <div class="main">
+|     <div class="error-description">
+|     <h1>Server Error</h1>
+|     <div class="error-code">404</div>
+|     <h2>Page Not Found</h2>
+|     class="lead">This page either doesn't exist, or it moved somewhere else.</p>
+|     <hr/>
+|     <p>If you think this is an error, please <a href="https://www.plesk.com/bug-report/"
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Server: sw-cp-server
+|     Date: Sat, 16 Mar 2019 07:10:51 GMT
+|     Content-Type: text/html; charset=UTF-8
+|     Connection: close
+|     Expires: Fri, 28 May 1999 00:00:00 GMT
+|     Last-Modified: Sat, 16 Mar 2019 07:10:50 GMT
+|     Cache-Control: no-store, no-cache, must-revalidate
+|     Cache-Control: post-check=0, pre-check=0
+|     Pragma: no-cache
+|     P3P: CP="NON COR CURa ADMa OUR NOR UNI COM NAV STA"
+|     <html><head>
+|     <meta charset="utf-8">
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+|     <meta name="plesk-build" content="1708180301.19">
+|     <title>Rejuvenate Web Hosting - Control Panel</title>
+|     <script language="javascript" type="text/javascript" src="/javascript/common.js?1519907507"/></script>
+|     <script language="javascript" type="text/javascript" src="/javascript/externals/prototype.js?1519907507"/></script>
+|_    </head><body onL
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port53-TCP:V=7.70%I=7%D=3/16%Time=5C8CA17B%P=x86_64-unknown-linux-gnu%r
+SF:(DNSVersionBindReqTCP,3F,"\0=\0\x06\x85\0\0\x01\0\x01\0\x01\0\0\x07vers
+SF:ion\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\x05\x04none\xc0
+SF:\x0c\0\x02\0\x03\0\0\0\0\0\x02\xc0\x0c");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8880-TCP:V=7.70%I=7%D=3/16%Time=5C8CA177%P=x86_64-unknown-linux-gnu
+SF:%r(GetRequest,6E8,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20sw-cp-server\r\
+SF:nDate:\x20Sat,\x2016\x20Mar\x202019\x2007:10:51\x20GMT\r\nContent-Type:
+SF:\x20text/html;\x20charset=UTF-8\r\nConnection:\x20close\r\nExpires:\x20
+SF:Fri,\x2028\x20May\x201999\x2000:00:00\x20GMT\r\nLast-Modified:\x20Sat,\
+SF:x2016\x20Mar\x202019\x2007:10:50\x20GMT\r\nCache-Control:\x20no-store,\
+SF:x20no-cache,\x20must-revalidate\r\nCache-Control:\x20post-check=0,\x20p
+SF:re-check=0\r\nPragma:\x20no-cache\r\nP3P:\x20CP=\"NON\x20COR\x20CURa\x2
+SF:0ADMa\x20OUR\x20NOR\x20UNI\x20COM\x20NAV\x20STA\"\r\n\r\n\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20<html><head>\n\x20\x20\x20\x20\x20\x20\x20\x20<meta
+SF:\x20charset=\"utf-8\">\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20http-e
+SF:quiv=\"X-UA-Compatible\"\x20content=\"IE=edge,chrome=1\">\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20<meta\x20name=\"plesk-build\"\x20content=\"17081803
+SF:01\.19\">\n\x20\x20\x20\x20\x20\x20\x20\x20<title>Rejuvenate\x20Web\x20
+SF:Hosting\x20-\x20Control\x20Panel</title>\n\x20\x20\x20\x20\x20\x20\x20\
+SF:x20<script\x20language=\"javascript\"\x20type=\"text/javascript\"\x20sr
+SF:c=\"/javascript/common\.js\?1519907507\"/></script>\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20<script\x20language=\"javascript\"\x20type=\"text/javascr
+SF:ipt\"\x20src=\"/javascript/externals/prototype\.js\?1519907507\"/></scr
+SF:ipt>\n\x20\x20\x20\x20\x20\x20\x20\x20\n\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0</head><body\x20onL")%r(FourOhFourRequest,B01,"HTTP/1\.1\x20404\x20Not
+SF:\x20Found\r\nServer:\x20sw-cp-server\r\nDate:\x20Sat,\x2016\x20Mar\x202
+SF:019\x2007:10:51\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:
+SF:\x202644\r\nConnection:\x20close\r\nETag:\x20\"5965c92a-a54\"\r\n\r\n<!
+SF:DOCTYPE\x20html>\n<html\x20lang=\"en\">\n\x20\x20<head>\n\x20\x20\x20\x
+SF:20<meta\x20charset=\"utf-8\">\n\x20\x20\x20\x20<meta\x20http-equiv=\"x-
+SF:ua-compatible\"\x20content=\"ie=edge\">\n\x20\x20\x20\x20<meta\x20name=
+SF:\"viewport\"\x20content=\"width=device-width,\x20initial-scale=1,\x20sh
+SF:rink-to-fit=no\">\n\x20\x20\x20\x20<title>404\x20Not\x20Found</title>\n
+SF:\x20\x20\x20\x20<link\x20rel=\"stylesheet\"\x20href=\"/error_docs/style
+SF:s\.css\">\n\x20\x20</head>\n\x20\x20<body>\n\x20\x20\x20\x20<div\x20cla
+SF:ss=\"page\">\n\x20\x20\x20\x20\x20\x20<div\x20class=\"main\">\n\x20\x20
+SF:\x20\x20\x20\x20\x20\x20<div\x20class=\"error-description\">\n\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20<h1>Server\x20Error</h1>\n\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20<div\x20class=\"error-code\">404</div>\n\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20<h2>Page\x20Not\x20Found</h2>\n\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\"lead\">This\x20page\x2
+SF:0either\x20doesn't\x20exist,\x20or\x20it\x20moved\x20somewhere\x20else\
+SF:.</p>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<hr/>\n\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20<p>If\x20you\x20think\x20this\x20is\x20an\x20err
+SF:or,\x20please\x20<a\x20href=\"https://www\.plesk\.com/bug-report/\"\x20
+SF:");
+Service Info: Hosts: localhost.localdomain,  web1.rejuvenate-systems.co.uk
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 09:11:58 2019 -- 1 IP address (1 host up) scanned in 1326.97 seconds

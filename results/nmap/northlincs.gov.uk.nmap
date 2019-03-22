@@ -1,0 +1,108 @@
+# Nmap 7.70 scan initiated Sat Mar 16 14:24:16 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/northlincs.gov.uk northlincs.gov.uk
+Nmap scan report for northlincs.gov.uk (80.6.94.212)
+Host is up (0.38s latency).
+rDNS record for 80.6.94.212: unallocated.nelincs.gov.uk
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      Microsoft-IIS/10.0
+| fingerprint-strings: 
+|   RTSPRequest: 
+|     HTTP/1.1 400 Invalid Request
+|     Date: Sat, 16 Mar 2019 12:49:04 GMT
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Connection: close
+|     Content-Length: 87
+|     Content-Type: text/html
+|     <html><head><title>400 Invalid Request</title></head><body>Invalid Request: ??</body>
+|   SIPOptions: 
+|     HTTP/1.1 400 Invalid Request
+|     Date: Sat, 16 Mar 2019 12:50:18 GMT
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Connection: close
+|     Content-Length: 87
+|     Content-Type: text/html
+|_    <html><head><title>400 Invalid Request</title></head><body>Invalid Request: ??</body>
+|_http-server-header: Microsoft-IIS/10.0
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   RTSPRequest: 
+|     HTTP/1.1 400 Invalid Request
+|     Date: Sat, 16 Mar 2019 12:49:26 GMT
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Connection: close
+|     Content-Length: 87
+|     Content-Type: text/html
+|     <html><head><title>400 Invalid Request</title></head><body>Invalid Request: ??</body>
+|   SIPOptions: 
+|     HTTP/1.1 400 Invalid Request
+|     Date: Sat, 16 Mar 2019 12:50:37 GMT
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Connection: close
+|     Content-Length: 87
+|     Content-Type: text/html
+|_    <html><head><title>400 Invalid Request</title></head><body>Invalid Request: ??</body>
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_256_CBC_SHA and TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8CF0BC%P=x86_64-unknown-linux-gnu%r
+SF:(RTSPRequest,13B,"HTTP/1\.1\x20400\x20Invalid\x20Request\r\nDate:\x20Sa
+SF:t,\x2016\x20Mar\x202019\x2012:49:04\x20GMT\r\nX-Frame-Options:\x20SAMEO
+SF:RIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Option
+SF:s:\x20nosniff\r\nConnection:\x20close\r\nContent-Length:\x2087\r\nConte
+SF:nt-Type:\x20text/html\r\n\r\n<html><head><title>400\x20Invalid\x20Reque
+SF:st</title></head><body>Invalid\x20Request:\x20\?\?</body>\r\n")%r(SIPOp
+SF:tions,13B,"HTTP/1\.1\x20400\x20Invalid\x20Request\r\nDate:\x20Sat,\x201
+SF:6\x20Mar\x202019\x2012:50:18\x20GMT\r\nX-Frame-Options:\x20SAMEORIGIN\r
+SF:\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20n
+SF:osniff\r\nConnection:\x20close\r\nContent-Length:\x2087\r\nContent-Type
+SF::\x20text/html\r\n\r\n<html><head><title>400\x20Invalid\x20Request</tit
+SF:le></head><body>Invalid\x20Request:\x20\?\?</body>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CF0D2%P=x86_64-unknown-linu
+SF:x-gnu%r(RTSPRequest,13B,"HTTP/1\.1\x20400\x20Invalid\x20Request\r\nDate
+SF::\x20Sat,\x2016\x20Mar\x202019\x2012:49:26\x20GMT\r\nX-Frame-Options:\x
+SF:20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type
+SF:-Options:\x20nosniff\r\nConnection:\x20close\r\nContent-Length:\x2087\r
+SF:\nContent-Type:\x20text/html\r\n\r\n<html><head><title>400\x20Invalid\x
+SF:20Request</title></head><body>Invalid\x20Request:\x20\?\?</body>\r\n")%
+SF:r(SIPOptions,13B,"HTTP/1\.1\x20400\x20Invalid\x20Request\r\nDate:\x20Sa
+SF:t,\x2016\x20Mar\x202019\x2012:50:37\x20GMT\r\nX-Frame-Options:\x20SAMEO
+SF:RIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Option
+SF:s:\x20nosniff\r\nConnection:\x20close\r\nContent-Length:\x2087\r\nConte
+SF:nt-Type:\x20text/html\r\n\r\n<html><head><title>400\x20Invalid\x20Reque
+SF:st</title></head><body>Invalid\x20Request:\x20\?\?</body>\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 14:52:02 2019 -- 1 IP address (1 host up) scanned in 1666.46 seconds

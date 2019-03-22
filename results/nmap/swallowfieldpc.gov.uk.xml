@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 19:10:47 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/swallowfieldpc.gov.uk swallowfieldpc.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/swallowfieldpc.gov.uk swallowfieldpc.gov.uk" start="1552756247" startstr="Sat Mar 16 19:10:47 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552756247" endtime="1552756465"><status state="up" reason="reset" reason_ttl="53"/>
+<address addr="217.68.242.156" addrtype="ipv4"/>
+<hostnames>
+<hostname name="swallowfieldpc.gov.uk" type="user"/>
+<hostname name="parishwebsites1.vps.elite.net.uk" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65528">
+<extrareasons reason="no-responses" count="65528"/>
+</extraports>
+<port protocol="tcp" portid="20"><state state="closed" reason="reset" reason_ttl="53"/><service name="ftp-data" method="table" conf="3"/></port>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="ftp" product="vsftpd" version="2.2.2" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:2.2.2</cpe></service><script id="banner" output="220 (vsFTPd 2.2.2)"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="http" product="Apache httpd" extrainfo="PHP 5.3.29" method="probed" conf="10"><cpe>cpe:/a:php:php:5.3.29</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+<port protocol="tcp" portid="110"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="pop3" product="Dovecot pop3d" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="banner" output="+OK Dovecot ready."/></port>
+<port protocol="tcp" portid="143"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="imap" product="Dovecot imapd" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="banner" output="* OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID &#xa;ENABLE IDLE STARTTLS AUTH=PLAIN] Dovecot ready."/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="53"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="587"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="smtp" product="Sendmail" version="8.14.4/8.14.4" hostname="parishwebsites1.vps.elite.net.uk" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:sendmail:sendmail:8.14.4%2F8.14.4</cpe></service><script id="banner" output="220 parishwebsites1.vps.elite.net.uk ESMTP Sendmail 8.14.4/8.14&#xa;.4; Sat, 16 Mar 2019 17:13:59 GMT"/></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="mysql" product="MySQL" extrainfo="unauthorized" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql</cpe></service><script id="banner" output="U\x00\x00\x00\xFFj\x04Host &apos;78-58-49-144.static.zebra.lt&apos; is no&#xa;t allowed to connect to this MySQL server"/></port>
+</ports>
+<times srtt="60853" rttvar="8230" to="100000"/>
+</host>
+<runstats><finished time="1552756465" timestr="Sat Mar 16 19:14:25 2019" elapsed="218.55" summary="Nmap done at Sat Mar 16 19:14:25 2019; 1 IP address (1 host up) scanned in 218.55 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

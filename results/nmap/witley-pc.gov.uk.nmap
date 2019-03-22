@@ -1,0 +1,37 @@
+# Nmap 7.70 scan initiated Sat Mar 16 21:38:39 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/witley-pc.gov.uk witley-pc.gov.uk
+Nmap scan report for witley-pc.gov.uk (176.32.230.43)
+Host is up (0.069s latency).
+rDNS record for 176.32.230.43: web299.extendcp.co.uk
+Not shown: 65530 filtered ports
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 5.3 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_5.3
+80/tcp   open  http     Apache httpd 2.4.37
+443/tcp  open  ssl/http Apache httpd 2.4.37
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|     compressors: 
+| 
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_CBC_SHA and TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|     compressors: 
+| 
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 and TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
+|_  least strength: A
+544/tcp  open  kshell?
+2105/tcp open  eklogin?
+3306/tcp open  mysql    MySQL 5.5.5-10.1.27-MariaDB
+| banner: Y\x00\x00\x00\x0A5.5.5-10.1.27-MariaDB\x00ZA6\x13A-\gt14R\x00\x
+|_FF\xFF\x08\x02\x00?\xE0\x15\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00~...
+Service Info: Hosts: mv0.web298.extendcp.co.uk, mv0.web301.extendcp.co.uk
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 21:47:51 2019 -- 1 IP address (1 host up) scanned in 551.71 seconds

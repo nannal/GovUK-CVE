@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 02:02:23 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/alconburyparishcouncil.gov.uk alconburyparishcouncil.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/alconburyparishcouncil.gov.uk alconburyparishcouncil.gov.uk" start="1552694543" startstr="Sat Mar 16 02:02:23 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552694545" endtime="1552703548"><status state="up" reason="syn-ack" reason_ttl="110"/>
+<address addr="213.143.3.16" addrtype="ipv4"/>
+<hostnames>
+<hostname name="alconburyparishcouncil.gov.uk" type="user"/>
+<hostname name="nxdomain-16-3-143-213.pipe.co" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="64532">
+<extrareasons reason="no-responses" count="64532"/>
+</extraports>
+<extraports state="closed" count="1001">
+<extrareasons reason="resets" count="1001"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="110"/><service name="ftp" product="Microsoft ftpd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:ftp_service</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="banner" output="220 Microsoft FTP Service"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="110"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="110"/><service name="tcpwrapped" method="probed" conf="8"/><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  least strength: A"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<elem key="least strength">A</elem>
+</script></port>
+</ports>
+<times srtt="126140" rttvar="54741" to="345104"/>
+</host>
+<runstats><finished time="1552703548" timestr="Sat Mar 16 04:32:28 2019" elapsed="9005.63" summary="Nmap done at Sat Mar 16 04:32:28 2019; 1 IP address (1 host up) scanned in 9005.63 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

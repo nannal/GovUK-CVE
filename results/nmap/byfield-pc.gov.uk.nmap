@@ -1,0 +1,40 @@
+# Nmap 7.70 scan initiated Sat Mar 16 03:58:17 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/byfield-pc.gov.uk byfield-pc.gov.uk
+Nmap scan report for byfield-pc.gov.uk (5.133.183.20)
+Host is up (0.072s latency).
+rDNS record for 5.133.183.20: easy2.swshosting.co.uk
+Not shown: 65521 filtered ports
+PORT      STATE SERVICE       VERSION
+21/tcp    open  ftp           Microsoft ftpd
+|_banner: 220 Microsoft FTP Service
+53/tcp    open  domain?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|_    bind
+80/tcp    open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+| http-server-header: 
+|   Microsoft-HTTPAPI/2.0
+|_  Microsoft-IIS/8.5
+110/tcp   open  pop3          MailEnable POP3 Server
+|_banner: +OK Welcome to MailEnable POP3 Server
+135/tcp   open  msrpc         Microsoft Windows RPC
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+143/tcp   open  imap          MailEnable imapd
+|_banner: * OK IMAP4rev1 server ready at 03/16/19 02:04:05
+443/tcp   open  ssl/http      Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+445/tcp   open  microsoft-ds  Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+587/tcp   open  smtp          MailEnable smptd 9.00--
+1046/tcp  open  wfremotertm?
+3389/tcp  open  ms-wbt-server Microsoft Terminal Service
+6051/tcp  open  tcpwrapped
+49156/tcp open  unknown
+49157/tcp open  unknown
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-TCP:V=7.70%I=7%D=3/16%Time=5C8C5953%P=x86_64-unknown-linux-gnu%r
+SF:(DNSVersionBindReqTCP,20,"\0\x1e\0\x06\x81\x04\0\x01\0\0\0\0\0\0\x07ver
+SF:sion\x04bind\0\0\x10\0\x03");
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 04:04:23 2019 -- 1 IP address (1 host up) scanned in 366.58 seconds

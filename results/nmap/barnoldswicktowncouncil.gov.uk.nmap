@@ -1,0 +1,281 @@
+# Nmap 7.70 scan initiated Sat Mar 16 02:40:35 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/barnoldswicktowncouncil.gov.uk barnoldswicktowncouncil.gov.uk
+Nmap scan report for barnoldswicktowncouncil.gov.uk (193.39.255.39)
+Host is up (0.079s latency).
+rDNS record for 193.39.255.39: 193.39.255.39.srvlist.ukfast.net
+Not shown: 65520 filtered ports
+PORT     STATE  SERVICE      VERSION
+20/tcp   closed ftp-data
+21/tcp   open   ftp          Pure-FTPd
+| banner: 220---------- Welcome to Pure-FTPd [privsep] [TLS] ----------\x
+|_0D\x0A220-You are user number 1 of 50 allowed.\x0D\x0A220-Local time...
+22/tcp   closed ssh
+80/tcp   open   http         Apache httpd
+110/tcp  open   pop3         Dovecot pop3d
+|_banner: +OK Dovecot ready.
+443/tcp  open   ssl/http     Apache httpd
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+465/tcp  open   ssl/smtp     Exim smtpd 4.91
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+587/tcp  open   smtp         Exim smtpd 4.91
+993/tcp  open   imaps?
+| banner: * OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE ID
+|_LE NAMESPACE LITERAL+ AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 and TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+|_  least strength: A
+2020/tcp open   ssh          OpenSSH 7.4 (protocol 2.0)
+2082/tcp open   infowave?
+2083/tcp open   ssl/radsec?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 01:40:05 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=%3aFxaWDwmthzE7P_D9%2c668091eeefb86316dcc21aab626d5ef2; HttpOnly; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=193.39.255.39.srvlist.ukfast.net; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.193.39.255.39.srvlist.ukfast.net; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: horde_secr
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 01:40:06 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: cpsession=%3aU4U_SqbriFW8Ky5L%2cfc1c2c71d51084a387ad217b06b04ad5; HttpOnly; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=193.39.255.39.srvlist.ukfast.net; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.193.39.255.39.srvlist.ukfast.net; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2083; secure
+|_    Set-Cookie: horde_secr
+2086/tcp open   gnunet?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 301 Moved
+|     Content-length: 138
+|     Location: https://193.39.255.39.srvlist.ukfast.net:2087/sip%3anm
+|     Content-type: text/html; charset="utf-8"
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|_    <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://193.39.255.39.srvlist.ukfast.net:2087/sip%3anm"></head><body></body></html>
+2087/tcp open   ssl/eli?
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 01:41:29 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="Web Host Manager"
+|     Set-Cookie: whostmgrrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: whostmgrsession=%3afm1tNQG39Zcl43c3%2c25a236059e568bffd6dea3c695163ea5; HttpOnly; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=193.39.255.39.srvlist.ukfast.net; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.193.39.255.39.srvlist.ukfast.net; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|   SIPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 01:41:49 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="Web Host Manager"
+|     Set-Cookie: whostmgrrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: whostmgrsession=%3ai80tkk5Wpsnq1i74%2c73eef8f720ac024941be0ea41af85174; HttpOnly; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=193.39.255.39.srvlist.ukfast.net; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|_    Set-Cookie: Horde=expired; HttpOnly; domain=.193.39.255.39.srvlist.ukfast.net; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2095/tcp open   nbx-ser?
+2096/tcp open   ssl/nbx-dir?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 01:40:01 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=%3aDaEaJmGjSo92im_v%2c891976999fb56f7aae1258596a755ea1; HttpOnly; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=193.39.255.39.srvlist.ukfast.net; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.193.39.255.39.srvlist.ukfast.net; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie:
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 01:40:02 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=%3ayCCHdGFqmv2r8bHD%2c95a1613532972337c2c028bc94a257cd; HttpOnly; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=193.39.255.39.srvlist.ukfast.net; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.193.39.255.39.srvlist.ukfast.net; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|_    Set-Cookie:
+4 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2083-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8C53F2%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2001:40:05\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"cPanel\"\r\nSet-Cook
+SF:ie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:
+SF:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20cpse
+SF:ssion=%3aFxaWDwmthzE7P_D9%2c668091eeefb86316dcc21aab626d5ef2;\x20HttpOn
+SF:ly;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_sess
+SF:id=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20
+SF:GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20roundcube_ses
+SF:sauth=expired;\x20HttpOnly;\x20domain=193\.39\.255\.39\.srvlist\.ukfast
+SF:\.net;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x2
+SF:0port=2083;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20
+SF:domain=\.193\.39\.255\.39\.srvlist\.ukfast\.net;\x20expires=Thu,\x2001-
+SF:Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-
+SF:Cookie:\x20horde_secr")%r(HTTPOptions,4000,"HTTP/1\.0\x20401\x20Access\
+SF:x20Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20cha
+SF:rset=\"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2001:40:06\x20GMT
+SF:\r\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20pri
+SF:vate\r\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"cP
+SF:anel\"\r\nSet-Cookie:\x20cprelogin=no;\x20HttpOnly;\x20expires=Thu,\x20
+SF:01-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nS
+SF:et-Cookie:\x20cpsession=%3aU4U_SqbriFW8Ky5L%2cfc1c2c71d51084a387ad217b0
+SF:6b04ad5;\x20HttpOnly;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:
+SF:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-19
+SF:70\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie
+SF::\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=193\.39\.255\.3
+SF:9\.srvlist\.ukfast\.net;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20
+SF:GMT;\x20path=/;\x20port=2083;\x20secure\r\nSet-Cookie:\x20Horde=expired
+SF:;\x20HttpOnly;\x20domain=\.193\.39\.255\.39\.srvlist\.ukfast\.net;\x20e
+SF:xpires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2083;
+SF:\x20secure\r\nSet-Cookie:\x20horde_secr");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2086-TCP:V=7.70%I=7%D=3/16%Time=5C8C5431%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,15E,"HTTP/1\.1\x20301\x20Moved\r\nContent-length:\x20138\
+SF:r\nLocation:\x20https://193\.39\.255\.39\.srvlist\.ukfast\.net:2087/sip
+SF:%3anm\r\nContent-type:\x20text/html;\x20charset=\"utf-8\"\r\nCache-Cont
+SF:rol:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\n\r\n<h
+SF:tml><head><META\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"2;URL=https://19
+SF:3\.39\.255\.39\.srvlist\.ukfast\.net:2087/sip%3anm\"></head><body></bod
+SF:y></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2087-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8C5446%P=x86_64-unknown-lin
+SF:ux-gnu%r(FourOhFourRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r
+SF:\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-
+SF:8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2001:41:29\x20GMT\r\nCache-C
+SF:ontrol:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPra
+SF:gma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"Web\x20Host\x
+SF:20Manager\"\r\nSet-Cookie:\x20whostmgrrelogin=no;\x20HttpOnly;\x20expir
+SF:es=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20
+SF:secure\r\nSet-Cookie:\x20whostmgrsession=%3afm1tNQG39Zcl43c3%2c25a23605
+SF:9e568bffd6dea3c695163ea5;\x20HttpOnly;\x20path=/;\x20port=2087;\x20secu
+SF:re\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=
+SF:Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20sec
+SF:ure\r\nSet-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domai
+SF:n=193\.39\.255\.39\.srvlist\.ukfast\.net;\x20expires=Thu,\x2001-Jan-197
+SF:0\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\nSet-Cookie:
+SF:\x20Horde=expired;\x20HttpOnly;\x20domain=\.193\.39\.255\.39\.srvlist\.
+SF:ukfast\.net;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path
+SF:=/;\x20port=2087;\x20secure\r\n")%r(SIPOptions,4000,"HTTP/1\.0\x20401\x
+SF:20Access\x20Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/htm
+SF:l;\x20charset=\"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2001:41:
+SF:49\x20GMT\r\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidat
+SF:e,\x20private\r\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20r
+SF:ealm=\"Web\x20Host\x20Manager\"\r\nSet-Cookie:\x20whostmgrrelogin=no;\x
+SF:20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=
+SF:/;\x20port=2087;\x20secure\r\nSet-Cookie:\x20whostmgrsession=%3ai80tkk5
+SF:Wpsnq1i74%2c73eef8f720ac024941be0ea41af85174;\x20HttpOnly;\x20path=/;\x
+SF:20port=2087;\x20secure\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20H
+SF:ttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\
+SF:x20port=2087;\x20secure\r\nSet-Cookie:\x20roundcube_sessauth=expired;\x
+SF:20HttpOnly;\x20domain=193\.39\.255\.39\.srvlist\.ukfast\.net;\x20expire
+SF:s=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20s
+SF:ecure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20domain=\.193\.39
+SF:\.255\.39\.srvlist\.ukfast\.net;\x20expires=Thu,\x2001-Jan-1970\x2000:0
+SF:0:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2096-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8C53EE%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2001:40:01\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"WebMail\"\r\nSet-Coo
+SF:kie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\
+SF:x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x
+SF:20webmailsession=%3aDaEaJmGjSo92im_v%2c891976999fb56f7aae1258596a755ea1
+SF:;\x20HttpOnly;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20rou
+SF:ndcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x200
+SF:0:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20ro
+SF:undcube_sessauth=expired;\x20HttpOnly;\x20domain=193\.39\.255\.39\.srvl
+SF:ist\.ukfast\.net;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x2
+SF:0path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20Ht
+SF:tpOnly;\x20domain=\.193\.39\.255\.39\.srvlist\.ukfast\.net;\x20expires=
+SF:Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20sec
+SF:ure\r\nSet-Cookie:")%r(HTTPOptions,4000,"HTTP/1\.0\x20401\x20Access\x20
+SF:Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charse
+SF:t=\"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2001:40:02\x20GMT\r\
+SF:nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20privat
+SF:e\r\nPragma:\x20no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"WebMa
+SF:il\"\r\nSet-Cookie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\
+SF:x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r
+SF:\nSet-Cookie:\x20webmailsession=%3ayCCHdGFqmv2r8bHD%2c95a1613532972337c
+SF:2c028bc94a257cd;\x20HttpOnly;\x20path=/;\x20port=2096;\x20secure\r\nSet
+SF:-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x200
+SF:1-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSe
+SF:t-Cookie:\x20roundcube_sessauth=expired;\x20HttpOnly;\x20domain=193\.39
+SF:\.255\.39\.srvlist\.ukfast\.net;\x20expires=Thu,\x2001-Jan-1970\x2000:0
+SF:0:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20Horde
+SF:=expired;\x20HttpOnly;\x20domain=\.193\.39\.255\.39\.srvlist\.ukfast\.n
+SF:et;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20po
+SF:rt=2096;\x20secure\r\nSet-Cookie:");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 03:43:18 2019 -- 1 IP address (1 host up) scanned in 3762.43 seconds

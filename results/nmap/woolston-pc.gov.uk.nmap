@@ -1,0 +1,69 @@
+# Nmap 7.70 scan initiated Sat Mar 16 21:48:04 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/woolston-pc.gov.uk woolston-pc.gov.uk
+Nmap scan report for woolston-pc.gov.uk (185.197.62.154)
+Host is up (0.074s latency).
+rDNS record for 185.197.62.154: 185.197.62.154.srvlist.ukfast.net
+Not shown: 65532 filtered ports
+PORT    STATE SERVICE  VERSION
+21/tcp  open  ftp      FileZilla ftpd 0.9.48 beta
+| banner: 220-FileZilla Server version 0.9.48 beta\x0D\x0A220-written by 
+|_Tim Kosse (tim.kosse@filezilla-project.org)\x0D\x0A220 Please visit ...
+80/tcp  open  http     Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+| http-server-header: 
+|   Microsoft-HTTPAPI/2.0
+|_  Microsoft-IIS/8.5
+443/tcp open  ssl/http Microsoft IIS httpd 8.5
+|_http-server-header: Microsoft-IIS/8.5
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp521r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp521r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     cipher preference error: Network error
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp521r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp521r1) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+587/tcp open  smtp     Microsoft ESMTP 8.5.9600.16384
+| banner: 220 id63537 Microsoft ESMTP MAIL Service, Version: 8.5.9600.163
+|_84 ready at  Sat, 16 Mar 2019 19:52:05 +0000
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp521r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp521r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp521r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp521r1) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+Service Info: Host: id63537; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 21:52:22 2019 -- 1 IP address (1 host up) scanned in 257.74 seconds

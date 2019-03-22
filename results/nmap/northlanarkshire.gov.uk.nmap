@@ -1,0 +1,68 @@
+# Nmap 7.70 scan initiated Sat Mar 16 14:22:54 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/northlanarkshire.gov.uk northlanarkshire.gov.uk
+Nmap scan report for northlanarkshire.gov.uk (212.104.140.177)
+Host is up (0.083s latency).
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 302 Found
+|     Cache-Control: private
+|     Content-Type: text/html; charset=utf-8
+|     Location: https://10.11.144.13/index.aspx?articleid=27397
+|     Set-Cookie: ASP.NET_SessionId=c14y0azspkrewkynfhvy2nfl; path=/; HttpOnly
+|     Set-Cookie: clientvars=d5bde6e2-21f4-4b3a-8771-3f4895acbe7a; path=/; HttpOnly
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Referrer-Policy: no-referrer
+|     Date: Sat, 16 Mar 2019 12:28:14 GMT
+|     Connection: close
+|     Content-Length: 164
+|     <html><head><title>Object moved</title></head><body>
+|     <h2>Object moved to <a href="https://10.11.144.13/index.aspx?articleid=27397">here</a>.</h2>
+|     </body></html>
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Allow: OPTIONS, TRACE, GET, HEAD, POST
+|     Public: OPTIONS, TRACE, GET, HEAD, POST
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Referrer-Policy: no-referrer
+|     Date: Sat, 16 Mar 2019 12:28:14 GMT
+|     Connection: close
+|_    Content-Length: 0
+443/tcp open  https?
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp521r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp521r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA and TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+|_  least strength: A
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8CEBDA%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,298,"HTTP/1\.1\x20302\x20Found\r\nCache-Control:\x20private
+SF:\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nLocation:\x20https:
+SF://10\.11\.144\.13/index\.aspx\?articleid=27397\r\nSet-Cookie:\x20ASP\.N
+SF:ET_SessionId=c14y0azspkrewkynfhvy2nfl;\x20path=/;\x20HttpOnly\r\nSet-Co
+SF:okie:\x20clientvars=d5bde6e2-21f4-4b3a-8771-3f4895acbe7a;\x20path=/;\x2
+SF:0HttpOnly\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\
+SF:x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nReferrer-Policy:
+SF:\x20no-referrer\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2012:28:14\x20GM
+SF:T\r\nConnection:\x20close\r\nContent-Length:\x20164\r\n\r\n<html><head>
+SF:<title>Object\x20moved</title></head><body>\r\n<h2>Object\x20moved\x20t
+SF:o\x20<a\x20href=\"https://10\.11\.144\.13/index\.aspx\?articleid=27397\
+SF:">here</a>\.</h2>\r\n</body></html>\r\n")%r(HTTPOptions,12C,"HTTP/1\.1\
+SF:x20200\x20OK\r\nAllow:\x20OPTIONS,\x20TRACE,\x20GET,\x20HEAD,\x20POST\r
+SF:\nPublic:\x20OPTIONS,\x20TRACE,\x20GET,\x20HEAD,\x20POST\r\nX-Frame-Opt
+SF:ions:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Conte
+SF:nt-Type-Options:\x20nosniff\r\nReferrer-Policy:\x20no-referrer\r\nDate:
+SF:\x20Sat,\x2016\x20Mar\x202019\x2012:28:14\x20GMT\r\nConnection:\x20clos
+SF:e\r\nContent-Length:\x200\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 14:28:53 2019 -- 1 IP address (1 host up) scanned in 358.76 seconds

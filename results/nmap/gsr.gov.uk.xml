@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 09:34:05 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/gsr.gov.uk gsr.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/gsr.gov.uk gsr.gov.uk" start="1552721645" startstr="Sat Mar 16 09:34:05 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552721655" endtime="1552727350"><status state="up" reason="syn-ack" reason_ttl="49"/>
+<address addr="193.110.246.53" addrtype="ipv4"/>
+<hostnames>
+<hostname name="gsr.gov.uk" type="user"/>
+<hostname name="livelinux1vh.connectinternetsolutions.com" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65473">
+<extrareasons reason="no-responses" count="65473"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="49"/><service name="ftp" product="ProFTPD" method="probed" conf="10"><cpe>cpe:/a:proftpd:proftpd</cpe></service><script id="banner" output="220 ::ffff:193.110.246.53 FTP server ready"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="49"/><service name="ssh" product="OpenSSH" version="5.3" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:5.3</cpe></service><script id="banner" output="SSH-2.0-OpenSSH_5.3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="49"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="49"/><service name="ssl" product="Apache httpd" extrainfo="SSL-only mode" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - C&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference error: Error when comparing TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA and TLS_DHE_RSA_WITH_AES_128_CBC_SHA&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - C&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - C&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;  least strength: C"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">C</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">C</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">C</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference error">Error when comparing TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA and TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+</table>
+</table>
+<table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">C</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">C</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">C</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+</table>
+</table>
+<table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">C</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">C</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+</table>
+</table>
+<elem key="least strength">C</elem>
+</script></port>
+<port protocol="tcp" portid="444"><state state="closed" reason="reset" reason_ttl="49"/><service name="snpp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="481"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="3487"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="3768"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="5949"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="7498"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="10821"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="12625"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="13533"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="14487"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="14932"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="16895"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="17481"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="20465"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="21802"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="22312"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="22488"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="22529"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="23138"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="24020"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="24022"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="24155"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="24251"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="24293"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="25696"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="26361"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="27668"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="27956"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="27961"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="29479"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="30091"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="30614"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="31213"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="31244"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="31463"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="33279"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="33799"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="33851"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="38998"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="39673"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="40260"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="41248"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="43335"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="45435"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="45860"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="47624"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="48692"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="49428"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="52726"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="52916"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="55941"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="56073"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="56790"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="57382"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="57505"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="58458"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="59658"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="62586"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="63402"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+</ports>
+<times srtt="68359" rttvar="12826" to="119663"/>
+</host>
+<runstats><finished time="1552727350" timestr="Sat Mar 16 11:09:10 2019" elapsed="5705.15" summary="Nmap done at Sat Mar 16 11:09:10 2019; 1 IP address (1 host up) scanned in 5705.15 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,96 @@
+# Nmap 7.70 scan initiated Sat Mar 16 13:33:16 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/myjobscotland.gov.uk myjobscotland.gov.uk
+Warning: 37.188.111.207 giving up on port because retransmission cap hit (6).
+Nmap scan report for myjobscotland.gov.uk (37.188.111.207)
+Host is up (0.048s latency).
+Not shown: 65467 closed ports, 67 filtered ports
+PORT    STATE SERVICE  VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Kerberos, RPCCheck, SMBProgNeg, SSLSessionReq, TLSSessionReq, X11Probe: 
+|     HTTP/1.0 400 Bad request
+|     Content-Type: text/html
+|     <h2>Client sent a bad request.</h2>
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Content-Type: text/html
+|     Date: Sat, 16 Mar 2019 11:52:38 GMT
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Connection: close
+|     Content-Length: 0
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Content-Type: text/html
+|     Date: Sat, 16 Mar 2019 11:52:32 GMT
+|     Location: https:///
+|     Connection: close
+|     Content-Length: 0
+|   RTSPRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Content-Type: text/html
+|     Date: Sat, 16 Mar 2019 11:52:32 GMT
+|     Location: https:///
+|     Connection: Keep-Alive
+|_    Content-Length: 0
+443/tcp open  ssl/http Apache httpd 2.4.29 ((Ubuntu))
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8CE37C%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,9B,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nContent-Typ
+SF:e:\x20text/html\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2011:52:32\x20GM
+SF:T\r\nLocation:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\
+SF:x200\r\n\r\n")%r(HTTPOptions,9B,"HTTP/1\.1\x20301\x20Moved\x20Permanent
+SF:ly\r\nContent-Type:\x20text/html\r\nDate:\x20Sat,\x2016\x20Mar\x202019\
+SF:x2011:52:32\x20GMT\r\nLocation:\x20https:///\r\nConnection:\x20close\r\
+SF:nContent-Length:\x200\r\n\r\n")%r(RTSPRequest,A0,"HTTP/1\.1\x20301\x20M
+SF:oved\x20Permanently\r\nContent-Type:\x20text/html\r\nDate:\x20Sat,\x201
+SF:6\x20Mar\x202019\x2011:52:32\x20GMT\r\nLocation:\x20https:///\r\nConnec
+SF:tion:\x20Keep-Alive\r\nContent-Length:\x200\r\n\r\n")%r(X11Probe,59,"HT
+SF:TP/1\.0\x20400\x20Bad\x20request\r\nContent-Type:\x20text/html\r\n\r\n<
+SF:h2>Client\x20sent\x20a\x20bad\x20request\.</h2>\n")%r(FourOhFourRequest
+SF:,BE,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nContent-Type:\x20text/
+SF:html\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2011:52:38\x20GMT\r\nLocati
+SF:on:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:\x20
+SF:close\r\nContent-Length:\x200\r\n\r\n")%r(RPCCheck,59,"HTTP/1\.0\x20400
+SF:\x20Bad\x20request\r\nContent-Type:\x20text/html\r\n\r\n<h2>Client\x20s
+SF:ent\x20a\x20bad\x20request\.</h2>\n")%r(DNSVersionBindReqTCP,59,"HTTP/1
+SF:\.0\x20400\x20Bad\x20request\r\nContent-Type:\x20text/html\r\n\r\n<h2>C
+SF:lient\x20sent\x20a\x20bad\x20request\.</h2>\n")%r(DNSStatusRequestTCP,5
+SF:9,"HTTP/1\.0\x20400\x20Bad\x20request\r\nContent-Type:\x20text/html\r\n
+SF:\r\n<h2>Client\x20sent\x20a\x20bad\x20request\.</h2>\n")%r(SSLSessionRe
+SF:q,59,"HTTP/1\.0\x20400\x20Bad\x20request\r\nContent-Type:\x20text/html\
+SF:r\n\r\n<h2>Client\x20sent\x20a\x20bad\x20request\.</h2>\n")%r(TLSSessio
+SF:nReq,59,"HTTP/1\.0\x20400\x20Bad\x20request\r\nContent-Type:\x20text/ht
+SF:ml\r\n\r\n<h2>Client\x20sent\x20a\x20bad\x20request\.</h2>\n")%r(Kerber
+SF:os,59,"HTTP/1\.0\x20400\x20Bad\x20request\r\nContent-Type:\x20text/html
+SF:\r\n\r\n<h2>Client\x20sent\x20a\x20bad\x20request\.</h2>\n")%r(SMBProgN
+SF:eg,59,"HTTP/1\.0\x20400\x20Bad\x20request\r\nContent-Type:\x20text/html
+SF:\r\n\r\n<h2>Client\x20sent\x20a\x20bad\x20request\.</h2>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 13:53:37 2019 -- 1 IP address (1 host up) scanned in 1220.34 seconds

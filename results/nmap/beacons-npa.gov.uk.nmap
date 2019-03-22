@@ -1,0 +1,26 @@
+# Nmap 7.70 scan initiated Sat Mar 16 02:47:09 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/beacons-npa.gov.uk beacons-npa.gov.uk
+Nmap scan report for beacons-npa.gov.uk (46.254.200.227)
+Host is up (0.65s latency).
+Not shown: 65533 filtered ports
+PORT      STATE SERVICE     VERSION
+80/tcp    open  http        Golang net/http server (Go-IPFS json-rpc or InfluxDB API)
+443/tcp   open  ssl/http    Golang net/http server (Go-IPFS json-rpc or InfluxDB API)
+|_http-server-header: Apache/2.4.25 (Debian)
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 4096) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 4096) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+37110/tcp open  ssl/unknown
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 03:17:42 2019 -- 1 IP address (1 host up) scanned in 1833.61 seconds

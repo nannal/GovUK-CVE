@@ -1,0 +1,66 @@
+# Nmap 7.70 scan initiated Sat Mar 16 19:13:17 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/swdevon.gov.uk swdevon.gov.uk
+Nmap scan report for swdevon.gov.uk (80.194.75.189)
+Host is up (0.069s latency).
+rDNS record for 80.194.75.189: host-80-194-75-189.static.virginmedia.com
+Not shown: 65533 filtered ports
+PORT     STATE SERVICE VERSION
+80/tcp   open  http    Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+443/tcp  open  https   Microsoft-IIS/7.5
+|_http-server-header: Microsoft-IIS/7.5
+8008/tcp open  http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 302 Found
+|     Location: https://:8010/nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Connection: close
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Content-Security-Policy: frame-ancestors
+|   GenericLines, HTTPOptions, RTSPRequest, SIPOptions: 
+|     HTTP/1.1 302 Found
+|     Location: https://:8010
+|     Connection: close
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Content-Security-Policy: frame-ancestors
+|   GetRequest: 
+|     HTTP/1.1 302 Found
+|     Location: https://:8010/
+|     Connection: close
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|_    Content-Security-Policy: frame-ancestors
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8008-TCP:V=7.70%I=7%D=3/16%Time=5C8D2F86%P=x86_64-unknown-linux-gnu
+SF:%r(GetRequest,CC,"HTTP/1\.1\x20302\x20Found\r\nLocation:\x20https://:80
+SF:10/\r\nConnection:\x20close\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-
+SF:Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r
+SF:\nContent-Security-Policy:\x20frame-ancestors\r\n\r\n")%r(FourOhFourReq
+SF:uest,EF,"HTTP/1\.1\x20302\x20Found\r\nLocation:\x20https://:8010/nice%2
+SF:0ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:\x20close\r\nX-Frame-Optio
+SF:ns:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content
+SF:-Type-Options:\x20nosniff\r\nContent-Security-Policy:\x20frame-ancestor
+SF:s\r\n\r\n")%r(GenericLines,CB,"HTTP/1\.1\x20302\x20Found\r\nLocation:\x
+SF:20https://:8010\r\nConnection:\x20close\r\nX-Frame-Options:\x20SAMEORIG
+SF:IN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\
+SF:x20nosniff\r\nContent-Security-Policy:\x20frame-ancestors\r\n\r\n")%r(H
+SF:TTPOptions,CB,"HTTP/1\.1\x20302\x20Found\r\nLocation:\x20https://:8010\
+SF:r\nConnection:\x20close\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Prot
+SF:ection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nCo
+SF:ntent-Security-Policy:\x20frame-ancestors\r\n\r\n")%r(RTSPRequest,CB,"H
+SF:TTP/1\.1\x20302\x20Found\r\nLocation:\x20https://:8010\r\nConnection:\x
+SF:20close\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x2
+SF:0mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nContent-Security-P
+SF:olicy:\x20frame-ancestors\r\n\r\n")%r(SIPOptions,CB,"HTTP/1\.1\x20302\x
+SF:20Found\r\nLocation:\x20https://:8010\r\nConnection:\x20close\r\nX-Fram
+SF:e-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-
+SF:Content-Type-Options:\x20nosniff\r\nContent-Security-Policy:\x20frame-a
+SF:ncestors\r\n\r\n");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 19:19:37 2019 -- 1 IP address (1 host up) scanned in 379.16 seconds

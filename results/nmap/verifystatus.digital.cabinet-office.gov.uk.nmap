@@ -1,0 +1,198 @@
+# Nmap 7.70 scan initiated Sat Mar 16 20:29:41 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/verifystatus.digital.cabinet-office.gov.uk verifystatus.digital.cabinet-office.gov.uk
+Nmap scan report for verifystatus.digital.cabinet-office.gov.uk (52.215.192.133)
+Host is up (0.068s latency).
+rDNS record for 52.215.192.133: ec2-52-215-192-133.eu-west-1.compute.amazonaws.com
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 302 Found
+|     Vary: Accept,Accept-Encoding,X-Forwarded-Host,X-Forwarded-Scheme,X-Forwarded-Proto,Fastly-SSL
+|     Cache-Control: no-cache
+|     X-Cache: MISS
+|     Content-Type: text/html; charset=utf-8
+|     X-Request-Id: 18f19cf1-1ba9-4f66-944e-905db6bfb886
+|     Date: Sat, 16 Mar 2019 19:39:37 GMT
+|     X-Download-Options: noopen
+|     Location: https://www.statuspage.io
+|     X-XSS-Protection: 1; mode=block
+|     X-Runtime: 0.014901
+|     X-Permitted-Cross-Domain-Policies: none
+|     X-Content-Type-Options: nosniff
+|     X-StatusPage-Skip-Logging: true
+|     Connection: close
+|     X-StatusPage-Version: eb04476
+|     X-Frame-Options: SAMEORIGIN
+|     Referrer-Policy: strict-origin-when-cross-origin
+|     Age: 0
+|     Content-Length: 91
+|     <html><body>You are being <a href="https://www.statuspage.io">redirected</a>.</body></html>
+|   HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Vary: Accept-Encoding
+|     X-Cache: MISS
+|     Content-Type: text/html; charset=utf-8
+|     X-Request-Id: 63bc0110-358d-4e30-88f6-dee40a9f5b11
+|     Date: Sat, 16 Mar 2019 19:39:38 GMT
+|     X-Runtime: 0.002738
+|     Connection: close
+|     Age: 0
+|     Content-Length: 3564
+|     <!DOCTYPE html>
+|     <html lang="en" charset="utf-8">
+|     <head>
+|     <title>404 Page not found</title>
+|     <meta name="HandheldFriendly" content="True">
+|     <meta name="MobileOptimized" content="320">
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+|     <style>
+|     Reset */
+|     -moz-box-sizing:border-box;
+|     -webkit-box-sizing:border-box;
+|     box-sizing:border-box;
+|     html {
+|     font-size: 14px;
+|     line-height: 21px;
+|     width:100%;
+|     font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+|_    -webkit-text-size
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 302 Found
+|     Vary: Accept,Accept-Encoding,X-Forwarded-Host,X-Forwarded-Scheme,X-Forwarded-Proto,Fastly-SSL
+|     Cache-Control: no-cache
+|     X-Cache: MISS
+|     Content-Type: text/html; charset=utf-8
+|     X-Request-Id: d94ca0f2-1aec-409c-8171-34b815ce5580
+|     Date: Sat, 16 Mar 2019 19:39:43 GMT
+|     X-Download-Options: noopen
+|     Location: https://www.statuspage.io
+|     X-XSS-Protection: 1; mode=block
+|     X-Runtime: 0.014241
+|     X-Permitted-Cross-Domain-Policies: none
+|     X-Content-Type-Options: nosniff
+|     X-StatusPage-Skip-Logging: true
+|     Connection: close
+|     X-StatusPage-Version: eb04476
+|     X-Frame-Options: SAMEORIGIN
+|     Referrer-Policy: strict-origin-when-cross-origin
+|     Age: 0
+|     <html><body>You are being <a href="https://www.statuspage.io">redirected</a>.</body></html>
+|   HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Vary: Accept-Encoding
+|     X-Cache: MISS
+|     Content-Type: text/html; charset=utf-8
+|     X-Request-Id: bacb98e5-6873-44cc-9859-f5369d166214
+|     Date: Sat, 16 Mar 2019 19:39:44 GMT
+|     X-Runtime: 0.002827
+|     Connection: close
+|     Age: 0
+|     Content-Length: 3564
+|     <!DOCTYPE html>
+|     <html lang="en" charset="utf-8">
+|     <head>
+|     <title>404 Page not found</title>
+|     <meta name="HandheldFriendly" content="True">
+|     <meta name="MobileOptimized" content="320">
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+|     <style>
+|     Reset */
+|     -moz-box-sizing:border-box;
+|     -webkit-box-sizing:border-box;
+|     box-sizing:border-box;
+|     html {
+|     font-size: 14px;
+|     line-height: 21px;
+|     width:100%;
+|     font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+|_    -webkit-text-size
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8D50F5%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,2F8,"HTTP/1\.1\x20302\x20Found\r\nVary:\x20Accept,Accept-En
+SF:coding,X-Forwarded-Host,X-Forwarded-Scheme,X-Forwarded-Proto,Fastly-SSL
+SF:\r\nCache-Control:\x20no-cache\r\nX-Cache:\x20MISS\r\nContent-Type:\x20
+SF:text/html;\x20charset=utf-8\r\nX-Request-Id:\x2018f19cf1-1ba9-4f66-944e
+SF:-905db6bfb886\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2019:39:37\x20GMT\
+SF:r\nX-Download-Options:\x20noopen\r\nLocation:\x20https://www\.statuspag
+SF:e\.io\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Runtime:\x200\.0149
+SF:01\r\nX-Permitted-Cross-Domain-Policies:\x20none\r\nX-Content-Type-Opti
+SF:ons:\x20nosniff\r\nX-StatusPage-Skip-Logging:\x20true\r\nConnection:\x2
+SF:0close\r\nX-StatusPage-Version:\x20eb04476\r\nX-Frame-Options:\x20SAMEO
+SF:RIGIN\r\nReferrer-Policy:\x20strict-origin-when-cross-origin\r\nAge:\x2
+SF:00\r\nContent-Length:\x2091\r\n\r\n<html><body>You\x20are\x20being\x20<
+SF:a\x20href=\"https://www\.statuspage\.io\">redirected</a>\.</body></html
+SF:>")%r(HTTPOptions,EF3,"HTTP/1\.1\x20404\x20Not\x20Found\r\nVary:\x20Acc
+SF:ept-Encoding\r\nX-Cache:\x20MISS\r\nContent-Type:\x20text/html;\x20char
+SF:set=utf-8\r\nX-Request-Id:\x2063bc0110-358d-4e30-88f6-dee40a9f5b11\r\nD
+SF:ate:\x20Sat,\x2016\x20Mar\x202019\x2019:39:38\x20GMT\r\nX-Runtime:\x200
+SF:\.002738\r\nConnection:\x20close\r\nAge:\x200\r\nContent-Length:\x20356
+SF:4\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"en\"\x20charset=\"utf-8\">
+SF:\n\x20\x20<head>\n\x20\x20\x20\x20<title>404\x20Page\x20not\x20found</t
+SF:itle>\n\x20\x20\x20\x20<meta\x20name=\"HandheldFriendly\"\x20content=\"
+SF:True\">\n\x20\x20\x20\x20<meta\x20name=\"MobileOptimized\"\x20content=\
+SF:"320\">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=
+SF:device-width,\x20initial-scale=1\.0,\x20minimum-scale=1\.0,\x20maximum-
+SF:scale=1\.0\">\n\x20\x20\x20\x20<style>\n\x20\x20\x20\x20/\*\x20Reset\x2
+SF:0\*/\n\x20\x20\x20\x20\x20\x20\*\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20
+SF:-moz-box-sizing:border-box;\n\x20\x20\x20\x20\x20\x20\x20\x20-webkit-bo
+SF:x-sizing:border-box;\n\x20\x20\x20\x20\x20\x20\x20\x20box-sizing:border
+SF:-box;\n\x20\x20\x20\x20\x20\x20}\n\x20\x20\x20\x20\x20\x20html\x20{\n\x
+SF:20\x20\x20\x20\x20\x20\x20\x20font-size:\x2014px;\n\x20\x20\x20\x20\x20
+SF:\x20\x20\x20line-height:\x2021px;\n\x20\x20\x20\x20\x20\x20\x20\x20widt
+SF:h:100%;\n\x20\x20\x20\x20\x20\x20\x20\x20font-family:\"Helvetica\x20Neu
+SF:e\",\x20Helvetica,\x20Arial,\x20sans-serif;\n\x20\x20\x20\x20\x20\x20\x
+SF:20\x20-webkit-text-size");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D50FB%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,2E4,"HTTP/1\.1\x20302\x20Found\r\nVary:\x20Accept,Ac
+SF:cept-Encoding,X-Forwarded-Host,X-Forwarded-Scheme,X-Forwarded-Proto,Fas
+SF:tly-SSL\r\nCache-Control:\x20no-cache\r\nX-Cache:\x20MISS\r\nContent-Ty
+SF:pe:\x20text/html;\x20charset=utf-8\r\nX-Request-Id:\x20d94ca0f2-1aec-40
+SF:9c-8171-34b815ce5580\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2019:39:43\
+SF:x20GMT\r\nX-Download-Options:\x20noopen\r\nLocation:\x20https://www\.st
+SF:atuspage\.io\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Runtime:\x20
+SF:0\.014241\r\nX-Permitted-Cross-Domain-Policies:\x20none\r\nX-Content-Ty
+SF:pe-Options:\x20nosniff\r\nX-StatusPage-Skip-Logging:\x20true\r\nConnect
+SF:ion:\x20close\r\nX-StatusPage-Version:\x20eb04476\r\nX-Frame-Options:\x
+SF:20SAMEORIGIN\r\nReferrer-Policy:\x20strict-origin-when-cross-origin\r\n
+SF:Age:\x200\r\n\r\n<html><body>You\x20are\x20being\x20<a\x20href=\"https:
+SF://www\.statuspage\.io\">redirected</a>\.</body></html>")%r(HTTPOptions,
+SF:EF3,"HTTP/1\.1\x20404\x20Not\x20Found\r\nVary:\x20Accept-Encoding\r\nX-
+SF:Cache:\x20MISS\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nX-Req
+SF:uest-Id:\x20bacb98e5-6873-44cc-9859-f5369d166214\r\nDate:\x20Sat,\x2016
+SF:\x20Mar\x202019\x2019:39:44\x20GMT\r\nX-Runtime:\x200\.002827\r\nConnec
+SF:tion:\x20close\r\nAge:\x200\r\nContent-Length:\x203564\r\n\r\n<!DOCTYPE
+SF:\x20html>\n<html\x20lang=\"en\"\x20charset=\"utf-8\">\n\x20\x20<head>\n
+SF:\x20\x20\x20\x20<title>404\x20Page\x20not\x20found</title>\n\x20\x20\x2
+SF:0\x20<meta\x20name=\"HandheldFriendly\"\x20content=\"True\">\n\x20\x20\
+SF:x20\x20<meta\x20name=\"MobileOptimized\"\x20content=\"320\">\n\x20\x20\
+SF:x20\x20<meta\x20name=\"viewport\"\x20content=\"width=device-width,\x20i
+SF:nitial-scale=1\.0,\x20minimum-scale=1\.0,\x20maximum-scale=1\.0\">\n\x2
+SF:0\x20\x20\x20<style>\n\x20\x20\x20\x20/\*\x20Reset\x20\*/\n\x20\x20\x20
+SF:\x20\x20\x20\*\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20-moz-box-sizing:bo
+SF:rder-box;\n\x20\x20\x20\x20\x20\x20\x20\x20-webkit-box-sizing:border-bo
+SF:x;\n\x20\x20\x20\x20\x20\x20\x20\x20box-sizing:border-box;\n\x20\x20\x2
+SF:0\x20\x20\x20}\n\x20\x20\x20\x20\x20\x20html\x20{\n\x20\x20\x20\x20\x20
+SF:\x20\x20\x20font-size:\x2014px;\n\x20\x20\x20\x20\x20\x20\x20\x20line-h
+SF:eight:\x2021px;\n\x20\x20\x20\x20\x20\x20\x20\x20width:100%;\n\x20\x20\
+SF:x20\x20\x20\x20\x20\x20font-family:\"Helvetica\x20Neue\",\x20Helvetica,
+SF:\x20Arial,\x20sans-serif;\n\x20\x20\x20\x20\x20\x20\x20\x20-webkit-text
+SF:-size");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 21:40:43 2019 -- 1 IP address (1 host up) scanned in 4261.86 seconds

@@ -1,0 +1,159 @@
+# Nmap 7.70 scan initiated Sat Mar 16 14:35:22 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/nwleics.gov.uk nwleics.gov.uk
+Nmap scan report for nwleics.gov.uk (35.190.20.135)
+Host is up (0.047s latency).
+rDNS record for 35.190.20.135: 135.20.190.35.bc.googleusercontent.com
+Not shown: 65510 filtered ports
+PORT     STATE SERVICE    VERSION
+43/tcp   open  tcpwrapped
+80/tcp   open  http       nginx
+|_http-server-header: nginx
+110/tcp  open  tcpwrapped
+143/tcp  open  tcpwrapped
+195/tcp  open  tcpwrapped
+443/tcp  open  ssl/http   nginx
+|_http-server-header: nginx
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+465/tcp  open  tcpwrapped
+587/tcp  open  tcpwrapped
+700/tcp  open  tcpwrapped
+993/tcp  open  tcpwrapped
+995/tcp  open  tcpwrapped
+1883/tcp open  tcpwrapped
+|_mqtt-subscribe: TIMEOUT
+3389/tcp open  tcpwrapped
+5222/tcp open  tcpwrapped
+| xmpp-info: 
+|   STARTTLS Failed
+|   info: 
+|     capabilities: 
+| 
+|     errors: 
+|       (timeout)
+|     unknown: 
+| 
+|     auth_mechanisms: 
+| 
+|     xmpp: 
+| 
+|     features: 
+| 
+|_    compression_methods: 
+5432/tcp open  tcpwrapped
+5671/tcp open  tcpwrapped
+5672/tcp open  tcpwrapped
+|_amqp-info: ERROR: AMQP:handshake connection closed unexpectedly while reading frame header
+5900/tcp open  tcpwrapped
+5901/tcp open  tcpwrapped
+6379/tcp open  tcpwrapped
+8080/tcp open  http-proxy
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 404 Not Found
+|     Content-Type: text/html; charset=UTF-8
+|     Referrer-Policy: no-referrer
+|     Content-Length: 1561
+|     Date: Sat, 16 Mar 2019 12:46:28 GMT
+|     <!DOCTYPE html>
+|     <html lang=en>
+|     <meta charset=utf-8>
+|     <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+|     <title>Error 404 (Not Found)!!1</title>
+|     <style>
+|     *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/goo
+|   HTTPOptions: 
+|     HTTP/1.0 404 Not Found
+|     Content-Type: text/html; charset=UTF-8
+|     Referrer-Policy: no-referrer
+|     Content-Length: 1561
+|     Date: Sat, 16 Mar 2019 12:46:29 GMT
+|     <!DOCTYPE html>
+|     <html lang=en>
+|     <meta charset=utf-8>
+|     <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+|     <title>Error 404 (Not Found)!!1</title>
+|     <style>
+|_    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/goo
+8085/tcp open  tcpwrapped
+8099/tcp open  tcpwrapped
+9092/tcp open  tcpwrapped
+9200/tcp open  tcpwrapped
+9300/tcp open  tcpwrapped
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8080-TCP:V=7.70%I=7%D=3/16%Time=5C8CF021%P=x86_64-unknown-linux-gnu
+SF:%r(GetRequest,6B4,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x2
+SF:0text/html;\x20charset=UTF-8\r\nReferrer-Policy:\x20no-referrer\r\nCont
+SF:ent-Length:\x201561\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2012:46:28\x
+SF:20GMT\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=en>\n\x20\x20<meta\x20ch
+SF:arset=utf-8>\n\x20\x20<meta\x20name=viewport\x20content=\"initial-scale
+SF:=1,\x20minimum-scale=1,\x20width=device-width\">\n\x20\x20<title>Error\
+SF:x20404\x20\(Not\x20Found\)!!1</title>\n\x20\x20<style>\n\x20\x20\x20\x2
+SF:0\*{margin:0;padding:0}html,code{font:15px/22px\x20arial,sans-serif}htm
+SF:l{background:#fff;color:#222;padding:15px}body{margin:7%\x20auto\x200;m
+SF:ax-width:390px;min-height:180px;padding:30px\x200\x2015px}\*\x20>\x20bo
+SF:dy{background:url\(//www\.google\.com/images/errors/robot\.png\)\x20100
+SF:%\x205px\x20no-repeat;padding-right:205px}p{margin:11px\x200\x2022px;ov
+SF:erflow:hidden}ins{color:#777;text-decoration:none}a\x20img{border:0}@me
+SF:dia\x20screen\x20and\x20\(max-width:772px\){body{background:none;margin
+SF:-top:0;max-width:none;padding-right:0}}#logo{background:url\(//www\.goo
+SF:gle\.com/images/branding/googlelogo/1x/goo")%r(HTTPOptions,6B4,"HTTP/1\
+SF:.0\x20404\x20Not\x20Found\r\nContent-Type:\x20text/html;\x20charset=UTF
+SF:-8\r\nReferrer-Policy:\x20no-referrer\r\nContent-Length:\x201561\r\nDat
+SF:e:\x20Sat,\x2016\x20Mar\x202019\x2012:46:29\x20GMT\r\n\r\n<!DOCTYPE\x20
+SF:html>\n<html\x20lang=en>\n\x20\x20<meta\x20charset=utf-8>\n\x20\x20<met
+SF:a\x20name=viewport\x20content=\"initial-scale=1,\x20minimum-scale=1,\x2
+SF:0width=device-width\">\n\x20\x20<title>Error\x20404\x20\(Not\x20Found\)
+SF:!!1</title>\n\x20\x20<style>\n\x20\x20\x20\x20\*{margin:0;padding:0}htm
+SF:l,code{font:15px/22px\x20arial,sans-serif}html{background:#fff;color:#2
+SF:22;padding:15px}body{margin:7%\x20auto\x200;max-width:390px;min-height:
+SF:180px;padding:30px\x200\x2015px}\*\x20>\x20body{background:url\(//www\.
+SF:google\.com/images/errors/robot\.png\)\x20100%\x205px\x20no-repeat;padd
+SF:ing-right:205px}p{margin:11px\x200\x2022px;overflow:hidden}ins{color:#7
+SF:77;text-decoration:none}a\x20img{border:0}@media\x20screen\x20and\x20\(
+SF:max-width:772px\){body{background:none;margin-top:0;max-width:none;padd
+SF:ing-right:0}}#logo{background:url\(//www\.google\.com/images/branding/g
+SF:ooglelogo/1x/goo");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 14:47:39 2019 -- 1 IP address (1 host up) scanned in 736.60 seconds

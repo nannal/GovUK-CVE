@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 13:38:18 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/nas.gov.uk nas.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/nas.gov.uk nas.gov.uk" start="1552736298" startstr="Sat Mar 16 13:38:18 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552736292" endtime="1552736725"><status state="up" reason="syn-ack" reason_ttl="116"/>
+<address addr="134.19.161.163" addrtype="ipv4"/>
+<hostnames>
+<hostname name="nas.gov.uk" type="user"/>
+<hostname name="a134-19-161-163.xtrahost.co.uk" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65534">
+<extrareasons reason="no-responses" count="65534"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="116"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="116"/><service name="https" product="Apache" tunnel="ssl" method="probed" conf="10"/><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+</ports>
+<times srtt="78907" rttvar="8300" to="112107"/>
+</host>
+<runstats><finished time="1552736725" timestr="Sat Mar 16 13:45:25 2019" elapsed="433.24" summary="Nmap done at Sat Mar 16 13:45:25 2019; 1 IP address (1 host up) scanned in 433.24 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

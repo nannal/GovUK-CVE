@@ -1,0 +1,32 @@
+# Nmap 7.70 scan initiated Sat Mar 16 20:55:13 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/webmail.digital.fco.gov.uk webmail.digital.fco.gov.uk
+Nmap scan report for webmail.digital.fco.gov.uk (62.232.86.103)
+Host is up (0.062s latency).
+rDNS record for 62.232.86.103: mail.digital.fco.gov.uk
+Not shown: 65533 filtered ports
+PORT    STATE SERVICE  VERSION
+443/tcp open  ssl/http Microsoft IIS httpd
+587/tcp open  smtp     Microsoft Exchange smtpd
+| banner: 220 mail.digital.fco.gov.uk Microsoft ESMTP MAIL Service ready 
+|_at Sat, 16 Mar 2019 19:02:14 +0000
+993/tcp open  ssl/imap Microsoft Exchange 2007-2010 imapd
+|_banner: * OK The Microsoft Exchange IMAP4 service is ready.
+| ssl-enum-ciphers: 
+|   SSLv3: 
+|     ciphers: 
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     cipher preference error: Network error
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       CBC-mode cipher in SSLv3 (CVE-2014-3566)
+|       Ciphersuite uses MD5 for message integrity
+|_  least strength: C
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 21:02:33 2019 -- 1 IP address (1 host up) scanned in 440.16 seconds

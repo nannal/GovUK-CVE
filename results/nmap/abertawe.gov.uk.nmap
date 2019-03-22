@@ -1,0 +1,46 @@
+# Nmap 7.70 scan initiated Sat Mar 16 02:02:19 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/abertawe.gov.uk abertawe.gov.uk
+Nmap scan report for abertawe.gov.uk (212.104.147.59)
+Host is up (0.36s latency).
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE   VERSION
+80/tcp  open  ssl/http
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Sat, 16 Mar 2019 00:46:21 GMT
+|     Location: https://abertawe.gov.uk/preswylwyr
+|     Connection: close
+|     Content-Type: text/plain; charset=UTF-8
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Sat, 16 Mar 2019 00:46:22 GMT
+|     Allow: GET, HEAD, POST, TRACE, OPTIONS
+|     Content-Length: 0
+|     Connection: close
+|_    Content-Type: text/plain; charset=UTF-8
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA - unknown
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 4096) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: unknown
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8C4759%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,B1,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate
+SF::\x20Sat,\x2016\x20Mar\x202019\x2000:46:21\x20GMT\r\nLocation:\x20https
+SF:://abertawe\.gov\.uk/preswylwyr\r\nConnection:\x20close\r\nContent-Type
+SF::\x20text/plain;\x20charset=UTF-8\r\n\r\n")%r(HTTPOptions,AF,"HTTP/1\.1
+SF:\x20200\x20OK\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2000:46:22\x20GMT\
+SF:r\nAllow:\x20GET,\x20HEAD,\x20POST,\x20TRACE,\x20OPTIONS\r\nContent-Len
+SF:gth:\x200\r\nConnection:\x20close\r\nContent-Type:\x20text/plain;\x20ch
+SF:arset=UTF-8\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 02:47:06 2019 -- 1 IP address (1 host up) scanned in 2687.62 seconds

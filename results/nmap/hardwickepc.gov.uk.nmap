@@ -1,0 +1,32 @@
+# Nmap 7.70 scan initiated Sat Mar 16 09:45:48 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/hardwickepc.gov.uk hardwickepc.gov.uk
+Nmap scan report for hardwickepc.gov.uk (78.31.107.141)
+Host is up (0.073s latency).
+rDNS record for 78.31.107.141: mafieaa1.miniserver.com
+Not shown: 65525 filtered ports
+PORT     STATE  SERVICE  VERSION
+20/tcp   closed ftp-data
+21/tcp   open   ftp      Pure-FTPd
+| banner: 220---------- Welcome to Pure-FTPd [privsep] [TLS] ----------\x
+|_0D\x0A220-You are user number 1 of 50 allowed.\x0D\x0A220-Local time...
+22/tcp   open   ssh      OpenSSH 4.3 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_4.3
+80/tcp   open   http     Apache httpd 2.2.26 ((Unix) mod_ssl/2.2.26 OpenSSL/0.9.8e-fips-rhel5 mod_bwlimited/1.4)
+|_http-server-header: Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/0.9.8e-fips-rhel5 mod_bwlimited/1.4
+110/tcp  open   pop3     Dovecot pop3d
+|_banner: +OK Dovecot ready.
+143/tcp  open   imap     Dovecot imapd
+| banner: * OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID 
+|_ENABLE IDLE NAMESPACE STARTTLS AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+443/tcp  open   ssl/http Apache httpd 2.2.26 ((Unix) mod_ssl/2.2.26 OpenSSL/0.9.8e-fips-rhel5 mod_bwlimited/1.4)
+|_http-server-header: Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/0.9.8e-fips-rhel5 mod_bwlimited/1.4
+2083/tcp open   http     cPanel httpd 11.56.0.52
+|_http-server-header: cpsrvd/11.56.0.52
+2087/tcp open   http     cPanel httpd 11.56.0.52
+|_http-server-header: cpsrvd/11.56.0.52
+2095/tcp open   http     cPanel httpd 11.56.0.52
+2096/tcp open   http     cPanel httpd 11.56.0.52
+|_http-server-header: cpsrvd/11.56.0.52
+Service Info: OS: Unix
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 10:18:46 2019 -- 1 IP address (1 host up) scanned in 1977.52 seconds

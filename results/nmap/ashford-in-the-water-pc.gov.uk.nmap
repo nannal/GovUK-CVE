@@ -1,0 +1,125 @@
+# Nmap 7.70 scan initiated Sat Mar 16 02:03:21 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/ashford-in-the-water-pc.gov.uk ashford-in-the-water-pc.gov.uk
+Nmap scan report for ashford-in-the-water-pc.gov.uk (66.33.212.76)
+Host is up (0.63s latency).
+rDNS record for 66.33.212.76: apache2-cid.buckshot.dreamhost.com
+Not shown: 65526 filtered ports
+PORT      STATE SERVICE VERSION
+21/tcp    open  ftp     ProFTPD 1.2.10
+|_banner: 220 DreamHost FTP Server
+22/tcp    open  ssh     OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.10 (Ubuntu Linux; protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2.10
+80/tcp    open  http    Apache httpd
+|_http-server-header: Apache
+443/tcp   open  ssl/ssl Apache httpd (SSL-only mode)
+|_http-server-header: Apache
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+587/tcp   open  smtp    Postfix smtpd
+|_banner: 220 buckshot.dreamhost.com ESMTP
+4369/tcp  open  epmd    Erlang Port Mapper Daemon
+5222/tcp  open  jabber  ejabberd (Protocol 1.0)
+| xmpp-info: 
+|   STARTTLS Failed
+|   info: 
+|     unknown: 
+| 
+|     xmpp: 
+|       lang: en
+|       server name: buckshot.dreamhost.com
+|       version: (none)
+|     auth_mechanisms: 
+| 
+|     errors: 
+|       host-unknown
+|       (timeout)
+|     compression_methods: 
+| 
+|     capabilities: 
+| 
+|     stream_id: 2528346093
+|_    features: 
+5269/tcp  open  jabber  ejabberd
+| xmpp-info: 
+|   Ignores server name
+|   info: 
+|     xmpp: 
+|       version: 1.0
+|     capabilities: 
+| 
+|   pre_tls: 
+|     xmpp: 
+| 
+|     capabilities: 
+| 
+|     features: 
+|       TLS (required)
+|   post_tls: 
+|     xmpp: 
+| 
+|_    capabilities: 
+8186/tcp  open  unknown
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 401 Unauthorized
+|     Content-Type: text/plain; charset=utf-8
+|     X-Content-Type-Options: nosniff
+|     Date: Sat, 16 Mar 2019 00:50:57 GMT
+|     Content-Length: 14
+|     Unauthorized.
+|   GenericLines, Help, Kerberos, LDAPSearchReq, LPDString, RTSPRequest, SIPOptions, SSLSessionReq, TLSSessionReq: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/plain; charset=utf-8
+|     Connection: close
+|     Request
+|   GetRequest: 
+|     HTTP/1.0 401 Unauthorized
+|     Content-Type: text/plain; charset=utf-8
+|     X-Content-Type-Options: nosniff
+|     Date: Sat, 16 Mar 2019 00:50:20 GMT
+|     Content-Length: 14
+|_    Unauthorized.
+39895/tcp open  unknown
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8186-TCP:V=7.70%I=7%D=3/16%Time=5C8C4848%P=x86_64-unknown-linux-gnu
+SF:%r(GenericLines,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:
+SF:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20
+SF:Bad\x20Request")%r(GetRequest,AE,"HTTP/1\.0\x20401\x20Unauthorized\r\nC
+SF:ontent-Type:\x20text/plain;\x20charset=utf-8\r\nX-Content-Type-Options:
+SF:\x20nosniff\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2000:50:20\x20GMT\r\
+SF:nContent-Length:\x2014\r\n\r\nUnauthorized\.\n")%r(RTSPRequest,67,"HTTP
+SF:/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20chars
+SF:et=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(Help,
+SF:67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\
+SF:x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")
+SF:%r(SSLSessionReq,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type
+SF::\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x2
+SF:0Bad\x20Request")%r(TLSSessionReq,67,"HTTP/1\.1\x20400\x20Bad\x20Reques
+SF:t\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20cl
+SF:ose\r\n\r\n400\x20Bad\x20Request")%r(Kerberos,67,"HTTP/1\.1\x20400\x20B
+SF:ad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConne
+SF:ction:\x20close\r\n\r\n400\x20Bad\x20Request")%r(FourOhFourRequest,AE,"
+SF:HTTP/1\.0\x20401\x20Unauthorized\r\nContent-Type:\x20text/plain;\x20cha
+SF:rset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nDate:\x20Sat,\x2016
+SF:\x20Mar\x202019\x2000:50:57\x20GMT\r\nContent-Length:\x2014\r\n\r\nUnau
+SF:thorized\.\n")%r(LPDString,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCo
+SF:ntent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n
+SF:\r\n400\x20Bad\x20Request")%r(LDAPSearchReq,67,"HTTP/1\.1\x20400\x20Bad
+SF:\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnect
+SF:ion:\x20close\r\n\r\n400\x20Bad\x20Request")%r(SIPOptions,67,"HTTP/1\.1
+SF:\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=ut
+SF:f-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request");
+Service Info: Host: buckshot.dreamhost.com; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 02:53:14 2019 -- 1 IP address (1 host up) scanned in 2993.12 seconds

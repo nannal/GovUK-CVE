@@ -1,0 +1,53 @@
+# Nmap 7.70 scan initiated Sat Mar 16 08:57:52 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/fishregister.gov.uk fishregister.gov.uk
+Nmap scan report for fishregister.gov.uk (212.74.117.61)
+Host is up (0.078s latency).
+Not shown: 65523 filtered ports
+PORT     STATE  SERVICE         VERSION
+21/tcp   closed ftp
+80/tcp   open   tcpwrapped
+| http-server-header: 
+|   Microsoft-HTTPAPI/2.0
+|_  Microsoft-IIS/7.0
+|_http-trane-info: Problem with XML parsing of /evox/about
+81/tcp   closed hosts2-ns
+443/tcp  open   tcpwrapped
+|_http-trane-info: Problem with XML parsing of /evox/about
+444/tcp  open   tcpwrapped
+8002/tcp closed teradataordbms
+8007/tcp closed ajp12
+8008/tcp closed http
+8009/tcp closed ajp13
+8010/tcp closed xmpp
+8081/tcp closed blackice-icecap
+8088/tcp closed radan-http
+8443/tcp open   ssl/https-alt?
+| ssl-enum-ciphers: 
+|   SSLv3: 
+|     ciphers: 
+|       TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA - E
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 768) - E
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 768) - C
+|       TLS_DHE_RSA_WITH_DES_CBC_SHA (dh 768) - E
+|       TLS_RSA_EXPORT_WITH_DES40_CBC_SHA - E
+|       TLS_RSA_EXPORT_WITH_RC4_40_MD5 - E
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 1024) - D
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_DES_CBC_SHA (rsa 1024) - D
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 1024) - D
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 1024) - D
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       64-bit block cipher DES vulnerable to SWEET32 attack
+|       64-bit block cipher DES40 vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       CBC-mode cipher in SSLv3 (CVE-2014-3566)
+|       Ciphersuite uses MD5 for message integrity
+|       Key exchange (dh 768) of lower strength than certificate key
+|       Weak certificate signature: SHA1
+|_  least strength: E
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 09:07:18 2019 -- 1 IP address (1 host up) scanned in 566.04 seconds

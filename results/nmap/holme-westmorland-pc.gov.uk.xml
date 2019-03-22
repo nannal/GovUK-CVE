@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 10:34:59 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/holme-westmorland-pc.gov.uk holme-westmorland-pc.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/holme-westmorland-pc.gov.uk holme-westmorland-pc.gov.uk" start="1552725299" startstr="Sat Mar 16 10:34:59 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552725299" endtime="1552726971"><status state="up" reason="echo-reply" reason_ttl="46"/>
+<address addr="185.25.240.171" addrtype="ipv4"/>
+<hostnames>
+<hostname name="holme-westmorland-pc.gov.uk" type="user"/>
+<hostname name="bfs001.bfhosting.co.uk" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="64559">
+<extrareasons reason="port-unreaches" count="63024"/>
+<extrareasons reason="no-responses" count="1535"/>
+</extraports>
+<extraports state="closed" count="974">
+<extrareasons reason="resets" count="974"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="46"/><service name="ftp" product="vsftpd" version="2.0.8 or later" hostname="Welcome" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd</cpe></service><script id="banner" output="220 Welcome to BF Internet FTP service."/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="46"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="46"/><service name="ssl" product="Apache httpd" extrainfo="SSL-only mode" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A&#xa;    compressors: &#xa;&#xa;    cipher preference: server&#xa;  least strength: A"><table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+</table>
+</table>
+<table key="compressors">
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<elem key="least strength">A</elem>
+</script></port>
+</ports>
+<times srtt="75199" rttvar="12235" to="124139"/>
+</host>
+<runstats><finished time="1552726971" timestr="Sat Mar 16 11:02:51 2019" elapsed="1672.31" summary="Nmap done at Sat Mar 16 11:02:51 2019; 1 IP address (1 host up) scanned in 1672.31 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

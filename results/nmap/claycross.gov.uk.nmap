@@ -1,0 +1,32 @@
+# Nmap 7.70 scan initiated Sat Mar 16 04:56:00 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/claycross.gov.uk claycross.gov.uk
+Nmap scan report for claycross.gov.uk (77.73.5.159)
+Host is up (0.53s latency).
+rDNS record for 77.73.5.159: k1medaa18.memset.net
+Not shown: 65533 filtered ports
+PORT    STATE SERVICE    VERSION
+22/tcp  open  ssh        OpenSSH 6.0p1 Debian 4+deb7u4 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_6.0p1 Debian-4+deb7u4
+80/tcp  open  http       Apache httpd
+|_http-server-header: Apache
+443/tcp open  ssl/https?
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+| 
+|     cipher preference: server
+|     warnings: 
+|       Key exchange (dh 1024) of lower strength than certificate key
+|       Weak certificate signature: SHA1
+|_  least strength: A
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 05:42:16 2019 -- 1 IP address (1 host up) scanned in 2775.86 seconds

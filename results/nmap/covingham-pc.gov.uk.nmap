@@ -1,0 +1,45 @@
+# Nmap 7.70 scan initiated Sat Mar 16 05:28:53 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/covingham-pc.gov.uk covingham-pc.gov.uk
+Nmap scan report for covingham-pc.gov.uk (176.32.230.17)
+Host is up (0.069s latency).
+rDNS record for 176.32.230.17: web17.extendcp.co.uk
+Not shown: 65530 filtered ports
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 5.3 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_5.3
+80/tcp   open  http     Apache httpd 2.4.37
+|_http-server-header: Apache/2.4.37 (Unix)
+443/tcp  open  ssl/http Apache httpd 2.4.37
+|_http-server-header: Apache/2.4.37 (Unix)
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|     compressors: 
+| 
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_CBC_SHA and TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+| 
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 and TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
+|_  least strength: A
+544/tcp  open  kshell?
+2105/tcp open  eklogin?
+3306/tcp open  mysql    MySQL 5.5.5-10.1.27-MariaDB
+| banner: Y\x00\x00\x00\x0A5.5.5-10.1.27-MariaDB\x00t\xE0\xFF\x14S!J4`hlc
+|_\x00\xFF\xFF\x08\x02\x00?\xE0\x15\x00\x00\x00\x00\x00\x00\x00\x00\x0...
+Service Info: Host: mv0.web17.extendcp.co.uk
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 05:42:29 2019 -- 1 IP address (1 host up) scanned in 815.36 seconds

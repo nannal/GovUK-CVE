@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 14:53:01 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/operational-research.gov.uk operational-research.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/operational-research.gov.uk operational-research.gov.uk" start="1552740781" startstr="Sat Mar 16 14:53:01 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552740782" endtime="1552742585"><status state="up" reason="reset" reason_ttl="240"/>
+<address addr="94.136.40.100" addrtype="ipv4"/>
+<hostnames>
+<hostname name="operational-research.gov.uk" type="user"/>
+<hostname name="outbound-traffic.linweb.ahost.me" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65368">
+<extrareasons reason="resets" count="65368"/>
+</extraports>
+<extraports state="filtered" count="164">
+<extrareasons reason="no-responses" count="164"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="240"/><service name="ftp" product="ProFTPD" method="probed" conf="10"><cpe>cpe:/a:proftpd:proftpd</cpe></service><script id="banner" output="220 ATLAS/WebFusion FTP server"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="240"/><service name="ssh" extrainfo="protocol 2.0" servicefp="SF-Port22-TCP:V=7.70%I=7%D=3/16%Time=5C8CF893%P=x86_64-unknown-linux-gnu%r(NULL,1CC,&quot;SSH-2\.0-ATLAS/WebFusion\x20FTP\x20server\r\n\0\0\x01\xa4\x08\x14d\xa4_;\x88\xae\xd7\x873\xf7\x9e7\xdb#0\x9c\0\0\0\xc4ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,rsa1024-sha1\0\0\0\x07ssh-rsa\0\0\0-aes256-ctr,aes192-ctr,aes128-ctr,blowfish-ctr\0\0\0-aes256-ctr,aes192-ctr,aes128-ctr,blowfish-ctr\0\0\0\x18hmac-sha1,hmac-ripemd160\0\0\0\x18hmac-sha1,hmac-ripemd160\0\0\0\x04none\0\0\0\x04none\0\0\0\0\0\0\0\0\0\0\0\0\0\xb0\.\?61g\xae\x16&quot;);" method="probed" conf="10"/><script id="banner" output="SSH-2.0-ATLAS/WebFusion FTP server\x0D\x0A\x00\x00\x01\xA4\x08\&#xa;x14d\xA4_;\x88\xAE\xD7\x873\xF7\x9E7\xDB#0\x9C\x00\x00\x00\xC4ecdh-s...&#xa;"/><script id="fingerprint-strings" output="&#xa;  NULL: &#xa;    SSH-2.0-ATLAS/WebFusion FTP server&#xa;    ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,rsa1024-sha1&#xa;    ssh-rsa&#xa;    -aes256-ctr,aes192-ctr,aes128-ctr,blowfish-ctr&#xa;    -aes256-ctr,aes192-ctr,aes128-ctr,blowfish-ctr&#xa;    hmac-sha1,hmac-ripemd160&#xa;    hmac-sha1,hmac-ripemd160&#xa;    none&#xa;    none&#xa;    .?61g"><elem key="NULL">&#xa;    SSH-2.0-ATLAS/WebFusion FTP server&#xa;    ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,rsa1024-sha1&#xa;    ssh-rsa&#xa;    -aes256-ctr,aes192-ctr,aes128-ctr,blowfish-ctr&#xa;    -aes256-ctr,aes192-ctr,aes128-ctr,blowfish-ctr&#xa;    hmac-sha1,hmac-ripemd160&#xa;    hmac-sha1,hmac-ripemd160&#xa;    none&#xa;    none&#xa;    .?61g</elem>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="240"/><service name="http" product="Apache httpd" hostname="02-webfusion" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="240"/><service name="https" product="BigIP" servicefp="SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CF89A%P=x86_64-unknown-linux-gnu%r(GetRequest,75,&quot;HTTP/1\.0\x20302\x20Found\r\nLocation:\x20http://webfusion-support\.co\.uk\r\nServer:\x20BigIP\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n&quot;);" tunnel="ssl" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  GetRequest: &#xa;    HTTP/1.0 302 Found&#xa;    Location: http://webfusion-support.co.uk&#xa;    Server: BigIP&#xa;    Connection: close&#xa;    Content-Length: 0"><elem key="GetRequest">&#xa;    HTTP/1.0 302 Found&#xa;    Location: http://webfusion-support.co.uk&#xa;    Server: BigIP&#xa;    Connection: close&#xa;    Content-Length: 0</elem>
+</script><script id="http-server-header" output="BigIP"><elem>BigIP</elem>
+</script></port>
+</ports>
+<times srtt="70068" rttvar="16559" to="136304"/>
+</host>
+<runstats><finished time="1552742585" timestr="Sat Mar 16 15:23:05 2019" elapsed="1803.80" summary="Nmap done at Sat Mar 16 15:23:05 2019; 1 IP address (1 host up) scanned in 1803.80 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

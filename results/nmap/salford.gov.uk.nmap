@@ -1,0 +1,36 @@
+# Nmap 7.70 scan initiated Sat Mar 16 16:40:40 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/salford.gov.uk salford.gov.uk
+Warning: 86.12.129.71 giving up on port because retransmission cap hit (6).
+Nmap scan report for salford.gov.uk (86.12.129.71)
+Host is up (0.064s latency).
+rDNS record for 86.12.129.71: 71-129-12-86.static.virginmedia.com
+Not shown: 65526 closed ports
+PORT      STATE    SERVICE   VERSION
+0/tcp     filtered unknown
+25/tcp    filtered smtp
+80/tcp    open     http      Citrix NetScaler httpd
+443/tcp   open     ssl/http  Citrix NetScaler httpd
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 - unknown
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: unknown
+947/tcp   filtered unknown
+1402/tcp  filtered prm-sm-np
+42194/tcp filtered unknown
+46322/tcp filtered unknown
+59420/tcp filtered unknown
+63102/tcp filtered unknown
+Service Info: Device: load balancer
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 16:58:13 2019 -- 1 IP address (1 host up) scanned in 1052.74 seconds

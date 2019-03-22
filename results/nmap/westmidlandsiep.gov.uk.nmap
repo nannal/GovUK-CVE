@@ -1,0 +1,60 @@
+# Nmap 7.70 scan initiated Sat Mar 16 21:12:37 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/westmidlandsiep.gov.uk westmidlandsiep.gov.uk
+Nmap scan report for westmidlandsiep.gov.uk (94.236.93.207)
+Host is up (0.060s latency).
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE  VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 302 Security Redirect
+|     Location: http://waf.jadu.net/waf/error.html?EVENT_ID=340941878130&HOST=192.168.232.207
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Expires: 0
+|     Connection: close
+|   HTTPOptions: 
+|     HTTP/1.0 302 Security Redirect
+|     Location: http://waf.jadu.net/waf/error.html?EVENT_ID=340941878149&HOST=192.168.232.207
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Expires: 0
+|_    Connection: close
+443/tcp open  ssl/http Apache httpd
+|_http-server-header: Apache
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 4096) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 4096) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 4096) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8D4B8C%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,C5,"HTTP/1\.0\x20302\x20Security\x20Redirect\r\nLocation:\x
+SF:20http://waf\.jadu\.net/waf/error\.html\?EVENT_ID=340941878130&HOST=192
+SF:\.168\.232\.207\r\nCache-Control:\x20no-cache\r\nPragma:\x20no-cache\r\
+SF:nExpires:\x200\r\nConnection:\x20close\r\n\r\n")%r(HTTPOptions,C5,"HTTP
+SF:/1\.0\x20302\x20Security\x20Redirect\r\nLocation:\x20http://waf\.jadu\.
+SF:net/waf/error\.html\?EVENT_ID=340941878149&HOST=192\.168\.232\.207\r\nC
+SF:ache-Control:\x20no-cache\r\nPragma:\x20no-cache\r\nExpires:\x200\r\nCo
+SF:nnection:\x20close\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 21:16:56 2019 -- 1 IP address (1 host up) scanned in 259.39 seconds

@@ -1,0 +1,121 @@
+# Nmap 7.70 scan initiated Sat Mar 16 04:36:32 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/cheveningparishcouncil.gov.uk cheveningparishcouncil.gov.uk
+Nmap scan report for cheveningparishcouncil.gov.uk (83.223.98.233)
+Host is up (0.070s latency).
+Not shown: 65309 filtered ports, 204 closed ports
+PORT     STATE SERVICE           VERSION
+21/tcp   open  ftp               Pure-FTPd
+|_banner: The firewall on this server is blocking your connection.
+80/tcp   open  http              LiteSpeed httpd
+|_http-server-header: LiteSpeed
+110/tcp  open  pop3              Dovecot pop3d
+143/tcp  open  imap              Dovecot imapd
+443/tcp  open  ssl/http          LiteSpeed httpd
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 and TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+|_  least strength: A
+465/tcp  open  ssl/smtps?
+587/tcp  open  smtp              Exim smtpd 4.91
+993/tcp  open  ssl/imap          Dovecot imapd
+995/tcp  open  ssl/pop3          Dovecot pop3d
+2077/tcp open  tsrmagt?
+2078/tcp open  ssl/tpcsrvr?
+2079/tcp open  idware-router?
+2080/tcp open  ssl/autodesk-nlm?
+2082/tcp open  http              LiteSpeed httpd
+|_http-server-header: LiteSpeed
+|_http-trane-info: Problem with XML parsing of /evox/about
+2083/tcp open  ssl/http          LiteSpeed httpd
+|_http-server-header: LiteSpeed
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2086/tcp open  http              LiteSpeed httpd
+|_http-server-header: LiteSpeed
+2087/tcp open  ssl/eli?
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2095/tcp open  nbx-ser?
+2096/tcp open  ssl/http          LiteSpeed httpd
+8885/tcp open  unknown
+| banner: The firewall on this server is blocking your connection.\x0D\x0
+|_AYou need to contact the server owner or hosting provider for furthe...
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GetRequest, HTTPOptions, NULL: 
+|     The firewall on this server is blocking your connection.
+|     need to contact the server owner or hosting provider for further information.
+|     Your blocked IP address is: 78.58.49.144
+|_    This server's hostname is: adams.uk-noc.com
+8886/tcp open  http              LiteSpeed httpd
+|_http-trane-info: Problem with XML parsing of /evox/about
+8887/tcp open  ssl/http          LiteSpeed httpd
+|_http-server-header: LiteSpeed
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|     compressors: 
+|       NULL
+|     cipher preference: indeterminate
+|     cipher preference error: Too few ciphers supported
+|_  least strength: A
+8899/tcp open  ospf-lite?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8885-TCP:V=7.70%I=7%D=3/16%Time=5C8C6DEA%P=x86_64-unknown-linux-gnu
+SF:%r(NULL,E4,"The\x20firewall\x20on\x20this\x20server\x20is\x20blocking\x
+SF:20your\x20connection\.\r\nYou\x20need\x20to\x20contact\x20the\x20server
+SF:\x20owner\x20or\x20hosting\x20provider\x20for\x20further\x20information
+SF:\.\r\nYour\x20blocked\x20IP\x20address\x20is:\x2078\.58\.49\.144\r\nThi
+SF:s\x20server's\x20hostname\x20is:\x20adams\.uk-noc\.com\r\n")%r(GetReque
+SF:st,E4,"The\x20firewall\x20on\x20this\x20server\x20is\x20blocking\x20you
+SF:r\x20connection\.\r\nYou\x20need\x20to\x20contact\x20the\x20server\x20o
+SF:wner\x20or\x20hosting\x20provider\x20for\x20further\x20information\.\r\
+SF:nYour\x20blocked\x20IP\x20address\x20is:\x2078\.58\.49\.144\r\nThis\x20
+SF:server's\x20hostname\x20is:\x20adams\.uk-noc\.com\r\n")%r(FourOhFourReq
+SF:uest,E4,"The\x20firewall\x20on\x20this\x20server\x20is\x20blocking\x20y
+SF:our\x20connection\.\r\nYou\x20need\x20to\x20contact\x20the\x20server\x2
+SF:0owner\x20or\x20hosting\x20provider\x20for\x20further\x20information\.\
+SF:r\nYour\x20blocked\x20IP\x20address\x20is:\x2078\.58\.49\.144\r\nThis\x
+SF:20server's\x20hostname\x20is:\x20adams\.uk-noc\.com\r\n")%r(HTTPOptions
+SF:,E4,"The\x20firewall\x20on\x20this\x20server\x20is\x20blocking\x20your\
+SF:x20connection\.\r\nYou\x20need\x20to\x20contact\x20the\x20server\x20own
+SF:er\x20or\x20hosting\x20provider\x20for\x20further\x20information\.\r\nY
+SF:our\x20blocked\x20IP\x20address\x20is:\x2078\.58\.49\.144\r\nThis\x20se
+SF:rver's\x20hostname\x20is:\x20adams\.uk-noc\.com\r\n")%r(DNSVersionBindR
+SF:eqTCP,E4,"The\x20firewall\x20on\x20this\x20server\x20is\x20blocking\x20
+SF:your\x20connection\.\r\nYou\x20need\x20to\x20contact\x20the\x20server\x
+SF:20owner\x20or\x20hosting\x20provider\x20for\x20further\x20information\.
+SF:\r\nYour\x20blocked\x20IP\x20address\x20is:\x2078\.58\.49\.144\r\nThis\
+SF:x20server's\x20hostname\x20is:\x20adams\.uk-noc\.com\r\n")%r(DNSStatusR
+SF:equestTCP,E4,"The\x20firewall\x20on\x20this\x20server\x20is\x20blocking
+SF:\x20your\x20connection\.\r\nYou\x20need\x20to\x20contact\x20the\x20serv
+SF:er\x20owner\x20or\x20hosting\x20provider\x20for\x20further\x20informati
+SF:on\.\r\nYour\x20blocked\x20IP\x20address\x20is:\x2078\.58\.49\.144\r\nT
+SF:his\x20server's\x20hostname\x20is:\x20adams\.uk-noc\.com\r\n");
+Service Info: Host: adams.uk-noc.com
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 05:32:18 2019 -- 1 IP address (1 host up) scanned in 3345.97 seconds

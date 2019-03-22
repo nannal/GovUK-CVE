@@ -1,0 +1,526 @@
+# Nmap 7.70 scan initiated Sat Mar 16 19:43:04 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/thornburytowncouncil.gov.uk thornburytowncouncil.gov.uk
+Warning: 178.128.163.123 giving up on port because retransmission cap hit (6).
+Nmap scan report for thornburytowncouncil.gov.uk (178.128.163.123)
+Host is up (0.063s latency).
+rDNS record for 178.128.163.123: srv4.pure-host.co.uk
+Not shown: 49135 filtered ports, 16385 closed ports
+PORT     STATE SERVICE       VERSION
+21/tcp   open  ftp           ProFTPD (requires SSL)
+|_banner: 220 ProFTPD Server (ProFTPD) [178.128.163.123]
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+22/tcp   open  ssh           OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+53/tcp   open  domain        (unknown banner: none)
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|     bind
+|_    none
+80/tcp   open  http          Apache httpd
+|_http-server-header: nginx
+106/tcp  open  pop3pw        poppassd
+|_banner: 200 poppassd hello, who are you?
+110/tcp  open  pop3          Dovecot pop3d
+| banner: +OK Dovecot ready. <1964.96.5c8d4540.4WGRXcgvGanlcePvFDRCNw==@s
+|_rv4>
+139/tcp  open  netbios-ssn   Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+143/tcp  open  imap          Dovecot imapd
+| banner: * OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE ID
+|_LE LITERAL+ STARTTLS AUTH=PLAIN AUTH=LOGIN AUTH=DIGEST-MD5 AUTH=CRAM...
+443/tcp  open  ssl/http      nginx
+|_http-server-header: nginx
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+445/tcp  open  netbios-ssn   Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+465/tcp  open  ssl/smtp      Postfix smtpd
+|_banner: 220 srv4.pure-host.co.uk ESMTP Postfix (Ubuntu)
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+587/tcp  open  smtp          Postfix smtpd
+|_banner: 220 srv4.pure-host.co.uk ESMTP Postfix (Ubuntu)
+993/tcp  open  ssl/imap      Dovecot imapd
+| banner: * OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE ID
+|_LE LITERAL+ AUTH=PLAIN AUTH=LOGIN AUTH=DIGEST-MD5 AUTH=CRAM-MD5] Dov...
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       Key exchange (dh 1024) of lower strength than certificate key
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       Key exchange (dh 1024) of lower strength than certificate key
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       Key exchange (dh 1024) of lower strength than certificate key
+|_  least strength: A
+995/tcp  open  ssl/pop3      Dovecot pop3d
+| banner: +OK Dovecot ready. <1964.b.5c8d4538.pD3MzdXD6EBl9ztjjSXztA==@sr
+|_v4>
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       Key exchange (dh 1024) of lower strength than certificate key
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       Key exchange (dh 1024) of lower strength than certificate key
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       Key exchange (dh 1024) of lower strength than certificate key
+|_  least strength: A
+8443/tcp open  ssl/https-alt sw-cp-server
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Server: sw-cp-server
+|     Date: Sat, 16 Mar 2019 18:49:12 GMT
+|     Content-Type: text/html; charset=UTF-8
+|     Connection: close
+|     Expires: Fri, 28 May 1999 00:00:00 GMT
+|     Last-Modified: Sat, 16 Mar 2019 18:49:12 GMT
+|     Cache-Control: no-store, no-cache, must-revalidate
+|     Cache-Control: post-check=0, pre-check=0
+|     Pragma: no-cache
+|     P3P: CP="NON COR CURa ADMa OUR NOR UNI COM NAV STA"
+|     <html><head>
+|     <meta charset="utf-8">
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+|     <meta name="plesk-build" content="1708180301.19">
+|     <title>Pure Hosting</title>
+|     <script language="javascript" type="text/javascript" src="/javascript/common.js?1519907633"/></script>
+|     <script language="javascript" type="text/javascript" src="/javascript/externals/prototype.js?1519907633"/></script>
+|     </head><body onLoad=";top.location='/login
+|   HTTPOptions: 
+|     HTTP/1.1 405 Not Allowed
+|     Server: sw-cp-server
+|     Date: Sat, 16 Mar 2019 18:49:12 GMT
+|     Content-Type: text/html
+|     Content-Length: 2654
+|     Connection: close
+|     ETag: "59dded4e-a5e"
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <meta charset="utf-8">
+|     <meta http-equiv="x-ua-compatible" content="ie=edge">
+|     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+|     <title>405 Method Not Allowed</title>
+|     <link rel="stylesheet" href="/error_docs/styles.css">
+|     </head>
+|     <body>
+|     <div class="page">
+|     <div class="main">
+|     <div class="error-description">
+|     <h1>Server Error</h1>
+|     <div class="error-code">405</div>
+|     <h2>Method Not Allowed</h2>
+|     class="lead">The HTTP verb used to access this page is not allowed.</p>
+|     <hr/>
+|_    <p>If you think this is an error, please <a href="https://www.plesk.com/bug
+|_http-server-header: sw-cp-server
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+8880/tcp open  cddbp-alt?
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Server: sw-cp-server
+|     Date: Sat, 16 Mar 2019 18:49:06 GMT
+|     Content-Type: text/html
+|     Content-Length: 2644
+|     Connection: close
+|     ETag: "59dded4e-a54"
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <meta charset="utf-8">
+|     <meta http-equiv="x-ua-compatible" content="ie=edge">
+|     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+|     <title>404 Not Found</title>
+|     <link rel="stylesheet" href="/error_docs/styles.css">
+|     </head>
+|     <body>
+|     <div class="page">
+|     <div class="main">
+|     <div class="error-description">
+|     <h1>Server Error</h1>
+|     <div class="error-code">404</div>
+|     <h2>Page Not Found</h2>
+|     class="lead">This page either doesn't exist, or it moved somewhere else.</p>
+|     <hr/>
+|     <p>If you think this is an error, please <a href="https://www.plesk.com/bug-report/"
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Server: sw-cp-server
+|     Date: Sat, 16 Mar 2019 18:49:06 GMT
+|     Content-Type: text/html; charset=UTF-8
+|     Connection: close
+|     Expires: Fri, 28 May 1999 00:00:00 GMT
+|     Last-Modified: Sat, 16 Mar 2019 18:49:06 GMT
+|     Cache-Control: no-store, no-cache, must-revalidate
+|     Cache-Control: post-check=0, pre-check=0
+|     Pragma: no-cache
+|     P3P: CP="NON COR CURa ADMa OUR NOR UNI COM NAV STA"
+|     <html><head>
+|     <meta charset="utf-8">
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+|     <meta name="plesk-build" content="1708180301.19">
+|     <title>Pure Hosting</title>
+|     <script language="javascript" type="text/javascript" src="/javascript/common.js?1519907633"/></script>
+|     <script language="javascript" type="text/javascript" src="/javascript/externals/prototype.js?1519907633"/></script>
+|_    </head><body onLoad=";top.location='/login
+3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port53-TCP:V=7.70%I=7%D=3/16%Time=5C8D4522%P=x86_64-unknown-linux-gnu%r
+SF:(DNSVersionBindReqTCP,3F,"\0=\0\x06\x85\0\0\x01\0\x01\0\x01\0\0\x07vers
+SF:ion\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\x05\x04none\xc0
+SF:\x0c\0\x02\0\x03\0\0\0\0\0\x02\xc0\x0c");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D4524%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,6CE,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20sw-cp-ser
+SF:ver\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2018:49:12\x20GMT\r\nContent
+SF:-Type:\x20text/html;\x20charset=UTF-8\r\nConnection:\x20close\r\nExpire
+SF:s:\x20Fri,\x2028\x20May\x201999\x2000:00:00\x20GMT\r\nLast-Modified:\x2
+SF:0Sat,\x2016\x20Mar\x202019\x2018:49:12\x20GMT\r\nCache-Control:\x20no-s
+SF:tore,\x20no-cache,\x20must-revalidate\r\nCache-Control:\x20post-check=0
+SF:,\x20pre-check=0\r\nPragma:\x20no-cache\r\nP3P:\x20CP=\"NON\x20COR\x20C
+SF:URa\x20ADMa\x20OUR\x20NOR\x20UNI\x20COM\x20NAV\x20STA\"\r\n\r\n\n\x20\x
+SF:20\x20\x20\x20\x20\x20\x20<html><head>\n\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0<meta\x20charset=\"utf-8\">\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20
+SF:http-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge,chrome=1\">\n\x20\x
+SF:20\x20\x20\x20\x20\x20\x20<meta\x20name=\"plesk-build\"\x20content=\"17
+SF:08180301\.19\">\n\x20\x20\x20\x20\x20\x20\x20\x20<title>Pure\x20Hosting
+SF:</title>\n\x20\x20\x20\x20\x20\x20\x20\x20<script\x20language=\"javascr
+SF:ipt\"\x20type=\"text/javascript\"\x20src=\"/javascript/common\.js\?1519
+SF:907633\"/></script>\n\x20\x20\x20\x20\x20\x20\x20\x20<script\x20languag
+SF:e=\"javascript\"\x20type=\"text/javascript\"\x20src=\"/javascript/exter
+SF:nals/prototype\.js\?1519907633\"/></script>\n\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\n\x20\x20\x20\x20\x20\x20\x20\x20</head><body\x20onLoad=\";top\.
+SF:location='/login")%r(HTTPOptions,B0D,"HTTP/1\.1\x20405\x20Not\x20Allowe
+SF:d\r\nServer:\x20sw-cp-server\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x201
+SF:8:49:12\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x202654
+SF:\r\nConnection:\x20close\r\nETag:\x20\"59dded4e-a5e\"\r\n\r\n<!DOCTYPE\
+SF:x20html>\n<html\x20lang=\"en\">\n\x20\x20<head>\n\x20\x20\x20\x20<meta\
+SF:x20charset=\"utf-8\">\n\x20\x20\x20\x20<meta\x20http-equiv=\"x-ua-compa
+SF:tible\"\x20content=\"ie=edge\">\n\x20\x20\x20\x20<meta\x20name=\"viewpo
+SF:rt\"\x20content=\"width=device-width,\x20initial-scale=1,\x20shrink-to-
+SF:fit=no\">\n\x20\x20\x20\x20<title>405\x20Method\x20Not\x20Allowed</titl
+SF:e>\n\x20\x20\x20\x20<link\x20rel=\"stylesheet\"\x20href=\"/error_docs/s
+SF:tyles\.css\">\n\x20\x20</head>\n\x20\x20<body>\n\x20\x20\x20\x20<div\x2
+SF:0class=\"page\">\n\x20\x20\x20\x20\x20\x20<div\x20class=\"main\">\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20<div\x20class=\"error-description\">\n\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20<h1>Server\x20Error</h1>\n\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\"error-code\">405</div>\n\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h2>Method\x20Not\x20Allowed</h2
+SF:>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\"lead\">The\x20
+SF:HTTP\x20verb\x20used\x20to\x20access\x20this\x20page\x20is\x20not\x20al
+SF:lowed\.</p>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<hr/>\n\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20<p>If\x20you\x20think\x20this\x20is\x20an\
+SF:x20error,\x20please\x20<a\x20href=\"https://www\.plesk\.com/bug");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8880-TCP:V=7.70%I=7%D=3/16%Time=5C8D451E%P=x86_64-unknown-linux-gnu
+SF:%r(GetRequest,6CE,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20sw-cp-server\r\
+SF:nDate:\x20Sat,\x2016\x20Mar\x202019\x2018:49:06\x20GMT\r\nContent-Type:
+SF:\x20text/html;\x20charset=UTF-8\r\nConnection:\x20close\r\nExpires:\x20
+SF:Fri,\x2028\x20May\x201999\x2000:00:00\x20GMT\r\nLast-Modified:\x20Sat,\
+SF:x2016\x20Mar\x202019\x2018:49:06\x20GMT\r\nCache-Control:\x20no-store,\
+SF:x20no-cache,\x20must-revalidate\r\nCache-Control:\x20post-check=0,\x20p
+SF:re-check=0\r\nPragma:\x20no-cache\r\nP3P:\x20CP=\"NON\x20COR\x20CURa\x2
+SF:0ADMa\x20OUR\x20NOR\x20UNI\x20COM\x20NAV\x20STA\"\r\n\r\n\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20<html><head>\n\x20\x20\x20\x20\x20\x20\x20\x20<meta
+SF:\x20charset=\"utf-8\">\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20http-e
+SF:quiv=\"X-UA-Compatible\"\x20content=\"IE=edge,chrome=1\">\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20<meta\x20name=\"plesk-build\"\x20content=\"17081803
+SF:01\.19\">\n\x20\x20\x20\x20\x20\x20\x20\x20<title>Pure\x20Hosting</titl
+SF:e>\n\x20\x20\x20\x20\x20\x20\x20\x20<script\x20language=\"javascript\"\
+SF:x20type=\"text/javascript\"\x20src=\"/javascript/common\.js\?1519907633
+SF:\"/></script>\n\x20\x20\x20\x20\x20\x20\x20\x20<script\x20language=\"ja
+SF:vascript\"\x20type=\"text/javascript\"\x20src=\"/javascript/externals/p
+SF:rototype\.js\?1519907633\"/></script>\n\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\n\x20\x20\x20\x20\x20\x20\x20\x20</head><body\x20onLoad=\";top\.locati
+SF:on='/login")%r(FourOhFourRequest,B01,"HTTP/1\.1\x20404\x20Not\x20Found\
+SF:r\nServer:\x20sw-cp-server\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2018:
+SF:49:06\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x202644\r
+SF:\nConnection:\x20close\r\nETag:\x20\"59dded4e-a54\"\r\n\r\n<!DOCTYPE\x2
+SF:0html>\n<html\x20lang=\"en\">\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x2
+SF:0charset=\"utf-8\">\n\x20\x20\x20\x20<meta\x20http-equiv=\"x-ua-compati
+SF:ble\"\x20content=\"ie=edge\">\n\x20\x20\x20\x20<meta\x20name=\"viewport
+SF:\"\x20content=\"width=device-width,\x20initial-scale=1,\x20shrink-to-fi
+SF:t=no\">\n\x20\x20\x20\x20<title>404\x20Not\x20Found</title>\n\x20\x20\x
+SF:20\x20<link\x20rel=\"stylesheet\"\x20href=\"/error_docs/styles\.css\">\
+SF:n\x20\x20</head>\n\x20\x20<body>\n\x20\x20\x20\x20<div\x20class=\"page\
+SF:">\n\x20\x20\x20\x20\x20\x20<div\x20class=\"main\">\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20<div\x20class=\"error-description\">\n\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20<h1>Server\x20Error</h1>\n\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20<div\x20class=\"error-code\">404</div>\n\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20<h2>Page\x20Not\x20Found</h2>\n\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20<p\x20class=\"lead\">This\x20page\x20either\x2
+SF:0doesn't\x20exist,\x20or\x20it\x20moved\x20somewhere\x20else\.</p>\n\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20<hr/>\n\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20<p>If\x20you\x20think\x20this\x20is\x20an\x20error,\x20ple
+SF:ase\x20<a\x20href=\"https://www\.plesk\.com/bug-report/\"\x20");
+Service Info: Hosts: puremsp.uk, srv4,  srv4.pure-host.co.uk; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 20:49:50 2019 -- 1 IP address (1 host up) scanned in 4005.44 seconds

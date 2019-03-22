@@ -1,0 +1,195 @@
+# Nmap 7.70 scan initiated Sat Mar 16 02:57:03 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/beta.companieshouse.gov.uk beta.companieshouse.gov.uk
+Nmap scan report for beta.companieshouse.gov.uk (52.210.110.232)
+Host is up (0.60s latency).
+Other addresses for beta.companieshouse.gov.uk (not scanned): 52.212.161.142 52.212.219.109
+rDNS record for 52.210.110.232: ec2-52-210-110-232.eu-west-1.compute.amazonaws.com
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     Server: awselb/2.0
+|     Date: Sat, 16 Mar 2019 01:39:26 GMT
+|     Content-Type: text/html
+|     Content-Length: 138
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|     </html>
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Sat, 16 Mar 2019 01:39:21 GMT
+|     Content-Length: 0
+|     Connection: close
+|     Location: https://prodblue-chs-chgovuk-1649828585.eu-west-1.elb.amazonaws.com/nice%20ports%2C/Tri%6Eity.txt%2ebak
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Sat, 16 Mar 2019 01:39:18 GMT
+|     Content-Length: 0
+|     Connection: close
+|     Location: https://prodblue-chs-chgovuk-1649828585.eu-west-1.elb.amazonaws.com/
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|     </html>
+|   X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Server: awselb/2.0
+|     Date: Sat, 16 Mar 2019 01:39:20 GMT
+|     Content-Type: text/html
+|     Content-Length: 138
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|_    </html>
+443/tcp open  ssl/https CompaniesHouse
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Sat, 16 Mar 2019 01:39:27 GMT
+|     Content-Type: text/html;charset=UTF-8
+|     Content-Length: 22100
+|     Connection: close
+|     Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+|     Pragma: no-cache
+|     Set-Cookie: sft=; path=/company
+|     Set-Cookie: sft=; path=/company
+|     Set-Cookie: __SID=u0K47aleTGKLxahBwlVWyNbVYsFz+1V0QkBsHTtPXyV/vmcAP2A8pJU; expires=Sat, 16 Mar 2019 02:39:27 GMT; domain=companieshouse.gov.uk; path=/; secure; HttpOnly
+|     Set-Cookie: sft=; path=/company
+|     Strict-Transport-Security: max-age=31536000
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: DENY
+|     Server: CompaniesHouse
+|     <!DOCTYPE html>
+|     <!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]-->
+|     <!--[if gt IE 8]><!--><html lang="en"><!--<![endif]--><head>
+|     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+|     <!-- Company numbers are not taken as a phone number -->
+|   HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Date: Sat, 16 Mar 2019 01:39:32 GMT
+|     Content-Type: text/html;charset=UTF-8
+|     Content-Length: 21461
+|     Connection: close
+|     Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+|     Pragma: no-cache
+|     Set-Cookie: __SID=kiUwq3oUGOpjUDNhbEoeb4FvDMQKI5WD63seBR3o4WHLsc0iwSJUeEE; expires=Sat, 16 Mar 2019 02:39:32 GMT; domain=companieshouse.gov.uk; path=/; secure; HttpOnly
+|     Strict-Transport-Security: max-age=31536000
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: DENY
+|     Server: CompaniesHouse
+|     <!DOCTYPE html>
+|     <!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]-->
+|     <!--[if gt IE 8]><!--><html lang="en"><!--<![endif]--><head>
+|     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+|     <!-- Company numbers are not taken as a phone number -->
+|     <meta name="format-detection" content="telephone=no">
+|_    <title data-id="">Page not found</ti
+|_http-server-header: CompaniesHouse
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8C53C3%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,BD,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20Sa
+SF:t,\x2016\x20Mar\x202019\x2001:39:18\x20GMT\r\nContent-Length:\x200\r\nC
+SF:onnection:\x20close\r\nLocation:\x20https://prodblue-chs-chgovuk-164982
+SF:8585\.eu-west-1\.elb\.amazonaws\.com/\r\n\r\n")%r(HTTPOptions,BD,"HTTP/
+SF:1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20Sat,\x2016\x20Mar\x2020
+SF:19\x2001:39:18\x20GMT\r\nContent-Length:\x200\r\nConnection:\x20close\r
+SF:\nLocation:\x20https://prodblue-chs-chgovuk-1649828585\.eu-west-1\.elb\
+SF:.amazonaws\.com/\r\n\r\n")%r(RTSPRequest,8A,"<html>\r\n<head><title>400
+SF:\x20Bad\x20Request</title></head>\r\n<body\x20bgcolor=\"white\">\r\n<ce
+SF:nter><h1>400\x20Bad\x20Request</h1></center>\r\n</body>\r\n</html>\r\n"
+SF:)%r(X11Probe,120,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20awse
+SF:lb/2\.0\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2001:39:20\x20GMT\r\nCon
+SF:tent-Type:\x20text/html\r\nContent-Length:\x20138\r\nConnection:\x20clo
+SF:se\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r
+SF:\n<body\x20bgcolor=\"white\">\r\n<center><h1>400\x20Bad\x20Request</h1>
+SF:</center>\r\n</body>\r\n</html>\r\n")%r(FourOhFourRequest,E0,"HTTP/1\.1
+SF:\x20301\x20Moved\x20Permanently\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x
+SF:2001:39:21\x20GMT\r\nContent-Length:\x200\r\nConnection:\x20close\r\nLo
+SF:cation:\x20https://prodblue-chs-chgovuk-1649828585\.eu-west-1\.elb\.ama
+SF:zonaws\.com/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\n\r\n")%r(RPCCheck,1
+SF:20,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20awselb/2\.0\r\nDat
+SF:e:\x20Sat,\x2016\x20Mar\x202019\x2001:39:26\x20GMT\r\nContent-Type:\x20
+SF:text/html\r\nContent-Length:\x20138\r\nConnection:\x20close\r\n\r\n<htm
+SF:l>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<body\x20bgc
+SF:olor=\"white\">\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<
+SF:/body>\r\n</html>\r\n")%r(DNSVersionBindReqTCP,120,"HTTP/1\.1\x20400\x2
+SF:0Bad\x20Request\r\nServer:\x20awselb/2\.0\r\nDate:\x20Sat,\x2016\x20Mar
+SF:\x202019\x2001:39:26\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Le
+SF:ngth:\x20138\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>400\
+SF:x20Bad\x20Request</title></head>\r\n<body\x20bgcolor=\"white\">\r\n<cen
+SF:ter><h1>400\x20Bad\x20Request</h1></center>\r\n</body>\r\n</html>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8C53CD%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,2D53,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2016\
+SF:x20Mar\x202019\x2001:39:27\x20GMT\r\nContent-Type:\x20text/html;charset
+SF:=UTF-8\r\nContent-Length:\x2022100\r\nConnection:\x20close\r\nCache-Con
+SF:trol:\x20no-store,\x20no-cache,\x20must-revalidate,\x20post-check=0,\x2
+SF:0pre-check=0\r\nPragma:\x20no-cache\r\nSet-Cookie:\x20sft=;\x20path=/co
+SF:mpany\r\nSet-Cookie:\x20sft=;\x20path=/company\r\nSet-Cookie:\x20__SID=
+SF:u0K47aleTGKLxahBwlVWyNbVYsFz\+1V0QkBsHTtPXyV/vmcAP2A8pJU;\x20expires=Sa
+SF:t,\x2016\x20Mar\x202019\x2002:39:27\x20GMT;\x20domain=companieshouse\.g
+SF:ov\.uk;\x20path=/;\x20secure;\x20HttpOnly\r\nSet-Cookie:\x20sft=;\x20pa
+SF:th=/company\r\nStrict-Transport-Security:\x20max-age=31536000\r\nX-Cont
+SF:ent-Type-Options:\x20nosniff\r\nX-Frame-Options:\x20DENY\r\nServer:\x20
+SF:CompaniesHouse\r\n\r\n<!DOCTYPE\x20html>\n<!--\[if\x20lt\x20IE\x209\]><
+SF:html\x20class=\"lte-ie8\"\x20lang=\"en\"><!\[endif\]-->\n<!--\[if\x20gt
+SF:\x20IE\x208\]><!--><html\x20lang=\"en\"><!--<!\[endif\]--><head>\n\x20\
+SF:x20\x20<meta\x20http-equiv=\"content-type\"\x20content=\"text/html;\x20
+SF:charset=UTF-8\">\n<!--\x20Company\x20numbers\x20are\x20not\x20taken\x20
+SF:as\x20a\x20phone\x20number\x20-->\n\x20\x20\x20<m")%r(HTTPOptions,31A4,
+SF:"HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:\x20Sat,\x2016\x20Mar\x202019
+SF:\x2001:39:32\x20GMT\r\nContent-Type:\x20text/html;charset=UTF-8\r\nCont
+SF:ent-Length:\x2021461\r\nConnection:\x20close\r\nCache-Control:\x20no-st
+SF:ore,\x20no-cache,\x20must-revalidate,\x20post-check=0,\x20pre-check=0\r
+SF:\nPragma:\x20no-cache\r\nSet-Cookie:\x20__SID=kiUwq3oUGOpjUDNhbEoeb4FvD
+SF:MQKI5WD63seBR3o4WHLsc0iwSJUeEE;\x20expires=Sat,\x2016\x20Mar\x202019\x2
+SF:002:39:32\x20GMT;\x20domain=companieshouse\.gov\.uk;\x20path=/;\x20secu
+SF:re;\x20HttpOnly\r\nStrict-Transport-Security:\x20max-age=31536000\r\nX-
+SF:Content-Type-Options:\x20nosniff\r\nX-Frame-Options:\x20DENY\r\nServer:
+SF:\x20CompaniesHouse\r\n\r\n<!DOCTYPE\x20html>\n<!--\[if\x20lt\x20IE\x209
+SF:\]><html\x20class=\"lte-ie8\"\x20lang=\"en\"><!\[endif\]-->\n<!--\[if\x
+SF:20gt\x20IE\x208\]><!--><html\x20lang=\"en\"><!--<!\[endif\]--><head>\n\
+SF:x20\x20\x20<meta\x20http-equiv=\"content-type\"\x20content=\"text/html;
+SF:\x20charset=UTF-8\">\n<!--\x20Company\x20numbers\x20are\x20not\x20taken
+SF:\x20as\x20a\x20phone\x20number\x20-->\n\x20\x20\x20<meta\x20name=\"form
+SF:at-detection\"\x20content=\"telephone=no\">\n\n\x20\x20\x20<title\x20da
+SF:ta-id=\"\">Page\x20not\x20found</ti");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 03:40:32 2019 -- 1 IP address (1 host up) scanned in 2608.62 seconds

@@ -1,0 +1,125 @@
+# Nmap 7.70 scan initiated Sat Mar 16 14:27:35 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/northwestvotes.gov.uk northwestvotes.gov.uk
+Nmap scan report for northwestvotes.gov.uk (94.236.91.9)
+Host is up (0.074s latency).
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      Web Server
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 500 Internal Server Error
+|     Date: Sat, 16 Mar 2019 12:31:49 GMT
+|     Server: Web Server
+|     X-Frame-Options: SAMEORIGIN
+|     Node: mcc-2
+|     Vary: Accept-Encoding
+|     Content-Length: 0
+|     Connection: close
+|     Content-Type: text/html; charset=UTF-8
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 500 Internal Server Error
+|     Date: Sat, 16 Mar 2019 12:31:43 GMT
+|     Server: Web Server
+|     X-Frame-Options: SAMEORIGIN
+|     Node: mcc-2
+|     Vary: Accept-Encoding
+|     Content-Length: 0
+|     Connection: close
+|     Content-Type: text/html; charset=UTF-8
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 16 Mar 2019 12:31:44 GMT
+|     Server: Web Server
+|     X-Frame-Options: SAMEORIGIN
+|     Vary: Accept-Encoding
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|_    </body></html>
+|_http-server-header: Web Server
+443/tcp open  ssl/https Web Server
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 500 Internal Server Error
+|     Date: Sat, 16 Mar 2019 12:32:00 GMT
+|     Server: Web Server
+|     X-Frame-Options: SAMEORIGIN
+|     Node: mcc-2
+|     Vary: Accept-Encoding
+|     Content-Length: 0
+|     Connection: close
+|     Content-Type: text/html; charset=UTF-8
+|   GetRequest: 
+|     HTTP/1.1 500 Internal Server Error
+|     Date: Sat, 16 Mar 2019 12:31:51 GMT
+|     Server: Web Server
+|     X-Frame-Options: SAMEORIGIN
+|     Node: mcc-1
+|     Vary: Accept-Encoding
+|     Content-Length: 0
+|     Connection: close
+|_    Content-Type: text/html; charset=UTF-8
+|_http-server-header: Web Server
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: indeterminate
+|     cipher preference error: Too few ciphers supported
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: indeterminate
+|     cipher preference error: Too few ciphers supported
+|_  least strength: A
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8CECAB%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,EE,"HTTP/1\.1\x20500\x20Internal\x20Server\x20Error\r\nDate
+SF::\x20Sat,\x2016\x20Mar\x202019\x2012:31:43\x20GMT\r\nServer:\x20Web\x20
+SF:Server\r\nX-Frame-Options:\x20SAMEORIGIN\r\nNode:\x20mcc-2\r\nVary:\x20
+SF:Accept-Encoding\r\nContent-Length:\x200\r\nConnection:\x20close\r\nCont
+SF:ent-Type:\x20text/html;\x20charset=UTF-8\r\n\r\n")%r(HTTPOptions,EE,"HT
+SF:TP/1\.1\x20500\x20Internal\x20Server\x20Error\r\nDate:\x20Sat,\x2016\x2
+SF:0Mar\x202019\x2012:31:43\x20GMT\r\nServer:\x20Web\x20Server\r\nX-Frame-
+SF:Options:\x20SAMEORIGIN\r\nNode:\x20mcc-2\r\nVary:\x20Accept-Encoding\r\
+SF:nContent-Length:\x200\r\nConnection:\x20close\r\nContent-Type:\x20text/
+SF:html;\x20charset=UTF-8\r\n\r\n")%r(RTSPRequest,1C0,"HTTP/1\.1\x20400\x2
+SF:0Bad\x20Request\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2012:31:44\x20GM
+SF:T\r\nServer:\x20Web\x20Server\r\nX-Frame-Options:\x20SAMEORIGIN\r\nVary
+SF::\x20Accept-Encoding\r\nContent-Length:\x20226\r\nConnection:\x20close\
+SF:r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x
+SF:20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>
+SF:\n<title>400\x20Bad\x20Request</title>\n</head><body>\n<h1>Bad\x20Reque
+SF:st</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\x20that\x20this\x20
+SF:server\x20could\x20not\x20understand\.<br\x20/>\n</p>\n</body></html>\n
+SF:")%r(FourOhFourRequest,EE,"HTTP/1\.1\x20500\x20Internal\x20Server\x20Er
+SF:ror\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2012:31:49\x20GMT\r\nServer:
+SF:\x20Web\x20Server\r\nX-Frame-Options:\x20SAMEORIGIN\r\nNode:\x20mcc-2\r
+SF:\nVary:\x20Accept-Encoding\r\nContent-Length:\x200\r\nConnection:\x20cl
+SF:ose\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CECB3%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,EE,"HTTP/1\.1\x20500\x20Internal\x20Server\x20Error\
+SF:r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2012:31:51\x20GMT\r\nServer:\x20
+SF:Web\x20Server\r\nX-Frame-Options:\x20SAMEORIGIN\r\nNode:\x20mcc-1\r\nVa
+SF:ry:\x20Accept-Encoding\r\nContent-Length:\x200\r\nConnection:\x20close\
+SF:r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\n\r\n")%r(FourOhFourR
+SF:equest,EE,"HTTP/1\.1\x20500\x20Internal\x20Server\x20Error\r\nDate:\x20
+SF:Sat,\x2016\x20Mar\x202019\x2012:32:00\x20GMT\r\nServer:\x20Web\x20Serve
+SF:r\r\nX-Frame-Options:\x20SAMEORIGIN\r\nNode:\x20mcc-2\r\nVary:\x20Accep
+SF:t-Encoding\r\nContent-Length:\x200\r\nConnection:\x20close\r\nContent-T
+SF:ype:\x20text/html;\x20charset=UTF-8\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 14:32:26 2019 -- 1 IP address (1 host up) scanned in 291.66 seconds

@@ -1,0 +1,43 @@
+# Nmap 7.70 scan initiated Sat Mar 16 16:27:04 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/rosstc-herefordshire.gov.uk rosstc-herefordshire.gov.uk
+Warning: 195.171.90.19 giving up on port because retransmission cap hit (6).
+Nmap scan report for rosstc-herefordshire.gov.uk (195.171.90.19)
+Host is up (0.064s latency).
+rDNS record for 195.171.90.19: mimas.wyehost.net
+Not shown: 62867 closed ports, 2664 filtered ports
+PORT    STATE SERVICE VERSION
+21/tcp  open  ftp     Solaris ftpd
+|_banner: 220 mimas FTP server ready.
+22/tcp  open  ssh?
+80/tcp  open  http    Apache httpd
+111/tcp open  rpcbind 2-4 (RPC #100000)
+443/tcp open  https   Apache
+| fingerprint-strings: 
+|   SSLSessionReq, TLSSessionReq: 
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>403 Forbidden</title>
+|     </head><body>
+|     <h1>Forbidden</h1>
+|     <p>You don't have permission to access /
+|     this server.</p>
+|     <hr>
+|     <address>Apache Server at mimas.wyehosts.net Port 80</address>
+|_    </body></html>
+|_http-server-header: Apache
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.70%I=7%D=3/16%Time=5C8D0FA6%P=x86_64-unknown-linux-gnu%
+SF:r(SSLSessionReq,10E,"<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20H
+SF:TML\x202\.0//EN\">\n<html><head>\n<title>403\x20Forbidden</title>\n</he
+SF:ad><body>\n<h1>Forbidden</h1>\n<p>You\x20don't\x20have\x20permission\x2
+SF:0to\x20access\x20/\non\x20this\x20server\.</p>\n<hr>\n<address>Apache\x
+SF:20Server\x20at\x20mimas\.wyehosts\.net\x20Port\x2080</address>\n</body>
+SF:</html>\n")%r(TLSSessionReq,10E,"<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IE
+SF:TF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>403\x20Forbidden</
+SF:title>\n</head><body>\n<h1>Forbidden</h1>\n<p>You\x20don't\x20have\x20p
+SF:ermission\x20to\x20access\x20/\non\x20this\x20server\.</p>\n<hr>\n<addr
+SF:ess>Apache\x20Server\x20at\x20mimas\.wyehosts\.net\x20Port\x2080</addre
+SF:ss>\n</body></html>\n");
+Service Info: Host: mimas; OS: Solaris; CPE: cpe:/o:sun:sunos
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 17:02:16 2019 -- 1 IP address (1 host up) scanned in 2112.61 seconds

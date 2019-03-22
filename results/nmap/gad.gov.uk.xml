@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 09:07:22 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/gad.gov.uk gad.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/gad.gov.uk gad.gov.uk" start="1552720042" startstr="Sat Mar 16 09:07:22 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552720043" endtime="1552722794"><status state="up" reason="syn-ack" reason_ttl="50"/>
+<address addr="217.72.181.189" addrtype="ipv4"/>
+<hostnames>
+<hostname name="gad.gov.uk" type="user"/>
+<hostname name="217-72-181-189.no-dns-yet.hotchilli.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65532">
+<extrareasons reason="no-responses" count="65532"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="ftp" product="vsftpd" version="2.0.5" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:2.0.5</cpe></service><script id="banner" output="220 (vsFTPd 2.0.5)"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="http" product="Apache httpd" version="2.2.25" extrainfo="(Unix) mod_ssl/2.2.25 OpenSSL/0.9.8e-fips-rhel5 DAV/2 PHP/5.4.20" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.25</cpe></service></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="19"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="http" product="Apache httpd" version="2.2.25" extrainfo="mod_ssl/2.2.25 OpenSSL/0.9.8e-fips-rhel5 DAV/2 PHP/5.4.20" hostname="217.72.181.189" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.25</cpe></service></port>
+</ports>
+<times srtt="76966" rttvar="20374" to="158462"/>
+</host>
+<runstats><finished time="1552722794" timestr="Sat Mar 16 09:53:14 2019" elapsed="2752.47" summary="Nmap done at Sat Mar 16 09:53:14 2019; 1 IP address (1 host up) scanned in 2752.47 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

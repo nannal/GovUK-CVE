@@ -1,0 +1,76 @@
+# Nmap 7.70 scan initiated Sat Mar 16 12:03:11 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/lintoncambridgeshire-pc.gov.uk lintoncambridgeshire-pc.gov.uk
+Nmap scan report for lintoncambridgeshire-pc.gov.uk (109.108.129.32)
+Host is up (0.072s latency).
+rDNS record for 109.108.129.32: mail.autosend.co.uk
+Not shown: 65514 filtered ports
+PORT      STATE  SERVICE      VERSION
+20/tcp    closed ftp-data
+21/tcp    open   ftp          ProFTPD
+|_banner: 220 ProFTPD Server (ProFTPD) [109.108.129.32]
+80/tcp    open   http         Apache httpd (PleskLin)
+|_http-server-header: Apache
+110/tcp   open   pop3         Courier pop3d
+143/tcp   open   imap         Courier Imapd (released 2017)
+| banner: * OK [CAPABILITY IMAP4rev1 UIDPLUS CHILDREN NAMESPACE THREAD=OR
+|_DEREDSUBJECT THREAD=REFERENCES SORT QUOTA AUTH=CRAM-MD5 AUTH=CRAM-SH...
+443/tcp   open   ssl/http     Apache httpd
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+587/tcp   open   smtp         Postfix smtpd
+2020/tcp  open   ssh          OpenSSH 5.3 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_5.3
+2082/tcp  closed infowave
+2083/tcp  closed radsec
+2086/tcp  closed gnunet
+2087/tcp  closed eli
+2095/tcp  closed nbx-ser
+2096/tcp  closed nbx-dir
+3306/tcp  open   mysql        MySQL 5.1.73
+| banner: 4\x00\x00\x00\x0A5.1.73\x00!\xA9\xA1\x034&a7-y@p\x00\xFF\xF7\x0
+|_8\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x005S&b:<\...
+5224/tcp  closed hpvirtctrl
+8090/tcp  closed opsmessaging
+8091/tcp  closed jamlink
+8443/tcp  open   ssl/http     sw-cp-server httpd (Plesk Onyx 17.8.11)
+|_http-server-header: sw-cp-server
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+| 
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA and TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: C
+11444/tcp closed unknown
+55443/tcp closed unknown
+65443/tcp closed unknown
+Service Info: Hosts: localhost.localdomain, hub.wombatcms.com,  mail.autosend.co.uk
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 12:22:08 2019 -- 1 IP address (1 host up) scanned in 1136.65 seconds

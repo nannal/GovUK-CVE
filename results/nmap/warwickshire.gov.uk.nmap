@@ -1,0 +1,216 @@
+# Nmap 7.70 scan initiated Sat Mar 16 20:47:22 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/warwickshire.gov.uk warwickshire.gov.uk
+Nmap scan report for warwickshire.gov.uk (195.225.188.170)
+Host is up (0.063s latency).
+rDNS record for 195.225.188.170: www.warwickshire.gov.uk
+Not shown: 65533 filtered ports
+PORT     STATE  SERVICE   VERSION
+80/tcp   open   http
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 302 Found
+|     Date: Sat, 16 Mar 2019 19:04:09 GMT
+|     Location: https://www.warwickshire.gov.uk/invest/
+|     Content-Length: 223
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>302 Found</title>
+|     </head><body>
+|     <h1>Found</h1>
+|     <p>The document has moved <a href="https://www.warwickshire.gov.uk/invest/">here</a>.</p>
+|     </body></html>
+|   HTTPOptions: 
+|     HTTP/1.1 302 Found
+|     Date: Sat, 16 Mar 2019 19:04:10 GMT
+|     Location: https://www.warwickshire.gov.uk/invest/
+|     Content-Length: 223
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>302 Found</title>
+|     </head><body>
+|     <h1>Found</h1>
+|     <p>The document has moved <a href="https://www.warwickshire.gov.uk/invest/">here</a>.</p>
+|     </body></html>
+|   RPCCheck, X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: Close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <HTML><HEAD>
+|     <TITLE>400 Bad Request</TITLE>
+|     </HEAD><BODY>
+|     <H1>Bad Request</H1>
+|     Your browser sent a request that this server could not understand.<P><HR>
+|     </BODY></HTML>
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 16 Mar 2019 19:04:10 GMT
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|_    </body></html>
+443/tcp  open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Date: Sat, 16 Mar 2019 19:04:18 GMT
+|     Content-Length: 271
+|     Content-Type: text/html; charset=iso-8859-1
+|     Connection: close
+|     Strict-Transport-Security: max-age=31536000
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>404 Not Found</title>
+|     </head><body>
+|     <h1>Not Found</h1>
+|     <p>The requested URL /35cdf335-3532-4704-82f3-37b57cade7d0/home.htmlnice ports,/Trinity.txt.bak was not found on this server.</p>
+|     </body></html>
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Sat, 16 Mar 2019 19:04:16 GMT
+|     Last-Modified: Wed, 20 Feb 2019 09:25:08 GMT
+|     Accept-Ranges: bytes
+|     Content-Length: 54950
+|     Content-Type: text/html; charset=UTF-8
+|     Connection: close
+|     Strict-Transport-Security: max-age=31536000
+|     <!DOCTYPE html>
+|     <!--[if lt IE 7]> <html class="lt-ie10 lt-ie9 lt-ie8 lt-ie7 no-js" lang="en"> <![endif]-->
+|     <!--[if IE 7]> <html class="lt-ie10 lt-ie9 lt-ie8 no-js" lang="en"> <![endif]-->
+|     <!--[if IE 8]> <html class="lt-ie10 lt-ie9 no-js" lang="en"> <![endif]-->
+|     <!--[if IE 9]> <html class="lt-ie10 no-js" lang="en"> <![endif]-->
+|     <!--[if gt IE 9]><!-->
+|     <html class=" no-js" lang="en">
+|     <!--<![endif]-->
+|     <head>
+|     <meta charset="UTF-8">
+|     <title>Home Page - Warwickshire County Council</title>
+|     <meta http-equiv="x-ua-compatible" content="ie=edge">
+|     <meta name="viewport" content="width=device-width, initial-scale=
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Sat, 16 Mar 2019 19:04:16 GMT
+|     Allow: GET,HEAD,POST,OPTIONS
+|     Content-Length: 0
+|     Content-Type: text/html; charset=UTF-8
+|     Connection: close
+|_    Strict-Transport-Security: max-age=31536000
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+8200/tcp closed trivnet1
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8D48A5%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,1A2,"HTTP/1\.1\x20302\x20Found\r\nDate:\x20Sat,\x2016\x20Ma
+SF:r\x202019\x2019:04:09\x20GMT\r\nLocation:\x20https://www\.warwickshire\
+SF:.gov\.uk/invest/\r\nContent-Length:\x20223\r\nConnection:\x20close\r\nC
+SF:ontent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HT
+SF:ML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<t
+SF:itle>302\x20Found</title>\n</head><body>\n<h1>Found</h1>\n<p>The\x20doc
+SF:ument\x20has\x20moved\x20<a\x20href=\"https://www\.warwickshire\.gov\.u
+SF:k/invest/\">here</a>\.</p>\n</body></html>\n")%r(HTTPOptions,1A2,"HTTP/
+SF:1\.1\x20302\x20Found\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2019:04:10\
+SF:x20GMT\r\nLocation:\x20https://www\.warwickshire\.gov\.uk/invest/\r\nCo
+SF:ntent-Length:\x20223\r\nConnection:\x20close\r\nContent-Type:\x20text/h
+SF:tml;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//I
+SF:ETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>302\x20Found</tit
+SF:le>\n</head><body>\n<h1>Found</h1>\n<p>The\x20document\x20has\x20moved\
+SF:x20<a\x20href=\"https://www\.warwickshire\.gov\.uk/invest/\">here</a>\.
+SF:</p>\n</body></html>\n")%r(RTSPRequest,178,"HTTP/1\.1\x20400\x20Bad\x20
+SF:Request\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2019:04:10\x20GMT\r\nCon
+SF:tent-Length:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/ht
+SF:ml;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IE
+SF:TF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Requ
+SF:est</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser
+SF:\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x20not\x20u
+SF:nderstand\.<br\x20/>\n</p>\n</body></html>\n")%r(X11Probe,104,"HTTP/1\.
+SF:1\x20400\x20Bad\x20Request\r\nConnection:\x20Close\r\nContent-Type:\x20
+SF:text/html;\x20charset=iso-8859-1\r\n\r\n<HTML><HEAD>\n<TITLE>400\x20Bad
+SF:\x20Request</TITLE>\n</HEAD><BODY>\n<H1>Bad\x20Request</H1>\nYour\x20br
+SF:owser\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x20not
+SF:\x20understand\.<P><HR>\n</BODY></HTML>\n")%r(RPCCheck,104,"HTTP/1\.1\x
+SF:20400\x20Bad\x20Request\r\nConnection:\x20Close\r\nContent-Type:\x20tex
+SF:t/html;\x20charset=iso-8859-1\r\n\r\n<HTML><HEAD>\n<TITLE>400\x20Bad\x2
+SF:0Request</TITLE>\n</HEAD><BODY>\n<H1>Bad\x20Request</H1>\nYour\x20brows
+SF:er\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x20not\x2
+SF:0understand\.<P><HR>\n</BODY></HTML>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D48AB%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,20FB,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2016\
+SF:x20Mar\x202019\x2019:04:16\x20GMT\r\nLast-Modified:\x20Wed,\x2020\x20Fe
+SF:b\x202019\x2009:25:08\x20GMT\r\nAccept-Ranges:\x20bytes\r\nContent-Leng
+SF:th:\x2054950\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nConnect
+SF:ion:\x20close\r\nStrict-Transport-Security:\x20max-age=31536000\r\n\r\n
+SF:<!DOCTYPE\x20html>\n<!--\[if\x20lt\x20IE\x207\]>\x20\x20\x20\x20\x20\x2
+SF:0\x20<html\x20class=\"lt-ie10\x20lt-ie9\x20lt-ie8\x20lt-ie7\x20no-js\"\
+SF:x20lang=\"en\">\x20<!\[endif\]-->\n<!--\[if\x20IE\x207\]>\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20<html\x20class=\"lt-ie10\x20lt-ie9\x20lt-ie8\
+SF:x20no-js\"\x20lang=\"en\">\x20<!\[endif\]-->\n<!--\[if\x20IE\x208\]>\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20<html\x20class=\"lt-ie10\x20lt-ie9
+SF:\x20no-js\"\x20lang=\"en\">\x20<!\[endif\]-->\n<!--\[if\x20IE\x209\]>\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20<html\x20class=\"lt-ie10\x20no-js
+SF:\"\x20lang=\"en\">\x20<!\[endif\]-->\n<!--\[if\x20gt\x20IE\x209\]><!-->
+SF:\n<html\x20class=\"\x20no-js\"\x20lang=\"en\">\n<!--<!\[endif\]-->\n\n<
+SF:head>\n\x20\x20<meta\x20charset=\"UTF-8\">\n\n\x20\x20<title>Home\x20Pa
+SF:ge\x20-\x20Warwickshire\x20County\x20Council</title>\n\n\x20\x20<meta\x
+SF:20http-equiv=\"x-ua-compatible\"\x20content=\"ie=edge\">\n\x20\x20<meta
+SF:\x20name=\"viewport\"\x20content=\"width=device-width,\x20initial-scale
+SF:=")%r(HTTPOptions,D1,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2016\x20
+SF:Mar\x202019\x2019:04:16\x20GMT\r\nAllow:\x20GET,HEAD,POST,OPTIONS\r\nCo
+SF:ntent-Length:\x200\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nC
+SF:onnection:\x20close\r\nStrict-Transport-Security:\x20max-age=31536000\r
+SF:\n\r\n")%r(FourOhFourRequest,1D0,"HTTP/1\.1\x20404\x20Not\x20Found\r\nD
+SF:ate:\x20Sat,\x2016\x20Mar\x202019\x2019:04:18\x20GMT\r\nContent-Length:
+SF:\x20271\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\nConnect
+SF:ion:\x20close\r\nStrict-Transport-Security:\x20max-age=31536000\r\n\r\n
+SF:<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<
+SF:html><head>\n<title>404\x20Not\x20Found</title>\n</head><body>\n<h1>Not
+SF:\x20Found</h1>\n<p>The\x20requested\x20URL\x20/35cdf335-3532-4704-82f3-
+SF:37b57cade7d0/home\.htmlnice\x20ports,/Trinity\.txt\.bak\x20was\x20not\x
+SF:20found\x20on\x20this\x20server\.</p>\n</body></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 21:05:41 2019 -- 1 IP address (1 host up) scanned in 1098.64 seconds

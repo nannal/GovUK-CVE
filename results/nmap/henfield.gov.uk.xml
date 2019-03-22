@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 10:06:15 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/henfield.gov.uk henfield.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/henfield.gov.uk henfield.gov.uk" start="1552723575" startstr="Sat Mar 16 10:06:15 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552723575" endtime="1552724749"><status state="up" reason="echo-reply" reason_ttl="84"/>
+<address addr="199.116.77.19" addrtype="ipv4"/>
+<hostnames>
+<hostname name="henfield.gov.uk" type="user"/>
+<hostname name="lamp108.cloudaccess.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65524">
+<extrareasons reason="no-responses" count="64762"/>
+<extrareasons reason="host-prohibiteds" count="762"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="84"/><service name="ftp" product="ProFTPD or KnFTPD" ostype="Unix" method="probed" conf="10"/><script id="banner" output="220 FTP Server ready."/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="84"/><service name="ssh" product="OpenSSH" version="5.3" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:5.3</cpe></service></port>
+<port protocol="tcp" portid="70"><state state="open" reason="syn-ack" reason_ttl="84"/><service name="http" product="lighttpd" version="1.4.47" method="probed" conf="10"><cpe>cpe:/a:lighttpd:lighttpd:1.4.47</cpe></service><script id="http-server-header" output="lighttpd/1.4.47"><elem>lighttpd/1.4.47</elem>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="84"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+<port protocol="tcp" portid="81"><state state="closed" reason="reset" reason_ttl="84"/><service name="hosts2-ns" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="84"/><service name="http" product="Apache httpd" hostname="escuelamontana.org" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;  least strength: C"><table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">C</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+</table>
+</table>
+<elem key="least strength">C</elem>
+</script></port>
+<port protocol="tcp" portid="444"><state state="closed" reason="reset" reason_ttl="84"/><service name="snpp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="1311"><state state="open" reason="syn-ack" reason_ttl="84"/><service name="rxmon" servicefp="SF-Port1311-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CB297%P=x86_64-unknown-linux-gnu%r(GetRequest,101D,&quot;HTTP/1\.1\x20200\x20\r\nStrict-Transport-Security:\x20max-age=0\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nVary:\x20Accept-Encoding\r\nContent-Type:\x20text/html;charset=UTF-8\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2008:23:55\x20GMT\r\nConnection:\x20close\r\n\r\n&lt;!DOCTYPE\x20html\x20PUBLIC\x20\&quot;-//W3C//DTD\x20XHTML\x201\.0\x20Strict//EN\&quot;\x20\&quot;http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-strict\.dtd\&quot;&gt;\n&lt;html&gt;\n&lt;head&gt;\n&lt;META\x20http-equiv=\&quot;Content-Type\&quot;\x20content=\&quot;text/html;\x20charset=UTF-8\&quot;&gt;\n&lt;title&gt;OpenManage&amp;trade;&lt;/title&gt;\n&lt;link\x20type=\&quot;text/css\&quot;\x20rel=\&quot;stylesheet\&quot;\x20href=\&quot;/oma/css/loginmaster\.css\&quot;&gt;\n&lt;style\x20type=\&quot;text/css\&quot;&gt;&lt;/style&gt;\n&lt;script\x20type=\&quot;text/javascript\&quot;\x20src=\&quot;/oma/js/prototype\.js\&quot;\x20language=\&quot;javascript\&quot;&gt;&lt;/script&gt;&lt;script\x20type=\&quot;text/javascript\&quot;\x20src=\&quot;/oma/js/gnavbar\.js\&quot;\x20language=\&quot;javascript\&quot;&gt;&lt;/script&gt;&lt;script\x20type=\&quot;text/javascript\&quot;\x20src=\&quot;/oma/js/Clarity\.js\&quot;\x20language=\&quot;javascript\&quot;&gt;&lt;/script&gt;&lt;script\x20language=\&quot;javascript\&quot;&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20&quot;)%r(HTTPOptions,101D,&quot;HTTP/1\.1\x20200\x20\r\nStrict-Transport-Security:\x20max-age=0\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nVary:\x20Accept-Encoding\r\nContent-Type:\x20text/html;charset=UTF-8\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2008:24:02\x20GMT\r\nConnection:\x20close\r\n\r\n&lt;!DOCTYPE\x20html\x20PUBLIC\x20\&quot;-//W3C//DTD\x20XHTML\x201\.0\x20Strict//EN\&quot;\x20\&quot;http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-strict\.dtd\&quot;&gt;\n&lt;html&gt;\n&lt;head&gt;\n&lt;META\x20http-equiv=\&quot;Content-Type\&quot;\x20content=\&quot;text/html;\x20charset=UTF-8\&quot;&gt;\n&lt;title&gt;OpenManage&amp;trade;&lt;/title&gt;\n&lt;link\x20type=\&quot;text/css\&quot;\x20rel=\&quot;stylesheet\&quot;\x20href=\&quot;/oma/css/loginmaster\.css\&quot;&gt;\n&lt;style\x20type=\&quot;text/css\&quot;&gt;&lt;/style&gt;\n&lt;script\x20type=\&quot;text/javascript\&quot;\x20src=\&quot;/oma/js/prototype\.js\&quot;\x20language=\&quot;javascript\&quot;&gt;&lt;/script&gt;&lt;script\x20type=\&quot;text/javascript\&quot;\x20src=\&quot;/oma/js/gnavbar\.js\&quot;\x20language=\&quot;javascript\&quot;&gt;&lt;/script&gt;&lt;script\x20type=\&quot;text/javascript\&quot;\x20src=\&quot;/oma/js/Clarity\.js\&quot;\x20language=\&quot;javascript\&quot;&gt;&lt;/script&gt;&lt;script\x20language=\&quot;javascript\&quot;&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20&quot;);" tunnel="ssl" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  GetRequest: &#xa;    HTTP/1.1 200 &#xa;    Strict-Transport-Security: max-age=0&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    X-Content-Type-Options: nosniff&#xa;    X-XSS-Protection: 1; mode=block&#xa;    Vary: Accept-Encoding&#xa;    Content-Type: text/html;charset=UTF-8&#xa;    Date: Sat, 16 Mar 2019 08:23:55 GMT&#xa;    Connection: close&#xa;    &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head&gt;&#xa;    &lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;&#xa;    &lt;title&gt;OpenManage&amp;trade;&lt;/title&gt;&#xa;    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/oma/css/loginmaster.css&quot;&gt;&#xa;    &lt;style type=&quot;text/css&quot;&gt;&lt;/style&gt;&#xa;    &lt;script type=&quot;text/javascript&quot; src=&quot;/oma/js/prototype.js&quot; language=&quot;javascript&quot;&gt;&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;/oma/js/gnavbar.js&quot; language=&quot;javascript&quot;&gt;&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;/oma/js/Clarity.js&quot; language=&quot;javascript&quot;&gt;&lt;/script&gt;&lt;script language=&quot;javascript&quot;&gt;&#xa;  HTTPOptions: &#xa;    HTTP/1.1 200 &#xa;    Strict-Transport-Security: max-age=0&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    X-Content-Type-Options: nosniff&#xa;    X-XSS-Protection: 1; mode=block&#xa;    Vary: Accept-Encoding&#xa;    Content-Type: text/html;charset=UTF-8&#xa;    Date: Sat, 16 Mar 2019 08:24:02 GMT&#xa;    Connection: close&#xa;    &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head&gt;&#xa;    &lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;&#xa;    &lt;title&gt;OpenManage&amp;trade;&lt;/title&gt;&#xa;    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/oma/css/loginmaster.css&quot;&gt;&#xa;    &lt;style type=&quot;text/css&quot;&gt;&lt;/style&gt;&#xa;    &lt;script type=&quot;text/javascript&quot; src=&quot;/oma/js/prototype.js&quot; language=&quot;javascript&quot;&gt;&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;/oma/js/gnavbar.js&quot; language=&quot;javascript&quot;&gt;&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;/oma/js/Clarity.js&quot; language=&quot;javascript&quot;&gt;&lt;/script&gt;&lt;script language=&quot;javascript&quot;&gt;"><elem key="GetRequest">&#xa;    HTTP/1.1 200 &#xa;    Strict-Transport-Security: max-age=0&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    X-Content-Type-Options: nosniff&#xa;    X-XSS-Protection: 1; mode=block&#xa;    Vary: Accept-Encoding&#xa;    Content-Type: text/html;charset=UTF-8&#xa;    Date: Sat, 16 Mar 2019 08:23:55 GMT&#xa;    Connection: close&#xa;    &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head&gt;&#xa;    &lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;&#xa;    &lt;title&gt;OpenManage&amp;trade;&lt;/title&gt;&#xa;    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/oma/css/loginmaster.css&quot;&gt;&#xa;    &lt;style type=&quot;text/css&quot;&gt;&lt;/style&gt;&#xa;    &lt;script type=&quot;text/javascript&quot; src=&quot;/oma/js/prototype.js&quot; language=&quot;javascript&quot;&gt;&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;/oma/js/gnavbar.js&quot; language=&quot;javascript&quot;&gt;&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;/oma/js/Clarity.js&quot; language=&quot;javascript&quot;&gt;&lt;/script&gt;&lt;script language=&quot;javascript&quot;&gt;</elem>
+<elem key="HTTPOptions">&#xa;    HTTP/1.1 200 &#xa;    Strict-Transport-Security: max-age=0&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    X-Content-Type-Options: nosniff&#xa;    X-XSS-Protection: 1; mode=block&#xa;    Vary: Accept-Encoding&#xa;    Content-Type: text/html;charset=UTF-8&#xa;    Date: Sat, 16 Mar 2019 08:24:02 GMT&#xa;    Connection: close&#xa;    &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head&gt;&#xa;    &lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;&#xa;    &lt;title&gt;OpenManage&amp;trade;&lt;/title&gt;&#xa;    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/oma/css/loginmaster.css&quot;&gt;&#xa;    &lt;style type=&quot;text/css&quot;&gt;&lt;/style&gt;&#xa;    &lt;script type=&quot;text/javascript&quot; src=&quot;/oma/js/prototype.js&quot; language=&quot;javascript&quot;&gt;&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;/oma/js/gnavbar.js&quot; language=&quot;javascript&quot;&gt;&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;/oma/js/Clarity.js&quot; language=&quot;javascript&quot;&gt;&lt;/script&gt;&lt;script language=&quot;javascript&quot;&gt;</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;  least strength: A"><table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+</table>
+<table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+</table>
+<elem key="least strength">A</elem>
+</script></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="84"/><service name="mysql" product="MySQL" version="5.5.61-cll-lve" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql:5.5.61-cll-lve</cpe></service><script id="banner" output="R\x00\x00\x00\x0A5.5.61-cll-lve\x005\x08\xB0\x01;6&gt;tOmXO\x00\xF&#xa;F\xF7!\x02\x00\x0F\x80\x15\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00b}...&#xa;"/></port>
+<port protocol="tcp" portid="7890"><state state="closed" reason="reset" reason_ttl="84"/></port>
+<port protocol="tcp" portid="8700"><state state="open" reason="syn-ack" reason_ttl="84"/><service name="caldav" product="Radicale calendar and contacts server" extrainfo="Python BaseHTTPServer" method="probed" conf="10"><cpe>cpe:/a:python:python</cpe></service></port>
+<port protocol="tcp" portid="9000"><state state="open" reason="syn-ack" reason_ttl="84"/><service name="caldav" product="Radicale calendar and contacts server" extrainfo="Python BaseHTTPServer" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:python:python</cpe></service><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;  least strength: A"><table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+</table>
+<elem key="least strength">A</elem>
+</script></port>
+</ports>
+<times srtt="145108" rttvar="17038" to="213260"/>
+</host>
+<runstats><finished time="1552724749" timestr="Sat Mar 16 10:25:49 2019" elapsed="1174.43" summary="Nmap done at Sat Mar 16 10:25:49 2019; 1 IP address (1 host up) scanned in 1174.43 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

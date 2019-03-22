@@ -1,0 +1,32 @@
+# Nmap 7.70 scan initiated Sat Mar 16 09:42:39 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/hampshire-pcc.gov.uk hampshire-pcc.gov.uk
+Warning: 95.138.161.235 giving up on port because retransmission cap hit (6).
+Nmap scan report for hampshire-pcc.gov.uk (95.138.161.235)
+Host is up (0.078s latency).
+Not shown: 65447 closed ports, 86 filtered ports
+PORT    STATE SERVICE VERSION
+22/tcp  open  ssh     OpenSSH 6.6.1p1 Ubuntu 2ubuntu2 (Ubuntu Linux; protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2
+80/tcp  open  http    Apache httpd 2.4.7 ((Ubuntu))
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+443/tcp open  ssl/ssl Apache httpd (SSL-only mode)
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 10:04:29 2019 -- 1 IP address (1 host up) scanned in 1309.71 seconds

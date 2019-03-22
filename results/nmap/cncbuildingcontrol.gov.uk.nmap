@@ -1,0 +1,37 @@
+# Nmap 7.70 scan initiated Sat Mar 16 05:01:11 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/cncbuildingcontrol.gov.uk cncbuildingcontrol.gov.uk
+Nmap scan report for cncbuildingcontrol.gov.uk (79.170.40.162)
+Host is up (0.100s latency).
+rDNS record for 79.170.40.162: web162.extendcp.co.uk
+Not shown: 65530 filtered ports
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 5.3 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_5.3
+80/tcp   open  http     Apache httpd 2.4.37
+443/tcp  open  ssl/http Apache httpd 2.4.37
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|     compressors: 
+| 
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_CBC_SHA and TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|     compressors: 
+| 
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 and TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
+|_  least strength: A
+544/tcp  open  kshell?
+2105/tcp open  eklogin?
+3306/tcp open  mysql    MySQL 5.5.5-10.1.27-MariaDB
+| banner: Y\x00\x00\x00\x0A5.5.5-10.1.27-MariaDB\x00\xFF\xF7\xE0MA+P4R!H+
+|_\x00\xFF\xF7\x08\x02\x00?\xA0\x15\x00\x00\x00\x00\x00\x00\x00\x00\x0...
+Service Info: Host: mv0.web162.extendcp.co.uk
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 05:22:48 2019 -- 1 IP address (1 host up) scanned in 1297.77 seconds

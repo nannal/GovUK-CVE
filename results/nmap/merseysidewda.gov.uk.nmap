@@ -1,0 +1,256 @@
+# Nmap 7.70 scan initiated Sat Mar 16 13:08:12 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/merseysidewda.gov.uk merseysidewda.gov.uk
+Nmap scan report for merseysidewda.gov.uk (54.72.74.248)
+Host is up (0.34s latency).
+rDNS record for 54.72.74.248: ec2-54-72-74-248.eu-west-1.compute.amazonaws.com
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      Sprog
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Sat, 16 Mar 2019 11:33:09 GMT
+|     Server: Sprog
+|     X-Frame-Options: SAMEORIGIN
+|     X-Content-Type-Options: nosniff
+|     Location: https://moorgate.kiosk.tm/nice%20ports,/Trinity.txt.bak
+|     Content-Length: 263
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>301 Moved Permanently</title>
+|     </head><body>
+|     <h1>Moved Permanently</h1>
+|     <p>The document has moved <a href="https://moorgate.kiosk.tm/nice%20ports,/Trinity.txt.bak">here</a>.</p>
+|     </body></html>
+|   HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Sat, 16 Mar 2019 11:33:03 GMT
+|     Server: Sprog
+|     X-Frame-Options: SAMEORIGIN
+|     X-Content-Type-Options: nosniff
+|     Location: https://moorgate.kiosk.tm/
+|     Content-Length: 234
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>301 Moved Permanently</title>
+|     </head><body>
+|     <h1>Moved Permanently</h1>
+|     <p>The document has moved <a href="https://moorgate.kiosk.tm/">here</a>.</p>
+|     </body></html>
+|   Help: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 16 Mar 2019 11:33:31 GMT
+|     Server: Sprog
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|     </body></html>
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 16 Mar 2019 11:33:03 GMT
+|     Server: Sprog
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|_    </body></html>
+|_http-server-header: Sprog
+443/tcp open  ssl/https Sprog
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 16 Mar 2019 11:33:06 GMT
+|     Server: Sprog
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|     </body></html>
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 16 Mar 2019 11:33:05 GMT
+|     Server: Sprog
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|     </body></html>
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 16 Mar 2019 11:33:17 GMT
+|     Server: Sprog
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|_    </body></html>
+|_http-server-header: Sprog
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - C
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - C
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8CDEEB%P=x86_64-unknown-linux-gnu%r
+SF:(HTTPOptions,1F9,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20
+SF:Sat,\x2016\x20Mar\x202019\x2011:33:03\x20GMT\r\nServer:\x20Sprog\r\nX-F
+SF:rame-Options:\x20SAMEORIGIN\r\nX-Content-Type-Options:\x20nosniff\r\nLo
+SF:cation:\x20https://moorgate\.kiosk\.tm/\r\nContent-Length:\x20234\r\nCo
+SF:nnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1
+SF:\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//
+SF:EN\">\n<html><head>\n<title>301\x20Moved\x20Permanently</title>\n</head
+SF:><body>\n<h1>Moved\x20Permanently</h1>\n<p>The\x20document\x20has\x20mo
+SF:ved\x20<a\x20href=\"https://moorgate\.kiosk\.tm/\">here</a>\.</p>\n</bo
+SF:dy></html>\n")%r(RTSPRequest,187,"HTTP/1\.1\x20400\x20Bad\x20Request\r\
+SF:nDate:\x20Sat,\x2016\x20Mar\x202019\x2011:33:03\x20GMT\r\nServer:\x20Sp
+SF:rog\r\nContent-Length:\x20226\r\nConnection:\x20close\r\nContent-Type:\
+SF:x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\
+SF:x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20B
+SF:ad\x20Request</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\
+SF:x20browser\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x
+SF:20not\x20understand\.<br\x20/>\n</p>\n</body></html>\n")%r(FourOhFourRe
+SF:quest,233,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20Sat,\x2
+SF:016\x20Mar\x202019\x2011:33:09\x20GMT\r\nServer:\x20Sprog\r\nX-Frame-Op
+SF:tions:\x20SAMEORIGIN\r\nX-Content-Type-Options:\x20nosniff\r\nLocation:
+SF:\x20https://moorgate\.kiosk\.tm/nice%20ports,/Trinity\.txt\.bak\r\nCont
+SF:ent-Length:\x20263\r\nConnection:\x20close\r\nContent-Type:\x20text/htm
+SF:l;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IET
+SF:F//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>301\x20Moved\x20Per
+SF:manently</title>\n</head><body>\n<h1>Moved\x20Permanently</h1>\n<p>The\
+SF:x20document\x20has\x20moved\x20<a\x20href=\"https://moorgate\.kiosk\.tm
+SF:/nice%20ports,/Trinity\.txt\.bak\">here</a>\.</p>\n</body></html>\n")%r
+SF:(Help,187,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2016\x2
+SF:0Mar\x202019\x2011:33:31\x20GMT\r\nServer:\x20Sprog\r\nContent-Length:\
+SF:x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charse
+SF:t=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HT
+SF:ML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n
+SF:</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a
+SF:\x20request\x20that\x20this\x20server\x20could\x20not\x20understand\.<b
+SF:r\x20/>\n</p>\n</body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CDEED%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,187,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20
+SF:Sat,\x2016\x20Mar\x202019\x2011:33:05\x20GMT\r\nServer:\x20Sprog\r\nCon
+SF:tent-Length:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/ht
+SF:ml;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IE
+SF:TF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Requ
+SF:est</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser
+SF:\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x20not\x20u
+SF:nderstand\.<br\x20/>\n</p>\n</body></html>\n")%r(HTTPOptions,187,"HTTP/
+SF:1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x20
+SF:11:33:05\x20GMT\r\nServer:\x20Sprog\r\nContent-Length:\x20226\r\nConnec
+SF:tion:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n
+SF:\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\"
+SF:>\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head><body>\n<
+SF:h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\x20t
+SF:hat\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>\n</p>\n<
+SF:/body></html>\n")%r(FourOhFourRequest,187,"HTTP/1\.1\x20400\x20Bad\x20R
+SF:equest\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2011:33:06\x20GMT\r\nServ
+SF:er:\x20Sprog\r\nContent-Length:\x20226\r\nConnection:\x20close\r\nConte
+SF:nt-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x
+SF:20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title
+SF:>400\x20Bad\x20Request</title>\n</head><body>\n<h1>Bad\x20Request</h1>\
+SF:n<p>Your\x20browser\x20sent\x20a\x20request\x20that\x20this\x20server\x
+SF:20could\x20not\x20understand\.<br\x20/>\n</p>\n</body></html>\n")%r(RTS
+SF:PRequest,187,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2016
+SF:\x20Mar\x202019\x2011:33:17\x20GMT\r\nServer:\x20Sprog\r\nContent-Lengt
+SF:h:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20cha
+SF:rset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x2
+SF:0HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title
+SF:>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x
+SF:20a\x20request\x20that\x20this\x20server\x20could\x20not\x20understand\
+SF:.<br\x20/>\n</p>\n</body></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 13:34:35 2019 -- 1 IP address (1 host up) scanned in 1582.89 seconds

@@ -1,0 +1,403 @@
+# Nmap 7.70 scan initiated Sat Mar 16 16:43:23 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/sampfordcourtenay-pc.gov.uk sampfordcourtenay-pc.gov.uk
+Warning: 213.246.110.88 giving up on port because retransmission cap hit (6).
+Nmap scan report for sampfordcourtenay-pc.gov.uk (213.246.110.88)
+Host is up (0.086s latency).
+rDNS record for 213.246.110.88: server1.goldcoastmedia.co.uk
+Not shown: 65494 closed ports, 29 filtered ports
+PORT     STATE SERVICE       VERSION
+21/tcp   open  ftp           ProFTPD 1.3.5d
+|_banner: 220 ProFTPD 1.3.5d Server (ProFTPD) [213.246.110.88]
+80/tcp   open  http          nginx
+110/tcp  open  pop3          Courier pop3d
+|_banner: +OK Hello there. <8368.1552748460@localhost.localdomain>
+143/tcp  open  imap          Courier Imapd (released 2015)
+| banner: * OK [CAPABILITY IMAP4rev1 UIDPLUS CHILDREN NAMESPACE THREAD=OR
+|_DEREDSUBJECT THREAD=REFERENCES SORT QUOTA AUTH=CRAM-MD5 AUTH=CRAM-SH...
+443/tcp  open  ssl/http      nginx
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (secp256r1) of lower strength than certificate key
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA - unknown
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA - unknown
+|     compressors: 
+| 
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (secp256r1) of lower strength than certificate key
+|   TLSv1.2: 
+|     ciphers: 
+| 
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       Key exchange (secp256r1) of lower strength than certificate key
+|_  least strength: unknown
+465/tcp  open  ssl/smtp      Postfix smtpd
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (dh 1024) of lower strength than certificate key
+|       Key exchange (secp256r1) of lower strength than certificate key
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 4096) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (dh 1024) of lower strength than certificate key
+|       Key exchange (secp256r1) of lower strength than certificate key
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA - unknown
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 - unknown
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 4096) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (dh 1024) of lower strength than certificate key
+|       Key exchange (secp256r1) of lower strength than certificate key
+|_  least strength: unknown
+587/tcp  open  smtp          Postfix smtpd
+|_banner: 220 server1.goldcoastmedia.co.uk ESMTP Postfix
+993/tcp  open  ssl/imap      Courier Imapd (released 2015)
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 4096) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA - unknown
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA and TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (dh 1024) of lower strength than certificate key
+|       Key exchange (secp256r1) of lower strength than certificate key
+|_  least strength: unknown
+995/tcp  open  ssl/pop3      Courier pop3d
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (dh 1024) of lower strength than certificate key
+|       Key exchange (secp256r1) of lower strength than certificate key
+|_  least strength: C
+7080/tcp open  http          Apache httpd
+7081/tcp open  ssl/http      Apache httpd
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 4096) - C
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 4096) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 4096) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 4096) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 4096) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 4096) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_256_CBC_SHA and TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (secp256r1) of lower strength than certificate key
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 4096) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 4096) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 4096) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 4096) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (secp256r1) of lower strength than certificate key
+|   TLSv1.2: 
+|     ciphers: 
+| 
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (secp256r1) of lower strength than certificate key
+|_  least strength: C
+8443/tcp open  ssl/https-alt sw-cp-server
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Server: sw-cp-server
+|     Date: Sat, 16 Mar 2019 15:00:07 GMT
+|     Content-Type: text/html; charset=UTF-8
+|     Connection: close
+|     Expires: Fri, 28 May 1999 00:00:00 GMT
+|     Last-Modified: Sat, 16 Mar 2019 15:00:07 GMT
+|     Cache-Control: no-store, no-cache, must-revalidate
+|     Cache-Control: post-check=0, pre-check=0
+|     Pragma: no-cache
+|     P3P: CP="NON COR CURa ADMa OUR NOR UNI COM NAV STA"
+|     <html><head>
+|     <meta charset="utf-8">
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+|     <meta name="plesk-build" content="1705170317.16">
+|     <title>Gold Coast Media Hosting</title>
+|     <script language="javascript" type="text/javascript" src="/javascript/common.js?1489742387"/></script>
+|     <script language="javascript" type="text/javascript" src="/javascript/prototype.js?1489742387"/></script>
+|     </head><body onLoad=";top.location='/log
+|   HTTPOptions: 
+|     HTTP/1.1 405 Not Allowed
+|     Server: sw-cp-server
+|     Date: Sat, 16 Mar 2019 15:00:11 GMT
+|     Content-Type: text/html
+|     Content-Length: 2654
+|     Connection: close
+|     ETag: "58cbaa33-a5e"
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <meta charset="utf-8">
+|     <meta http-equiv="x-ua-compatible" content="ie=edge">
+|     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+|     <title>405 Method Not Allowed</title>
+|     <link rel="stylesheet" href="/error_docs/styles.css">
+|     </head>
+|     <body>
+|     <div class="page">
+|     <div class="main">
+|     <div class="error-description">
+|     <h1>Server Error</h1>
+|     <div class="error-code">405</div>
+|     <h2>Method Not Allowed</h2>
+|     class="lead">The HTTP verb used to access this page is not allowed.</p>
+|     <hr/>
+|_    <p>If you think this is an error, please <a href="https://www.plesk.com/bug
+|_http-server-header: sw-cp-server
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+| 
+|     compressors: 
+| 
+|     cipher preference: server
+|     warnings: 
+|       Key exchange (secp256r1) of lower strength than certificate key
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA and TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+|     warnings: 
+|       Key exchange (secp256r1) of lower strength than certificate key
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (secp256r1) of lower strength than certificate key
+|_  least strength: A
+8880/tcp open  cddbp-alt?
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Server: sw-cp-server
+|     Date: Sat, 16 Mar 2019 15:00:06 GMT
+|     Content-Type: text/html
+|     Content-Length: 2644
+|     Connection: close
+|     ETag: "58cbaa33-a54"
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <meta charset="utf-8">
+|     <meta http-equiv="x-ua-compatible" content="ie=edge">
+|     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+|     <title>404 Not Found</title>
+|     <link rel="stylesheet" href="/error_docs/styles.css">
+|     </head>
+|     <body>
+|     <div class="page">
+|     <div class="main">
+|     <div class="error-description">
+|     <h1>Server Error</h1>
+|     <div class="error-code">404</div>
+|     <h2>Page Not Found</h2>
+|     class="lead">This page either doesn't exist, or it moved somewhere else.</p>
+|     <hr/>
+|     <p>If you think this is an error, please <a href="https://www.plesk.com/bug-report/"
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Server: sw-cp-server
+|     Date: Sat, 16 Mar 2019 15:00:02 GMT
+|     Content-Type: text/html; charset=UTF-8
+|     Connection: close
+|     Expires: Fri, 28 May 1999 00:00:00 GMT
+|     Last-Modified: Sat, 16 Mar 2019 15:00:02 GMT
+|     Cache-Control: no-store, no-cache, must-revalidate
+|     Cache-Control: post-check=0, pre-check=0
+|     Pragma: no-cache
+|     P3P: CP="NON COR CURa ADMa OUR NOR UNI COM NAV STA"
+|     <html><head>
+|     <meta charset="utf-8">
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+|     <meta name="plesk-build" content="1705170317.16">
+|     <title>Gold Coast Media Hosting</title>
+|     <script language="javascript" type="text/javascript" src="/javascript/common.js?1489742387"/></script>
+|     <script language="javascript" type="text/javascript" src="/javascript/prototype.js?1489742387"/></script>
+|_    </head><body onLoad=";top.location='/log
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D0F73%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,6D0,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20sw-cp-ser
+SF:ver\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2015:00:07\x20GMT\r\nContent
+SF:-Type:\x20text/html;\x20charset=UTF-8\r\nConnection:\x20close\r\nExpire
+SF:s:\x20Fri,\x2028\x20May\x201999\x2000:00:00\x20GMT\r\nLast-Modified:\x2
+SF:0Sat,\x2016\x20Mar\x202019\x2015:00:07\x20GMT\r\nCache-Control:\x20no-s
+SF:tore,\x20no-cache,\x20must-revalidate\r\nCache-Control:\x20post-check=0
+SF:,\x20pre-check=0\r\nPragma:\x20no-cache\r\nP3P:\x20CP=\"NON\x20COR\x20C
+SF:URa\x20ADMa\x20OUR\x20NOR\x20UNI\x20COM\x20NAV\x20STA\"\r\n\r\n\n\x20\x
+SF:20\x20\x20\x20\x20\x20\x20<html><head>\n\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0<meta\x20charset=\"utf-8\">\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20
+SF:http-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge,chrome=1\">\n\x20\x
+SF:20\x20\x20\x20\x20\x20\x20<meta\x20name=\"plesk-build\"\x20content=\"17
+SF:05170317\.16\">\n\x20\x20\x20\x20\x20\x20\x20\x20<title>Gold\x20Coast\x
+SF:20Media\x20Hosting</title>\n\x20\x20\x20\x20\x20\x20\x20\x20<script\x20
+SF:language=\"javascript\"\x20type=\"text/javascript\"\x20src=\"/javascrip
+SF:t/common\.js\?1489742387\"/></script>\n\x20\x20\x20\x20\x20\x20\x20\x20
+SF:<script\x20language=\"javascript\"\x20type=\"text/javascript\"\x20src=\
+SF:"/javascript/prototype\.js\?1489742387\"/></script>\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\n\x20\x20\x20\x20\x20\x20\x20\x20</head><body\x20onLoad=
+SF:\";top\.location='/log")%r(HTTPOptions,B0D,"HTTP/1\.1\x20405\x20Not\x20
+SF:Allowed\r\nServer:\x20sw-cp-server\r\nDate:\x20Sat,\x2016\x20Mar\x20201
+SF:9\x2015:00:11\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x
+SF:202654\r\nConnection:\x20close\r\nETag:\x20\"58cbaa33-a5e\"\r\n\r\n<!DO
+SF:CTYPE\x20html>\n<html\x20lang=\"en\">\n\x20\x20<head>\n\x20\x20\x20\x20
+SF:<meta\x20charset=\"utf-8\">\n\x20\x20\x20\x20<meta\x20http-equiv=\"x-ua
+SF:-compatible\"\x20content=\"ie=edge\">\n\x20\x20\x20\x20<meta\x20name=\"
+SF:viewport\"\x20content=\"width=device-width,\x20initial-scale=1,\x20shri
+SF:nk-to-fit=no\">\n\x20\x20\x20\x20<title>405\x20Method\x20Not\x20Allowed
+SF:</title>\n\x20\x20\x20\x20<link\x20rel=\"stylesheet\"\x20href=\"/error_
+SF:docs/styles\.css\">\n\x20\x20</head>\n\x20\x20<body>\n\x20\x20\x20\x20<
+SF:div\x20class=\"page\">\n\x20\x20\x20\x20\x20\x20<div\x20class=\"main\">
+SF:\n\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\"error-description\">\
+SF:n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h1>Server\x20Error</h1>\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\"error-code\">405</d
+SF:iv>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h2>Method\x20Not\x20Allow
+SF:ed</h2>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\"lead\">T
+SF:he\x20HTTP\x20verb\x20used\x20to\x20access\x20this\x20page\x20is\x20not
+SF:\x20allowed\.</p>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<hr/>\n\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20<p>If\x20you\x20think\x20this\x20is\
+SF:x20an\x20error,\x20please\x20<a\x20href=\"https://www\.plesk\.com/bug");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8880-TCP:V=7.70%I=7%D=3/16%Time=5C8D0F70%P=x86_64-unknown-linux-gnu
+SF:%r(GetRequest,6D0,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20sw-cp-server\r\
+SF:nDate:\x20Sat,\x2016\x20Mar\x202019\x2015:00:02\x20GMT\r\nContent-Type:
+SF:\x20text/html;\x20charset=UTF-8\r\nConnection:\x20close\r\nExpires:\x20
+SF:Fri,\x2028\x20May\x201999\x2000:00:00\x20GMT\r\nLast-Modified:\x20Sat,\
+SF:x2016\x20Mar\x202019\x2015:00:02\x20GMT\r\nCache-Control:\x20no-store,\
+SF:x20no-cache,\x20must-revalidate\r\nCache-Control:\x20post-check=0,\x20p
+SF:re-check=0\r\nPragma:\x20no-cache\r\nP3P:\x20CP=\"NON\x20COR\x20CURa\x2
+SF:0ADMa\x20OUR\x20NOR\x20UNI\x20COM\x20NAV\x20STA\"\r\n\r\n\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20<html><head>\n\x20\x20\x20\x20\x20\x20\x20\x20<meta
+SF:\x20charset=\"utf-8\">\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20http-e
+SF:quiv=\"X-UA-Compatible\"\x20content=\"IE=edge,chrome=1\">\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20<meta\x20name=\"plesk-build\"\x20content=\"17051703
+SF:17\.16\">\n\x20\x20\x20\x20\x20\x20\x20\x20<title>Gold\x20Coast\x20Medi
+SF:a\x20Hosting</title>\n\x20\x20\x20\x20\x20\x20\x20\x20<script\x20langua
+SF:ge=\"javascript\"\x20type=\"text/javascript\"\x20src=\"/javascript/comm
+SF:on\.js\?1489742387\"/></script>\n\x20\x20\x20\x20\x20\x20\x20\x20<scrip
+SF:t\x20language=\"javascript\"\x20type=\"text/javascript\"\x20src=\"/java
+SF:script/prototype\.js\?1489742387\"/></script>\n\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\n\x20\x20\x20\x20\x20\x20\x20\x20</head><body\x20onLoad=\";top
+SF:\.location='/log")%r(FourOhFourRequest,B01,"HTTP/1\.1\x20404\x20Not\x20
+SF:Found\r\nServer:\x20sw-cp-server\r\nDate:\x20Sat,\x2016\x20Mar\x202019\
+SF:x2015:00:06\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20
+SF:2644\r\nConnection:\x20close\r\nETag:\x20\"58cbaa33-a54\"\r\n\r\n<!DOCT
+SF:YPE\x20html>\n<html\x20lang=\"en\">\n\x20\x20<head>\n\x20\x20\x20\x20<m
+SF:eta\x20charset=\"utf-8\">\n\x20\x20\x20\x20<meta\x20http-equiv=\"x-ua-c
+SF:ompatible\"\x20content=\"ie=edge\">\n\x20\x20\x20\x20<meta\x20name=\"vi
+SF:ewport\"\x20content=\"width=device-width,\x20initial-scale=1,\x20shrink
+SF:-to-fit=no\">\n\x20\x20\x20\x20<title>404\x20Not\x20Found</title>\n\x20
+SF:\x20\x20\x20<link\x20rel=\"stylesheet\"\x20href=\"/error_docs/styles\.c
+SF:ss\">\n\x20\x20</head>\n\x20\x20<body>\n\x20\x20\x20\x20<div\x20class=\
+SF:"page\">\n\x20\x20\x20\x20\x20\x20<div\x20class=\"main\">\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20<div\x20class=\"error-description\">\n\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20<h1>Server\x20Error</h1>\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20<div\x20class=\"error-code\">404</div>\n\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20<h2>Page\x20Not\x20Found</h2>\n\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\"lead\">This\x20page\x20eit
+SF:her\x20doesn't\x20exist,\x20or\x20it\x20moved\x20somewhere\x20else\.</p
+SF:>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<hr/>\n\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20<p>If\x20you\x20think\x20this\x20is\x20an\x20error,\
+SF:x20please\x20<a\x20href=\"https://www\.plesk\.com/bug-report/\"\x20");
+Service Info: Hosts: localhost.localdomain,  server1.goldcoastmedia.co.uk, default-213_246_110_88; OS: Unix
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 17:02:20 2019 -- 1 IP address (1 host up) scanned in 1137.03 seconds

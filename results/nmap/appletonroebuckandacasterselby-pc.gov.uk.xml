@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 02:02:28 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/appletonroebuckandacasterselby-pc.gov.uk appletonroebuckandacasterselby-pc.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/appletonroebuckandacasterselby-pc.gov.uk appletonroebuckandacasterselby-pc.gov.uk" start="1552694548" startstr="Sat Mar 16 02:02:28 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552694549" endtime="1552697214"><status state="up" reason="reset" reason_ttl="53"/>
+<address addr="185.47.63.20" addrtype="ipv4"/>
+<hostnames>
+<hostname name="appletonroebuckandacasterselby-pc.gov.uk" type="user"/>
+<hostname name="bronze.function28.co.uk" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65530">
+<extrareasons reason="no-responses" count="63806"/>
+<extrareasons reason="host-prohibiteds" count="1724"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="ftp" product="vsftpd" version="3.0.2" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.2</cpe></service></port>
+<port protocol="tcp" portid="22"><state state="closed" reason="reset" reason_ttl="53"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="http" product="Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.0.32" tunnel="ssl" method="probed" conf="10"/><script id="http-server-header" output="Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.0.32"><elem>Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.0.32</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="https" product="Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.0.32" tunnel="ssl" method="probed" conf="10"/><script id="http-server-header" output="Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.0.32"><elem>Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.0.32</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - C&#xa;      TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference error: Error when comparing TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA and TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: indeterminate&#xa;    cipher preference error: Too few ciphers supported&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;  least strength: C"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">C</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">C</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference error">Error when comparing TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA and TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+</table>
+</table>
+<table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">C</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">indeterminate</elem>
+<elem key="cipher preference error">Too few ciphers supported</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+</table>
+</table>
+<elem key="least strength">C</elem>
+</script></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="mysql" product="MySQL" version="5.5.60-MariaDB" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql:5.5.60-mariadb</cpe></service></port>
+<port protocol="tcp" portid="50022"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="ssh" product="OpenSSH" version="7.4" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.4</cpe></service><script id="banner" output="SSH-2.0-OpenSSH_7.4"/></port>
+</ports>
+<times srtt="79139" rttvar="18852" to="154547"/>
+</host>
+<runstats><finished time="1552697214" timestr="Sat Mar 16 02:46:54 2019" elapsed="2666.24" summary="Nmap done at Sat Mar 16 02:46:54 2019; 1 IP address (1 host up) scanned in 2666.24 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

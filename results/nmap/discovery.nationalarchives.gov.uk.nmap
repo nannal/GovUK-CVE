@@ -1,0 +1,142 @@
+# Nmap 7.70 scan initiated Sat Mar 16 06:23:44 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/discovery.nationalarchives.gov.uk discovery.nationalarchives.gov.uk
+Nmap scan report for discovery.nationalarchives.gov.uk (89.197.114.141)
+Host is up (0.22s latency).
+rDNS record for 89.197.114.141: 89-197-114-141.virtual1.co.uk
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: The National Archives
+443/tcp open  ssl/https The National Archives
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 302 Found
+|     Cache-Control: private
+|     Content-Type: text/html; charset=utf-8
+|     Location: /redirection/notfound
+|     Server: The National Archives
+|     Set-Cookie: ASP.NET_SessionId=ozlgt453pannhuak0rqqurct; path=/; HttpOnly
+|     X-AspNetMvc-Version: 
+|     X-AspNet-Version: 
+|     X-SiteConInfo: web12
+|     X-Powered-By: The National Archives
+|     X-Frame-Options: DENY
+|     Date: Sat, 16 Mar 2019 05:01:33 GMT
+|     Connection: close
+|     <html><head><title>Object moved</title></head><body>
+|     <h2>Object moved to <a href="/redirection/notfound">here</a>.</h2>
+|     </body></html>
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Cache-Control: private
+|     Content-Type: text/html; charset=utf-8
+|     Server: The National Archives
+|     Set-Cookie: ASP.NET_SessionId=w54jbeyzmd5rvwxyyajss1oz; path=/; HttpOnly
+|     X-AspNetMvc-Version: 
+|     X-AspNet-Version: 
+|     X-SiteConInfo: web12
+|     X-Powered-By: The National Archives
+|     X-Frame-Options: DENY
+|     Date: Sat, 16 Mar 2019 05:01:22 GMT
+|     Connection: close
+|     Content-Length: 40209
+|     <!DOCTYPE html>
+|     <html lang="en-gb" class="no-js">
+|     <head>
+|     <meta charset="utf-8">
+|     <title>Discovery | The National Archives</title>
+|     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+|     <meta name="viewport" content="initial-scale=1.0">
+|     <meta name="keywords" content="government information, archive, history, information management, national archives, public records, manuscripts, documents" />
+|   tor-versions: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/html; charset=us-ascii
+|     Server: Microsoft-HTTPAPI/2.0
+|     Date: Sat, 16 Mar 2019 05:01:34 GMT
+|     Connection: close
+|     Content-Length: 326
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+|     <HTML><HEAD><TITLE>Bad Request</TITLE>
+|     <META HTTP-EQUIV="Content-Type" Content="text/html; charset=us-ascii"></HEAD>
+|     <BODY><h2>Bad Request - Invalid Verb</h2>
+|     <hr><p>HTTP Error 400. The request verb is invalid.</p>
+|_    </BODY></HTML>
+|_http-server-header: The National Archives
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+| 
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (dh 1024) of lower strength than certificate key
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     cipher preference error: Network error
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (dh 1024) of lower strength than certificate key
+|_  least strength: C
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8C8324%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,4000,"HTTP/1\.1\x20200\x20OK\r\nCache-Control:\x20pr
+SF:ivate\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nServer:\x20The
+SF:\x20National\x20Archives\r\nSet-Cookie:\x20ASP\.NET_SessionId=w54jbeyzm
+SF:d5rvwxyyajss1oz;\x20path=/;\x20HttpOnly\r\nX-AspNetMvc-Version:\x20\r\n
+SF:X-AspNet-Version:\x20\r\nX-SiteConInfo:\x20web12\r\nX-Powered-By:\x20Th
+SF:e\x20National\x20Archives\r\nX-Frame-Options:\x20DENY\r\nDate:\x20Sat,\
+SF:x2016\x20Mar\x202019\x2005:01:22\x20GMT\r\nConnection:\x20close\r\nCont
+SF:ent-Length:\x2040209\r\n\r\n<!DOCTYPE\x20html>\r\n<html\x20lang=\"en-gb
+SF:\"\x20class=\"no-js\">\r\n<head>\r\n\x20\x20\x20\x20<meta\x20charset=\"
+SF:utf-8\">\r\n\x20\x20\x20\x20<title>Discovery\x20\|\x20The\x20National\x
+SF:20Archives</title>\r\n\x20\x20\x20\x20<meta\x20http-equiv=\"Content-Typ
+SF:e\"\x20content=\"text/html;\x20charset=UTF-8\"\x20/>\r\n\x20\x20\x20\x2
+SF:0<meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge,chrome=1\
+SF:">\r\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"initial-s
+SF:cale=1\.0\">\r\n\x20\x20\x20\x20<meta\x20name=\"keywords\"\x20content=\
+SF:"government\x20information,\x20archive,\x20history,\x20information\x20m
+SF:anagement,\x20national\x20archives,\x20public\x20records,\x20manuscript
+SF:s,\x20documents\"\x20/>\r\n\x20\x20\x20")%r(FourOhFourRequest,21F,"HTTP
+SF:/1\.1\x20302\x20Found\r\nCache-Control:\x20private\r\nContent-Type:\x20
+SF:text/html;\x20charset=utf-8\r\nLocation:\x20/redirection/notfound\r\nSe
+SF:rver:\x20The\x20National\x20Archives\r\nSet-Cookie:\x20ASP\.NET_Session
+SF:Id=ozlgt453pannhuak0rqqurct;\x20path=/;\x20HttpOnly\r\nX-AspNetMvc-Vers
+SF:ion:\x20\r\nX-AspNet-Version:\x20\r\nX-SiteConInfo:\x20web12\r\nX-Power
+SF:ed-By:\x20The\x20National\x20Archives\r\nX-Frame-Options:\x20DENY\r\nDa
+SF:te:\x20Sat,\x2016\x20Mar\x202019\x2005:01:33\x20GMT\r\nConnection:\x20c
+SF:lose\r\n\r\n<html><head><title>Object\x20moved</title></head><body>\r\n
+SF:<h2>Object\x20moved\x20to\x20<a\x20href=\"/redirection/notfound\">here<
+SF:/a>\.</h2>\r\n</body></html>\r\n")%r(tor-versions,1F9,"HTTP/1\.1\x20400
+SF:\x20Bad\x20Request\r\nContent-Type:\x20text/html;\x20charset=us-ascii\r
+SF:\nServer:\x20Microsoft-HTTPAPI/2\.0\r\nDate:\x20Sat,\x2016\x20Mar\x2020
+SF:19\x2005:01:34\x20GMT\r\nConnection:\x20close\r\nContent-Length:\x20326
+SF:\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.01//
+SF:EN\"\"http://www\.w3\.org/TR/html4/strict\.dtd\">\r\n<HTML><HEAD><TITLE
+SF:>Bad\x20Request</TITLE>\r\n<META\x20HTTP-EQUIV=\"Content-Type\"\x20Cont
+SF:ent=\"text/html;\x20charset=us-ascii\"></HEAD>\r\n<BODY><h2>Bad\x20Requ
+SF:est\x20-\x20Invalid\x20Verb</h2>\r\n<hr><p>HTTP\x20Error\x20400\.\x20Th
+SF:e\x20request\x20verb\x20is\x20invalid\.</p>\r\n</BODY></HTML>\r\n");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 07:02:45 2019 -- 1 IP address (1 host up) scanned in 2341.32 seconds

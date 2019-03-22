@@ -1,0 +1,168 @@
+# Nmap 7.70 scan initiated Sat Mar 16 21:04:02 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/westdevon.gov.uk westdevon.gov.uk
+Nmap scan report for westdevon.gov.uk (82.153.216.143)
+Host is up (0.079s latency).
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 404 Not Found
+|     Cache-Control: private
+|     Content-Type: text/html; charset=utf-8
+|     Server: 
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     X-Powered-By: ASP.NET
+|     Date: Sat, 16 Mar 2019 19:08:27 GMT
+|     Connection: close
+|     Content-Length: 1885
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <title>The resource cannot be found.</title>
+|     <meta name="viewport" content="width=device-width" />
+|     <style>
+|     body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+|     {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+|     {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+|     font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+|     font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+|     {font-family:"Consolas","L
+|   HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Cache-Control: private
+|     Content-Type: text/html; charset=utf-8
+|     Server: 
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     X-Powered-By: ASP.NET
+|     Date: Sat, 16 Mar 2019 19:08:28 GMT
+|     Connection: close
+|     Content-Length: 1885
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <title>The resource cannot be found.</title>
+|     <meta name="viewport" content="width=device-width" />
+|     <style>
+|     body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+|     {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+|     {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+|     font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+|     font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+|_    {font-family:"Consolas","L
+|_http-server-header: <empty>
+443/tcp open  ssl     Microsoft SChannel TLS
+| fingerprint-strings: 
+|   TLSSessionReq: 
+|     \x8dI
+|     Entrust, Inc.1(0&
+|     www.entrust.net/legal-terms1907
+|     0(c) 2012 Entrust, Inc. - for authorized use only1.0,
+|     %Entrust Certification Authority - L1K0
+|     171221121845Z
+|     200320124845Z0c1
+|     Tavistock1#0!
+|     West Devon Borough Council1
+|     *.westdevon.gov.uk0
+|     v4eq
+|     ,0*0(
+|     "http://crl.entrust.net/level1k.crl0K
+|     D0B06
+|_    0(0&
+|_http-server-header: <empty>
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp521r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp521r1) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8D49A8%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,868,"HTTP/1\.1\x20404\x20Not\x20Found\r\nCache-Control:\x20
+SF:private\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nServer:\x20\
+SF:r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20
+SF:nosniff\r\nX-Powered-By:\x20ASP\.NET\r\nDate:\x20Sat,\x2016\x20Mar\x202
+SF:019\x2019:08:27\x20GMT\r\nConnection:\x20close\r\nContent-Length:\x2018
+SF:85\r\n\r\n<!DOCTYPE\x20html>\r\n<html>\r\n\x20\x20\x20\x20<head>\r\n\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20<title>The\x20resource\x20cannot\x20be\x20
+SF:found\.</title>\r\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20name=\"view
+SF:port\"\x20content=\"width=device-width\"\x20/>\r\n\x20\x20\x20\x20\x20\
+SF:x20\x20\x20<style>\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20body\x20{font
+SF:-family:\"Verdana\";font-weight:normal;font-size:\x20\.7em;color:black;
+SF:}\x20\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20p\x20{font-family:\"Verdan
+SF:a\";font-weight:normal;color:black;margin-top:\x20-5px}\r\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20b\x20{font-family:\"Verdana\";font-weight:bold;
+SF:color:black;margin-top:\x20-5px}\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0H1\x20{\x20font-family:\"Verdana\";font-weight:normal;font-size:18pt;c
+SF:olor:red\x20}\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20H2\x20{\x20font-fa
+SF:mily:\"Verdana\";font-weight:normal;font-size:14pt;color:maroon\x20}\r\
+SF:n\x20\x20\x20\x20\x20\x20\x20\x20\x20pre\x20{font-family:\"Consolas\",\
+SF:"L")%r(HTTPOptions,868,"HTTP/1\.1\x20404\x20Not\x20Found\r\nCache-Contr
+SF:ol:\x20private\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nServe
+SF:r:\x20\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Optio
+SF:ns:\x20nosniff\r\nX-Powered-By:\x20ASP\.NET\r\nDate:\x20Sat,\x2016\x20M
+SF:ar\x202019\x2019:08:28\x20GMT\r\nConnection:\x20close\r\nContent-Length
+SF::\x201885\r\n\r\n<!DOCTYPE\x20html>\r\n<html>\r\n\x20\x20\x20\x20<head>
+SF:\r\n\x20\x20\x20\x20\x20\x20\x20\x20<title>The\x20resource\x20cannot\x2
+SF:0be\x20found\.</title>\r\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20name
+SF:=\"viewport\"\x20content=\"width=device-width\"\x20/>\r\n\x20\x20\x20\x
+SF:20\x20\x20\x20\x20<style>\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20body\x
+SF:20{font-family:\"Verdana\";font-weight:normal;font-size:\x20\.7em;color
+SF::black;}\x20\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20p\x20{font-family:\
+SF:"Verdana\";font-weight:normal;color:black;margin-top:\x20-5px}\r\n\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20b\x20{font-family:\"Verdana\";font-weigh
+SF:t:bold;color:black;margin-top:\x20-5px}\r\n\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20H1\x20{\x20font-family:\"Verdana\";font-weight:normal;font-size
+SF::18pt;color:red\x20}\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20H2\x20{\x20
+SF:font-family:\"Verdana\";font-weight:normal;font-size:14pt;color:maroon\
+SF:x20}\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20pre\x20{font-family:\"Conso
+SF:las\",\"L");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%I=7%D=3/16%Time=5C8D49AD%P=x86_64-unknown-linux-gnu%
+SF:r(TLSSessionReq,AC2,"\x16\x03\x03\n\xbd\x02\0\0M\x03\x03\\\x8dI\xac\xcf
+SF:\)ui\x89\xd5\x8eg\xfa\xadO\xb0\x1d\xb2l\xdd\x85J\x96\xd5\xbb\xe7\xe5\xa
+SF:8wk\"\x10\x20\|\x07\0\0\xbe\xee\xc9\x99\xd3\x8dh7\|\x0bT,\.\xb5\x14H\xa
+SF:8\x97\x20\$\xb6\xef\xec\|\x96\x89\xa5\x82\0/\0\0\x05\xff\x01\0\x01\0\x0
+SF:b\0\nd\0\na\0\x05I0\x82\x05E0\x82\x04-\xa0\x03\x02\x01\x02\x02\x10I\xf9
+SF:a\xa9\xe6f\x80\x83\0\0\0\0P\xdf\x83\xb90\r\x06\t\*\x86H\x86\xf7\r\x01\x
+SF:01\x0b\x05\x000\x81\xba1\x0b0\t\x06\x03U\x04\x06\x13\x02US1\x160\x14\x0
+SF:6\x03U\x04\n\x13\rEntrust,\x20Inc\.1\(0&\x06\x03U\x04\x0b\x13\x1fSee\x2
+SF:0www\.entrust\.net/legal-terms1907\x06\x03U\x04\x0b\x130\(c\)\x202012\x
+SF:20Entrust,\x20Inc\.\x20-\x20for\x20authorized\x20use\x20only1\.0,\x06\x
+SF:03U\x04\x03\x13%Entrust\x20Certification\x20Authority\x20-\x20L1K0\x1e\
+SF:x17\r171221121845Z\x17\r200320124845Z0c1\x0b0\t\x06\x03U\x04\x06\x13\x0
+SF:2GB1\x120\x10\x06\x03U\x04\x07\x13\tTavistock1#0!\x06\x03U\x04\n\x13\x1
+SF:aWest\x20Devon\x20Borough\x20Council1\x1b0\x19\x06\x03U\x04\x03\x0c\x12
+SF:\*\.westdevon\.gov\.uk0\x82\x01\"0\r\x06\t\*\x86H\x86\xf7\r\x01\x01\x01
+SF:\x05\0\x03\x82\x01\x0f\x000\x82\x01\n\x02\x82\x01\x01\0\x88\x97\xb6\x18
+SF:\xc8\x9a\x8dI:E\x968\x17D\xf2\xa0m\x17L\x9bh\?\x80\x07v4eq\xeb\xf6\xa2\
+SF:t!J\x99\xe5\?\xbd3\x0e\x8b\x93\xab0\x19\xab\xa9\xbe\xba\xc4\xf6g\xcct\x
+SF:90\x9b\x99F\xb1\xd2m\xee\xed\xb9\xd1\xed\xfe\x8a\xb1oq7\xe3\x85;\x9d\x8
+SF:e\x19\x02\x96\xb3\xa5\.%Z\xf5\xb3\xa2\+\x06#\xaczYj\x1d\xed\xc16\xfb\xe
+SF:b\tg\x8dz\xd0\"\x0c\x98\x91\xb7G\xb96\xbd\|\xc6P\xa7{\x9b5\xe8\)\x86\xf
+SF:0\xff\0\xf2\xf8o\x1c\xfe\x9d\xc8\x1e\x9e\xf5-SL\xa1\x18%!\x06\xf7\xe1\x
+SF:f7\xbc\]\xcf\xbe\xf2<\x9a\x8b\xe0\xbc\x02\xc7\xb1\x9b\xa5\xa7\x82\xf7\x
+SF:062\xd9zT\xc4\xc1\x0e\x8c\x02\r\x90\xe1\xea\x1d\xeeD}\x97\xd5\x02\xfe\x
+SF:876J\+\xe0vmv\xe2\xd0b\x8f\x8d\xd4\x96r\x95\xe5\x05L\xe51\x7fN:E\xca\to
+SF:\x10\x03YHB\x90\(d\xa5\x823\xad\xc6p\x87\x20\xbb\x147\xc7\xd0\x10\xba\x
+SF:15\x8c\xa9\xbd\xaf_:9\xa8\x89\x18\xbb\xcc\xf9\x89\x02\x03\x01\0\x01\xa3
+SF:\x82\x01\x9b0\x82\x01\x970\x0e\x06\x03U\x1d\x0f\x01\x01\xff\x04\x04\x03
+SF:\x02\x05\xa00\x1d\x06\x03U\x1d%\x04\x160\x14\x06\x08\+\x06\x01\x05\x05\
+SF:x07\x03\x01\x06\x08\+\x06\x01\x05\x05\x07\x03\x0203\x06\x03U\x1d\x1f\x0
+SF:4,0\*0\(\xa0&\xa0\$\x86\"http://crl\.entrust\.net/level1k\.crl0K\x06\x0
+SF:3U\x1d\x20\x04D0B06\x06\n`\x86H\x01\x86\xfal\n\x01\x050\(0&\x06\x08\+\x
+SF:06\x01");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 21:08:54 2019 -- 1 IP address (1 host up) scanned in 292.49 seconds

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 19:34:38 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/tfws.environment-agency.gov.uk tfws.environment-agency.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/tfws.environment-agency.gov.uk tfws.environment-agency.gov.uk" start="1552757678" startstr="Sat Mar 16 19:34:38 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552757678" endtime="1552758010"><status state="up" reason="syn-ack" reason_ttl="242"/>
+<address addr="195.59.221.46" addrtype="ipv4"/>
+<hostnames>
+<hostname name="tfws.environment-agency.gov.uk" type="user"/>
+</hostnames>
+<ports><extraports state="filtered" count="65534">
+<extrareasons reason="no-responses" count="65534"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="242"/><service name="http-proxy" product="F5 BIG-IP load balancer http proxy" devicetype="load balancer" method="probed" conf="10"/><script id="http-server-header" output="BigIP"><elem>BigIP</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="242"/><service name="https" servicefp="SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D3464%P=x86_64-unknown-linux-gnu%r(GetRequest,6B,&quot;HTTP/1\.0\x20302\x20Found\r\nLocation:\x20http://apps\.environment-agency\.gov\.uk/holding/tfw\.aspx\r\nConnection:\x20close\r\n\r\n&quot;)%r(HTTPOptions,6B,&quot;HTTP/1\.0\x20302\x20Found\r\nLocation:\x20http://apps\.environment-agency\.gov\.uk/holding/tfw\.aspx\r\nConnection:\x20close\r\n\r\n&quot;)%r(FourOhFourRequest,6B,&quot;HTTP/1\.0\x20302\x20Found\r\nLocation:\x20http://apps\.environment-agency\.gov\.uk/holding/tfw\.aspx\r\nConnection:\x20close\r\n\r\n&quot;)%r(RTSPRequest,6B,&quot;HTTP/1\.0\x20302\x20Found\r\nLocation:\x20http://apps\.environment-agency\.gov\.uk/holding/tfw\.aspx\r\nConnection:\x20close\r\n\r\n&quot;)%r(SIPOptions,6B,&quot;HTTP/1\.0\x20302\x20Found\r\nLocation:\x20http://apps\.environment-agency\.gov\.uk/holding/tfw\.aspx\r\nConnection:\x20close\r\n\r\n&quot;);" tunnel="ssl" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest, GetRequest, HTTPOptions, RTSPRequest, SIPOptions: &#xa;    HTTP/1.0 302 Found&#xa;    Location: http://apps.environment-agency.gov.uk/holding/tfw.aspx&#xa;    Connection: close"><elem key="FourOhFourRequest, GetRequest, HTTPOptions, RTSPRequest, SIPOptions">&#xa;    HTTP/1.0 302 Found&#xa;    Location: http://apps.environment-agency.gov.uk/holding/tfw.aspx&#xa;    Connection: close</elem>
+</script></port>
+</ports>
+<times srtt="64252" rttvar="14671" to="122936"/>
+</host>
+<runstats><finished time="1552758010" timestr="Sat Mar 16 19:40:10 2019" elapsed="332.52" summary="Nmap done at Sat Mar 16 19:40:10 2019; 1 IP address (1 host up) scanned in 332.52 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

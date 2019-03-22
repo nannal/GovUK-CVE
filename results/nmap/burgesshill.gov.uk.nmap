@@ -1,0 +1,93 @@
+# Nmap 7.70 scan initiated Sat Mar 16 03:46:38 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/burgesshill.gov.uk burgesshill.gov.uk
+Nmap scan report for burgesshill.gov.uk (159.253.212.220)
+Host is up (0.068s latency).
+rDNS record for 159.253.212.220: 159.253.212.220.srvlist.ukfast.net
+Not shown: 65513 filtered ports
+PORT      STATE  SERVICE         VERSION
+20/tcp    closed ftp-data
+22/tcp    closed ssh
+80/tcp    open   http            Apache httpd (PleskLin)
+110/tcp   open   pop3            Courier pop3d
+|_banner: +OK Hello there. <30447.1552704120@localhost.localdomain>
+143/tcp   open   imap            Plesk Courier imapd
+| banner: * OK [CAPABILITY IMAP4rev1 UIDPLUS CHILDREN NAMESPACE THREAD=OR
+|_DEREDSUBJECT THREAD=REFERENCES SORT QUOTA AUTH=CRAM-MD5 AUTH=PLAIN I...
+443/tcp   open   ssl/http        Apache httpd (PleskLin)
+| ssl-enum-ciphers: 
+|   SSLv3: 
+|     ciphers: 
+|       TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA - E
+|       TLS_RSA_EXPORT_WITH_DES40_CBC_SHA - E
+|       TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5 - E
+|     compressors: 
+| 
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher DES40 vulnerable to SWEET32 attack
+|       64-bit block cipher RC2 vulnerable to SWEET32 attack
+|       CBC-mode cipher in SSLv3 (CVE-2014-3566)
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_DES_CBC_SHA (dh 1024) - D
+|       TLS_RSA_EXPORT_WITH_DES40_CBC_SHA - E
+|       TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5 - E
+|       TLS_RSA_EXPORT_WITH_RC4_40_MD5 - E
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_DES_CBC_SHA and TLS_RSA_EXPORT_WITH_DES40_CBC_SHA
+|     warnings: 
+|       64-bit block cipher DES vulnerable to SWEET32 attack
+|       64-bit block cipher DES40 vulnerable to SWEET32 attack
+|       64-bit block cipher RC2 vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Key exchange (dh 1024) of lower strength than certificate key
+|_  least strength: E
+587/tcp   open   smtp            qmail smtpd
+|_banner: 220 mail2.preview.co.uk ESMTP
+902/tcp   closed iss-realsecure
+903/tcp   closed iss-console-mgr
+993/tcp   open   ssl/imap        Plesk Courier imapd
+| ssl-enum-ciphers: 
+|   SSLv3: 
+|     ciphers: 
+|       TLS_RSA_EXPORT_WITH_DES40_CBC_SHA - E
+|       TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5 - E
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher DES40 vulnerable to SWEET32 attack
+|       64-bit block cipher RC2 vulnerable to SWEET32 attack
+|       CBC-mode cipher in SSLv3 (CVE-2014-3566)
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_RSA_EXPORT_WITH_DES40_CBC_SHA - E
+|       TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5 - E
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_RSA_EXPORT_WITH_DES40_CBC_SHA and TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5
+|     warnings: 
+|       64-bit block cipher DES40 vulnerable to SWEET32 attack
+|       64-bit block cipher RC2 vulnerable to SWEET32 attack
+|_  least strength: E
+2020/tcp  open   ssh             OpenSSH 4.3 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_4.3
+2082/tcp  closed infowave
+2083/tcp  closed radsec
+2086/tcp  closed gnunet
+2087/tcp  closed eli
+2095/tcp  closed nbx-ser
+2096/tcp  closed nbx-dir
+3306/tcp  open   mysql           MySQL 5.0.95-log
+| banner: 8\x00\x00\x00\x0A5.0.95-log\x00\xF2\x1D`\x01f7}1z6=l\x00,\xA2\x
+|_08\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00,1S04U...
+8090/tcp  closed opsmessaging
+8091/tcp  closed jamlink
+9102/tcp  open   jetdirect?
+11444/tcp closed unknown
+65443/tcp closed unknown
+Service Info: Host: localhost.localdomain; OS: Unix
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 04:42:39 2019 -- 1 IP address (1 host up) scanned in 3361.63 seconds

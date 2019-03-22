@@ -1,0 +1,109 @@
+# Nmap 7.70 scan initiated Sat Mar 16 19:23:52 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/taxdisc.service.gov.uk taxdisc.service.gov.uk
+Nmap scan report for taxdisc.service.gov.uk (107.162.132.57)
+Host is up (0.048s latency).
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      F5aaS
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 302 Found
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Server: F5aaS
+|     Connection: close
+|     Content-Length: 0
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.0 302 Found
+|     Location: https:///
+|     Server: F5aaS
+|     Connection: close
+|     Content-Length: 0
+|   SIPOptions: 
+|     HTTP/1.0 302 Found
+|     Location: https://sip:nm
+|     Server: F5aaS
+|     Connection: close
+|_    Content-Length: 0
+|_http-server-header: F5aaS
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 200 OK
+|     Content-Length: 26778
+|     Cache-Control: no-cache
+|     <html><head><meta http-equiv="Pragma" content="no-cache"/>
+|     <meta http-equiv="Expires" content="-1"/>
+|     <meta http-equiv="CacheControl" content="no-cache"/>
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+|     <script>
+|     (function(){
+|     securemsg;
+|     dosl7_common;
+|     window["bobcmn"] = "10112000000022000000003000000003000000081d015909300000008TSPD_101300000030%2fnice%2520ports%252C%2fTri%256Eity.txt%252ebak300000000300000006/TSPD/300000008TSPD_101300000005https200000000200000000";
+|     try{(function(){try{var IS,lS,LS=1,oS=1;for(var OS=0;OS<lS;++OS)LS+=2,oS+=3;IS=LS+oS;window.i===IS&&(window.i=++IS)}catch(zS){window.i=IS}var S_=window.sdkljshr489=!0;function __(S){window.sdkljshr489&&S&&(S_=!1);return S_}function i_(){}__(window[i_.name]===i_);__("undefined"===window.vodsS0);window.vodsS0=null;__(/</.te
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Content-Length: 26733
+|     Cache-Control: no-cache
+|     <html><head><meta http-equiv="Pragma" content="no-cache"/>
+|     <meta http-equiv="Expires" content="-1"/>
+|     <meta http-equiv="CacheControl" content="no-cache"/>
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+|     <script>
+|     (function(){
+|     securemsg;
+|     dosl7_common;
+|     window["bobcmn"] = "10112000000022000000003000000003000000081d015909300000008TSPD_101300000003%2f300000000300000006/TSPD/300000008TSPD_101300000005https200000000200000000";
+|_    try{(function(){try{var IS,lS,LS=1,oS=1;for(var OS=0;OS<lS;++OS)LS+=2,oS+=3;IS=LS+oS;window.i===IS&&(window.i=++IS)}catch(zS){window.i=IS}var S_=window.sdkljshr489=!0;function __(S){window.sdkljshr489&&S&&(S_=!1);return S_}function i_(){}__(window[i_.name]===i_);__("undefined"===window.vodsS0);window.vodsS0=null;__(/</.test(function(){return"<"})&/x3d/.test(funct
+|_http-trane-info: Problem with XML parsing of /evox/about
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8D31F1%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,60,"HTTP/1\.0\x20302\x20Found\r\nLocation:\x20https:///\r\n
+SF:Server:\x20F5aaS\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\
+SF:n")%r(HTTPOptions,60,"HTTP/1\.0\x20302\x20Found\r\nLocation:\x20https:/
+SF://\r\nServer:\x20F5aaS\r\nConnection:\x20close\r\nContent-Length:\x200\
+SF:r\n\r\n")%r(RTSPRequest,60,"HTTP/1\.0\x20302\x20Found\r\nLocation:\x20h
+SF:ttps:///\r\nServer:\x20F5aaS\r\nConnection:\x20close\r\nContent-Length:
+SF:\x200\r\n\r\n")%r(FourOhFourRequest,83,"HTTP/1\.0\x20302\x20Found\r\nLo
+SF:cation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nServer:\x20
+SF:F5aaS\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIPOp
+SF:tions,65,"HTTP/1\.0\x20302\x20Found\r\nLocation:\x20https://sip:nm\r\nS
+SF:erver:\x20F5aaS\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n
+SF:");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D31FB%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,34C3,"HTTP/1\.1\x20200\x20OK\r\nContent-Length:\x202
+SF:6733\r\nCache-Control:\x20no-cache\r\n\r\n<html><head><meta\x20http-equ
+SF:iv=\"Pragma\"\x20content=\"no-cache\"/>\r\n<meta\x20http-equiv=\"Expire
+SF:s\"\x20content=\"-1\"/>\r\n<meta\x20http-equiv=\"CacheControl\"\x20cont
+SF:ent=\"no-cache\"/>\r\n<meta\x20http-equiv=\"X-UA-Compatible\"\x20conten
+SF:t=\"IE=edge\"/>\r\n\r\n<script>\r\n\r\n\(function\(\){\r\n\x20\x20\x20\
+SF:x20var\x20securemsg;\r\n\x20\x20\x20\x20var\x20dosl7_common;\r\n\r\nwin
+SF:dow\[\"bobcmn\"\]\x20=\x20\"10112000000022000000003000000003000000081d0
+SF:15909300000008TSPD_101300000003%2f300000000300000006/TSPD/300000008TSPD
+SF:_101300000005https200000000200000000\";\r\n\r\ntry{\(function\(\){try{v
+SF:ar\x20IS,lS,LS=1,oS=1;for\(var\x20OS=0;OS<lS;\+\+OS\)LS\+=2,oS\+=3;IS=L
+SF:S\+oS;window\.i===IS&&\(window\.i=\+\+IS\)}catch\(zS\){window\.i=IS}var
+SF:\x20S_=window\.sdkljshr489=!0;function\x20__\(S\){window\.sdkljshr489&&
+SF:S&&\(S_=!1\);return\x20S_}function\x20i_\(\){}__\(window\[i_\.name\]===
+SF:i_\);__\(\"undefined\"===window\.vodsS0\);window\.vodsS0=null;__\(/\\x3
+SF:c/\.test\(function\(\){return\"\\x3c\"}\)&/x3d/\.test\(funct")%r(FourOh
+SF:FourRequest,34C3,"HTTP/1\.1\x20200\x20OK\r\nContent-Length:\x2026778\r\
+SF:nCache-Control:\x20no-cache\r\n\r\n<html><head><meta\x20http-equiv=\"Pr
+SF:agma\"\x20content=\"no-cache\"/>\r\n<meta\x20http-equiv=\"Expires\"\x20
+SF:content=\"-1\"/>\r\n<meta\x20http-equiv=\"CacheControl\"\x20content=\"n
+SF:o-cache\"/>\r\n<meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=
+SF:edge\"/>\r\n\r\n<script>\r\n\r\n\(function\(\){\r\n\x20\x20\x20\x20var\
+SF:x20securemsg;\r\n\x20\x20\x20\x20var\x20dosl7_common;\r\n\r\nwindow\[\"
+SF:bobcmn\"\]\x20=\x20\"10112000000022000000003000000003000000081d01590930
+SF:0000008TSPD_101300000030%2fnice%2520ports%252C%2fTri%256Eity\.txt%252eb
+SF:ak300000000300000006/TSPD/300000008TSPD_101300000005https20000000020000
+SF:0000\";\r\n\r\ntry{\(function\(\){try{var\x20IS,lS,LS=1,oS=1;for\(var\x
+SF:20OS=0;OS<lS;\+\+OS\)LS\+=2,oS\+=3;IS=LS\+oS;window\.i===IS&&\(window\.
+SF:i=\+\+IS\)}catch\(zS\){window\.i=IS}var\x20S_=window\.sdkljshr489=!0;fu
+SF:nction\x20__\(S\){window\.sdkljshr489&&S&&\(S_=!1\);return\x20S_}functi
+SF:on\x20i_\(\){}__\(window\[i_\.name\]===i_\);__\(\"undefined\"===window\
+SF:.vodsS0\);window\.vodsS0=null;__\(/\\x3c/\.te");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 19:29:31 2019 -- 1 IP address (1 host up) scanned in 339.16 seconds

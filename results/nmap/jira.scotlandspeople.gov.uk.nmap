@@ -1,0 +1,241 @@
+# Nmap 7.70 scan initiated Sat Mar 16 11:13:01 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/jira.scotlandspeople.gov.uk jira.scotlandspeople.gov.uk
+Nmap scan report for jira.scotlandspeople.gov.uk (213.128.255.70)
+Host is up (0.40s latency).
+Not shown: 65532 filtered ports
+PORT     STATE SERVICE       VERSION
+80/tcp   open  http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Content-length: 0
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Connection: close
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Content-length: 0
+|     Location: https:///
+|     Connection: close
+|   RPCCheck, X11Probe: 
+|     HTTP/1.0 400 Bad Request
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <!DOCTYPE html>
+|     <html lang="en" dir="ltr" class="no-js"><head profile="http://www.w3.org/1999/xhtml/vocab"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+|     <title>Error 400 - Bad Request | ScotlandsPeople</title>
+|_    </head><style>@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700); @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700); body{background-color:fff;color:#fff;font-family: "Raleway",Verdana,sans-serif;line-height: 1.375em;} .region{margin-right:auto;margin-left:auto;max-width:1200px;margin-top:80px;height:400px;background-color:#3266cc} h1{background-color:#232323;padding:15px 25px;wi
+81/tcp   open  hosts2-ns?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, RPCCheck: 
+|     HTTP/1.0 400 Bad Request
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <!DOCTYPE html>
+|     <html lang="en" dir="ltr" class="no-js"><head profile="http://www.w3.org/1999/xhtml/vocab"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+|     <title>Error 400 - Bad Request | ScotlandsPeople</title>
+|     </head><style>@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700); @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700); body{background-color:fff;color:#fff;font-family: "Raleway",Verdana,sans-serif;line-height: 1.375em;} .region{margin-right:auto;margin-left:auto;max-width:1200px;margin-top:80px;height:400px;background-color:#3266cc} h1{background-color:#232323;padding:15px 25px;wi
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Content-length: 0
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Connection: close
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Content-length: 0
+|     Location: https:///
+|_    Connection: close
+443/tcp  open  ssl/https
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 403 Forbidden
+|     Cache-Control: no-cache
+|     Content-Type: text/html
+|     Strict-Transport-Security: max-age=31536000
+|     X-XSS-Protection: 1; mode=block
+|     X-Frame-Options: SAMEORIGIN
+|     X-Content-Type-Options: nosniff
+|     Referrer-Policy: no-referrer-when-downgrade
+|     <!DOCTYPE html>
+|     <html lang="en" dir="ltr" class="no-js"><head profile="http://www.w3.org/1999/xhtml/vocab"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+|     <title>Error 403 - Forbidden | ScotlandsPeople</title>
+|_    </head><style>@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700); @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700); body{background-color:fff;color:#fff;font-family: "Raleway",Verdana,sans-serif;line-height: 1.375em;}
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+8443/tcp open  ssl/https-alt
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 403 Forbidden
+|     Cache-Control: no-cache
+|     Content-Type: text/html
+|     Strict-Transport-Security: max-age=31536000
+|     X-XSS-Protection: 1; mode=block
+|     X-Frame-Options: SAMEORIGIN
+|     X-Content-Type-Options: nosniff
+|     Referrer-Policy: no-referrer-when-downgrade
+|     <!DOCTYPE html>
+|     <html lang="en" dir="ltr" class="no-js"><head profile="http://www.w3.org/1999/xhtml/vocab"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+|     <title>Error 403 - Forbidden | ScotlandsPeople</title>
+|_    </head><style>@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700); @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700); body{background-color:fff;color:#fff;font-family: "Raleway",Verdana,sans-serif;line-height: 1.375em;}
+4 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8CC473%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nContent-len
+SF:gth:\x200\r\nLocation:\x20https:///\r\nConnection:\x20close\r\n\r\n")%r
+SF:(HTTPOptions,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nContent-le
+SF:ngth:\x200\r\nLocation:\x20https:///\r\nConnection:\x20close\r\n\r\n")%
+SF:r(RTSPRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nContent-l
+SF:ength:\x200\r\nLocation:\x20https:///\r\nConnection:\x20close\r\n\r\n")
+SF:%r(X11Probe,1BB4,"HTTP/1\.0\x20400\x20Bad\x20Request\nCache-Control:\x2
+SF:0no-cache\nConnection:\x20close\nContent-Type:\x20text/html\n\n<!DOCTYP
+SF:E\x20html>\n<html\x20lang=\"en\"\x20dir=\"ltr\"\x20class=\"no-js\"><hea
+SF:d\x20profile=\"http://www\.w3\.org/1999/xhtml/vocab\"><meta\x20charset=
+SF:\"utf-8\"><meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=Edge\
+SF:"><meta\x20name=\"viewport\"\x20content=\"width=device-width,initial-sc
+SF:ale=1\.0\"><meta\x20http-equiv=\"Content-Type\"\x20content=\"text/html;
+SF:\x20charset=utf-8\"\x20/>\n<title>Error\x20400\x20-\x20Bad\x20Request\x
+SF:20\|\x20ScotlandsPeople</title>\n</head><style>@import\x20url\(https://
+SF:fonts\.googleapis\.com/css\?family=Raleway:400,600,700\);\x20@import\x2
+SF:0url\(https://fonts\.googleapis\.com/css\?family=Open\+Sans:400,600,700
+SF:\);\x20body{background-color:fff;color:#fff;font-family:\x20\"Raleway\"
+SF:,Verdana,sans-serif;line-height:\x201\.375em;}\x20\x20\.region{margin-r
+SF:ight:auto;margin-left:auto;max-width:1200px;margin-top:80px;height:400p
+SF:x;background-color:#3266cc}\x20h1{background-color:#232323;padding:15px
+SF:\x2025px;wi")%r(FourOhFourRequest,80,"HTTP/1\.1\x20301\x20Moved\x20Perm
+SF:anently\r\nContent-length:\x200\r\nLocation:\x20https:///nice%20ports%2
+SF:C/Tri%6Eity\.txt%2ebak\r\nConnection:\x20close\r\n\r\n")%r(RPCCheck,1BB
+SF:4,"HTTP/1\.0\x20400\x20Bad\x20Request\nCache-Control:\x20no-cache\nConn
+SF:ection:\x20close\nContent-Type:\x20text/html\n\n<!DOCTYPE\x20html>\n<ht
+SF:ml\x20lang=\"en\"\x20dir=\"ltr\"\x20class=\"no-js\"><head\x20profile=\"
+SF:http://www\.w3\.org/1999/xhtml/vocab\"><meta\x20charset=\"utf-8\"><meta
+SF:\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=Edge\"><meta\x20name
+SF:=\"viewport\"\x20content=\"width=device-width,initial-scale=1\.0\"><met
+SF:a\x20http-equiv=\"Content-Type\"\x20content=\"text/html;\x20charset=utf
+SF:-8\"\x20/>\n<title>Error\x20400\x20-\x20Bad\x20Request\x20\|\x20Scotlan
+SF:dsPeople</title>\n</head><style>@import\x20url\(https://fonts\.googleap
+SF:is\.com/css\?family=Raleway:400,600,700\);\x20@import\x20url\(https://f
+SF:onts\.googleapis\.com/css\?family=Open\+Sans:400,600,700\);\x20body{bac
+SF:kground-color:fff;color:#fff;font-family:\x20\"Raleway\",Verdana,sans-s
+SF:erif;line-height:\x201\.375em;}\x20\x20\.region{margin-right:auto;margi
+SF:n-left:auto;max-width:1200px;margin-top:80px;height:400px;background-co
+SF:lor:#3266cc}\x20h1{background-color:#232323;padding:15px\x2025px;wi");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port81-TCP:V=7.70%I=7%D=3/16%Time=5C8CC473%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nContent-len
+SF:gth:\x200\r\nLocation:\x20https:///\r\nConnection:\x20close\r\n\r\n")%r
+SF:(HTTPOptions,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nContent-le
+SF:ngth:\x200\r\nLocation:\x20https:///\r\nConnection:\x20close\r\n\r\n")%
+SF:r(RPCCheck,1BB4,"HTTP/1\.0\x20400\x20Bad\x20Request\nCache-Control:\x20
+SF:no-cache\nConnection:\x20close\nContent-Type:\x20text/html\n\n<!DOCTYPE
+SF:\x20html>\n<html\x20lang=\"en\"\x20dir=\"ltr\"\x20class=\"no-js\"><head
+SF:\x20profile=\"http://www\.w3\.org/1999/xhtml/vocab\"><meta\x20charset=\
+SF:"utf-8\"><meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=Edge\"
+SF:><meta\x20name=\"viewport\"\x20content=\"width=device-width,initial-sca
+SF:le=1\.0\"><meta\x20http-equiv=\"Content-Type\"\x20content=\"text/html;\
+SF:x20charset=utf-8\"\x20/>\n<title>Error\x20400\x20-\x20Bad\x20Request\x2
+SF:0\|\x20ScotlandsPeople</title>\n</head><style>@import\x20url\(https://f
+SF:onts\.googleapis\.com/css\?family=Raleway:400,600,700\);\x20@import\x20
+SF:url\(https://fonts\.googleapis\.com/css\?family=Open\+Sans:400,600,700\
+SF:);\x20body{background-color:fff;color:#fff;font-family:\x20\"Raleway\",
+SF:Verdana,sans-serif;line-height:\x201\.375em;}\x20\x20\.region{margin-ri
+SF:ght:auto;margin-left:auto;max-width:1200px;margin-top:80px;height:400px
+SF:;background-color:#3266cc}\x20h1{background-color:#232323;padding:15px\
+SF:x2025px;wi")%r(FourOhFourRequest,80,"HTTP/1\.1\x20301\x20Moved\x20Perma
+SF:nently\r\nContent-length:\x200\r\nLocation:\x20https:///nice%20ports%2C
+SF:/Tri%6Eity\.txt%2ebak\r\nConnection:\x20close\r\n\r\n")%r(RTSPRequest,5
+SF:D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nContent-length:\x200\r\n
+SF:Location:\x20https:///\r\nConnection:\x20close\r\n\r\n")%r(DNSVersionBi
+SF:ndReqTCP,1590,"HTTP/1\.0\x20400\x20Bad\x20Request\nCache-Control:\x20no
+SF:-cache\nConnection:\x20close\nContent-Type:\x20text/html\n\n<!DOCTYPE\x
+SF:20html>\n<html\x20lang=\"en\"\x20dir=\"ltr\"\x20class=\"no-js\"><head\x
+SF:20profile=\"http://www\.w3\.org/1999/xhtml/vocab\"><meta\x20charset=\"u
+SF:tf-8\"><meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=Edge\"><
+SF:meta\x20name=\"viewport\"\x20content=\"width=device-width,initial-scale
+SF:=1\.0\"><meta\x20http-equiv=\"Content-Type\"\x20content=\"text/html;\x2
+SF:0charset=utf-8\"\x20/>\n<title>Error\x20400\x20-\x20Bad\x20Request\x20\
+SF:|\x20ScotlandsPeople</title>\n</head><style>@import\x20url\(https://fon
+SF:ts\.googleapis\.com/css\?family=Raleway:400,600,700\);\x20@import\x20ur
+SF:l\(https://fonts\.googleapis\.com/css\?family=Open\+Sans:400,600,700\);
+SF:\x20body{background-color:fff;color:#fff;font-family:\x20\"Raleway\",Ve
+SF:rdana,sans-serif;line-height:\x201\.375em;}\x20\x20\.region{margin-righ
+SF:t:auto;margin-left:auto;max-width:1200px;margin-top:80px;height:400px;b
+SF:ackground-color:#3266cc}\x20h1{background-color:#232323;padding:15px\x2
+SF:025px;wi");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CC47A%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,1C60,"HTTP/1\.0\x20403\x20Forbidden\nCache-Control:\
+SF:x20no-cache\nContent-Type:\x20text/html\nStrict-Transport-Security:\x20
+SF:max-age=31536000\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Frame-Op
+SF:tions:\x20SAMEORIGIN\r\nX-Content-Type-Options:\x20nosniff\r\nReferrer-
+SF:Policy:\x20no-referrer-when-downgrade\r\n\n<!DOCTYPE\x20html>\n<html\x2
+SF:0lang=\"en\"\x20dir=\"ltr\"\x20class=\"no-js\"><head\x20profile=\"http:
+SF://www\.w3\.org/1999/xhtml/vocab\"><meta\x20charset=\"utf-8\"><meta\x20h
+SF:ttp-equiv=\"X-UA-Compatible\"\x20content=\"IE=Edge\"><meta\x20name=\"vi
+SF:ewport\"\x20content=\"width=device-width,initial-scale=1\.0\"><meta\x20
+SF:http-equiv=\"Content-Type\"\x20content=\"text/html;\x20charset=utf-8\"\
+SF:x20/>\n<title>Error\x20403\x20-\x20Forbidden\x20\|\x20ScotlandsPeople</
+SF:title>\n</head><style>@import\x20url\(https://fonts\.googleapis\.com/cs
+SF:s\?family=Raleway:400,600,700\);\x20@import\x20url\(https://fonts\.goog
+SF:leapis\.com/css\?family=Open\+Sans:400,600,700\);\x20body{background-co
+SF:lor:fff;color:#fff;font-family:\x20\"Raleway\",Verdana,sans-serif;line-
+SF:height:\x201\.375em;}\x20\x20")%r(HTTPOptions,1C60,"HTTP/1\.0\x20403\x2
+SF:0Forbidden\nCache-Control:\x20no-cache\nContent-Type:\x20text/html\nStr
+SF:ict-Transport-Security:\x20max-age=31536000\r\nX-XSS-Protection:\x201;\
+SF:x20mode=block\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Content-Type-Optio
+SF:ns:\x20nosniff\r\nReferrer-Policy:\x20no-referrer-when-downgrade\r\n\n<
+SF:!DOCTYPE\x20html>\n<html\x20lang=\"en\"\x20dir=\"ltr\"\x20class=\"no-js
+SF:\"><head\x20profile=\"http://www\.w3\.org/1999/xhtml/vocab\"><meta\x20c
+SF:harset=\"utf-8\"><meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"I
+SF:E=Edge\"><meta\x20name=\"viewport\"\x20content=\"width=device-width,ini
+SF:tial-scale=1\.0\"><meta\x20http-equiv=\"Content-Type\"\x20content=\"tex
+SF:t/html;\x20charset=utf-8\"\x20/>\n<title>Error\x20403\x20-\x20Forbidden
+SF:\x20\|\x20ScotlandsPeople</title>\n</head><style>@import\x20url\(https:
+SF://fonts\.googleapis\.com/css\?family=Raleway:400,600,700\);\x20@import\
+SF:x20url\(https://fonts\.googleapis\.com/css\?family=Open\+Sans:400,600,7
+SF:00\);\x20body{background-color:fff;color:#fff;font-family:\x20\"Raleway
+SF:\",Verdana,sans-serif;line-height:\x201\.375em;}\x20\x20");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CC47A%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,1C60,"HTTP/1\.0\x20403\x20Forbidden\nCache-Control:
+SF:\x20no-cache\nContent-Type:\x20text/html\nStrict-Transport-Security:\x2
+SF:0max-age=31536000\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Frame-O
+SF:ptions:\x20SAMEORIGIN\r\nX-Content-Type-Options:\x20nosniff\r\nReferrer
+SF:-Policy:\x20no-referrer-when-downgrade\r\n\n<!DOCTYPE\x20html>\n<html\x
+SF:20lang=\"en\"\x20dir=\"ltr\"\x20class=\"no-js\"><head\x20profile=\"http
+SF:://www\.w3\.org/1999/xhtml/vocab\"><meta\x20charset=\"utf-8\"><meta\x20
+SF:http-equiv=\"X-UA-Compatible\"\x20content=\"IE=Edge\"><meta\x20name=\"v
+SF:iewport\"\x20content=\"width=device-width,initial-scale=1\.0\"><meta\x2
+SF:0http-equiv=\"Content-Type\"\x20content=\"text/html;\x20charset=utf-8\"
+SF:\x20/>\n<title>Error\x20403\x20-\x20Forbidden\x20\|\x20ScotlandsPeople<
+SF:/title>\n</head><style>@import\x20url\(https://fonts\.googleapis\.com/c
+SF:ss\?family=Raleway:400,600,700\);\x20@import\x20url\(https://fonts\.goo
+SF:gleapis\.com/css\?family=Open\+Sans:400,600,700\);\x20body{background-c
+SF:olor:fff;color:#fff;font-family:\x20\"Raleway\",Verdana,sans-serif;line
+SF:-height:\x201\.375em;}\x20\x20")%r(HTTPOptions,1C60,"HTTP/1\.0\x20403\x
+SF:20Forbidden\nCache-Control:\x20no-cache\nContent-Type:\x20text/html\nSt
+SF:rict-Transport-Security:\x20max-age=31536000\r\nX-XSS-Protection:\x201;
+SF:\x20mode=block\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Content-Type-Opti
+SF:ons:\x20nosniff\r\nReferrer-Policy:\x20no-referrer-when-downgrade\r\n\n
+SF:<!DOCTYPE\x20html>\n<html\x20lang=\"en\"\x20dir=\"ltr\"\x20class=\"no-j
+SF:s\"><head\x20profile=\"http://www\.w3\.org/1999/xhtml/vocab\"><meta\x20
+SF:charset=\"utf-8\"><meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"
+SF:IE=Edge\"><meta\x20name=\"viewport\"\x20content=\"width=device-width,in
+SF:itial-scale=1\.0\"><meta\x20http-equiv=\"Content-Type\"\x20content=\"te
+SF:xt/html;\x20charset=utf-8\"\x20/>\n<title>Error\x20403\x20-\x20Forbidde
+SF:n\x20\|\x20ScotlandsPeople</title>\n</head><style>@import\x20url\(https
+SF:://fonts\.googleapis\.com/css\?family=Raleway:400,600,700\);\x20@import
+SF:\x20url\(https://fonts\.googleapis\.com/css\?family=Open\+Sans:400,600,
+SF:700\);\x20body{background-color:fff;color:#fff;font-family:\x20\"Ralewa
+SF:y\",Verdana,sans-serif;line-height:\x201\.375em;}\x20\x20");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 11:40:58 2019 -- 1 IP address (1 host up) scanned in 1676.59 seconds

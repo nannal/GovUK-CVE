@@ -1,0 +1,74 @@
+# Nmap 7.70 scan initiated Sat Mar 16 19:50:29 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/tobaccoregisterni.gov.uk tobaccoregisterni.gov.uk
+Nmap scan report for tobaccoregisterni.gov.uk (77.89.166.213)
+Host is up (0.083s latency).
+rDNS record for 77.89.166.213: 77-89-166-213.fluidata.co.uk
+Not shown: 65533 filtered ports
+PORT     STATE  SERVICE    VERSION
+80/tcp   open   http       BigIP
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 302 Found
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Server: BigIP
+|     Connection: close
+|     Content-Length: 0
+|   GetRequest: 
+|     HTTP/1.0 302 Found
+|     Location: https:///
+|     Server: BigIP
+|     Connection: close
+|     Content-Length: 0
+|   RTSPRequest: 
+|     HTTP/1.1 503 Service Unavailable
+|     Content-Type: text/html; charset=UTF-8
+|     Content-Length: 952
+|     Connection: close
+|     P3P: CP="CAO PSA OUR"
+|     Expires: Thu, 01 Jan 1970 00:00:00 GMT
+|     Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+|     Pragma: no-cache
+|     <html>
+|     <head>
+|     <title>Application Blocked</title>
+|     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+|     <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+|     <style>
+|     #content{border:3px solid#aaa;background-color:#fff;margin:40;padding:40;font-family:Tahoma,Helvetica,Arial,sans-serif;font-size:12px;}
+|     h1{font-size:20px;font-weight:bold;color:#196390;}
+|     b{font-weight:bold;color:#196390;}
+|     </style>
+|     </head>
+|     <body bgcolor="#e7e8e9">
+|     <div id="content">
+|     <h1>Application Blocked</h1>
+|_    <p>Access to the file you were trying to download has been blocked in accordance with company policy. Please contact ISB Se
+|_http-server-header: BigIP
+443/tcp  open   ssl/https?
+|_http-trane-info: Problem with XML parsing of /evox/about
+8080/tcp closed http-proxy
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8D3876%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,60,"HTTP/1\.0\x20302\x20Found\r\nLocation:\x20https:///\r\n
+SF:Server:\x20BigIP\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\
+SF:n")%r(RTSPRequest,4CC,"HTTP/1\.1\x20503\x20Service\x20Unavailable\r\nCo
+SF:ntent-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\x20952\r\
+SF:nConnection:\x20close\r\nP3P:\x20CP=\"CAO\x20PSA\x20OUR\"\r\nExpires:\x
+SF:20Thu,\x2001\x20Jan\x201970\x2000:00:00\x20GMT\r\nCache-Control:\x20no-
+SF:store,\x20no-cache,\x20must-revalidate,\x20post-check=0,\x20pre-check=0
+SF:\r\nPragma:\x20no-cache\r\n\r\n<html>\r\n<head>\r\n<title>Application\x
+SF:20Blocked</title>\r\n<meta\x20http-equiv=\"Content-Type\"\x20content=\"
+SF:text/html;\x20charset=utf-8\">\r\n<META\x20HTTP-EQUIV=\"PRAGMA\"\x20CON
+SF:TENT=\"NO-CACHE\">\r\n<style>\r\n#content{border:3px\x20solid#aaa;backg
+SF:round-color:#fff;margin:40;padding:40;font-family:Tahoma,Helvetica,Aria
+SF:l,sans-serif;font-size:12px;}\r\n\x20\x20h1{font-size:20px;font-weight:
+SF:bold;color:#196390;}\r\n\x20\x20b{font-weight:bold;color:#196390;}\r\n<
+SF:/style>\r\n</head>\r\n<body\x20bgcolor=\"#e7e8e9\">\r\n<div\x20id=\"con
+SF:tent\">\r\n<h1>Application\x20Blocked</h1>\r\n<p>Access\x20to\x20the\x2
+SF:0file\x20you\x20were\x20trying\x20to\x20download\x20has\x20been\x20bloc
+SF:ked\x20in\x20accordance\x20with\x20company\x20policy\.\x20Please\x20con
+SF:tact\x20ISB\x20Se")%r(FourOhFourRequest,83,"HTTP/1\.0\x20302\x20Found\r
+SF:\nLocation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nServer:
+SF:\x20BigIP\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 19:57:24 2019 -- 1 IP address (1 host up) scanned in 415.59 seconds

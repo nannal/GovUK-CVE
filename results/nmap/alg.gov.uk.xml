@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 02:02:24 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/alg.gov.uk alg.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/alg.gov.uk alg.gov.uk" start="1552694544" startstr="Sat Mar 16 02:02:24 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552694545" endtime="1552698033"><status state="up" reason="reset" reason_ttl="52"/>
+<address addr="217.154.96.12" addrtype="ipv4"/>
+<hostnames>
+<hostname name="alg.gov.uk" type="user"/>
+<hostname name="lnxsh-web.spn.kcom.com" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65531">
+<extrareasons reason="no-responses" count="65531"/>
+</extraports>
+<port protocol="tcp" portid="20"><state state="closed" reason="reset" reason_ttl="52"/><service name="ftp-data" method="table" conf="3"/></port>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="ftp" product="vsftpd" version="2.0.8 or later" hostname="Welcome" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd</cpe></service><script id="banner" output="220 Welcome to Mistral Internet FTP service."/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="http" product="Apache httpd" version="2.2.15" extrainfo="(CentOS)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.15</cpe></service><script id="http-server-header" output="Apache/2.2.15 (CentOS)"><elem>Apache/2.2.15 (CentOS)</elem>
+</script></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="53"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="52"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="74659" rttvar="12536" to="124803"/>
+</host>
+<runstats><finished time="1552698033" timestr="Sat Mar 16 03:00:33 2019" elapsed="3489.48" summary="Nmap done at Sat Mar 16 03:00:33 2019; 1 IP address (1 host up) scanned in 3489.48 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

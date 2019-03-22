@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 02:35:27 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/ayrshire-jsu.gov.uk ayrshire-jsu.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/ayrshire-jsu.gov.uk ayrshire-jsu.gov.uk" start="1552696527" startstr="Sat Mar 16 02:35:27 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552696532" endtime="1552697005"><status state="up" reason="reset" reason_ttl="52"/>
+<address addr="193.34.148.140" addrtype="ipv4"/>
+<hostnames>
+<hostname name="ayrshire-jsu.gov.uk" type="user"/>
+<hostname name="server10.webage.co.uk" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65531">
+<extrareasons reason="no-responses" count="65531"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="ftp" product="ProFTPD" version="1.3.3e" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:proftpd:proftpd:1.3.3e</cpe></service><script id="banner" output="220 ProFTPD 1.3.3e Server (ProFTPD server) [::ffff:193.34.148.1&#xa;40]"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="http" product="Apache httpd" version="2.2.17" hostname="localhost" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.17</cpe></service></port>
+<port protocol="tcp" portid="81"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="ssl" product="Apache httpd" extrainfo="SSL-only mode" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache/2.2.17 (Fedora)"><elem>Apache/2.2.17 (Fedora)</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  SSLv3: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA - E&#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D&#xa;      TLS_RSA_EXPORT_WITH_DES40_CBC_SHA - E&#xa;      TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5 - E&#xa;      TLS_RSA_EXPORT_WITH_RC4_40_MD5 - E&#xa;    compressors: &#xa;&#xa;    cipher preference error: Error when comparing TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA and TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      64-bit block cipher DES40 vulnerable to SWEET32 attack&#xa;      64-bit block cipher RC2 vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      CBC-mode cipher in SSLv3 (CVE-2014-3566)&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Weak certificate signature: SHA1&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA - E&#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_EXPORT_WITH_DES40_CBC_SHA - E&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 1024) - D&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - A&#xa;    compressors: &#xa;      DEFLATE&#xa;    cipher preference error: Error when comparing TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA and TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      64-bit block cipher DES40 vulnerable to SWEET32 attack&#xa;      Weak certificate signature: SHA1&#xa;  least strength: E"><table key="SSLv3">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA</elem>
+<elem key="strength">E</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">D</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_EXPORT_WITH_DES40_CBC_SHA</elem>
+<elem key="strength">E</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5</elem>
+<elem key="strength">E</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_EXPORT_WITH_RC4_40_MD5</elem>
+<elem key="strength">E</elem>
+</table>
+</table>
+<table key="compressors">
+</table>
+<elem key="cipher preference error">Error when comparing TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA and TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>64-bit block cipher DES40 vulnerable to SWEET32 attack</elem>
+<elem>64-bit block cipher RC2 vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>CBC-mode cipher in SSLv3 (CVE-2014-3566)</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Weak certificate signature: SHA1</elem>
+</table>
+</table>
+<table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA</elem>
+<elem key="strength">E</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">D</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_EXPORT_WITH_DES40_CBC_SHA</elem>
+<elem key="strength">E</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">D</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>DEFLATE</elem>
+</table>
+<elem key="cipher preference error">Error when comparing TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA and TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>64-bit block cipher DES40 vulnerable to SWEET32 attack</elem>
+<elem>Weak certificate signature: SHA1</elem>
+</table>
+</table>
+<elem key="least strength">E</elem>
+</script></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="mysql" product="MySQL" version="5.1.56" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql:5.1.56</cpe></service><script id="banner" output="4\x00\x00\x00\x0A5.1.56\x00\xAA\xA7\x0F\x00VvoLjTC2\x00\xFF\xF7&#xa;\x08\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00rf+B...&#xa;"/></port>
+</ports>
+<times srtt="81427" rttvar="9830" to="120747"/>
+</host>
+<runstats><finished time="1552697005" timestr="Sat Mar 16 02:43:25 2019" elapsed="478.26" summary="Nmap done at Sat Mar 16 02:43:25 2019; 1 IP address (1 host up) scanned in 478.26 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

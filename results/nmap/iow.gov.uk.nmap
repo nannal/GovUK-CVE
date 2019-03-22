@@ -1,0 +1,202 @@
+# Nmap 7.70 scan initiated Sat Mar 16 11:05:29 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/iow.gov.uk iow.gov.uk
+Nmap scan report for iow.gov.uk (86.63.9.169)
+Host is up (0.081s latency).
+Not shown: 65519 filtered ports
+PORT     STATE  SERVICE        VERSION
+21/tcp   open   ftp-proxy      Secure Computing Sidewinder firewall ftp proxy
+|_banner: 220-Firewall ftp proxy.  You must login to the proxy first.
+23/tcp   open   tcpwrapped
+53/tcp   open   domain         (generic dns response: NOTIMP)
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|_    bind
+80/tcp   open   http           Microsoft-IIS/7.5
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Content-Type: text/html; charset=us-ascii
+|     Date: Sat, 16 Mar 2019 09:10:43 GMT
+|     Connection: close
+|     Content-Length: 315
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+|     <HTML><HEAD><TITLE>Not Found</TITLE>
+|     <META HTTP-EQUIV="Content-Type" Content="text/html; charset=us-ascii"></HEAD>
+|     <BODY><h2>Not Found</h2>
+|     <hr><p>HTTP Error 404. The requested resource is not found.</p>
+|     </BODY></HTML>
+|   GetRequest: 
+|     HTTP/1.1 404 Not Found
+|     Content-Type: text/html; charset=us-ascii
+|     Date: Sat, 16 Mar 2019 09:10:37 GMT
+|     Connection: close
+|     Content-Length: 315
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+|     <HTML><HEAD><TITLE>Not Found</TITLE>
+|     <META HTTP-EQUIV="Content-Type" Content="text/html; charset=us-ascii"></HEAD>
+|     <BODY><h2>Not Found</h2>
+|     <hr><p>HTTP Error 404. The requested resource is not found.</p>
+|     </BODY></HTML>
+|   HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Content-Type: text/html; charset=us-ascii
+|     Date: Sat, 16 Mar 2019 09:10:38 GMT
+|     Connection: close
+|     Content-Length: 315
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+|     <HTML><HEAD><TITLE>Not Found</TITLE>
+|     <META HTTP-EQUIV="Content-Type" Content="text/html; charset=us-ascii"></HEAD>
+|     <BODY><h2>Not Found</h2>
+|     <hr><p>HTTP Error 404. The requested resource is not found.</p>
+|     </BODY></HTML>
+|   RTSPRequest: 
+|     HTTP/1.0 400 Bad Request
+|     Content-Type: text/html
+|     Connection: close
+|     Content-Length: 337
+|     <HTML><HEAD>
+|     <TITLE>ERROR: The requested URL could not be retrieved</TITLE>
+|     </HEAD><BODY>
+|     <H1>ERROR</H1>
+|     <H2>The requested URL could not be retrieved</H2>
+|     <HR>
+|     following error was encountered:
+|     <UL>
+|     <LI>
+|     <STRONG>
+|     Invalid Request: Malformed request
+|     </STRONG>
+|     </UL>
+|     Some aspect of the HTTP Request is invalid.
+|     </BODY>
+|_    </HTML>
+|_http-server-header: Microsoft-IIS/7.5
+135/tcp  open   msrpc?
+137/tcp  closed netbios-ns
+139/tcp  closed netbios-ssn
+443/tcp  open   tcpwrapped
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+445/tcp  closed microsoft-ds
+513/tcp  open   tcpwrapped
+514/tcp  open   tcpwrapped
+1521/tcp open   oracle?
+3389/tcp open   ms-wbt-server?
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 403 Forbidden
+|     Content-Type: text/html
+|     Connection: close
+|     Content-Length: 1987
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+|     <HTML><HEAD><TITLE>Isle of Wight Council - Notification</TITLE>
+|     <META http-equiv=Content-Type content="text/html; charset=windows-1252">
+|     <STYLE type=text/css>#iwchr1 {
+|     BORDER-RIGHT: medium none; BORDER-TOP: #2d338e solid; BORDER-LEFT: medium none; BORDER-BOTTOM: #e0aa0f solid; HEIGHT: 14px
+|     #iwchr {
+|     BORDER-RIGHT: medium none; BORDER-TOP: #2d338e solid; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none
+|     </STYLE>
+|     <META content="MSHTML 6.00.2900.3492" name=GENERATOR></HEAD>
+|     <BODY bgColor=#ffffff onload=replaceReason()>
+|     <TABLE id=Table1 cellSpacing=0 cellPadding=10 width=800 border=0>
+|     <TBODY>
+|     <TR>
+|     vAlign=top align=left><IMG alt=I.W.C 
+|_    src="Isle of Wight Council - SW - Notification_files/iow_co
+8192/tcp open   sophos?
+8194/tcp open   sophos?
+9005/tcp open   golem?
+9055/tcp open   unknown
+3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port53-TCP:V=7.70%I=7%D=3/16%Time=5C8CBE25%P=x86_64-unknown-linux-gnu%r
+SF:(DNSVersionBindReqTCP,3B,"\x009\0\x06\x85\0\0\x01\0\x01\0\x01\0\0\x07ve
+SF:rsion\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\x01\0\xc0\x0c
+SF:\0\x02\0\x03\0\0\0\0\0\x02\xc0\x0c")%r(DNSStatusRequestTCP,E,"\0\x0c\0\
+SF:0\x90\x04\0\0\0\0\0\0\0\0");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8CBE22%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,1CD,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Type:\x20t
+SF:ext/html;\x20charset=us-ascii\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x20
+SF:09:10:37\x20GMT\r\nConnection:\x20close\r\nContent-Length:\x20315\r\n\r
+SF:\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.01//EN\"\"
+SF:http://www\.w3\.org/TR/html4/strict\.dtd\">\r\n<HTML><HEAD><TITLE>Not\x
+SF:20Found</TITLE>\r\n<META\x20HTTP-EQUIV=\"Content-Type\"\x20Content=\"te
+SF:xt/html;\x20charset=us-ascii\"></HEAD>\r\n<BODY><h2>Not\x20Found</h2>\r
+SF:\n<hr><p>HTTP\x20Error\x20404\.\x20The\x20requested\x20resource\x20is\x
+SF:20not\x20found\.</p>\r\n</BODY></HTML>\r\n")%r(HTTPOptions,1CD,"HTTP/1\
+SF:.1\x20404\x20Not\x20Found\r\nContent-Type:\x20text/html;\x20charset=us-
+SF:ascii\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2009:10:38\x20GMT\r\nConne
+SF:ction:\x20close\r\nContent-Length:\x20315\r\n\r\n<!DOCTYPE\x20HTML\x20P
+SF:UBLIC\x20\"-//W3C//DTD\x20HTML\x204\.01//EN\"\"http://www\.w3\.org/TR/h
+SF:tml4/strict\.dtd\">\r\n<HTML><HEAD><TITLE>Not\x20Found</TITLE>\r\n<META
+SF:\x20HTTP-EQUIV=\"Content-Type\"\x20Content=\"text/html;\x20charset=us-a
+SF:scii\"></HEAD>\r\n<BODY><h2>Not\x20Found</h2>\r\n<hr><p>HTTP\x20Error\x
+SF:20404\.\x20The\x20requested\x20resource\x20is\x20not\x20found\.</p>\r\n
+SF:</BODY></HTML>\r\n")%r(RTSPRequest,1AE,"HTTP/1\.0\x20400\x20Bad\x20Requ
+SF:est\r\nContent-Type:\x20text/html\r\nConnection:\x20close\r\nContent-Le
+SF:ngth:\x20337\r\n\r\n<HTML><HEAD>\n<TITLE>ERROR:\x20The\x20requested\x20
+SF:URL\x20could\x20not\x20be\x20retrieved</TITLE>\n</HEAD><BODY>\n<H1>ERRO
+SF:R</H1>\n<H2>The\x20requested\x20URL\x20could\x20not\x20be\x20retrieved<
+SF:/H2>\n<HR>\n<P>\nThe\x20following\x20error\x20was\x20encountered:\n<UL>
+SF:\n<LI>\n<STRONG>\nInvalid\x20Request:\x20Malformed\x20request\n</STRONG
+SF:>\n</UL>\n\n<P>\nSome\x20aspect\x20of\x20the\x20HTTP\x20Request\x20is\x
+SF:20invalid\.\n</BODY>\n</HTML>\n\n")%r(FourOhFourRequest,1CD,"HTTP/1\.1\
+SF:x20404\x20Not\x20Found\r\nContent-Type:\x20text/html;\x20charset=us-asc
+SF:ii\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2009:10:43\x20GMT\r\nConnecti
+SF:on:\x20close\r\nContent-Length:\x20315\r\n\r\n<!DOCTYPE\x20HTML\x20PUBL
+SF:IC\x20\"-//W3C//DTD\x20HTML\x204\.01//EN\"\"http://www\.w3\.org/TR/html
+SF:4/strict\.dtd\">\r\n<HTML><HEAD><TITLE>Not\x20Found</TITLE>\r\n<META\x2
+SF:0HTTP-EQUIV=\"Content-Type\"\x20Content=\"text/html;\x20charset=us-asci
+SF:i\"></HEAD>\r\n<BODY><h2>Not\x20Found</h2>\r\n<hr><p>HTTP\x20Error\x204
+SF:04\.\x20The\x20requested\x20resource\x20is\x20not\x20found\.</p>\r\n</B
+SF:ODY></HTML>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port3389-TCP:V=7.70%I=7%D=3/16%Time=5C8CBE26%P=x86_64-unknown-linux-gnu
+SF:%r(GetRequest,81F,"HTTP/1\.0\x20403\x20Forbidden\r\nContent-Type:\x20te
+SF:xt/html\r\nConnection:\x20close\r\nContent-Length:\x201987\r\n\r\n<!DOC
+SF:TYPE\x20HTML\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.0\x20Transitional
+SF://EN\">\r\n<HTML><HEAD><TITLE>Isle\x20of\x20Wight\x20Council\x20-\x20No
+SF:tification</TITLE>\r\n<META\x20http-equiv=Content-Type\x20content=\"tex
+SF:t/html;\x20charset=windows-1252\">\r\n<STYLE\x20type=text/css>#iwchr1\x
+SF:20{\r\n\tBORDER-RIGHT:\x20medium\x20none;\x20BORDER-TOP:\x20#2d338e\x20
+SF:solid;\x20BORDER-LEFT:\x20medium\x20none;\x20BORDER-BOTTOM:\x20#e0aa0f\
+SF:x20solid;\x20HEIGHT:\x2014px\r\n}\r\n#iwchr\x20{\r\n\tBORDER-RIGHT:\x20
+SF:medium\x20none;\x20BORDER-TOP:\x20#2d338e\x20solid;\x20BORDER-LEFT:\x20
+SF:medium\x20none;\x20BORDER-BOTTOM:\x20medium\x20none\r\n}\r\n</STYLE>\r\
+SF:n\r\n\r\n\r\n<META\x20content=\"MSHTML\x206\.00\.2900\.3492\"\x20name=G
+SF:ENERATOR></HEAD>\r\n<BODY\x20bgColor=#ffffff\x20onload=replaceReason\(\
+SF:)>\r\n<TABLE\x20id=Table1\x20cellSpacing=0\x20cellPadding=10\x20width=8
+SF:00\x20border=0>\r\n\x20\x20<TBODY>\r\n\x20\x20<TR>\r\n\x20\x20\x20\x20<
+SF:TD\x20vAlign=top\x20align=left><IMG\x20alt=I\.W\.C\x20\r\n\x20\x20\x20\
+SF:x20\x20\x20src=\"Isle\x20of\x20Wight\x20Council\x20-\x20SW\x20-\x20Noti
+SF:fication_files/iow_co")%r(HTTPOptions,81F,"HTTP/1\.0\x20403\x20Forbidde
+SF:n\r\nContent-Type:\x20text/html\r\nConnection:\x20close\r\nContent-Leng
+SF:th:\x201987\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//W3C//DTD\x20HTML
+SF:\x204\.0\x20Transitional//EN\">\r\n<HTML><HEAD><TITLE>Isle\x20of\x20Wig
+SF:ht\x20Council\x20-\x20Notification</TITLE>\r\n<META\x20http-equiv=Conte
+SF:nt-Type\x20content=\"text/html;\x20charset=windows-1252\">\r\n<STYLE\x2
+SF:0type=text/css>#iwchr1\x20{\r\n\tBORDER-RIGHT:\x20medium\x20none;\x20BO
+SF:RDER-TOP:\x20#2d338e\x20solid;\x20BORDER-LEFT:\x20medium\x20none;\x20BO
+SF:RDER-BOTTOM:\x20#e0aa0f\x20solid;\x20HEIGHT:\x2014px\r\n}\r\n#iwchr\x20
+SF:{\r\n\tBORDER-RIGHT:\x20medium\x20none;\x20BORDER-TOP:\x20#2d338e\x20so
+SF:lid;\x20BORDER-LEFT:\x20medium\x20none;\x20BORDER-BOTTOM:\x20medium\x20
+SF:none\r\n}\r\n</STYLE>\r\n\r\n\r\n\r\n<META\x20content=\"MSHTML\x206\.00
+SF:\.2900\.3492\"\x20name=GENERATOR></HEAD>\r\n<BODY\x20bgColor=#ffffff\x2
+SF:0onload=replaceReason\(\)>\r\n<TABLE\x20id=Table1\x20cellSpacing=0\x20c
+SF:ellPadding=10\x20width=800\x20border=0>\r\n\x20\x20<TBODY>\r\n\x20\x20<
+SF:TR>\r\n\x20\x20\x20\x20<TD\x20vAlign=top\x20align=left><IMG\x20alt=I\.W
+SF:\.C\x20\r\n\x20\x20\x20\x20\x20\x20src=\"Isle\x20of\x20Wight\x20Council
+SF:\x20-\x20SW\x20-\x20Notification_files/iow_co");
+Service Info: Device: firewall; CPE: cpe:/h:securecomputing:sidewinder
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 11:14:48 2019 -- 1 IP address (1 host up) scanned in 559.12 seconds

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 07:21:57 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/equalities.gov.uk equalities.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/equalities.gov.uk equalities.gov.uk" start="1552713717" startstr="Sat Mar 16 07:21:57 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552713723" endtime="1552722111"><status state="up" reason="syn-ack" reason_ttl="49"/>
+<address addr="193.110.243.5" addrtype="ipv4"/>
+<hostnames>
+<hostname name="equalities.gov.uk" type="user"/>
+<hostname name="blade07vh.connectinternetsolutions.com" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65436">
+<extrareasons reason="no-responses" count="65436"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="49"/><service name="ftp" servicefp="SF-Port21-TCP:V=7.70%I=7%D=3/16%Time=5C8CA860%P=x86_64-unknown-linux-gnu%r(GenericLines,16,&quot;220\x20FTP\x20server\x20ready\r\n&quot;);" method="probed" conf="10"/><script id="banner" output="220 FTP server ready"/><script id="fingerprint-strings" output="&#xa;  GenericLines: &#xa;    220 FTP server ready"><elem key="GenericLines">&#xa;    220 FTP server ready</elem>
+</script></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="49"/><service name="ssh" product="OpenSSH" version="4.3" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:4.3</cpe></service></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="49"/><service name="domain" extrainfo="unknown banner: [Secured]" servicefp="SF-Port53-TCP:V=7.70%I=7%D=3/16%Time=5C8CA860%P=x86_64-unknown-linux-gnu%r(DNSVersionBindReqTCP,44,&quot;\0B\0\x06\x85\0\0\x01\0\x01\0\x01\0\0\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\n\t\[Secured\]\xc0\x0c\0\x02\0\x03\0\0\0\0\0\x02\xc0\x0c&quot;);" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  DNSVersionBindReqTCP: &#xa;    version&#xa;    bind&#xa;    [Secured]"><elem key="DNSVersionBindReqTCP">&#xa;    version&#xa;    bind&#xa;    [Secured]</elem>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="49"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="49"/><service name="http" product="Apache httpd" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference error: Error when comparing TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA and TLS_RSA_WITH_3DES_EDE_CBC_SHA&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Key exchange (dh 1024) of lower strength than certificate key&#xa;  least strength: D"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">D</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">C</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference error">Error when comparing TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA and TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Key exchange (dh 1024) of lower strength than certificate key</elem>
+</table>
+</table>
+<elem key="least strength">D</elem>
+</script></port>
+<port protocol="tcp" portid="5351"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="5835"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="6044"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="6315"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="6900"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="6982"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="7219"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="7820"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="8572"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="9013"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="11196"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="12014"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="12511"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="12612"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="17852"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="18300"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="18642"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="19626"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="19733"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="20680"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="20795"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="21336"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="22380"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="22446"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="23379"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="23395"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="24212"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="25047"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="25416"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="26085"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="26099"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="26511"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="26608"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="26715"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="28541"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="28542"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="29143"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="29298"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="29962"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="30469"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="30805"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="31820"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="31995"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="33598"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="33615"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="36382"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="36393"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="37428"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="37821"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="39544"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="39794"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="40018"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="41539"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="41717"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="41838"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="42158"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="42371"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="42451"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="44482"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="44871"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="45086"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="45230"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="45620"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="46581"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="47083"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="47358"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="47775"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="48046"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="48307"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="48545"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="49232"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="49583"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="49936"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="50800"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="50845"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="50974"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="51322"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="52280"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="52527"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="53950"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="54425"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="54619"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="55017"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="55585"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="57625"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="57662"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="58489"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="59985"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="60811"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="61054"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="61837"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="62311"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="63272"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="63989"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="64415"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+</ports>
+<times srtt="79932" rttvar="18997" to="155920"/>
+</host>
+<runstats><finished time="1552722111" timestr="Sat Mar 16 09:41:51 2019" elapsed="8393.67" summary="Nmap done at Sat Mar 16 09:41:51 2019; 1 IP address (1 host up) scanned in 8393.67 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

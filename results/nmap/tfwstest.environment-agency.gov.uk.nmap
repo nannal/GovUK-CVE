@@ -1,0 +1,28 @@
+# Nmap 7.70 scan initiated Sat Mar 16 19:34:59 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/tfwstest.environment-agency.gov.uk tfwstest.environment-agency.gov.uk
+Nmap scan report for tfwstest.environment-agency.gov.uk (195.59.199.189)
+Host is up (0.056s latency).
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http-proxy F5 BIG-IP load balancer http proxy
+|_http-server-header: BigIP
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.0 302 Found
+|     Location: http://environment-agency.gov.uk/holding-pages/tfw.aspx
+|_    Connection: close
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D349C%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,6C,"HTTP/1\.0\x20302\x20Found\r\nLocation:\x20http:/
+SF:/environment-agency\.gov\.uk/holding-pages/tfw\.aspx\r\nConnection:\x20
+SF:close\r\n\r\n")%r(HTTPOptions,6C,"HTTP/1\.0\x20302\x20Found\r\nLocation
+SF::\x20http://environment-agency\.gov\.uk/holding-pages/tfw\.aspx\r\nConn
+SF:ection:\x20close\r\n\r\n")%r(FourOhFourRequest,6C,"HTTP/1\.0\x20302\x20
+SF:Found\r\nLocation:\x20http://environment-agency\.gov\.uk/holding-pages/
+SF:tfw\.aspx\r\nConnection:\x20close\r\n\r\n")%r(RTSPRequest,6C,"HTTP/1\.0
+SF:\x20302\x20Found\r\nLocation:\x20http://environment-agency\.gov\.uk/hol
+SF:ding-pages/tfw\.aspx\r\nConnection:\x20close\r\n\r\n");
+Service Info: Device: load balancer
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 19:40:08 2019 -- 1 IP address (1 host up) scanned in 308.40 seconds

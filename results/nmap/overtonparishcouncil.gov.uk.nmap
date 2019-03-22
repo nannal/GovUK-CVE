@@ -1,0 +1,38 @@
+# Nmap 7.70 scan initiated Sat Mar 16 15:05:06 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/overtonparishcouncil.gov.uk overtonparishcouncil.gov.uk
+Warning: 188.240.191.163 giving up on port because retransmission cap hit (6).
+Nmap scan report for overtonparishcouncil.gov.uk (188.240.191.163)
+Host is up (0.072s latency).
+rDNS record for 188.240.191.163: server63.interdns.co.uk
+Not shown: 65496 closed ports, 36 filtered ports
+PORT    STATE SERVICE    VERSION
+22/tcp  open  tcpwrapped
+80/tcp  open  http       Apache httpd
+|_http-server-header: Apache
+88/tcp  open  http       Apache httpd
+|_http-server-header: Apache
+443/tcp open  ssl/ssl    Apache httpd (SSL-only mode)
+|_http-server-header: Apache
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_CBC_SHA and TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 15:23:09 2019 -- 1 IP address (1 host up) scanned in 1082.45 seconds

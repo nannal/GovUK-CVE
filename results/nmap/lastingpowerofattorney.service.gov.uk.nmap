@@ -1,0 +1,92 @@
+# Nmap 7.70 scan initiated Sat Mar 16 11:42:52 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/lastingpowerofattorney.service.gov.uk lastingpowerofattorney.service.gov.uk
+Nmap scan report for lastingpowerofattorney.service.gov.uk (52.19.19.162)
+Host is up (0.070s latency).
+Other addresses for lastingpowerofattorney.service.gov.uk (not scanned): 52.48.187.8 34.245.242.53
+rDNS record for 52.19.19.162: ec2-52-19-19-162.eu-west-1.compute.amazonaws.com
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      nginx
+|_http-server-header: nginx
+443/tcp open  ssl/https nginx
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Kerberos, LANDesk-RC, LDAPBindReq, LDAPSearchReq, NCP, RPCCheck, RTSPRequest, SIPOptions, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServer, X11Probe, tor-versions: 
+|     HTTP/1.1 400 BAD_REQUEST
+|     Content-Length: 0
+|     Connection: Close
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.1 504 GATEWAY_TIMEOUT
+|     Content-Length: 0
+|_    Connection: Close
+|_http-server-header: nginx
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CC6B3%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,46,"HTTP/1\.1\x20504\x20GATEWAY_TIMEOUT\r\nContent-L
+SF:ength:\x200\r\nConnection:\x20Close\r\n\r\n")%r(HTTPOptions,46,"HTTP/1\
+SF:.1\x20504\x20GATEWAY_TIMEOUT\r\nContent-Length:\x200\r\nConnection:\x20
+SF:Close\r\n\r\n")%r(FourOhFourRequest,46,"HTTP/1\.1\x20504\x20GATEWAY_TIM
+SF:EOUT\r\nContent-Length:\x200\r\nConnection:\x20Close\r\n\r\n")%r(tor-ve
+SF:rsions,42,"HTTP/1\.1\x20400\x20BAD_REQUEST\r\nContent-Length:\x200\r\nC
+SF:onnection:\x20Close\r\n\r\n")%r(RTSPRequest,42,"HTTP/1\.1\x20400\x20BAD
+SF:_REQUEST\r\nContent-Length:\x200\r\nConnection:\x20Close\r\n\r\n")%r(RP
+SF:CCheck,42,"HTTP/1\.1\x20400\x20BAD_REQUEST\r\nContent-Length:\x200\r\nC
+SF:onnection:\x20Close\r\n\r\n")%r(DNSVersionBindReqTCP,42,"HTTP/1\.1\x204
+SF:00\x20BAD_REQUEST\r\nContent-Length:\x200\r\nConnection:\x20Close\r\n\r
+SF:\n")%r(DNSStatusRequestTCP,42,"HTTP/1\.1\x20400\x20BAD_REQUEST\r\nConte
+SF:nt-Length:\x200\r\nConnection:\x20Close\r\n\r\n")%r(SSLSessionReq,42,"H
+SF:TTP/1\.1\x20400\x20BAD_REQUEST\r\nContent-Length:\x200\r\nConnection:\x
+SF:20Close\r\n\r\n")%r(TLSSessionReq,42,"HTTP/1\.1\x20400\x20BAD_REQUEST\r
+SF:\nContent-Length:\x200\r\nConnection:\x20Close\r\n\r\n")%r(Kerberos,42,
+SF:"HTTP/1\.1\x20400\x20BAD_REQUEST\r\nContent-Length:\x200\r\nConnection:
+SF:\x20Close\r\n\r\n")%r(SMBProgNeg,42,"HTTP/1\.1\x20400\x20BAD_REQUEST\r\
+SF:nContent-Length:\x200\r\nConnection:\x20Close\r\n\r\n")%r(X11Probe,42,"
+SF:HTTP/1\.1\x20400\x20BAD_REQUEST\r\nContent-Length:\x200\r\nConnection:\
+SF:x20Close\r\n\r\n")%r(LDAPSearchReq,42,"HTTP/1\.1\x20400\x20BAD_REQUEST\
+SF:r\nContent-Length:\x200\r\nConnection:\x20Close\r\n\r\n")%r(LDAPBindReq
+SF:,42,"HTTP/1\.1\x20400\x20BAD_REQUEST\r\nContent-Length:\x200\r\nConnect
+SF:ion:\x20Close\r\n\r\n")%r(SIPOptions,42,"HTTP/1\.1\x20400\x20BAD_REQUES
+SF:T\r\nContent-Length:\x200\r\nConnection:\x20Close\r\n\r\n")%r(LANDesk-R
+SF:C,42,"HTTP/1\.1\x20400\x20BAD_REQUEST\r\nContent-Length:\x200\r\nConnec
+SF:tion:\x20Close\r\n\r\n")%r(TerminalServer,42,"HTTP/1\.1\x20400\x20BAD_R
+SF:EQUEST\r\nContent-Length:\x200\r\nConnection:\x20Close\r\n\r\n")%r(NCP,
+SF:42,"HTTP/1\.1\x20400\x20BAD_REQUEST\r\nContent-Length:\x200\r\nConnecti
+SF:on:\x20Close\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 11:52:24 2019 -- 1 IP address (1 host up) scanned in 571.51 seconds

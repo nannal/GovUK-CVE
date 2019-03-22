@@ -1,0 +1,35 @@
+# Nmap 7.70 scan initiated Sat Mar 16 11:51:35 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/leics-fire.gov.uk leics-fire.gov.uk
+Nmap scan report for leics-fire.gov.uk (146.148.27.169)
+Host is up (0.41s latency).
+rDNS record for 146.148.27.169: 169.27.148.146.bc.googleusercontent.com
+Not shown: 65533 filtered ports
+PORT     STATE SERVICE  VERSION
+80/tcp   open  http     nginx
+|_http-server-header: nginx
+443/tcp  open  ssl/http nginx
+|_http-server-header: nginx
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA - unknown
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: unknown
+2222/tcp open  ssh      ProFTPD mod_sftp 0.9.9 (protocol 2.0)
+| banner: SSH-2.0-mod_sftp/0.9.9\x0D\x0A\x00\x00\x01\xBC\x08\x14\xEB\x8D\
+|_xC0\xA2\x8D\x1B\xC7i\x15\x1C\xA1\xE2\xEC\xD7\xE4\xA5\x00\x00\x00\xC4...
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 12:35:38 2019 -- 1 IP address (1 host up) scanned in 2642.94 seconds

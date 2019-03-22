@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 08:51:41 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/ferryhill.gov.uk ferryhill.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/ferryhill.gov.uk ferryhill.gov.uk" start="1552719101" startstr="Sat Mar 16 08:51:41 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552719102" endtime="1552720418"><status state="up" reason="reset" reason_ttl="47"/>
+<address addr="81.91.100.34" addrtype="ipv4"/>
+<hostnames>
+<hostname name="ferryhill.gov.uk" type="user"/>
+<hostname name="no-dns-yet.81-91-100.anlx.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65419">
+<extrareasons reason="resets" count="65419"/>
+</extraports>
+<extraports state="filtered" count="114">
+<extrareasons reason="no-responses" count="114"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="ssh" product="OpenSSH" version="7.4p1 Debian 10+deb9u6" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.4p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="banner" output="SSH-2.0-OpenSSH_7.4p1 Debian-10+deb9u6"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="http" product="nginx" version="1.10.3" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.10.3</cpe></service><script id="http-server-header" output="nginx/1.10.3"><elem>nginx/1.10.3</elem>
+</script></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version   port/proto  service&#xa;  100000  2,3,4        111/tcp  rpcbind&#xa;  100000  2,3,4        111/udp  rpcbind&#xa;"><table key="100000">
+<table key="tcp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">111</elem>
+</table>
+<table key="udp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">111</elem>
+</table>
+</table>
+</script></port>
+</ports>
+<times srtt="72376" rttvar="18913" to="148028"/>
+</host>
+<runstats><finished time="1552720418" timestr="Sat Mar 16 09:13:38 2019" elapsed="1316.67" summary="Nmap done at Sat Mar 16 09:13:38 2019; 1 IP address (1 host up) scanned in 1316.67 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

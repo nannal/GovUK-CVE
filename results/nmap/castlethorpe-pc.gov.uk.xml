@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 04:13:52 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/castlethorpe-pc.gov.uk castlethorpe-pc.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/castlethorpe-pc.gov.uk castlethorpe-pc.gov.uk" start="1552702432" startstr="Sat Mar 16 04:13:52 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552702432" endtime="1552702899"><status state="up" reason="echo-reply" reason_ttl="53"/>
+<address addr="212.69.40.200" addrtype="ipv4"/>
+<hostnames>
+<hostname name="castlethorpe-pc.gov.uk" type="user"/>
+<hostname name="cpanel8.idnet.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65528">
+<extrareasons reason="no-responses" count="65528"/>
+</extraports>
+<port protocol="tcp" portid="20"><state state="closed" reason="reset" reason_ttl="53"/><service name="ftp-data" method="table" conf="3"/></port>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="ftp" product="Pure-FTPd" method="probed" conf="10"><cpe>cpe:/a:pureftpd:pure-ftpd</cpe></service><script id="banner" output="220-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; Welcome to Pure-FTPd [privsep] [TLS] -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\x&#xa;0D\x0A220-You are user number 1 of 50 allowed.\x0D\x0A220-Local time...&#xa;"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="ssh" product="OpenSSH" version="7.4" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.4</cpe></service><script id="banner" output="SSH-2.0-OpenSSH_7.4"/></port>
+<port protocol="tcp" portid="53"><state state="closed" reason="reset" reason_ttl="53"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="ssl" product="Apache httpd" extrainfo="SSL-only mode" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+<port protocol="tcp" portid="2083"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="radsec" servicefp="SF-Port2083-TCP:V=7.70%I=7%D=3/16%Time=5C8C5D94%P=x86_64-unknown-linux-gnu%r(TerminalServer,140,&quot;HTTP/1\.1\x20301\x20Moved\r\nContent-length:\x20114\r\nLocation:\x20https://cpanel8\.idnet\.net:2083\r\nContent-type:\x20text/html;\x20charset=\&quot;utf-8\&quot;\r\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x20no-cache\r\n\r\n&lt;html&gt;&lt;head&gt;&lt;META\x20HTTP-EQUIV=\&quot;refresh\&quot;\x20CONTENT=\&quot;2;URL=https://cpanel8\.idnet\.net:2083\&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;\n&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  TerminalServer: &#xa;    HTTP/1.1 301 Moved&#xa;    Content-length: 114&#xa;    Location: https://cpanel8.idnet.net:2083&#xa;    Content-type: text/html; charset=&quot;utf-8&quot;&#xa;    Cache-Control: no-cache, no-store, must-revalidate, private&#xa;    Pragma: no-cache&#xa;    &lt;html&gt;&lt;head&gt;&lt;META HTTP-EQUIV=&quot;refresh&quot; CONTENT=&quot;2;URL=https://cpanel8.idnet.net:2083&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;"><elem key="TerminalServer">&#xa;    HTTP/1.1 301 Moved&#xa;    Content-length: 114&#xa;    Location: https://cpanel8.idnet.net:2083&#xa;    Content-type: text/html; charset=&quot;utf-8&quot;&#xa;    Cache-Control: no-cache, no-store, must-revalidate, private&#xa;    Pragma: no-cache&#xa;    &lt;html&gt;&lt;head&gt;&lt;META HTTP-EQUIV=&quot;refresh&quot; CONTENT=&quot;2;URL=https://cpanel8.idnet.net:2083&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</elem>
+</script></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="mysql" product="MySQL" version="5.7.25" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql:5.7.25</cpe></service><script id="banner" output="J\x00\x00\x00\x0A5.7.25\x00\x82#\x0E\x00O^?4\x0972\x17\x00\xFF\&#xa;xF7\x08\x02\x00\xFF\x81\x15\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\...&#xa;"/></port>
+</ports>
+<times srtt="77798" rttvar="14690" to="136558"/>
+</host>
+<runstats><finished time="1552702899" timestr="Sat Mar 16 04:21:39 2019" elapsed="467.79" summary="Nmap done at Sat Mar 16 04:21:39 2019; 1 IP address (1 host up) scanned in 467.79 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,163 @@
+# Nmap 7.70 scan initiated Sat Mar 16 22:26:54 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/www.signin.service.gov.uk www.signin.service.gov.uk
+Nmap scan report for www.signin.service.gov.uk (35.176.149.113)
+Host is up (0.056s latency).
+Other addresses for www.signin.service.gov.uk (not scanned): 18.130.47.107 18.130.64.77
+rDNS record for 35.176.149.113: ec2-35-176-149-113.eu-west-2.compute.amazonaws.com
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE  VERSION
+80/tcp  open  http     awselb/2.0
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Server: awselb/2.0
+|     Date: Sat, 16 Mar 2019 20:29:43 GMT
+|     Content-Type: text/html
+|     Content-Length: 150
+|     Connection: close
+|     Location: https://internal-prod-ingress-806165055.eu-west-2.elb.amazonaws.com:443/nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body bgcolor="white">
+|     <center><h1>301 Moved Permanently</h1></center>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Server: awselb/2.0
+|     Date: Sat, 16 Mar 2019 20:29:40 GMT
+|     Content-Type: text/html
+|     Content-Length: 150
+|     Connection: close
+|     Location: https://internal-prod-ingress-806165055.eu-west-2.elb.amazonaws.com:443/
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body bgcolor="white">
+|     <center><h1>301 Moved Permanently</h1></center>
+|     </body>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Server: awselb/2.0
+|     Date: Sat, 16 Mar 2019 20:29:41 GMT
+|     Content-Type: text/html
+|     Content-Length: 150
+|     Connection: close
+|     Location: https://internal-prod-ingress-806165055.eu-west-2.elb.amazonaws.com:443/
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body bgcolor="white">
+|     <center><h1>301 Moved Permanently</h1></center>
+|     </body>
+|     </html>
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|     </html>
+|   X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Server: awselb/2.0
+|     Date: Sat, 16 Mar 2019 20:29:43 GMT
+|     Content-Type: text/html
+|     Content-Length: 138
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|_    </html>
+|_http-server-header: awselb/2.0
+443/tcp open  ssl/http nginx 1.15.8
+|_http-server-header: awselb/2.0
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8D5CB0%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,186,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x2
+SF:0awselb/2\.0\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2020:29:40\x20GMT\r
+SF:\nContent-Type:\x20text/html\r\nContent-Length:\x20150\r\nConnection:\x
+SF:20close\r\nLocation:\x20https://internal-prod-ingress-806165055\.eu-wes
+SF:t-2\.elb\.amazonaws\.com:443/\r\n\r\n<html>\r\n<head><title>301\x20Move
+SF:d\x20Permanently</title></head>\r\n<body\x20bgcolor=\"white\">\r\n<cent
+SF:er><h1>301\x20Moved\x20Permanently</h1></center>\r\n</body>\r\n</html>\
+SF:r\n")%r(HTTPOptions,186,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nSe
+SF:rver:\x20awselb/2\.0\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2020:29:41\
+SF:x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20150\r\nConne
+SF:ction:\x20close\r\nLocation:\x20https://internal-prod-ingress-806165055
+SF:\.eu-west-2\.elb\.amazonaws\.com:443/\r\n\r\n<html>\r\n<head><title>301
+SF:\x20Moved\x20Permanently</title></head>\r\n<body\x20bgcolor=\"white\">\
+SF:r\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n</body>\r\n
+SF:</html>\r\n")%r(RTSPRequest,8A,"<html>\r\n<head><title>400\x20Bad\x20Re
+SF:quest</title></head>\r\n<body\x20bgcolor=\"white\">\r\n<center><h1>400\
+SF:x20Bad\x20Request</h1></center>\r\n</body>\r\n</html>\r\n")%r(X11Probe,
+SF:120,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20awselb/2\.0\r\nDa
+SF:te:\x20Sat,\x2016\x20Mar\x202019\x2020:29:43\x20GMT\r\nContent-Type:\x2
+SF:0text/html\r\nContent-Length:\x20138\r\nConnection:\x20close\r\n\r\n<ht
+SF:ml>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<body\x20bg
+SF:color=\"white\">\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n
+SF:</body>\r\n</html>\r\n")%r(FourOhFourRequest,1A9,"HTTP/1\.1\x20301\x20M
+SF:oved\x20Permanently\r\nServer:\x20awselb/2\.0\r\nDate:\x20Sat,\x2016\x2
+SF:0Mar\x202019\x2020:29:43\x20GMT\r\nContent-Type:\x20text/html\r\nConten
+SF:t-Length:\x20150\r\nConnection:\x20close\r\nLocation:\x20https://intern
+SF:al-prod-ingress-806165055\.eu-west-2\.elb\.amazonaws\.com:443/nice%20po
+SF:rts%2C/Tri%6Eity\.txt%2ebak\r\n\r\n<html>\r\n<head><title>301\x20Moved\
+SF:x20Permanently</title></head>\r\n<body\x20bgcolor=\"white\">\r\n<center
+SF:><h1>301\x20Moved\x20Permanently</h1></center>\r\n</body>\r\n</html>\r\
+SF:n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 22:30:17 2019 -- 1 IP address (1 host up) scanned in 202.85 seconds

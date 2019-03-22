@@ -1,0 +1,253 @@
+# Nmap 7.70 scan initiated Sat Mar 16 02:02:19 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/acastermalbis-pc.gov.uk acastermalbis-pc.gov.uk
+Nmap scan report for acastermalbis-pc.gov.uk (77.68.40.142)
+Host is up (0.067s latency).
+rDNS record for 77.68.40.142: server77-68-40-142.live-servers.net
+Not shown: 65522 filtered ports
+PORT     STATE SERVICE         VERSION
+22/tcp   open  ssh             OpenSSH 6.8 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_6.8
+53/tcp   open  domain          Microsoft DNS 6.1.7601 (1DB15EC5) (Windows Server 2008 R2 SP1)
+80/tcp   open  http            Microsoft IIS httpd 7.5
+110/tcp  open  pop3?
+|_banner: -ERR Connection refused
+| fingerprint-strings: 
+|   NULL: 
+|_    -ERR Connection refused
+143/tcp  open  imap            Microsoft Exchange imapd (refused)
+443/tcp  open  ssl/http        Microsoft IIS httpd 7.5
+465/tcp  open  ssl/smtp?
+|_banner: 220 acs-mail.co.uk ESMTP Sat, 16 Mar 2019 00:23:01 +0000
+| fingerprint-strings: 
+|   Hello: 
+|     220 acs-mail.co.uk ESMTP Sat, 16 Mar 2019 00:23:01 +0000
+|     5.5.4 Invalid or missing command argument(s)
+|   Help: 
+|     220 acs-mail.co.uk ESMTP Sat, 16 Mar 2019 00:23:17 +0000
+|     5.5.1 Command not implemented
+|   NULL: 
+|_    220 acs-mail.co.uk ESMTP Sat, 16 Mar 2019 00:23:01 +0000
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+587/tcp  open  submission?
+|_banner: 421 5.7.1 Connection refused
+| fingerprint-strings: 
+|   NULL: 
+|_    421 5.7.1 Connection refused
+900/tcp  open  omginitialrefs?
+|_banner: 220 Welcome to the ACS Server...
+| fingerprint-strings: 
+|   GenericLines, NULL: 
+|     220 Welcome to the ACS Server...
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     220 Welcome to the ACS Server...
+|     Syntax error, command unrecognized.
+|   RPCCheck: 
+|     220 Welcome to the ACS Server...
+|     Syntax error, command unrecognized.
+|     Syntax error, command unrecognized.
+|     Syntax error, command unrecognized.
+|     Syntax error, command unrecognized.
+|_    Syntax error, command unrecognized.
+993/tcp  open  tcpwrapped
+995/tcp  open  tcpwrapped
+3001/tcp open  nessus?
+| fingerprint-strings: 
+|   GenericLines: 
+|     HTTP/1.0 400 Bad Request
+|     X-Frame-Options: sameorigin
+|     X-XSS-Protection: 1
+|     Server: WDaemon/4.0
+|     Date: Sat, 16 Mar 2019 00:23:05 GMT
+|     Content-Type: text/html
+|     Content-Length: 97
+|     Connection: close
+|     <HTML>
+|     <HEAD><TITLE>400 Bad Request</TITLE></HEAD>
+|     <BODY><H1>Bad Request</H1></BODY>
+|     </HTML>
+|   GetRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     X-Frame-Options: sameorigin
+|     X-XSS-Protection: 1
+|     Server: WDaemon/4.0
+|     Date: Sat, 16 Mar 2019 00:23:05 GMT
+|     Content-Type: text/html
+|     Content-Length: 0
+|_    Connection: close
+3002/tcp open  ssl/exlm-agent?
+| fingerprint-strings: 
+|   GenericLines: 
+|     HTTP/1.0 400 Bad Request
+|     X-Frame-Options: sameorigin
+|     X-XSS-Protection: 1
+|     Server: WDaemon/4.0
+|     Date: Sat, 16 Mar 2019 00:23:33 GMT
+|     Content-Type: text/html
+|     Content-Length: 97
+|     Connection: close
+|     <HTML>
+|     <HEAD><TITLE>400 Bad Request</TITLE></HEAD>
+|     <BODY><H1>Bad Request</H1></BODY>
+|     </HTML>
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     X-Frame-Options: sameorigin
+|     X-XSS-Protection: 1
+|     Content-Type: text/html; charset=utf-8
+|     Last-Modified: Sat, 16 Mar 2019 00:23:41 GMT
+|     Expires: 0
+|     Pragma: no-cache
+|     Connection: close
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <meta charset="UTF-8">
+|     <meta name="ROBOTS" content="NOINDEX, FOLLOW" />
+|     <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width" />
+|     <title>MDaemon Webmail</title>
+|     <link rel="shortcut icon" href="favicon.ico?v=18.5.1c" type="image/x-icon" />
+|     <link rel="stylesheet" href="LookOut/pages/logon.css?v=18.5.1" />
+|     <script src="All/JavaScript/jquery-latest.js?v=18.5.1"></script>
+|     <script type="text/javascript">
+|     "lang": "en",
+|     "languages": ["en","fc","zh","da","de","cs","uk","es","fr","id","it","ja",
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     X-Frame-Options: sameorigin
+|     X-XSS-Protection: 1
+|     Content-Type: text/html; charset=utf-8
+|     Last-Modified: Sat, 16 Mar 2019 00:23:43 GMT
+|     Expires: 0
+|     Pragma: no-cache
+|     Connection: close
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <meta charset="UTF-8">
+|     <meta name="ROBOTS" content="NOINDEX, FOLLOW" />
+|     <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width" />
+|     <title>MDaemon Webmail</title>
+|     <link rel="shortcut icon" href="favicon.ico?v=18.5.1c" type="image/x-icon" />
+|     <link rel="stylesheet" href="LookOut/pages/logon.css?v=18.5.1" />
+|     <script src="All/JavaScript/jquery-latest.js?v=18.5.1"></script>
+|     <script type="text/javascript">
+|     "lang": "en",
+|_    "languages": ["en","fc","zh","da","de","cs","uk","es","fr","id","it","ja",
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+3389/tcp open  ms-wbt-server   Microsoft Terminal Service
+6 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port110-TCP:V=7.70%I=7%D=3/16%Time=5C8C41CE%P=x86_64-unknown-linux-gnu%
+SF:r(NULL,19,"-ERR\x20Connection\x20refused\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port465-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8C41DC%P=x86_64-unknown-linu
+SF:x-gnu%r(NULL,3A,"220\x20acs-mail\.co\.uk\x20ESMTP\x20Sat,\x2016\x20Mar\
+SF:x202019\x2000:23:01\x20\+0000\r\n")%r(Hello,6C,"220\x20acs-mail\.co\.uk
+SF:\x20ESMTP\x20Sat,\x2016\x20Mar\x202019\x2000:23:01\x20\+0000\r\n501\x20
+SF:5\.5\.4\x20Invalid\x20or\x20missing\x20command\x20argument\(s\)\r\n")%r
+SF:(Help,5D,"220\x20acs-mail\.co\.uk\x20ESMTP\x20Sat,\x2016\x20Mar\x202019
+SF:\x2000:23:17\x20\+0000\r\n502\x205\.5\.1\x20Command\x20not\x20implement
+SF:ed\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port587-TCP:V=7.70%I=7%D=3/16%Time=5C8C41CE%P=x86_64-unknown-linux-gnu%
+SF:r(NULL,1E,"421\x205\.7\.1\x20Connection\x20refused\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port900-TCP:V=7.70%I=7%D=3/16%Time=5C8C41D4%P=x86_64-unknown-linux-gnu%
+SF:r(NULL,22,"220\x20Welcome\x20to\x20the\x20ACS\x20Server\.\.\.\r\n")%r(G
+SF:etRequest,4B,"220\x20Welcome\x20to\x20the\x20ACS\x20Server\.\.\.\r\n500
+SF:\x20Syntax\x20error,\x20command\x20unrecognized\.\r\n")%r(GenericLines,
+SF:22,"220\x20Welcome\x20to\x20the\x20ACS\x20Server\.\.\.\r\n")%r(HTTPOpti
+SF:ons,4B,"220\x20Welcome\x20to\x20the\x20ACS\x20Server\.\.\.\r\n500\x20Sy
+SF:ntax\x20error,\x20command\x20unrecognized\.\r\n")%r(RTSPRequest,4B,"220
+SF:\x20Welcome\x20to\x20the\x20ACS\x20Server\.\.\.\r\n500\x20Syntax\x20err
+SF:or,\x20command\x20unrecognized\.\r\n")%r(RPCCheck,EF,"220\x20Welcome\x2
+SF:0to\x20the\x20ACS\x20Server\.\.\.\r\n500\x20Syntax\x20error,\x20command
+SF:\x20unrecognized\.\r\n500\x20Syntax\x20error,\x20command\x20unrecognize
+SF:d\.\r\n500\x20Syntax\x20error,\x20command\x20unrecognized\.\r\n500\x20S
+SF:yntax\x20error,\x20command\x20unrecognized\.\r\n500\x20Syntax\x20error,
+SF:\x20command\x20unrecognized\.\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port3001-TCP:V=7.70%I=7%D=3/16%Time=5C8C41D9%P=x86_64-unknown-linux-gnu
+SF:%r(GenericLines,129,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nX-Frame-Opti
+SF:ons:\x20sameorigin\r\nX-XSS-Protection:\x201\r\nServer:\x20WDaemon/4\.0
+SF:\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2000:23:05\x20GMT\r\nContent-Ty
+SF:pe:\x20text/html\r\nContent-Length:\x2097\r\nConnection:\x20close\r\n\r
+SF:\n<HTML>\r\n<HEAD><TITLE>400\x20Bad\x20Request</TITLE></HEAD>\r\n<BODY>
+SF:<H1>Bad\x20Request</H1></BODY>\r\n</HTML>\r\n")%r(GetRequest,CD,"HTTP/1
+SF:\.0\x20302\x20Moved\x20Temporarily\r\nX-Frame-Options:\x20sameorigin\r\
+SF:nX-XSS-Protection:\x201\r\nServer:\x20WDaemon/4\.0\r\nDate:\x20Sat,\x20
+SF:16\x20Mar\x202019\x2000:23:05\x20GMT\r\nContent-Type:\x20text/html\r\nC
+SF:ontent-Length:\x200\r\nConnection:\x20close\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port3002-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8C41FC%P=x86_64-unknown-lin
+SF:ux-gnu%r(GenericLines,129,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nX-Fram
+SF:e-Options:\x20sameorigin\r\nX-XSS-Protection:\x201\r\nServer:\x20WDaemo
+SF:n/4\.0\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2000:23:33\x20GMT\r\nCont
+SF:ent-Type:\x20text/html\r\nContent-Length:\x2097\r\nConnection:\x20close
+SF:\r\n\r\n<HTML>\r\n<HEAD><TITLE>400\x20Bad\x20Request</TITLE></HEAD>\r\n
+SF:<BODY><H1>Bad\x20Request</H1></BODY>\r\n</HTML>\r\n")%r(GetRequest,10CC
+SF:,"HTTP/1\.0\x20200\x20OK\r\nX-Frame-Options:\x20sameorigin\r\nX-XSS-Pro
+SF:tection:\x201\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nLast-M
+SF:odified:\x20Sat,\x2016\x20Mar\x202019\x2000:23:41\x20GMT\r\nExpires:\x2
+SF:00\r\nPragma:\x20no-cache\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20h
+SF:tml>\r\n<html>\r\n\x20\x20\x20\x20<head>\r\n\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20<meta\x20charset=\"UTF-8\">\r\n\x20\x20\x20\x20\x20\x20\x20\x20<me
+SF:ta\x20name=\"ROBOTS\"\x20content=\"NOINDEX,\x20FOLLOW\"\x20/>\r\n\x20\x
+SF:20\x20\x20\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"initi
+SF:al-scale=1,user-scalable=no,maximum-scale=1,width=device-width\"\x20/>\
+SF:r\n\x20\x20\x20\x20\x20\x20\x20\x20<title>MDaemon\x20Webmail</title>\r\
+SF:n\t\x20\x20\x20\x20<link\x20rel=\"shortcut\x20icon\"\x20href=\"favicon\
+SF:.ico\?v=18\.5\.1c\"\x20type=\"image/x-icon\"\x20/>\r\n\t\x20\x20\x20\x2
+SF:0<link\x20rel=\"stylesheet\"\x20href=\"LookOut/pages/logon\.css\?v=18\.
+SF:5\.1\"\x20/>\r\n\x20\x20\x20\x20\x20\x20\x20\x20<script\x20src=\"All/Ja
+SF:vaScript/jquery-latest\.js\?v=18\.5\.1\"></script>\r\n\x20\x20\x20\x20\
+SF:x20\x20\x20\x20<script\x20type=\"text/javascript\">\r\n\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20var\x20\$WC\x20=\x20{\r\n\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\"lang\":\x20\"en\",\
+SF:r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\"la
+SF:nguages\":\x20\[\"en\",\"fc\",\"zh\",\"da\",\"de\",\"cs\",\"uk\",\"es\"
+SF:,\"fr\",\"id\",\"it\",\"ja\",")%r(HTTPOptions,10CC,"HTTP/1\.0\x20200\x2
+SF:0OK\r\nX-Frame-Options:\x20sameorigin\r\nX-XSS-Protection:\x201\r\nCont
+SF:ent-Type:\x20text/html;\x20charset=utf-8\r\nLast-Modified:\x20Sat,\x201
+SF:6\x20Mar\x202019\x2000:23:43\x20GMT\r\nExpires:\x200\r\nPragma:\x20no-c
+SF:ache\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20html>\r\n<html>\r\n\x2
+SF:0\x20\x20\x20<head>\r\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20charset
+SF:=\"UTF-8\">\r\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20name=\"ROBOTS\"
+SF:\x20content=\"NOINDEX,\x20FOLLOW\"\x20/>\r\n\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20<meta\x20name=\"viewport\"\x20content=\"initial-scale=1,user-scala
+SF:ble=no,maximum-scale=1,width=device-width\"\x20/>\r\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20<title>MDaemon\x20Webmail</title>\r\n\t\x20\x20\x20\x20<l
+SF:ink\x20rel=\"shortcut\x20icon\"\x20href=\"favicon\.ico\?v=18\.5\.1c\"\x
+SF:20type=\"image/x-icon\"\x20/>\r\n\t\x20\x20\x20\x20<link\x20rel=\"style
+SF:sheet\"\x20href=\"LookOut/pages/logon\.css\?v=18\.5\.1\"\x20/>\r\n\x20\
+SF:x20\x20\x20\x20\x20\x20\x20<script\x20src=\"All/JavaScript/jquery-lates
+SF:t\.js\?v=18\.5\.1\"></script>\r\n\x20\x20\x20\x20\x20\x20\x20\x20<scrip
+SF:t\x20type=\"text/javascript\">\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20var\x20\$WC\x20=\x20{\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\"lang\":\x20\"en\",\r\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\"languages\":\x20\[\"en\
+SF:",\"fc\",\"zh\",\"da\",\"de\",\"cs\",\"uk\",\"es\",\"fr\",\"id\",\"it\"
+SF:,\"ja\",");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows_server_2008:r2:sp1, cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 02:24:26 2019 -- 1 IP address (1 host up) scanned in 1327.21 seconds

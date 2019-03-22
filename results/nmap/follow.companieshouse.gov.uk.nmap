@@ -1,0 +1,199 @@
+# Nmap 7.70 scan initiated Sat Mar 16 09:00:04 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/follow.companieshouse.gov.uk follow.companieshouse.gov.uk
+Nmap scan report for follow.companieshouse.gov.uk (54.154.99.185)
+Host is up (0.47s latency).
+Other addresses for follow.companieshouse.gov.uk (not scanned): 34.248.252.66 52.48.114.123
+rDNS record for 54.154.99.185: ec2-54-154-99-185.eu-west-1.compute.amazonaws.com
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Kerberos, LANDesk-RC, LDAPBindReq, LDAPSearchReq, RPCCheck, RTSPRequest, SIPOptions, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServer, X11Probe: 
+|     HTTP/1.1 400 BAD_REQUEST
+|     Content-Length: 0
+|     Connection: Close
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Location: https://10.51.20.198/nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Content-Length: 0
+|     Connection: Close
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Location: https://10.51.20.198/
+|     Content-Length: 0
+|_    Connection: Close
+443/tcp open  ssl/https CompaniesHouse
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+|     Content-Type: text/html;charset=UTF-8
+|     Date: Sat, 16 Mar 2019 07:26:27 GMT
+|     Pragma: no-cache
+|     Server: CompaniesHouse
+|     Set-Cookie: __SID=D+dYN4vkdyFhqqZ2EpKGon3AUWqfdUxS98yFTZ+gVEwuyF+00WOssoE; expires=Sat, 16 Mar 2019 08:26:27 GMT; domain=companieshouse.gov.uk; path=/; secure; HttpOnly
+|     Strict-Transport-Security: max-age=31536000
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: DENY
+|     Content-Length: 13037
+|     Connection: Close
+|     <!DOCTYPE html>
+|     <!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]-->
+|     <!--[if gt IE 8]><!--><html lang="en"><!--<![endif]--><head>
+|     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+|     <!-- Company numbers are not taken as a phone number -->
+|     <meta name="format-detection" content="telephone=no">
+|     <title>Page not found</title>
+|     <met
+|   GetRequest: 
+|     HTTP/1.1 302 Found
+|     Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+|     Date: Sat, 16 Mar 2019 07:26:21 GMT
+|     Location: /signin?return_to=https://10.51.20.198/
+|     Pragma: no-cache
+|     Server: CompaniesHouse
+|     Set-Cookie: __SID=LC2hIN4jdOcHuB5Hy3NBrQTf0DNQGePmimKtvw2APV4DoxAmSCGOdpY; expires=Sat, 16 Mar 2019 08:26:21 GMT; domain=companieshouse.gov.uk; path=/; secure; HttpOnly
+|     Strict-Transport-Security: max-age=31536000
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: DENY
+|     Content-Length: 0
+|     Connection: Close
+|   HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+|     Content-Type: text/html;charset=UTF-8
+|     Date: Sat, 16 Mar 2019 07:26:27 GMT
+|     Pragma: no-cache
+|     Server: CompaniesHouse
+|     Set-Cookie: __SID=VbbTSCbIqZIwGz0oVO9PogXfTmjTOB5wXg2axP64kRBjzy4poYkDDhw; expires=Sat, 16 Mar 2019 08:26:27 GMT; domain=companieshouse.gov.uk; path=/; secure; HttpOnly
+|     Strict-Transport-Security: max-age=31536000
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: DENY
+|     Content-Length: 13037
+|     Connection: Close
+|     <!DOCTYPE html>
+|     <!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]-->
+|     <!--[if gt IE 8]><!--><html lang="en"><!--<![endif]--><head>
+|     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+|     <!-- Company numbers are not taken as a phone number -->
+|     <meta name="format-detection" content="telephone=no">
+|     <title>Page not found</title>
+|_    <met
+|_http-server-header: CompaniesHouse
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8CA513%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,69,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nLocation:\x
+SF:20https://10\.51\.20\.198/\r\nContent-Length:\x200\r\nConnection:\x20Cl
+SF:ose\r\n\r\n")%r(HTTPOptions,69,"HTTP/1\.1\x20301\x20Moved\x20Permanentl
+SF:y\r\nLocation:\x20https://10\.51\.20\.198/\r\nContent-Length:\x200\r\nC
+SF:onnection:\x20Close\r\n\r\n")%r(RTSPRequest,42,"HTTP/1\.1\x20400\x20BAD
+SF:_REQUEST\r\nContent-Length:\x200\r\nConnection:\x20Close\r\n\r\n")%r(X1
+SF:1Probe,42,"HTTP/1\.1\x20400\x20BAD_REQUEST\r\nContent-Length:\x200\r\nC
+SF:onnection:\x20Close\r\n\r\n")%r(FourOhFourRequest,8C,"HTTP/1\.1\x20301\
+SF:x20Moved\x20Permanently\r\nLocation:\x20https://10\.51\.20\.198/nice%20
+SF:ports%2C/Tri%6Eity\.txt%2ebak\r\nContent-Length:\x200\r\nConnection:\x2
+SF:0Close\r\n\r\n")%r(RPCCheck,42,"HTTP/1\.1\x20400\x20BAD_REQUEST\r\nCont
+SF:ent-Length:\x200\r\nConnection:\x20Close\r\n\r\n")%r(DNSVersionBindReqT
+SF:CP,42,"HTTP/1\.1\x20400\x20BAD_REQUEST\r\nContent-Length:\x200\r\nConne
+SF:ction:\x20Close\r\n\r\n")%r(DNSStatusRequestTCP,42,"HTTP/1\.1\x20400\x2
+SF:0BAD_REQUEST\r\nContent-Length:\x200\r\nConnection:\x20Close\r\n\r\n")%
+SF:r(SSLSessionReq,42,"HTTP/1\.1\x20400\x20BAD_REQUEST\r\nContent-Length:\
+SF:x200\r\nConnection:\x20Close\r\n\r\n")%r(TLSSessionReq,42,"HTTP/1\.1\x2
+SF:0400\x20BAD_REQUEST\r\nContent-Length:\x200\r\nConnection:\x20Close\r\n
+SF:\r\n")%r(Kerberos,42,"HTTP/1\.1\x20400\x20BAD_REQUEST\r\nContent-Length
+SF::\x200\r\nConnection:\x20Close\r\n\r\n")%r(SMBProgNeg,42,"HTTP/1\.1\x20
+SF:400\x20BAD_REQUEST\r\nContent-Length:\x200\r\nConnection:\x20Close\r\n\
+SF:r\n")%r(LDAPSearchReq,42,"HTTP/1\.1\x20400\x20BAD_REQUEST\r\nContent-Le
+SF:ngth:\x200\r\nConnection:\x20Close\r\n\r\n")%r(LDAPBindReq,42,"HTTP/1\.
+SF:1\x20400\x20BAD_REQUEST\r\nContent-Length:\x200\r\nConnection:\x20Close
+SF:\r\n\r\n")%r(SIPOptions,42,"HTTP/1\.1\x20400\x20BAD_REQUEST\r\nContent-
+SF:Length:\x200\r\nConnection:\x20Close\r\n\r\n")%r(LANDesk-RC,42,"HTTP/1\
+SF:.1\x20400\x20BAD_REQUEST\r\nContent-Length:\x200\r\nConnection:\x20Clos
+SF:e\r\n\r\n")%r(TerminalServer,42,"HTTP/1\.1\x20400\x20BAD_REQUEST\r\nCon
+SF:tent-Length:\x200\r\nConnection:\x20Close\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CA51E%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,21C,"HTTP/1\.1\x20302\x20Found\r\nCache-Control:\x20
+SF:no-store,\x20no-cache,\x20must-revalidate,\x20post-check=0,\x20pre-chec
+SF:k=0\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2007:26:21\x20GMT\r\nLocatio
+SF:n:\x20/signin\?return_to=https://10\.51\.20\.198/\r\nPragma:\x20no-cach
+SF:e\r\nServer:\x20CompaniesHouse\r\nSet-Cookie:\x20__SID=LC2hIN4jdOcHuB5H
+SF:y3NBrQTf0DNQGePmimKtvw2APV4DoxAmSCGOdpY;\x20expires=Sat,\x2016\x20Mar\x
+SF:202019\x2008:26:21\x20GMT;\x20domain=companieshouse\.gov\.uk;\x20path=/
+SF:;\x20secure;\x20HttpOnly\r\nStrict-Transport-Security:\x20max-age=31536
+SF:000\r\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Options:\x20DENY\r
+SF:\nContent-Length:\x200\r\nConnection:\x20Close\r\n\r\n")%r(HTTPOptions,
+SF:3505,"HTTP/1\.1\x20404\x20Not\x20Found\r\nCache-Control:\x20no-store,\x
+SF:20no-cache,\x20must-revalidate,\x20post-check=0,\x20pre-check=0\r\nCont
+SF:ent-Type:\x20text/html;charset=UTF-8\r\nDate:\x20Sat,\x2016\x20Mar\x202
+SF:019\x2007:26:27\x20GMT\r\nPragma:\x20no-cache\r\nServer:\x20CompaniesHo
+SF:use\r\nSet-Cookie:\x20__SID=VbbTSCbIqZIwGz0oVO9PogXfTmjTOB5wXg2axP64kRB
+SF:jzy4poYkDDhw;\x20expires=Sat,\x2016\x20Mar\x202019\x2008:26:27\x20GMT;\
+SF:x20domain=companieshouse\.gov\.uk;\x20path=/;\x20secure;\x20HttpOnly\r\
+SF:nStrict-Transport-Security:\x20max-age=31536000\r\nX-Content-Type-Optio
+SF:ns:\x20nosniff\r\nX-Frame-Options:\x20DENY\r\nContent-Length:\x2013037\
+SF:r\nConnection:\x20Close\r\n\r\n<!DOCTYPE\x20html>\n<!--\[if\x20lt\x20IE
+SF:\x209\]><html\x20class=\"lte-ie8\"\x20lang=\"en\"><!\[endif\]-->\n<!--\
+SF:[if\x20gt\x20IE\x208\]><!--><html\x20lang=\"en\"><!--<!\[endif\]--><hea
+SF:d>\n\x20\x20\x20<meta\x20http-equiv=\"content-type\"\x20content=\"text/
+SF:html;\x20charset=UTF-8\">\n<!--\x20Company\x20numbers\x20are\x20not\x20
+SF:taken\x20as\x20a\x20phone\x20number\x20-->\n\x20\x20\x20<meta\x20name=\
+SF:"format-detection\"\x20content=\"telephone=no\">\n\n\x20\x20\x20<title>
+SF:Page\x20not\x20found</title>\n\n\t<met")%r(FourOhFourRequest,3505,"HTTP
+SF:/1\.1\x20404\x20Not\x20Found\r\nCache-Control:\x20no-store,\x20no-cache
+SF:,\x20must-revalidate,\x20post-check=0,\x20pre-check=0\r\nContent-Type:\
+SF:x20text/html;charset=UTF-8\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2007:
+SF:26:27\x20GMT\r\nPragma:\x20no-cache\r\nServer:\x20CompaniesHouse\r\nSet
+SF:-Cookie:\x20__SID=D\+dYN4vkdyFhqqZ2EpKGon3AUWqfdUxS98yFTZ\+gVEwuyF\+00W
+SF:OssoE;\x20expires=Sat,\x2016\x20Mar\x202019\x2008:26:27\x20GMT;\x20doma
+SF:in=companieshouse\.gov\.uk;\x20path=/;\x20secure;\x20HttpOnly\r\nStrict
+SF:-Transport-Security:\x20max-age=31536000\r\nX-Content-Type-Options:\x20
+SF:nosniff\r\nX-Frame-Options:\x20DENY\r\nContent-Length:\x2013037\r\nConn
+SF:ection:\x20Close\r\n\r\n<!DOCTYPE\x20html>\n<!--\[if\x20lt\x20IE\x209\]
+SF:><html\x20class=\"lte-ie8\"\x20lang=\"en\"><!\[endif\]-->\n<!--\[if\x20
+SF:gt\x20IE\x208\]><!--><html\x20lang=\"en\"><!--<!\[endif\]--><head>\n\x2
+SF:0\x20\x20<meta\x20http-equiv=\"content-type\"\x20content=\"text/html;\x
+SF:20charset=UTF-8\">\n<!--\x20Company\x20numbers\x20are\x20not\x20taken\x
+SF:20as\x20a\x20phone\x20number\x20-->\n\x20\x20\x20<meta\x20name=\"format
+SF:-detection\"\x20content=\"telephone=no\">\n\n\x20\x20\x20<title>Page\x2
+SF:0not\x20found</title>\n\n\t<met");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 09:28:37 2019 -- 1 IP address (1 host up) scanned in 1713.02 seconds

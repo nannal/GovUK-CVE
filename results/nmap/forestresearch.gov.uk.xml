@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 09:01:27 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/forestresearch.gov.uk forestresearch.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/forestresearch.gov.uk forestresearch.gov.uk" start="1552719687" startstr="Sat Mar 16 09:01:27 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552719687" endtime="1552721366"><status state="up" reason="syn-ack" reason_ttl="54"/>
+<address addr="159.65.208.176" addrtype="ipv4"/>
+<hostnames>
+<hostname name="forestresearch.gov.uk" type="user"/>
+</hostnames>
+<ports><extraports state="filtered" count="65527">
+<extrareasons reason="no-responses" count="65527"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="ssh" product="OpenSSH" version="7.2p2 Ubuntu 4ubuntu2.8" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.2p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="banner" output="SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.8"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="http" product="nginx" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx</cpe></service><script id="http-server-header" output="nginx"><elem>nginx</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="http" product="nginx" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx</cpe></service><script id="http-server-header" output="nginx"><elem>nginx</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  least strength: A"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<elem key="least strength">A</elem>
+</script></port>
+<port protocol="tcp" portid="2375"><state state="closed" reason="reset" reason_ttl="54"/><service name="docker" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2376"><state state="closed" reason="reset" reason_ttl="54"/><service name="docker" method="table" conf="3"/></port>
+<port protocol="tcp" portid="32768"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="postgresql" product="PostgreSQL DB" version="9.6.0 or later" servicefp="SF-Port32768-TCP:V=7.70%I=7%D=3/16%Time=5C8CA5BB%P=x86_64-unknown-linux-gnu%r(Kerberos,8C,&quot;E\0\0\0\x8bSFATAL\0VFATAL\0C0A000\0Munsupported\x20frontend\x20protocol\x2027265\.28208:\x20server\x20supports\x201\.0\x20to\x203\.0\0Fpostmaster\.c\0L2030\0RProcessStartupPacket\0\0&quot;)%r(SMBProgNeg,8C,&quot;E\0\0\0\x8bSFATAL\0VFATAL\0C0A000\0Munsupported\x20frontend\x20protocol\x2065363\.19778:\x20server\x20supports\x201\.0\x20to\x203\.0\0Fpostmaster\.c\0L2030\0RProcessStartupPacket\0\0&quot;);" method="probed" conf="10"><cpe>cpe:/a:postgresql:postgresql</cpe></service><script id="fingerprint-strings" output="&#xa;  Kerberos: &#xa;    SFATAL&#xa;    VFATAL&#xa;    C0A000&#xa;    Munsupported frontend protocol 27265.28208: server supports 1.0 to 3.0&#xa;    Fpostmaster.c&#xa;    L2030&#xa;    RProcessStartupPacket&#xa;  SMBProgNeg: &#xa;    SFATAL&#xa;    VFATAL&#xa;    C0A000&#xa;    Munsupported frontend protocol 65363.19778: server supports 1.0 to 3.0&#xa;    Fpostmaster.c&#xa;    L2030&#xa;    RProcessStartupPacket"><elem key="Kerberos">&#xa;    SFATAL&#xa;    VFATAL&#xa;    C0A000&#xa;    Munsupported frontend protocol 27265.28208: server supports 1.0 to 3.0&#xa;    Fpostmaster.c&#xa;    L2030&#xa;    RProcessStartupPacket</elem>
+<elem key="SMBProgNeg">&#xa;    SFATAL&#xa;    VFATAL&#xa;    C0A000&#xa;    Munsupported frontend protocol 65363.19778: server supports 1.0 to 3.0&#xa;    Fpostmaster.c&#xa;    L2030&#xa;    RProcessStartupPacket</elem>
+</script></port>
+<port protocol="tcp" portid="32769"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="postgresql" product="PostgreSQL DB" version="9.6.0 or later" servicefp="SF-Port32769-TCP:V=7.70%I=7%D=3/16%Time=5C8CA5BB%P=x86_64-unknown-linux-gnu%r(Kerberos,8C,&quot;E\0\0\0\x8bSFATAL\0VFATAL\0C0A000\0Munsupported\x20frontend\x20protocol\x2027265\.28208:\x20server\x20supports\x201\.0\x20to\x203\.0\0Fpostmaster\.c\0L2030\0RProcessStartupPacket\0\0&quot;)%r(SMBProgNeg,8C,&quot;E\0\0\0\x8bSFATAL\0VFATAL\0C0A000\0Munsupported\x20frontend\x20protocol\x2065363\.19778:\x20server\x20supports\x201\.0\x20to\x203\.0\0Fpostmaster\.c\0L2030\0RProcessStartupPacket\0\0&quot;);" method="probed" conf="10"><cpe>cpe:/a:postgresql:postgresql</cpe></service><script id="fingerprint-strings" output="&#xa;  Kerberos: &#xa;    SFATAL&#xa;    VFATAL&#xa;    C0A000&#xa;    Munsupported frontend protocol 27265.28208: server supports 1.0 to 3.0&#xa;    Fpostmaster.c&#xa;    L2030&#xa;    RProcessStartupPacket&#xa;  SMBProgNeg: &#xa;    SFATAL&#xa;    VFATAL&#xa;    C0A000&#xa;    Munsupported frontend protocol 65363.19778: server supports 1.0 to 3.0&#xa;    Fpostmaster.c&#xa;    L2030&#xa;    RProcessStartupPacket"><elem key="Kerberos">&#xa;    SFATAL&#xa;    VFATAL&#xa;    C0A000&#xa;    Munsupported frontend protocol 27265.28208: server supports 1.0 to 3.0&#xa;    Fpostmaster.c&#xa;    L2030&#xa;    RProcessStartupPacket</elem>
+<elem key="SMBProgNeg">&#xa;    SFATAL&#xa;    VFATAL&#xa;    C0A000&#xa;    Munsupported frontend protocol 65363.19778: server supports 1.0 to 3.0&#xa;    Fpostmaster.c&#xa;    L2030&#xa;    RProcessStartupPacket</elem>
+</script></port>
+<port protocol="tcp" portid="32770"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="postgresql" product="PostgreSQL DB" version="9.6.0 or later" servicefp="SF-Port32770-TCP:V=7.70%I=7%D=3/16%Time=5C8CA5B9%P=x86_64-unknown-linux-gnu%r(Kerberos,8C,&quot;E\0\0\0\x8bSFATAL\0VFATAL\0C0A000\0Munsupported\x20frontend\x20protocol\x2027265\.28208:\x20server\x20supports\x201\.0\x20to\x203\.0\0Fpostmaster\.c\0L2030\0RProcessStartupPacket\0\0&quot;)%r(SMBProgNeg,8C,&quot;E\0\0\0\x8bSFATAL\0VFATAL\0C0A000\0Munsupported\x20frontend\x20protocol\x2065363\.19778:\x20server\x20supports\x201\.0\x20to\x203\.0\0Fpostmaster\.c\0L2030\0RProcessStartupPacket\0\0&quot;);" method="probed" conf="10"><cpe>cpe:/a:postgresql:postgresql</cpe></service><script id="fingerprint-strings" output="&#xa;  Kerberos: &#xa;    SFATAL&#xa;    VFATAL&#xa;    C0A000&#xa;    Munsupported frontend protocol 27265.28208: server supports 1.0 to 3.0&#xa;    Fpostmaster.c&#xa;    L2030&#xa;    RProcessStartupPacket&#xa;  SMBProgNeg: &#xa;    SFATAL&#xa;    VFATAL&#xa;    C0A000&#xa;    Munsupported frontend protocol 65363.19778: server supports 1.0 to 3.0&#xa;    Fpostmaster.c&#xa;    L2030&#xa;    RProcessStartupPacket"><elem key="Kerberos">&#xa;    SFATAL&#xa;    VFATAL&#xa;    C0A000&#xa;    Munsupported frontend protocol 27265.28208: server supports 1.0 to 3.0&#xa;    Fpostmaster.c&#xa;    L2030&#xa;    RProcessStartupPacket</elem>
+<elem key="SMBProgNeg">&#xa;    SFATAL&#xa;    VFATAL&#xa;    C0A000&#xa;    Munsupported frontend protocol 65363.19778: server supports 1.0 to 3.0&#xa;    Fpostmaster.c&#xa;    L2030&#xa;    RProcessStartupPacket</elem>
+</script></port>
+<port protocol="tcp" portid="32771"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="postgresql" product="PostgreSQL DB" version="9.6.0 or later" servicefp="SF-Port32771-TCP:V=7.70%I=7%D=3/16%Time=5C8CA5BA%P=x86_64-unknown-linux-gnu%r(Kerberos,8C,&quot;E\0\0\0\x8bSFATAL\0VFATAL\0C0A000\0Munsupported\x20frontend\x20protocol\x2027265\.28208:\x20server\x20supports\x201\.0\x20to\x203\.0\0Fpostmaster\.c\0L2030\0RProcessStartupPacket\0\0&quot;)%r(SMBProgNeg,8C,&quot;E\0\0\0\x8bSFATAL\0VFATAL\0C0A000\0Munsupported\x20frontend\x20protocol\x2065363\.19778:\x20server\x20supports\x201\.0\x20to\x203\.0\0Fpostmaster\.c\0L2030\0RProcessStartupPacket\0\0&quot;);" method="probed" conf="10"><cpe>cpe:/a:postgresql:postgresql</cpe></service><script id="fingerprint-strings" output="&#xa;  Kerberos: &#xa;    SFATAL&#xa;    VFATAL&#xa;    C0A000&#xa;    Munsupported frontend protocol 27265.28208: server supports 1.0 to 3.0&#xa;    Fpostmaster.c&#xa;    L2030&#xa;    RProcessStartupPacket&#xa;  SMBProgNeg: &#xa;    SFATAL&#xa;    VFATAL&#xa;    C0A000&#xa;    Munsupported frontend protocol 65363.19778: server supports 1.0 to 3.0&#xa;    Fpostmaster.c&#xa;    L2030&#xa;    RProcessStartupPacket"><elem key="Kerberos">&#xa;    SFATAL&#xa;    VFATAL&#xa;    C0A000&#xa;    Munsupported frontend protocol 27265.28208: server supports 1.0 to 3.0&#xa;    Fpostmaster.c&#xa;    L2030&#xa;    RProcessStartupPacket</elem>
+<elem key="SMBProgNeg">&#xa;    SFATAL&#xa;    VFATAL&#xa;    C0A000&#xa;    Munsupported frontend protocol 65363.19778: server supports 1.0 to 3.0&#xa;    Fpostmaster.c&#xa;    L2030&#xa;    RProcessStartupPacket</elem>
+</script></port>
+</ports>
+<times srtt="57772" rttvar="18784" to="132908"/>
+</host>
+<runstats><finished time="1552721366" timestr="Sat Mar 16 09:29:26 2019" elapsed="1679.23" summary="Nmap done at Sat Mar 16 09:29:26 2019; 1 IP address (1 host up) scanned in 1679.23 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

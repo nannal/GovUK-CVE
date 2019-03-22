@@ -1,0 +1,39 @@
+# Nmap 7.70 scan initiated Sat Mar 16 18:49:30 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/stoke.gov.uk stoke.gov.uk
+Nmap scan report for stoke.gov.uk (62.252.24.27)
+Host is up (0.072s latency).
+rDNS record for 62.252.24.27: 27-24-252-62.static.virginm.net
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE  VERSION
+80/tcp  open  ssl/http Resin/2.1.16
+| http-server-header: 
+|   Apache/2.4.37 (Win64) OpenSSL/1.1.1
+|_  Resin/2.1.16
+443/tcp open  ssl/ssl  Apache httpd (SSL-only mode)
+| http-server-header: 
+|   Apache/2.4.33 (Win64) OpenSSL/1.1.0h
+|_  Microsoft-IIS/8.5
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_IDEA_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher IDEA vulnerable to SWEET32 attack
+|_  least strength: A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 18:52:38 2019 -- 1 IP address (1 host up) scanned in 187.46 seconds

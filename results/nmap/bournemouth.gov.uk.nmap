@@ -1,0 +1,25 @@
+# Nmap 7.70 scan initiated Sat Mar 16 03:15:59 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/bournemouth.gov.uk bournemouth.gov.uk
+Nmap scan report for bournemouth.gov.uk (185.18.139.63)
+Host is up (0.49s latency).
+Not shown: 65533 filtered ports
+PORT    STATE SERVICE        VERSION
+80/tcp  open  http-proxy     HAProxy http proxy 1.3.1 or later
+443/tcp open  ssl/http-proxy HAProxy http proxy 1.3.1 or later
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+990/tcp open  ssl/ftp        FileZilla ftpd
+| banner: 220-FileZilla Server 0.9.60 beta\x0D\x0A220-written by Tim Koss
+|_e (tim.kosse@filezilla-project.org)\x0D\x0A220 Please visit https://...
+Service Info: OS: Windows; Device: load balancer; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 04:01:59 2019 -- 1 IP address (1 host up) scanned in 2760.22 seconds

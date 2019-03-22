@@ -1,0 +1,33 @@
+# Nmap 7.70 scan initiated Sat Mar 16 14:02:05 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/nfcdd.environment-agency.gov.uk nfcdd.environment-agency.gov.uk
+Nmap scan report for nfcdd.environment-agency.gov.uk (195.59.221.41)
+Host is up (0.056s latency).
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http-proxy F5 BIG-IP load balancer http proxy
+|_http-server-header: BigIP
+443/tcp open  ssl/https  BigIP
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 302 Found
+|     Location: http://apps.environment-agency.gov.uk/holding/nfcdd.aspx
+|     Connection: close
+|   GetRequest, RTSPRequest: 
+|     HTTP/1.0 302 Found
+|     Location: /nfcdd/
+|     Server: BigIP
+|     Connection: close
+|_    Content-Length: 0
+|_http-server-header: BigIP
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CE679%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,5E,"HTTP/1\.0\x20302\x20Found\r\nLocation:\x20/nfcdd
+SF:/\r\nServer:\x20BigIP\r\nConnection:\x20close\r\nContent-Length:\x200\r
+SF:\n\r\n")%r(FourOhFourRequest,6D,"HTTP/1\.0\x20302\x20Found\r\nLocation:
+SF:\x20http://apps\.environment-agency\.gov\.uk/holding/nfcdd\.aspx\r\nCon
+SF:nection:\x20close\r\n\r\n")%r(RTSPRequest,5E,"HTTP/1\.0\x20302\x20Found
+SF:\r\nLocation:\x20/nfcdd/\r\nServer:\x20BigIP\r\nConnection:\x20close\r\
+SF:nContent-Length:\x200\r\n\r\n");
+Service Info: Device: load balancer
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 14:06:00 2019 -- 1 IP address (1 host up) scanned in 235.48 seconds

@@ -1,0 +1,91 @@
+# Nmap 7.70 scan initiated Sat Mar 16 11:00:52 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/immingham-tc.gov.uk immingham-tc.gov.uk
+Nmap scan report for immingham-tc.gov.uk (217.68.242.156)
+Host is up (0.070s latency).
+rDNS record for 217.68.242.156: parishwebsites1.vps.elite.net.uk
+Not shown: 65528 filtered ports
+PORT     STATE  SERVICE  VERSION
+20/tcp   closed ftp-data
+21/tcp   open   ftp      vsftpd 2.2.2
+|_banner: 220 (vsFTPd 2.2.2)
+80/tcp   open   http     Apache httpd (PHP 5.3.29)
+|_http-server-header: Apache
+110/tcp  open   pop3     Dovecot pop3d
+|_banner: +OK Dovecot ready.
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 1024) - D
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_IDEA_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 1024) - D
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 1024) - D
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 1024) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       64-bit block cipher IDEA vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Weak certificate signature: SHA1
+|_  least strength: D
+143/tcp  open   imap     Dovecot imapd
+| banner: * OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID 
+|_ENABLE IDLE STARTTLS AUTH=PLAIN] Dovecot ready.
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 1024) - D
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_IDEA_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 1024) - D
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 1024) - D
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 1024) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       64-bit block cipher IDEA vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Weak certificate signature: SHA1
+|_  least strength: D
+443/tcp  closed https
+587/tcp  open   smtp     Sendmail 8.14.4/8.14.4
+| banner: 220 parishwebsites1.vps.elite.net.uk ESMTP Sendmail 8.14.4/8.14
+|_.4; Sat, 16 Mar 2019 09:07:06 GMT
+3306/tcp open   mysql    MySQL (unauthorized)
+| banner: U\x00\x00\x00\xFFj\x04Host '78-58-49-144.static.zebra.lt' is no
+|_t allowed to connect to this MySQL server
+Service Info: OS: Unix
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 11:07:26 2019 -- 1 IP address (1 host up) scanned in 394.45 seconds

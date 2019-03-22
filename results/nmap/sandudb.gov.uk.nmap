@@ -1,0 +1,90 @@
+# Nmap 7.70 scan initiated Sat Mar 16 16:45:01 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/sandudb.gov.uk sandudb.gov.uk
+Nmap scan report for sandudb.gov.uk (54.76.209.246)
+Host is up (0.063s latency).
+rDNS record for 54.76.209.246: ec2-54-76-209-246.eu-west-1.compute.amazonaws.com
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE   VERSION
+80/tcp  open  upnp      Microsoft IIS httpd
+|_http-server-header: Microsoft-IIS/8.5
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Content-Type: text/html; charset=us-ascii
+|     Date: Sat, 16 Mar 2019 14:48:27 GMT
+|     Connection: close
+|     Content-Length: 315
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+|     <HTML><HEAD><TITLE>Not Found</TITLE>
+|     <META HTTP-EQUIV="Content-Type" Content="text/html; charset=us-ascii"></HEAD>
+|     <BODY><h2>Not Found</h2>
+|     <hr><p>HTTP Error 404. The requested resource is not found.</p>
+|     </BODY></HTML>
+|   tor-versions: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/html; charset=us-ascii
+|     Date: Sat, 16 Mar 2019 14:48:27 GMT
+|     Connection: close
+|     Content-Length: 326
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+|     <HTML><HEAD><TITLE>Bad Request</TITLE>
+|     <META HTTP-EQUIV="Content-Type" Content="text/html; charset=us-ascii"></HEAD>
+|     <BODY><h2>Bad Request - Invalid Verb</h2>
+|     <hr><p>HTTP Error 400. The request verb is invalid.</p>
+|_    </BODY></HTML>
+| ssl-enum-ciphers: 
+|   SSLv3: 
+|     ciphers: 
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       CBC-mode cipher in SSLv3 (CVE-2014-3566)
+|       Ciphersuite uses MD5 for message integrity
+|_  least strength: C
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D0CB7%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,1CD,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Typ
+SF:e:\x20text/html;\x20charset=us-ascii\r\nDate:\x20Sat,\x2016\x20Mar\x202
+SF:019\x2014:48:27\x20GMT\r\nConnection:\x20close\r\nContent-Length:\x2031
+SF:5\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.01/
+SF:/EN\"\"http://www\.w3\.org/TR/html4/strict\.dtd\">\r\n<HTML><HEAD><TITL
+SF:E>Not\x20Found</TITLE>\r\n<META\x20HTTP-EQUIV=\"Content-Type\"\x20Conte
+SF:nt=\"text/html;\x20charset=us-ascii\"></HEAD>\r\n<BODY><h2>Not\x20Found
+SF:</h2>\r\n<hr><p>HTTP\x20Error\x20404\.\x20The\x20requested\x20resource\
+SF:x20is\x20not\x20found\.</p>\r\n</BODY></HTML>\r\n")%r(HTTPOptions,1CD,"
+SF:HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Type:\x20text/html;\x20char
+SF:set=us-ascii\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2014:48:27\x20GMT\r
+SF:\nConnection:\x20close\r\nContent-Length:\x20315\r\n\r\n<!DOCTYPE\x20HT
+SF:ML\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.01//EN\"\"http://www\.w3\.o
+SF:rg/TR/html4/strict\.dtd\">\r\n<HTML><HEAD><TITLE>Not\x20Found</TITLE>\r
+SF:\n<META\x20HTTP-EQUIV=\"Content-Type\"\x20Content=\"text/html;\x20chars
+SF:et=us-ascii\"></HEAD>\r\n<BODY><h2>Not\x20Found</h2>\r\n<hr><p>HTTP\x20
+SF:Error\x20404\.\x20The\x20requested\x20resource\x20is\x20not\x20found\.<
+SF:/p>\r\n</BODY></HTML>\r\n")%r(FourOhFourRequest,1CD,"HTTP/1\.1\x20404\x
+SF:20Not\x20Found\r\nContent-Type:\x20text/html;\x20charset=us-ascii\r\nDa
+SF:te:\x20Sat,\x2016\x20Mar\x202019\x2014:48:27\x20GMT\r\nConnection:\x20c
+SF:lose\r\nContent-Length:\x20315\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"
+SF:-//W3C//DTD\x20HTML\x204\.01//EN\"\"http://www\.w3\.org/TR/html4/strict
+SF:\.dtd\">\r\n<HTML><HEAD><TITLE>Not\x20Found</TITLE>\r\n<META\x20HTTP-EQ
+SF:UIV=\"Content-Type\"\x20Content=\"text/html;\x20charset=us-ascii\"></HE
+SF:AD>\r\n<BODY><h2>Not\x20Found</h2>\r\n<hr><p>HTTP\x20Error\x20404\.\x20
+SF:The\x20requested\x20resource\x20is\x20not\x20found\.</p>\r\n</BODY></HT
+SF:ML>\r\n")%r(tor-versions,1DA,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCon
+SF:tent-Type:\x20text/html;\x20charset=us-ascii\r\nDate:\x20Sat,\x2016\x20
+SF:Mar\x202019\x2014:48:27\x20GMT\r\nConnection:\x20close\r\nContent-Lengt
+SF:h:\x20326\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x
+SF:204\.01//EN\"\"http://www\.w3\.org/TR/html4/strict\.dtd\">\r\n<HTML><HE
+SF:AD><TITLE>Bad\x20Request</TITLE>\r\n<META\x20HTTP-EQUIV=\"Content-Type\
+SF:"\x20Content=\"text/html;\x20charset=us-ascii\"></HEAD>\r\n<BODY><h2>Ba
+SF:d\x20Request\x20-\x20Invalid\x20Verb</h2>\r\n<hr><p>HTTP\x20Error\x2040
+SF:0\.\x20The\x20request\x20verb\x20is\x20invalid\.</p>\r\n</BODY></HTML>\
+SF:r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 16:48:58 2019 -- 1 IP address (1 host up) scanned in 236.17 seconds

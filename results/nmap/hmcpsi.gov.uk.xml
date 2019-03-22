@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 10:27:10 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/hmcpsi.gov.uk hmcpsi.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/hmcpsi.gov.uk hmcpsi.gov.uk" start="1552724830" startstr="Sat Mar 16 10:27:10 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552724830" endtime="1552726718"><status state="up" reason="syn-ack" reason_ttl="240"/>
+<address addr="94.136.40.100" addrtype="ipv4"/>
+<hostnames>
+<hostname name="hmcpsi.gov.uk" type="user"/>
+<hostname name="outbound-traffic.linweb.ahost.me" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65246">
+<extrareasons reason="resets" count="65246"/>
+</extraports>
+<extraports state="filtered" count="286">
+<extrareasons reason="no-responses" count="286"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="240"/><service name="ftp" product="ProFTPD" method="probed" conf="10"><cpe>cpe:/a:proftpd:proftpd</cpe></service><script id="banner" output="220 ATLAS/WebFusion FTP server"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="240"/><service name="ssh" extrainfo="protocol 2.0" servicefp="SF-Port22-TCP:V=7.70%I=7%D=3/16%Time=5C8CBAA4%P=x86_64-unknown-linux-gnu%r(NULL,1CC,&quot;SSH-2\.0-ATLAS/WebFusion\x20FTP\x20server\r\n\0\0\x01\xa4\x08\x14\xdcV\xaa\xb1\xc6\xa9dx\x93\xdaH%\x97XY\xb2\0\0\0\xc4ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,rsa1024-sha1\0\0\0\x07ssh-rsa\0\0\0-aes256-ctr,aes192-ctr,aes128-ctr,blowfish-ctr\0\0\0-aes256-ctr,aes192-ctr,aes128-ctr,blowfish-ctr\0\0\0\x18hmac-sha1,hmac-ripemd160\0\0\0\x18hmac-sha1,hmac-ripemd160\0\0\0\x04none\0\0\0\x04none\0\0\0\0\0\0\0\0\0\0\0\0\0\xdb\xf1\xab\[\xfa@v\xdd&quot;);" method="probed" conf="10"/><script id="banner" output="SSH-2.0-ATLAS/WebFusion FTP server\x0D\x0A\x00\x00\x01\xA4\x08\&#xa;x14\xDCV\xAA\xB1\xC6\xA9dx\x93\xDAH%\x97XY\xB2\x00\x00\x00\xC4ecdh-s...&#xa;"/><script id="fingerprint-strings" output="&#xa;  NULL: &#xa;    SSH-2.0-ATLAS/WebFusion FTP server&#xa;    ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,rsa1024-sha1&#xa;    ssh-rsa&#xa;    -aes256-ctr,aes192-ctr,aes128-ctr,blowfish-ctr&#xa;    -aes256-ctr,aes192-ctr,aes128-ctr,blowfish-ctr&#xa;    hmac-sha1,hmac-ripemd160&#xa;    hmac-sha1,hmac-ripemd160&#xa;    none&#xa;    none"><elem key="NULL">&#xa;    SSH-2.0-ATLAS/WebFusion FTP server&#xa;    ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,rsa1024-sha1&#xa;    ssh-rsa&#xa;    -aes256-ctr,aes192-ctr,aes128-ctr,blowfish-ctr&#xa;    -aes256-ctr,aes192-ctr,aes128-ctr,blowfish-ctr&#xa;    hmac-sha1,hmac-ripemd160&#xa;    hmac-sha1,hmac-ripemd160&#xa;    none&#xa;    none</elem>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="240"/><service name="http" product="Apache httpd" hostname="02-webfusion" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="240"/><service name="tcpwrapped" method="probed" conf="10"/><script id="http-server-header" output="BigIP"><elem>BigIP</elem>
+</script></port>
+</ports>
+<times srtt="59579" rttvar="7214" to="100000"/>
+</host>
+<runstats><finished time="1552726718" timestr="Sat Mar 16 10:58:38 2019" elapsed="1887.91" summary="Nmap done at Sat Mar 16 10:58:38 2019; 1 IP address (1 host up) scanned in 1887.91 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

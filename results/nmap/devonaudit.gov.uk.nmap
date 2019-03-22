@@ -1,0 +1,371 @@
+# Nmap 7.70 scan initiated Sat Mar 16 06:10:03 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/devonaudit.gov.uk devonaudit.gov.uk
+Warning: 185.24.96.77 giving up on port because retransmission cap hit (6).
+Nmap scan report for devonaudit.gov.uk (185.24.96.77)
+Host is up (0.062s latency).
+rDNS record for 185.24.96.77: devon.servers.eqx.misp.co.uk
+Not shown: 62523 filtered ports, 2999 closed ports
+PORT     STATE SERVICE      VERSION
+22/tcp   open  ssh          OpenSSH 5.3 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_5.3
+80/tcp   open  http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Date: Sat, 16 Mar 2019 05:52:12 GMT
+|     Content-Type: text/html
+|     Age: 0
+|     X-Cache: MISS
+|     X-Cache-Hits: 0
+|     Connection: close
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+|     <html>
+|     <head>
+|     <title>404 Not Found</title>
+|     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+|     <style type="text/css">
+|     body {
+|     font-family: Verdana, Arial, Helvetica, sans-serif;
+|     font-size: 12px;
+|     background-color:#367E8E;
+|     scrollbar-base-color: #005B70;
+|     scrollbar-arrow-color: #F3960B;
+|     scrollbar-DarkShadow-Color: #000000;
+|     color: #FFFFFF;
+|     margin:0;
+|     color:#021f25; text-decoration:none}
+|     font-size: 18px;
+|     color: #FB9802;
+|     padding-bottom: 10px;
+|     background-im
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Sat, 16 Mar 2019 05:52:04 GMT
+|     Last-Modified: Tue, 20 Sep 2016 22:10:50 GMT
+|     Content-Length: 111
+|     Content-Type: text/html
+|     Age: 0
+|     X-Cache: MISS
+|     X-Cache-Hits: 0
+|     Accept-Ranges: bytes
+|     Connection: close
+|     <html><head><META HTTP-EQUIV="refresh" CONTENT="0;URL=/cgi-sys/defaultwebpage.cgi"></head><body></body></html>
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Sat, 16 Mar 2019 05:52:04 GMT
+|     Allow: GET,HEAD,POST,OPTIONS
+|     Content-Length: 0
+|     Content-Type: text/html
+|     Age: 0
+|     X-Cache: MISS
+|     X-Cache-Hits: 0
+|     Accept-Ranges: bytes
+|     Connection: close
+|   RTSPRequest: 
+|_    HTTP/1.1 400 Bad Request
+443/tcp  open  ssl/https
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Sat, 16 Mar 2019 05:52:04 GMT
+|     Last-Modified: Tue, 20 Sep 2016 22:10:50 GMT
+|     Content-Length: 111
+|     Content-Type: text/html
+|     Age: 7
+|     X-Cache: HIT
+|     X-Cache-Hits: 1
+|     Accept-Ranges: bytes
+|     Connection: close
+|     <html><head><META HTTP-EQUIV="refresh" CONTENT="0;URL=/cgi-sys/defaultwebpage.cgi"></head><body></body></html>
+|   HTTPOptions: 
+|     HTTP/1.0 501 Not Implemented
+|     Content-Type: text/html
+|     Content-Length: 59
+|     Expires: now
+|     Pragma: no-cache
+|     Cache-control: no-cache,no-store
+|_    Error 501 occurs. Default: "This method may not be used.".
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     cipher preference error: Network error
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 and TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+|_  least strength: A
+445/tcp  open  ssl/ssl      Apache httpd (SSL-only mode)
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|     compressors: 
+| 
+|     cipher preference error: Error when comparing TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA and TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+|_  least strength: A
+465/tcp  open  ssl/smtp     Exim smtpd 4.89
+| banner: 220-devon.servers.eqx.misp.co.uk ESMTP Exim 4.89 #1 Sat, 16 Mar
+|_ 2019 05:54:08 +0000 \x0D\x0A220-We do not authorize the use of this...
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 and TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+|_  least strength: A
+587/tcp  open  smtp         Exim smtpd 4.89
+| banner: 220-devon.servers.eqx.misp.co.uk ESMTP Exim 4.89 #1 Sat, 16 Mar
+|_ 2019 05:54:07 +0000 \x0D\x0A220-We do not authorize the use of this...
+993/tcp  open  ssl/imaps?
+| banner: * OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID 
+|_ENABLE IDLE NAMESPACE AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: indeterminate
+|     cipher preference error: Too few ciphers supported
+|_  least strength: A
+995/tcp  open  ssl/pop3s?
+|_banner: +OK Dovecot ready.
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_CBC_SHA and TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+|     warnings: 
+|       Key exchange (dh 1024) of lower strength than certificate key
+|_  least strength: A
+2077/tcp open  tsrmagt?
+2078/tcp open  ssl/tpcsrvr?
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA and TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 and TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
+|_  least strength: C
+2083/tcp open  radsec?
+| fingerprint-strings: 
+|   TerminalServer: 
+|     HTTP/1.1 301 Moved
+|     Server: cpsrvd
+|     Content-length: 125
+|     Location: https://devon.servers.eqx.misp.co.uk:2083
+|     Content-type: text/html; charset="utf-8"
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|_    <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://devon.servers.eqx.misp.co.uk:2083"></head><body></body></html>
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|     compressors: 
+| 
+|     cipher preference: indeterminate
+|     cipher preference error: Too few ciphers supported
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+| 
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 and TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+|_  least strength: A
+2087/tcp open  eli?
+| fingerprint-strings: 
+|   TerminalServer: 
+|     HTTP/1.1 301 Moved
+|     Server: cpsrvd
+|     Content-length: 125
+|     Location: https://devon.servers.eqx.misp.co.uk:2087
+|     Content-type: text/html; charset="utf-8"
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|_    <html><head><META HTTP-EQUIV="refresh" CONTENT="2;URL=https://devon.servers.eqx.misp.co.uk:2087"></head><body></body></html>
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+| 
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 and TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+|_  least strength: A
+2095/tcp open  nbx-ser?
+2096/tcp open  ssl/nbx-dir?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 05:52:33 GMT
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Pragma: no-cache
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: webmailsession=%3aJO_k3n1y_wq0NwJF%2c498f7152e4a6a169d1c580369b78e214; HttpOnly; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: roundcube_sessauth=expired; HttpOnly; domain=devon.servers.eqx.misp.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|     Set-Cookie: Horde=expired; HttpOnly; domain=.devon.servers.eqx.misp.co.uk; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2096; secure
+|_    Set-Cookie: horde_s
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: indeterminate
+|     cipher preference error: Too few ciphers supported
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+| 
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 and TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+|_  least strength: A
+5 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.70%I=7%D=3/16%Time=5C8C8F00%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,154,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2016\x20Mar\x
+SF:202019\x2005:52:04\x20GMT\r\nLast-Modified:\x20Tue,\x2020\x20Sep\x20201
+SF:6\x2022:10:50\x20GMT\r\nContent-Length:\x20111\r\nContent-Type:\x20text
+SF:/html\r\nAge:\x200\r\nX-Cache:\x20MISS\r\nX-Cache-Hits:\x200\r\nAccept-
+SF:Ranges:\x20bytes\r\nConnection:\x20close\r\n\r\n<html><head><META\x20HT
+SF:TP-EQUIV=\"refresh\"\x20CONTENT=\"0;URL=/cgi-sys/defaultwebpage\.cgi\">
+SF:</head><body></body></html>\n")%r(HTTPOptions,D3,"HTTP/1\.1\x20200\x20O
+SF:K\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2005:52:04\x20GMT\r\nAllow:\x2
+SF:0GET,HEAD,POST,OPTIONS\r\nContent-Length:\x200\r\nContent-Type:\x20text
+SF:/html\r\nAge:\x200\r\nX-Cache:\x20MISS\r\nX-Cache-Hits:\x200\r\nAccept-
+SF:Ranges:\x20bytes\r\nConnection:\x20close\r\n\r\n")%r(RTSPRequest,1C,"HT
+SF:TP/1\.1\x20400\x20Bad\x20Request\r\n\r\n")%r(FourOhFourRequest,897,"HTT
+SF:P/1\.1\x20404\x20Not\x20Found\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x20
+SF:05:52:12\x20GMT\r\nContent-Type:\x20text/html\r\nAge:\x200\r\nX-Cache:\
+SF:x20MISS\r\nX-Cache-Hits:\x200\r\nConnection:\x20close\r\n\r\n\n\n<!DOCT
+SF:YPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x20Transitional
+SF://EN\"\x20\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-transitional\.dtd\
+SF:">\n<html>\n\x20\x20<head>\n\x20\x20\x20\x20<title>404\x20Not\x20Found<
+SF:/title>\n\x20\x20\x20\x20<meta\x20http-equiv=\"Content-Type\"\x20conten
+SF:t=\"text/html;\x20charset=utf-8\"\x20/>\n\x20\x20\x20\x20<style\x20type
+SF:=\"text/css\">\n\x20\x20\x20\x20\x20\x20\x20\x20body\x20{\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\tfont-family:\x20Verdana,\x20Arial,\x20Helvetica,\
+SF:x20sans-serif;\n\x20\x20\x20\x20\x20\x20\x20\x20\tfont-size:\x2012px;\n
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\tbackground-color:#367E8E;\n\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\tscrollbar-base-color:\x20#005B70;\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\tscrollbar-arrow-color:\x20#F3960B;\n\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\tscrollbar-DarkShadow-Color:\x20#000000;\n\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\tcolor:\x20#FFFFFF;\n\t\t\tmargin:0;\n\x20\x20\
+SF:x20\x20\x20\x20\x20\x20}\n\x20\x20\x20\x20\x20\x20\x20\x20a\x20{\x20col
+SF:or:#021f25;\x20text-decoration:none}\n\x20\x20\x20\x20\x20\x20\x20\x20h
+SF:1\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\tfont-size:\x2018px;\n\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\tcolor:\x20#FB9802;\n\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\tpadding-bottom:\x2010px;\n\x20\x20\x20\x20\x20\x20\x20\x20\tba
+SF:ckground-im");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8C8F08%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,153,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2016\x
+SF:20Mar\x202019\x2005:52:04\x20GMT\r\nLast-Modified:\x20Tue,\x2020\x20Sep
+SF:\x202016\x2022:10:50\x20GMT\r\nContent-Length:\x20111\r\nContent-Type:\
+SF:x20text/html\r\nAge:\x207\r\nX-Cache:\x20HIT\r\nX-Cache-Hits:\x201\r\nA
+SF:ccept-Ranges:\x20bytes\r\nConnection:\x20close\r\n\r\n<html><head><META
+SF:\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"0;URL=/cgi-sys/defaultwebpage\.
+SF:cgi\"></head><body></body></html>\n")%r(HTTPOptions,CA,"HTTP/1\.0\x2050
+SF:1\x20Not\x20Implemented\r\nContent-Type:\x20text/html\r\nContent-Length
+SF::\x2059\r\nExpires:\x20now\r\nPragma:\x20no-cache\r\nCache-control:\x20
+SF:no-cache,no-store\r\n\r\nError\x20501\x20occurs\.\x20Default:\x20\"This
+SF:\x20method\x20may\x20not\x20be\x20used\.\"\.\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2083-TCP:V=7.70%I=7%D=3/16%Time=5C8C8F29%P=x86_64-unknown-linux-gnu
+SF:%r(TerminalServer,166,"HTTP/1\.1\x20301\x20Moved\r\nServer:\x20cpsrvd\r
+SF:\nContent-length:\x20125\r\nLocation:\x20https://devon\.servers\.eqx\.m
+SF:isp\.co\.uk:2083\r\nContent-type:\x20text/html;\x20charset=\"utf-8\"\r\
+SF:nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20privat
+SF:e\r\nPragma:\x20no-cache\r\n\r\n<html><head><META\x20HTTP-EQUIV=\"refre
+SF:sh\"\x20CONTENT=\"2;URL=https://devon\.servers\.eqx\.misp\.co\.uk:2083\
+SF:"></head><body></body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2087-TCP:V=7.70%I=7%D=3/16%Time=5C8C8F29%P=x86_64-unknown-linux-gnu
+SF:%r(TerminalServer,166,"HTTP/1\.1\x20301\x20Moved\r\nServer:\x20cpsrvd\r
+SF:\nContent-length:\x20125\r\nLocation:\x20https://devon\.servers\.eqx\.m
+SF:isp\.co\.uk:2087\r\nContent-type:\x20text/html;\x20charset=\"utf-8\"\r\
+SF:nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20privat
+SF:e\r\nPragma:\x20no-cache\r\n\r\n<html><head><META\x20HTTP-EQUIV=\"refre
+SF:sh\"\x20CONTENT=\"2;URL=https://devon\.servers\.eqx\.misp\.co\.uk:2087\
+SF:"></head><body></body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2096-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8C8F1D%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,8000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2005:52:33\x20GMT\r\nCache-Control:
+SF:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nPragma:\x2
+SF:0no-cache\r\nWWW-Authenticate:\x20Basic\x20realm=\"WebMail\"\r\nSet-Coo
+SF:kie:\x20webmailrelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\
+SF:x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x
+SF:20webmailsession=%3aJO_k3n1y_wq0NwJF%2c498f7152e4a6a169d1c580369b78e214
+SF:;\x20HttpOnly;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20rou
+SF:ndcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x200
+SF:0:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20ro
+SF:undcube_sessauth=expired;\x20HttpOnly;\x20domain=devon\.servers\.eqx\.m
+SF:isp\.co\.uk;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path
+SF:=/;\x20port=2096;\x20secure\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnl
+SF:y;\x20domain=\.devon\.servers\.eqx\.misp\.co\.uk;\x20expires=Thu,\x2001
+SF:-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2096;\x20secure\r\nSet
+SF:-Cookie:\x20horde_s");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 07:55:03 2019 -- 1 IP address (1 host up) scanned in 6299.64 seconds

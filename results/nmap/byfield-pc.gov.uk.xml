@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 03:58:17 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/byfield-pc.gov.uk byfield-pc.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/byfield-pc.gov.uk byfield-pc.gov.uk" start="1552701497" startstr="Sat Mar 16 03:58:17 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552701497" endtime="1552701863"><status state="up" reason="syn-ack" reason_ttl="113"/>
+<address addr="5.133.183.20" addrtype="ipv4"/>
+<hostnames>
+<hostname name="byfield-pc.gov.uk" type="user"/>
+<hostname name="easy2.swshosting.co.uk" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65521">
+<extrareasons reason="no-responses" count="65521"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="ftp" product="Microsoft ftpd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:ftp_service</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="banner" output="220 Microsoft FTP Service"/></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="domain" servicefp="SF-Port53-TCP:V=7.70%I=7%D=3/16%Time=5C8C5953%P=x86_64-unknown-linux-gnu%r(DNSVersionBindReqTCP,20,&quot;\0\x1e\0\x06\x81\x04\0\x01\0\0\0\0\0\0\x07version\x04bind\0\0\x10\0\x03&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  DNSVersionBindReqTCP: &#xa;    version&#xa;    bind"><elem key="DNSVersionBindReqTCP">&#xa;    version&#xa;    bind</elem>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="&#xa;  Microsoft-HTTPAPI/2.0&#xa;  Microsoft-IIS/8.5"><elem>Microsoft-HTTPAPI/2.0</elem>
+<elem>Microsoft-IIS/8.5</elem>
+</script></port>
+<port protocol="tcp" portid="110"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="pop3" product="MailEnable POP3 Server" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:mailenable:mailenable</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="banner" output="+OK Welcome to MailEnable POP3 Server"/></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="143"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="imap" product="MailEnable imapd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:mailenable:mailenable</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="banner" output="* OK IMAP4rev1 server ready at 03/16/19 02:04:05"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="microsoft-ds" product="Microsoft Windows Server 2008 R2 - 2012 microsoft-ds" ostype="Windows Server 2008 R2 - 2012" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="587"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="smtp" product="MailEnable smptd" version="9.00-&#45;" hostname="easy2.swshosting.co.uk" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:mailenable:mailenable:9.00-&#45;</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="1046"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="wfremotertm" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="ms-wbt-server" product="Microsoft Terminal Service" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="6051"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="49156"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="49157"><state state="open" reason="syn-ack" reason_ttl="113"/><service name="unknown" method="table" conf="3"/></port>
+</ports>
+<times srtt="72315" rttvar="12626" to="122819"/>
+</host>
+<runstats><finished time="1552701863" timestr="Sat Mar 16 04:04:23 2019" elapsed="366.58" summary="Nmap done at Sat Mar 16 04:04:23 2019; 1 IP address (1 host up) scanned in 366.58 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

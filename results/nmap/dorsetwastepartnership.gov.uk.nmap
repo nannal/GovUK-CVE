@@ -1,0 +1,65 @@
+# Nmap 7.70 scan initiated Sat Mar 16 06:33:30 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/dorsetwastepartnership.gov.uk dorsetwastepartnership.gov.uk
+Warning: 79.170.44.215 giving up on port because retransmission cap hit (6).
+Nmap scan report for dorsetwastepartnership.gov.uk (79.170.44.215)
+Host is up (0.077s latency).
+rDNS record for 79.170.44.215: web215.extendcp.co.uk
+Not shown: 56411 closed ports, 9104 filtered ports
+PORT      STATE SERVICE    VERSION
+80/tcp    open  tcpwrapped
+443/tcp   open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Found
+|     Location: http://webforwards1.hi.local
+|     Connection: close
+|   tor-versions: 
+|     HTTP/1.0 400 Bad request
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|_    </body></html>
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+| 
+|     compressors: 
+| 
+|     cipher preference: server
+|_  least strength: A
+3306/tcp  open  mysql      MySQL 5.5.5-10.1.27-MariaDB
+| banner: Y\x00\x00\x00\x0A5.5.5-10.1.27-MariaDB\x00\xE8d\x8F#!{i~_Aga\x0
+|_0\xFF\xF7\x08\x02\x00?\xA0\x15\x00\x00\x00\x00\x00\x00\x00\x00\x00\x...
+3338/tcp  open  tcpwrapped
+6808/tcp  open  tcpwrapped
+7191/tcp  open  tcpwrapped
+10050/tcp open  tcpwrapped
+17434/tcp open  tcpwrapped
+20681/tcp open  tcpwrapped
+25665/tcp open  tcpwrapped
+29469/tcp open  tcpwrapped
+30063/tcp open  tcpwrapped
+30290/tcp open  tcpwrapped
+35734/tcp open  tcpwrapped
+44283/tcp open  tcpwrapped
+44903/tcp open  tcpwrapped
+50927/tcp open  tcpwrapped
+52224/tcp open  tcpwrapped
+52823/tcp open  tcpwrapped
+56102/tcp open  tcpwrapped
+60805/tcp open  tcpwrapped
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8C9024%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,4E,"HTTP/1\.1\x20301\x20Found\nLocation:\x20http://w
+SF:ebforwards1\.hi\.local\nConnection:\x20close\r\n\n")%r(HTTPOptions,4E,"
+SF:HTTP/1\.1\x20301\x20Found\nLocation:\x20http://webforwards1\.hi\.local\
+SF:nConnection:\x20close\r\n\n")%r(FourOhFourRequest,4E,"HTTP/1\.1\x20301\
+SF:x20Found\nLocation:\x20http://webforwards1\.hi\.local\nConnection:\x20c
+SF:lose\r\n\n")%r(tor-versions,BB,"HTTP/1\.0\x20400\x20Bad\x20request\r\nC
+SF:ache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20t
+SF:ext/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20bro
+SF:wser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 07:57:30 2019 -- 1 IP address (1 host up) scanned in 5040.45 seconds

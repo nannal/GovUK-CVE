@@ -1,0 +1,70 @@
+# Nmap 7.70 scan initiated Sat Mar 16 03:25:15 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/brent.gov.uk brent.gov.uk
+Nmap scan report for brent.gov.uk (91.216.181.112)
+Host is up (0.083s latency).
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Cache-Control: private
+|     Content-Type: text/html; charset=utf-8
+|     X-AspNet-Version: 4.0.30319
+|     X-XSS-Protection: 1
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+|     X-Content-Type-Options: nosniff
+|     Date: Sat, 16 Mar 2019 01:31:05 GMT
+|     Connection: close
+|     Content-Length: 37063
+|     <!doctype html>
+|     <html xmlns:umbraco="http://umbraco.org" lang="en">
+|     <head>
+|     <meta charset="utf-8">
+|     <title>Brent Council</title>
+|     <meta name="PageID" content="1098" />
+|     <meta name="description" content="Official Brent Council website - from council tax to pest control, we provide services and information for residents, local businesses and the community of the London Borough of Brent. " />
+|     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+|_    <meta name="google-site-verification" content="AJgIcld8NIvayJip02DIHl4ZkN9jvy9-WSzGOCNo77g" />
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     cipher preference error: Network error
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (dh 1024) of lower strength than certificate key
+|_  least strength: C
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8C51B4%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,4000,"HTTP/1\.1\x20200\x20OK\r\nCache-Control:\x20pr
+SF:ivate\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nX-AspNet-Versi
+SF:on:\x204\.0\.30319\r\nX-XSS-Protection:\x201\r\nStrict-Transport-Securi
+SF:ty:\x20max-age=31536000;\x20includeSubDomains;\x20preload\r\nX-Content-
+SF:Type-Options:\x20nosniff\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2001:31
+SF::05\x20GMT\r\nConnection:\x20close\r\nContent-Length:\x2037063\r\n\r\n<
+SF:!doctype\x20html>\n<html\x20xmlns:umbraco=\"http://umbraco\.org\"\x20la
+SF:ng=\"en\">\n<head>\n\n\t<meta\x20charset=\"utf-8\">\n\x20\x20\x20\x20\t
+SF:\t\t\t\t\n\t\t<title>Brent\x20Council</title>\n\t<meta\x20name=\"PageID
+SF:\"\x20content=\"1098\"\x20/>\n\t\t<meta\x20name=\"description\"\x20cont
+SF:ent=\"Official\x20Brent\x20Council\x20website\x20-\x20from\x20council\x
+SF:20tax\x20to\x20pest\x20control,\x20we\x20provide\x20services\x20and\x20
+SF:information\x20for\x20residents,\x20local\x20businesses\x20and\x20the\x
+SF:20community\x20of\x20the\x20London\x20Borough\x20of\x20Brent\.\x20\x20\
+SF:"\x20/>\n\n\x20\x20\x20\x20\n\x20\x20\x20\x20<meta\x20http-equiv=\"X-UA
+SF:-Compatible\"\x20content=\"IE=Edge\"\x20/>\n\x20\x20\x20\x20<meta\x20na
+SF:me=\"google-site-verification\"\x20content=\"AJgIcld8NIvayJip02DIHl4ZkN
+SF:9jvy9-WSzGOCNo77g\"\x20/>\n\x20\x20\x20\x20\n\x20\x20\x20\x20<");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 03:30:56 2019 -- 1 IP address (1 host up) scanned in 340.58 seconds

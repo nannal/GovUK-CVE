@@ -1,0 +1,32 @@
+# Nmap 7.70 scan initiated Sat Mar 16 03:34:13 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/broadland.gov.uk broadland.gov.uk
+Nmap scan report for broadland.gov.uk (134.213.180.0)
+Host is up (0.19s latency).
+rDNS record for 134.213.180.0: rsvm175.servers.jadu.net
+Not shown: 65534 filtered ports
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http       Apache httpd
+|_http-server-header: Apache
+443/tcp open  ssl/https?
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 4096) - C
+|     compressors: 
+|       NULL
+|     cipher preference: indeterminate
+|     cipher preference error: Too few ciphers supported
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 4096) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 4096) - A
+|     compressors: 
+| 
+|     cipher preference error: Error when comparing TLS_RSA_WITH_AES_128_CBC_SHA and TLS_RSA_WITH_3DES_EDE_CBC_SHA
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 04:14:35 2019 -- 1 IP address (1 host up) scanned in 2422.06 seconds

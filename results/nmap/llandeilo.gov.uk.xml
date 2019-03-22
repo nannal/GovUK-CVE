@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 12:12:31 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/llandeilo.gov.uk llandeilo.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/llandeilo.gov.uk llandeilo.gov.uk" start="1552731151" startstr="Sat Mar 16 12:12:31 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552731151" endtime="1552731886"><status state="up" reason="reset" reason_ttl="52"/>
+<address addr="176.32.230.9" addrtype="ipv4"/>
+<hostnames>
+<hostname name="llandeilo.gov.uk" type="user"/>
+<hostname name="web9.extendcp.co.uk" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65530">
+<extrareasons reason="no-responses" count="65096"/>
+<extrareasons reason="host-prohibiteds" count="434"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="ssh" product="OpenSSH" version="5.3" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:5.3</cpe></service><script id="banner" output="SSH-2.0-OpenSSH_5.3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="http" product="Apache httpd" version="2.4.37" hostname="mv0.web6.extendcp.co.uk" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.37</cpe></service><script id="http-server-header" output="Apache/2.4.37 (Unix)"><elem>Apache/2.4.37 (Unix)</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="http" product="Apache httpd" version="2.4.37" hostname="mv0.web9.extendcp.co.uk" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.37</cpe></service><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A&#xa;    compressors: &#xa;&#xa;    cipher preference: indeterminate&#xa;    cipher preference error: Too few ciphers supported&#xa;  least strength: A"><table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+</table>
+</table>
+<table key="compressors">
+</table>
+<elem key="cipher preference">indeterminate</elem>
+<elem key="cipher preference error">Too few ciphers supported</elem>
+</table>
+<elem key="least strength">A</elem>
+</script></port>
+<port protocol="tcp" portid="544"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="kshell" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2105"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="eklogin" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="mysql" product="MySQL" version="5.5.5-10.1.27-MariaDB" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql:5.5.5-10.1.27-mariadb</cpe></service><script id="banner" output="Y\x00\x00\x00\x0A5.5.5-10.1.27-MariaDB\x00\x12\xBA\xBC\x04jk[cc&#xa;Djj\x00\xFF\xFF\x08\x02\x00?\xE0\x15\x00\x00\x00\x00\x00\x00\x00\x00...&#xa;"/></port>
+</ports>
+<times srtt="69451" rttvar="7471" to="100000"/>
+</host>
+<runstats><finished time="1552731886" timestr="Sat Mar 16 12:24:46 2019" elapsed="735.16" summary="Nmap done at Sat Mar 16 12:24:46 2019; 1 IP address (1 host up) scanned in 735.16 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

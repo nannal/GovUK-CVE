@@ -1,0 +1,159 @@
+# Nmap 7.70 scan initiated Sat Mar 16 15:38:11 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/portal.fylde.gov.uk portal.fylde.gov.uk
+Nmap scan report for portal.fylde.gov.uk (91.194.152.147)
+Host is up (0.078s latency).
+rDNS record for 91.194.152.147: no-dns-yet.demon.co.uk
+Not shown: 65528 filtered ports
+PORT     STATE  SERVICE      VERSION
+113/tcp  closed ident
+443/tcp  open   ssl/https
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Set-Cookie: JSESSIONID=1CB2016165FCD3FCF07C3C291B41155D; Path=/; Secure; HttpOnly
+|     Content-Length: 2988
+|     Content-Language: en-GB
+|     Content-Type: text/html;charset=UTF-8
+|     Strict-Transport-Security: max-age=31536000
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: deny
+|     X-XSS-Protection: 1; mode=block
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <meta charset="utf-8">
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+|     <title>VMware Horizon</title>
+|     <link rel="stylesheet" href="/portal/css/style.css?v=3976975">
+|     <link rel="shortcut icon" href="/portal/favicon.ico?v=3976975">
+|     <script type="text/javascript" src="/portal/lib/js/jquery-1.9.1.min.js?v=3976975"></script>
+|     <script type="text/javascript" src="/portal/js/main.js?v=3976975"></script>
+|     </head>
+|     <body>
+|     <div>
+|     <div class="ui-strip"></div>
+|     <div class="ui-header">
+|   HTTPOptions: 
+|     HTTP/1.1 405 Method Not Allowed
+|     Date: Sat, 16 Mar 2019 13:42:13 GMT
+|     Content-Length: 1994
+|     Content-Type: text/html
+|     <html>
+|     <head>
+|     <title>VMware Horizon</title>
+|     <link rel=stylesheet href="/error/base.css" type="text/css" />
+|     </head>
+|     <body leftmargin="0" rightmargin="0" topmargin="0" marginwidth="0"
+|     marginheight="0">
+|     <script language="JavaScript">
+|     function toggleError()
+|     errorElement = document.getElementById('errorDetails');
+|     (errorElement && errorElement.style.display == 'none')
+|     errorElement.style.display="block";
+|     else
+|     errorElement.style.display="none"; 
+|     function escapeHTML (str)
+|     document.createElement('div');
+|_    text = document.createTextNode(s
+3945/tcp closed emcads
+4172/tcp open   ssl/pcoip?
+5011/tcp open   ssl/http     Apache httpd 2.2
+5021/tcp open   zenginkyo-2?
+8443/tcp open   ssl/http     VMware Horizon View
+8555/tcp open   ssl/http     Fortinet security device httpd
+|_http-server-header: xxxxxxxx-xxxxx
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp384r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (secp384r1) - A
+|       TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CCM_8 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CCM (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp384r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384 (secp384r1) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CCM_8 (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp384r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CCM_8 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CCM (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp384r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (secp384r1) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp384r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CFD30%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,CEE,"HTTP/1\.1\x20200\x20OK\r\nSet-Cookie:\x20JSESSI
+SF:ONID=1CB2016165FCD3FCF07C3C291B41155D;\x20Path=/;\x20Secure;\x20HttpOnl
+SF:y\r\nContent-Length:\x202988\r\nContent-Language:\x20en-GB\r\nContent-T
+SF:ype:\x20text/html;charset=UTF-8\r\nStrict-Transport-Security:\x20max-ag
+SF:e=31536000\r\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Options:\x2
+SF:0deny\r\nX-XSS-Protection:\x201;\x20mode=block\r\n\r\n\r\n\r\n\r\n<!DOC
+SF:TYPE\x20html>\r\n<html\x20lang=\"en\">\r\n<head>\r\n\x20\x20\x20<meta\x
+SF:20charset=\"utf-8\">\r\n\x20\x20\x20<meta\x20http-equiv=\"X-UA-Compatib
+SF:le\"\x20content=\"IE=edge\">\r\n\x20\x20\x20<title>VMware\x20Horizon</t
+SF:itle>\r\n\x20\x20\x20<link\x20rel=\"stylesheet\"\x20href=\"/portal/css/
+SF:style\.css\?v=3976975\">\r\n\x20\x20\x20<link\x20rel=\"shortcut\x20icon
+SF:\"\x20href=\"/portal/favicon\.ico\?v=3976975\">\r\n\x20\x20\x20<script\
+SF:x20type=\"text/javascript\"\x20src=\"/portal/lib/js/jquery-1\.9\.1\.min
+SF:\.js\?v=3976975\"></script>\r\n\x20\x20\x20<script\x20type=\"text/javas
+SF:cript\"\x20src=\"/portal/js/main\.js\?v=3976975\"></script>\r\n</head>\
+SF:r\n<body>\r\n\x20\x20\x20<div>\r\n\x20\x20\x20\x20\x20\x20<div\x20class
+SF:=\"ui-strip\"></div>\r\n\x20\x20\x20\x20\x20\x20<div\x20class=\"ui-head
+SF:er\">\r\n\x20\x20\x20\x20\x20")%r(HTTPOptions,841,"HTTP/1\.1\x20405\x20
+SF:Method\x20Not\x20Allowed\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2013:42
+SF::13\x20GMT\r\nContent-Length:\x201994\r\nContent-Type:\x20text/html\r\n
+SF:\r\n<html>\r\n<head>\r\n<title>VMware\x20Horizon</title>\r\n<link\x20re
+SF:l=stylesheet\x20href=\"/error/base\.css\"\x20type=\"text/css\"\x20/>\r\
+SF:n</head>\r\n<body\x20leftmargin=\"0\"\x20rightmargin=\"0\"\x20topmargin
+SF:=\"0\"\x20marginwidth=\"0\"\r\n\tmarginheight=\"0\">\r\n\r\n<script\x20
+SF:language=\"JavaScript\">\r\n\x20\x20\x20\x20\x20\x20\x20\x20function\x2
+SF:0toggleError\(\)\r\n\x20\x20\x20\x20\x20\x20\x20\x20{\r\n\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20var\x20errorElement\x20=\x20document\
+SF:.getElementById\('errorDetails'\);\r\n\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20if\x20\(errorElement\x20&&\x20errorElement\.style\.displ
+SF:ay\x20==\x20'none'\)\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0{\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20e
+SF:rrorElement\.style\.display=\"block\";\r\n\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20}\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0else\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20{\r\n\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20errorElement\.st
+SF:yle\.display=\"none\";\x20\x20\x20\x20\x20\x20\x20\x20\r\n\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20}\r\n\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0}\r\n\r\n\x20\x20\x20\x20\x20\x20\x20\x20function\x20escapeHTML\x20\(s
+SF:tr\)\r\n\x20\x20\x20\x20\x20\x20\x20\x20{\r\n\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20var\x20div\x20=\x20document\.createElement\('div'
+SF:\);\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20var\x20text\x20=
+SF:\x20document\.createTextNode\(s");
+Service Info: Device: security-misc
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 15:44:12 2019 -- 1 IP address (1 host up) scanned in 360.92 seconds

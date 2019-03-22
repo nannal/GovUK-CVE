@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 02:03:21 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/ashford-in-the-water-pc.gov.uk ashford-in-the-water-pc.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/ashford-in-the-water-pc.gov.uk ashford-in-the-water-pc.gov.uk" start="1552694601" startstr="Sat Mar 16 02:03:21 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552694602" endtime="1552697594"><status state="up" reason="echo-reply" reason_ttl="50"/>
+<address addr="66.33.212.76" addrtype="ipv4"/>
+<hostnames>
+<hostname name="ashford-in-the-water-pc.gov.uk" type="user"/>
+<hostname name="apache2-cid.buckshot.dreamhost.com" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65526">
+<extrareasons reason="no-responses" count="65526"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="49"/><service name="ftp" product="ProFTPD" version="1.2.10" method="probed" conf="10"><cpe>cpe:/a:proftpd:proftpd:1.2.10</cpe></service><script id="banner" output="220 DreamHost FTP Server"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="ssh" product="OpenSSH" version="6.6.1p1 Ubuntu 2ubuntu2.10" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:6.6.1p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="banner" output="SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2.10"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="ssl" product="Apache httpd" extrainfo="SSL-only mode" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  least strength: A"><table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 2048</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<elem key="least strength">A</elem>
+</script></port>
+<port protocol="tcp" portid="587"><state state="open" reason="syn-ack" reason_ttl="49"/><service name="smtp" product="Postfix smtpd" hostname="buckshot.dreamhost.com" method="probed" conf="10"><cpe>cpe:/a:postfix:postfix</cpe></service><script id="banner" output="220 buckshot.dreamhost.com ESMTP"/></port>
+<port protocol="tcp" portid="4369"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="epmd" product="Erlang Port Mapper Daemon" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="5222"><state state="open" reason="syn-ack" reason_ttl="49"/><service name="jabber" product="ejabberd" extrainfo="Protocol 1.0" hostname="buckshot.dreamhost.com" method="probed" conf="10"><cpe>cpe:/a:process-one:ejabberd</cpe></service><script id="xmpp-info" output="&#xa;  STARTTLS Failed&#xa;  info: &#xa;    unknown: &#xa;&#xa;    xmpp: &#xa;      lang: en&#xa;      server name: buckshot.dreamhost.com&#xa;      version: (none)&#xa;    auth_mechanisms: &#xa;&#xa;    errors: &#xa;      host-unknown&#xa;      (timeout)&#xa;    compression_methods: &#xa;&#xa;    capabilities: &#xa;&#xa;    stream_id: 2528346093&#xa;    features: &#xa;"><elem>STARTTLS Failed</elem>
+<table key="info">
+<table key="unknown">
+</table>
+<table key="xmpp">
+<elem key="lang">en</elem>
+<elem key="server name">buckshot.dreamhost.com</elem>
+<elem key="version">(none)</elem>
+</table>
+<table key="auth_mechanisms">
+</table>
+<table key="errors">
+<elem>host-unknown</elem>
+<elem>(timeout)</elem>
+</table>
+<table key="compression_methods">
+</table>
+<table key="capabilities">
+</table>
+<elem key="stream_id">2528346093</elem>
+<table key="features">
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="5269"><state state="open" reason="syn-ack" reason_ttl="49"/><service name="jabber" product="ejabberd" method="probed" conf="10"><cpe>cpe:/a:process-one:ejabberd</cpe></service><script id="xmpp-info" output="&#xa;  Ignores server name&#xa;  info: &#xa;    xmpp: &#xa;      version: 1.0&#xa;    capabilities: &#xa;&#xa;  pre_tls: &#xa;    xmpp: &#xa;&#xa;    capabilities: &#xa;&#xa;    features: &#xa;      TLS (required)&#xa;  post_tls: &#xa;    xmpp: &#xa;&#xa;    capabilities: &#xa;"><elem>Ignores server name</elem>
+<table key="info">
+<table key="xmpp">
+<elem key="version">1.0</elem>
+</table>
+<table key="capabilities">
+</table>
+</table>
+<table key="pre_tls">
+<table key="xmpp">
+</table>
+<table key="capabilities">
+</table>
+<table key="features">
+<elem>TLS (required)</elem>
+</table>
+</table>
+<table key="post_tls">
+<table key="xmpp">
+</table>
+<table key="capabilities">
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="8186"><state state="open" reason="syn-ack" reason_ttl="49"/><service name="unknown" servicefp="SF-Port8186-TCP:V=7.70%I=7%D=3/16%Time=5C8C4848%P=x86_64-unknown-linux-gnu%r(GenericLines,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request&quot;)%r(GetRequest,AE,&quot;HTTP/1\.0\x20401\x20Unauthorized\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2000:50:20\x20GMT\r\nContent-Length:\x2014\r\n\r\nUnauthorized\.\n&quot;)%r(RTSPRequest,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request&quot;)%r(Help,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request&quot;)%r(SSLSessionReq,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request&quot;)%r(TLSSessionReq,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request&quot;)%r(Kerberos,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request&quot;)%r(FourOhFourRequest,AE,&quot;HTTP/1\.0\x20401\x20Unauthorized\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2000:50:57\x20GMT\r\nContent-Length:\x2014\r\n\r\nUnauthorized\.\n&quot;)%r(LPDString,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request&quot;)%r(LDAPSearchReq,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request&quot;)%r(SIPOptions,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest: &#xa;    HTTP/1.0 401 Unauthorized&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    X-Content-Type-Options: nosniff&#xa;    Date: Sat, 16 Mar 2019 00:50:57 GMT&#xa;    Content-Length: 14&#xa;    Unauthorized.&#xa;  GenericLines, Help, Kerberos, LDAPSearchReq, LPDString, RTSPRequest, SIPOptions, SSLSessionReq, TLSSessionReq: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    Connection: close&#xa;    Request&#xa;  GetRequest: &#xa;    HTTP/1.0 401 Unauthorized&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    X-Content-Type-Options: nosniff&#xa;    Date: Sat, 16 Mar 2019 00:50:20 GMT&#xa;    Content-Length: 14&#xa;    Unauthorized."><elem key="FourOhFourRequest">&#xa;    HTTP/1.0 401 Unauthorized&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    X-Content-Type-Options: nosniff&#xa;    Date: Sat, 16 Mar 2019 00:50:57 GMT&#xa;    Content-Length: 14&#xa;    Unauthorized.</elem>
+<elem key="GenericLines, Help, Kerberos, LDAPSearchReq, LPDString, RTSPRequest, SIPOptions, SSLSessionReq, TLSSessionReq">&#xa;    HTTP/1.1 400 Bad Request&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    Connection: close&#xa;    Request</elem>
+<elem key="GetRequest">&#xa;    HTTP/1.0 401 Unauthorized&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    X-Content-Type-Options: nosniff&#xa;    Date: Sat, 16 Mar 2019 00:50:20 GMT&#xa;    Content-Length: 14&#xa;    Unauthorized.</elem>
+</script></port>
+<port protocol="tcp" portid="39895"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="unknown" method="table" conf="3"/></port>
+</ports>
+<times srtt="629496" rttvar="558776" to="1250000"/>
+</host>
+<runstats><finished time="1552697594" timestr="Sat Mar 16 02:53:14 2019" elapsed="2993.12" summary="Nmap done at Sat Mar 16 02:53:14 2019; 1 IP address (1 host up) scanned in 2993.12 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

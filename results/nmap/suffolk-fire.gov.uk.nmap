@@ -1,0 +1,343 @@
+# Nmap 7.70 scan initiated Sat Mar 16 19:02:12 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/suffolk-fire.gov.uk suffolk-fire.gov.uk
+Nmap scan report for suffolk-fire.gov.uk (194.168.57.82)
+Host is up (0.21s latency).
+rDNS record for 194.168.57.82: p22-buzzard-gui.tch.virgin.net
+Not shown: 65454 filtered ports
+PORT      STATE SERVICE    VERSION
+21/tcp    open  ftp        Microsoft ftpd
+|_banner: 220 Microsoft FTP Service
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     cipher preference error: Network error
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|_  least strength: C
+53/tcp    open  domain?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|_    bind
+80/tcp    open  http       Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+443/tcp   open  ssl/https
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 500 Internal Server Error
+|     Content-Length: 38606
+|     Content-Type: text/html
+|_    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css"> html, body { margin: 0; padding: 0; font-family: Verdana, Arial, sans-serif; font-size: 10pt; } h1, h2 { height: 82px; text-indent: -999em; margin: 0; padding: 0; margin: 0; } div { margin: 0; padding: 0; } div.header { background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPMAAAFnCAMAAABEqI/sAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1ND
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CCM_8 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CCM (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384 (secp256r1) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+4181/tcp  open  tcpwrapped
+5680/tcp  open  tcpwrapped
+6080/tcp  open  tcpwrapped
+6189/tcp  open  tcpwrapped
+6217/tcp  open  tcpwrapped
+7598/tcp  open  tcpwrapped
+10443/tcp open  ssl/http   Fortinet SSL VPN
+| ssl-enum-ciphers: 
+|   SSLv3: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - D
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - D
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 1024) - D
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 1024) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     cipher preference error: Network error
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       CBC-mode cipher in SSLv3 (CVE-2014-3566)
+|       Weak certificate signature: SHA1
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 1024) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 1024) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - D
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - D
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 1024) - D
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Weak certificate signature: SHA1
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 1024) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 1024) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - D
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - D
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 1024) - D
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Weak certificate signature: SHA1
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 1024) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 1024) - A
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - D
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - D
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 1024) - D
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Weak certificate signature: SHA1
+|_  least strength: D
+11626/tcp open  tcpwrapped
+13319/tcp open  tcpwrapped
+14435/tcp open  tcpwrapped
+16735/tcp open  tcpwrapped
+17413/tcp open  tcpwrapped
+17722/tcp open  tcpwrapped
+18320/tcp open  tcpwrapped
+19382/tcp open  tcpwrapped
+20432/tcp open  tcpwrapped
+21007/tcp open  tcpwrapped
+21588/tcp open  tcpwrapped
+25235/tcp open  tcpwrapped
+25374/tcp open  tcpwrapped
+25729/tcp open  tcpwrapped
+26490/tcp open  tcpwrapped
+27629/tcp open  tcpwrapped
+27919/tcp open  tcpwrapped
+28310/tcp open  tcpwrapped
+29252/tcp open  tcpwrapped
+29378/tcp open  tcpwrapped
+29836/tcp open  tcpwrapped
+29937/tcp open  tcpwrapped
+29953/tcp open  tcpwrapped
+29977/tcp open  tcpwrapped
+30468/tcp open  tcpwrapped
+32186/tcp open  tcpwrapped
+32393/tcp open  tcpwrapped
+32840/tcp open  tcpwrapped
+34139/tcp open  tcpwrapped
+35765/tcp open  tcpwrapped
+38897/tcp open  tcpwrapped
+39096/tcp open  tcpwrapped
+39144/tcp open  tcpwrapped
+40131/tcp open  tcpwrapped
+40587/tcp open  tcpwrapped
+41137/tcp open  tcpwrapped
+41473/tcp open  tcpwrapped
+42830/tcp open  tcpwrapped
+42831/tcp open  tcpwrapped
+43475/tcp open  tcpwrapped
+43486/tcp open  tcpwrapped
+43716/tcp open  tcpwrapped
+43910/tcp open  tcpwrapped
+46299/tcp open  tcpwrapped
+47063/tcp open  tcpwrapped
+48462/tcp open  tcpwrapped
+48911/tcp open  tcpwrapped
+49450/tcp open  tcpwrapped
+49759/tcp open  tcpwrapped
+50528/tcp open  tcpwrapped
+50788/tcp open  tcpwrapped
+51559/tcp open  tcpwrapped
+51878/tcp open  tcpwrapped
+52331/tcp open  tcpwrapped
+52683/tcp open  tcpwrapped
+53016/tcp open  tcpwrapped
+54086/tcp open  tcpwrapped
+55497/tcp open  tcpwrapped
+55858/tcp open  tcpwrapped
+55904/tcp open  tcpwrapped
+55924/tcp open  tcpwrapped
+56201/tcp open  tcpwrapped
+56324/tcp open  tcpwrapped
+56531/tcp open  tcpwrapped
+57819/tcp open  tcpwrapped
+58449/tcp open  tcpwrapped
+61195/tcp open  tcpwrapped
+61854/tcp open  tcpwrapped
+61931/tcp open  tcpwrapped
+61963/tcp open  tcpwrapped
+64889/tcp open  tcpwrapped
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port53-TCP:V=7.70%I=7%D=3/16%Time=5C8D49CD%P=x86_64-unknown-linux-gnu%r
+SF:(DNSVersionBindReqTCP,20,"\0\x1e\0\x06\x81\x04\0\x01\0\0\0\0\0\0\x07ver
+SF:sion\x04bind\0\0\x10\0\x03");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8D49CE%P=x86_64-unknown-linu
+SF:x-gnu%r(GetRequest,2F88,"HTTP/1\.1\x20500\x20Internal\x20Server\x20Erro
+SF:r\r\nContent-Length:\x2038606\r\nContent-Type:\x20text/html\r\n\r\n<!DO
+SF:CTYPE\x20HTML\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.01\x20Transition
+SF:al//EN\"\x20\"http://www\.w3c\.org/TR/1999/REC-html401-19991224/loose\.
+SF:dtd\"><html><head><meta\x20http-equiv=\"Content-Type\"\x20content=\"tex
+SF:t/html;\x20charset=UTF-8\"><style\x20type=\"text/css\">\x20\x20\x20\x20
+SF:\x20\x20\x20html,\x20body\x20{\x20margin:\x200;\x20padding:\x200;\x20fo
+SF:nt-family:\x20Verdana,\x20Arial,\x20sans-serif;\x20font-size:\x2010pt;\
+SF:x20}\x20\x20\x20\x20\x20\x20\x20h1,\x20h2\x20{\x20height:\x2082px;\x20t
+SF:ext-indent:\x20-999em;\x20margin:\x200;\x20padding:\x200;\x20margin:\x2
+SF:00;\x20}\x20\x20\x20\x20\x20\x20\x20div\x20{\x20margin:\x200;\x20paddin
+SF:g:\x200;\x20}\x20\x20\x20\x20\x20\x20\x20div\.header\x20{\x20background
+SF::\x20url\(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPMAAAFnCAMAAAB
+SF:EqI/sAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOm
+SF:NvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2Voa
+SF:Uh6cmVTek5UY3prYzlkIj8\+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8
+SF:iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1ND")%r(HTTPOptions
+SF:,2F88,"HTTP/1\.1\x20500\x20Internal\x20Server\x20Error\r\nContent-Lengt
+SF:h:\x2038606\r\nContent-Type:\x20text/html\r\n\r\n<!DOCTYPE\x20HTML\x20P
+SF:UBLIC\x20\"-//W3C//DTD\x20HTML\x204\.01\x20Transitional//EN\"\x20\"http
+SF:://www\.w3c\.org/TR/1999/REC-html401-19991224/loose\.dtd\"><html><head>
+SF:<meta\x20http-equiv=\"Content-Type\"\x20content=\"text/html;\x20charset
+SF:=UTF-8\"><style\x20type=\"text/css\">\x20\x20\x20\x20\x20\x20\x20html,\
+SF:x20body\x20{\x20margin:\x200;\x20padding:\x200;\x20font-family:\x20Verd
+SF:ana,\x20Arial,\x20sans-serif;\x20font-size:\x2010pt;\x20}\x20\x20\x20\x
+SF:20\x20\x20\x20h1,\x20h2\x20{\x20height:\x2082px;\x20text-indent:\x20-99
+SF:9em;\x20margin:\x200;\x20padding:\x200;\x20margin:\x200;\x20}\x20\x20\x
+SF:20\x20\x20\x20\x20div\x20{\x20margin:\x200;\x20padding:\x200;\x20}\x20\
+SF:x20\x20\x20\x20\x20\x20div\.header\x20{\x20background:\x20url\(data:ima
+SF:ge/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPMAAAFnCAMAAABEqI/sAAAAGXRFWHRTb
+SF:2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAA
+SF:AAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzl
+SF:kIj8\+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb
+SF:2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1ND");
+Service Info: OS: Windows; Device: security-misc; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 21:11:01 2019 -- 1 IP address (1 host up) scanned in 7728.49 seconds

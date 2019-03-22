@@ -1,0 +1,299 @@
+# Nmap 7.70 scan initiated Sat Mar 16 11:50:38 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/legsb.gov.uk legsb.gov.uk
+Warning: 91.146.107.11 giving up on port because retransmission cap hit (6).
+Nmap scan report for legsb.gov.uk (91.146.107.11)
+Host is up (0.064s latency).
+rDNS record for 91.146.107.11: morocco.footholds.net
+Not shown: 62519 filtered ports, 2998 closed ports
+PORT     STATE SERVICE   VERSION
+21/tcp   open  ftp       Pure-FTPd
+| banner: 220---------- Welcome to Pure-FTPd [privsep] [TLS] ----------\x
+|_0D\x0A220-You are user number 2 of 50 allowed.\x0D\x0A220-Local time...
+26/tcp   open  smtp      Exim smtpd 4.87
+| banner: 220-morocco.footholds.net ESMTP Exim 4.87 #1 Sat, 16 Mar 2019 1
+|_1:27:48 +0000 \x0D\x0A220-We do not authorize the use of this system...
+80/tcp   open  http      Apache httpd
+|_http-server-header: Apache
+|_http-trane-info: Problem with XML parsing of /evox/about
+110/tcp  open  pop3      Dovecot pop3d
+|_banner: +OK Dovecot ready.
+143/tcp  open  imap      Dovecot imapd
+| banner: * OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID 
+|_ENABLE IDLE NAMESPACE STARTTLS AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+443/tcp  open  ssl/ssl   Apache httpd (SSL-only mode)
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 and TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+465/tcp  open  ssl/smtp  Exim smtpd 4.87
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+587/tcp  open  smtp      Exim smtpd 4.87
+| banner: 220-morocco.footholds.net ESMTP Exim 4.87 #1 Sat, 16 Mar 2019 1
+|_1:27:52 +0000 \x0D\x0A220-We do not authorize the use of this system...
+993/tcp  open  ssl/imap  Dovecot imapd
+| banner: * OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID 
+|_ENABLE IDLE NAMESPACE AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Key exchange (dh 1024) of lower strength than certificate key
+|_  least strength: D
+995/tcp  open  ssl/pop3  Dovecot pop3d
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - C
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - C
+|     compressors: 
+| 
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Key exchange (dh 1024) of lower strength than certificate key
+|_  least strength: D
+2077/tcp open  webdav    cPanel webdav
+2078/tcp open  ssl/http  cPanel httpd (unauthorized)
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_DHE_RSA_WITH_AES_256_CBC_SHA and TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+2082/tcp open  infowave?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 11:25:53 GMT
+|     WWW-Authenticate: Basic realm="cPanel"
+|     Set-Cookie: cprelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082
+|     Set-Cookie: cpsession=%3apsGOWVQCw5vsNiyR%2c96a1d5b8818c9f33a4b1fbdf61d0c742; HttpOnly; path=/; port=2082
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082
+|     Set-Cookie: Horde=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2082
+|     Set-Cookie: PPA_ID=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2082
+|     Set-Cookie: imp_key=expired; HttpOnly; domain=morocco.footholds.net; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2082
+|_    Set-Cookie: key=expired; HttpOnly; domain=morocco.footholds.net; expires=Thu, 01-Jan-1970 00:00:01
+2083/tcp open  http      cPanel httpd 11.56.0.52
+2086/tcp open  gnunet?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 11:25:53 GMT
+|     WWW-Authenticate: Basic realm="Web Host Manager"
+|     Set-Cookie: whostmgrrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2086
+|     Set-Cookie: whostmgrsession=%3adeM_sRz7JoGNSInT%2c3f7c30b657f94d557fdb559537bbc226; HttpOnly; path=/; port=2086
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2086
+|     Set-Cookie: Horde=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2086
+|     Set-Cookie: PPA_ID=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2086
+|     Set-Cookie: imp_key=expired; HttpOnly; domain=morocco.footholds.net; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2086
+|_    Set-Cookie: key=expired; HttpOnly; domain=morocco.footholds.net; expires=Thu,
+2087/tcp open  ssl/eli?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 11:24:51 GMT
+|     WWW-Authenticate: Basic realm="Web Host Manager"
+|     Set-Cookie: whostmgrrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: whostmgrsession=%3amf9EaeRpWJBMlU6g%2ce02a548f052dff726ad585d3fd0b7869; HttpOnly; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: Horde=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2087; secure
+|     Set-Cookie: PPA_ID=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: imp_key=expired; HttpOnly; domain=morocco.footholds.net; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2087; secure
+|     Set-Cookie: key=expired; Http
+|   HTTPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 11:25:00 GMT
+|     WWW-Authenticate: Basic realm="Web Host Manager"
+|     Set-Cookie: whostmgrrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: whostmgrsession=%3aPVzYRg3k2mFx6VfQ%2c3e1bc83252899c4148c0dd21ed0e339b; HttpOnly; path=/; port=2087; secure
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: Horde=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2087; secure
+|     Set-Cookie: PPA_ID=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2087; secure
+|     Set-Cookie: imp_key=expired; HttpOnly; domain=morocco.footholds.net; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2087; secure
+|_    Set-Cookie: key=expired; Http
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A
+|     compressors: 
+| 
+|     cipher preference: server
+|_  least strength: A
+2095/tcp open  nbx-ser?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.0 401 Access Denied
+|     Connection: close
+|     Content-Type: text/html; charset="utf-8"
+|     Date: Sat, 16 Mar 2019 11:25:56 GMT
+|     WWW-Authenticate: Basic realm="WebMail"
+|     Set-Cookie: webmailrelogin=no; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095
+|     Set-Cookie: webmailsession=%3aMzEVWXZ2zIBf8Vu5%2cca59cecec616d0511e72d71cc2af28cb; HttpOnly; path=/; port=2095
+|     Set-Cookie: roundcube_sessid=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095
+|     Set-Cookie: Horde=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2095
+|     Set-Cookie: PPA_ID=expired; HttpOnly; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; port=2095
+|     Set-Cookie: imp_key=expired; HttpOnly; domain=morocco.footholds.net; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/horde; port=2095
+|_    Set-Cookie: key=expired; HttpOnly; domain=morocco.footholds.net; expires=Thu, 01-Jan-197
+2096/tcp open  http      cPanel httpd 11.56.0.52
+3784/tcp open  ssh       OpenSSH 4.3 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_4.3
+4 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2082-TCP:V=7.70%I=7%D=3/16%Time=5C8CDD3D%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,10F8,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConnection:
+SF:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\
+SF:x20Sat,\x2016\x20Mar\x202019\x2011:25:53\x20GMT\r\nWWW-Authenticate:\x2
+SF:0Basic\x20realm=\"cPanel\"\r\nSet-Cookie:\x20cprelogin=no;\x20HttpOnly;
+SF:\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=
+SF:2082\r\nSet-Cookie:\x20cpsession=%3apsGOWVQCw5vsNiyR%2c96a1d5b8818c9f33
+SF:a4b1fbdf61d0c742;\x20HttpOnly;\x20path=/;\x20port=2082\r\nSet-Cookie:\x
+SF:20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970
+SF:\x2000:00:01\x20GMT;\x20path=/;\x20port=2082\r\nSet-Cookie:\x20Horde=ex
+SF:pired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\
+SF:x20path=/horde;\x20port=2082\r\nSet-Cookie:\x20PPA_ID=expired;\x20HttpO
+SF:nly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20p
+SF:ort=2082\r\nSet-Cookie:\x20imp_key=expired;\x20HttpOnly;\x20domain=moro
+SF:cco\.footholds\.net;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;
+SF:\x20path=/horde;\x20port=2082\r\nSet-Cookie:\x20key=expired;\x20HttpOnl
+SF:y;\x20domain=morocco\.footholds\.net;\x20expires=Thu,\x2001-Jan-1970\x2
+SF:000:00:01\x20");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2086-TCP:V=7.70%I=7%D=3/16%Time=5C8CDD3D%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,10F8,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConnection:
+SF:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\
+SF:x20Sat,\x2016\x20Mar\x202019\x2011:25:53\x20GMT\r\nWWW-Authenticate:\x2
+SF:0Basic\x20realm=\"Web\x20Host\x20Manager\"\r\nSet-Cookie:\x20whostmgrre
+SF:login=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GM
+SF:T;\x20path=/;\x20port=2086\r\nSet-Cookie:\x20whostmgrsession=%3adeM_sRz
+SF:7JoGNSInT%2c3f7c30b657f94d557fdb559537bbc226;\x20HttpOnly;\x20path=/;\x
+SF:20port=2086\r\nSet-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x2
+SF:0expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=208
+SF:6\r\nSet-Cookie:\x20Horde=expired;\x20HttpOnly;\x20expires=Thu,\x2001-J
+SF:an-1970\x2000:00:01\x20GMT;\x20path=/horde;\x20port=2086\r\nSet-Cookie:
+SF:\x20PPA_ID=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:0
+SF:0:01\x20GMT;\x20path=/;\x20port=2086\r\nSet-Cookie:\x20imp_key=expired;
+SF:\x20HttpOnly;\x20domain=morocco\.footholds\.net;\x20expires=Thu,\x2001-
+SF:Jan-1970\x2000:00:01\x20GMT;\x20path=/horde;\x20port=2086\r\nSet-Cookie
+SF::\x20key=expired;\x20HttpOnly;\x20domain=morocco\.footholds\.net;\x20ex
+SF:pires=Thu,");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2087-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CDD04%P=x86_64-unknown-lin
+SF:ux-gnu%r(GetRequest,4000,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\n
+SF:Date:\x20Sat,\x2016\x20Mar\x202019\x2011:24:51\x20GMT\r\nWWW-Authentica
+SF:te:\x20Basic\x20realm=\"Web\x20Host\x20Manager\"\r\nSet-Cookie:\x20whos
+SF:tmgrrelogin=no;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01
+SF:\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\nSet-Cookie:\x20whostmgrs
+SF:ession=%3amf9EaeRpWJBMlU6g%2ce02a548f052dff726ad585d3fd0b7869;\x20HttpO
+SF:nly;\x20path=/;\x20port=2087;\x20secure\r\nSet-Cookie:\x20roundcube_ses
+SF:sid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x2
+SF:0GMT;\x20path=/;\x20port=2087;\x20secure\r\nSet-Cookie:\x20Horde=expire
+SF:d;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20p
+SF:ath=/horde;\x20port=2087;\x20secure\r\nSet-Cookie:\x20PPA_ID=expired;\x
+SF:20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=
+SF:/;\x20port=2087;\x20secure\r\nSet-Cookie:\x20imp_key=expired;\x20HttpOn
+SF:ly;\x20domain=morocco\.footholds\.net;\x20expires=Thu,\x2001-Jan-1970\x
+SF:2000:00:01\x20GMT;\x20path=/horde;\x20port=2087;\x20secure\r\nSet-Cooki
+SF:e:\x20key=expired;\x20Http")%r(HTTPOptions,4000,"HTTP/1\.0\x20401\x20Ac
+SF:cess\x20Denied\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x
+SF:20charset=\"utf-8\"\r\nDate:\x20Sat,\x2016\x20Mar\x202019\x2011:25:00\x
+SF:20GMT\r\nWWW-Authenticate:\x20Basic\x20realm=\"Web\x20Host\x20Manager\"
+SF:\r\nSet-Cookie:\x20whostmgrrelogin=no;\x20HttpOnly;\x20expires=Thu,\x20
+SF:01-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\nS
+SF:et-Cookie:\x20whostmgrsession=%3aPVzYRg3k2mFx6VfQ%2c3e1bc83252899c4148c
+SF:0dd21ed0e339b;\x20HttpOnly;\x20path=/;\x20port=2087;\x20secure\r\nSet-C
+SF:ookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x2001-
+SF:Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\nSet-
+SF:Cookie:\x20Horde=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x
+SF:2000:00:01\x20GMT;\x20path=/horde;\x20port=2087;\x20secure\r\nSet-Cooki
+SF:e:\x20PPA_ID=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000
+SF::00:01\x20GMT;\x20path=/;\x20port=2087;\x20secure\r\nSet-Cookie:\x20imp
+SF:_key=expired;\x20HttpOnly;\x20domain=morocco\.footholds\.net;\x20expire
+SF:s=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/horde;\x20port=2087;
+SF:\x20secure\r\nSet-Cookie:\x20key=expired;\x20Http");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2095-TCP:V=7.70%I=7%D=3/16%Time=5C8CDD41%P=x86_64-unknown-linux-gnu
+SF:%r(SIPOptions,10F8,"HTTP/1\.0\x20401\x20Access\x20Denied\r\nConnection:
+SF:\x20close\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nDate:\
+SF:x20Sat,\x2016\x20Mar\x202019\x2011:25:56\x20GMT\r\nWWW-Authenticate:\x2
+SF:0Basic\x20realm=\"WebMail\"\r\nSet-Cookie:\x20webmailrelogin=no;\x20Htt
+SF:pOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x2
+SF:0port=2095\r\nSet-Cookie:\x20webmailsession=%3aMzEVWXZ2zIBf8Vu5%2cca59c
+SF:ecec616d0511e72d71cc2af28cb;\x20HttpOnly;\x20path=/;\x20port=2095\r\nSe
+SF:t-Cookie:\x20roundcube_sessid=expired;\x20HttpOnly;\x20expires=Thu,\x20
+SF:01-Jan-1970\x2000:00:01\x20GMT;\x20path=/;\x20port=2095\r\nSet-Cookie:\
+SF:x20Horde=expired;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:
+SF:01\x20GMT;\x20path=/horde;\x20port=2095\r\nSet-Cookie:\x20PPA_ID=expire
+SF:d;\x20HttpOnly;\x20expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20p
+SF:ath=/;\x20port=2095\r\nSet-Cookie:\x20imp_key=expired;\x20HttpOnly;\x20
+SF:domain=morocco\.footholds\.net;\x20expires=Thu,\x2001-Jan-1970\x2000:00
+SF::01\x20GMT;\x20path=/horde;\x20port=2095\r\nSet-Cookie:\x20key=expired;
+SF:\x20HttpOnly;\x20domain=morocco\.footholds\.net;\x20expires=Thu,\x2001-
+SF:Jan-197");
+Service Info: OSs: Linux, Unix; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 13:28:15 2019 -- 1 IP address (1 host up) scanned in 5856.74 seconds

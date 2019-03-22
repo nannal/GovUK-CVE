@@ -1,0 +1,59 @@
+# Nmap 7.70 scan initiated Sat Mar 16 12:45:01 2019 as: nmap -T4 -sSV -p0- --script=banner --script=ssl-enum-ciphers -oA ./results/nmap/mail1.mhra.gov.uk mail1.mhra.gov.uk
+Nmap scan report for mail1.mhra.gov.uk (109.231.221.122)
+Host is up (0.24s latency).
+Not shown: 65535 filtered ports
+PORT    STATE SERVICE   VERSION
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 16 Mar 2019 11:44:36 GMT
+|     Server: 
+|     Content-Length: 12
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     Request.
+|   HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 16 Mar 2019 11:44:32 GMT
+|     Server: 
+|     Content-Length: 12
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|_    Request.
+|_http-server-header: <empty>
+| ssl-enum-ciphers: 
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA and TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference error: Error when comparing TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 and TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+|_  least strength: A
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=3/16%Time=5C8CE19E%P=x86_64-unknown-linu
+SF:x-gnu%r(HTTPOptions,AC,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20
+SF:Sat,\x2016\x20Mar\x202019\x2011:44:32\x20GMT\r\nServer:\x20\x20\r\nCont
+SF:ent-Length:\x2012\r\nConnection:\x20close\r\nContent-Type:\x20text/html
+SF:;\x20charset=iso-8859-1\r\n\r\nBad\x20Request\.")%r(FourOhFourRequest,A
+SF:C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2016\x20Mar\x20
+SF:2019\x2011:44:36\x20GMT\r\nServer:\x20\x20\r\nContent-Length:\x2012\r\n
+SF:Connection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859
+SF:-1\r\n\r\nBad\x20Request\.");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 13:45:06 2019 -- 1 IP address (1 host up) scanned in 3605.05 seconds

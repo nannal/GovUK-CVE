@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 04:21:40 2019 as: nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/chalfontstpeter-pc.gov.uk chalfontstpeter-pc.gov.uk -->
+<nmaprun scanner="nmap" args="nmap -T4 -sSV -p0- -&#45;script=banner -&#45;script=ssl-enum-ciphers -oA ./results/nmap/chalfontstpeter-pc.gov.uk chalfontstpeter-pc.gov.uk" start="1552702900" startstr="Sat Mar 16 04:21:40 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552702900" endtime="1552703789"><status state="up" reason="reset" reason_ttl="50"/>
+<address addr="23.236.49.167" addrtype="ipv4"/>
+<hostnames>
+<hostname name="chalfontstpeter-pc.gov.uk" type="user"/>
+<hostname name="167.49.236.23.bc.googleusercontent.com" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65533">
+<extrareasons reason="no-responses" count="65529"/>
+<extrareasons reason="host-prohibiteds" count="4"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="http" product="nginx" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx</cpe></service><script id="http-server-header" output="nginx"><elem>nginx</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="http" product="nginx" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx</cpe></service><script id="http-server-header" output="nginx"><elem>nginx</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  least strength: A"><table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<elem key="least strength">A</elem>
+</script></port>
+<port protocol="tcp" portid="2222"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="ssh" product="ProFTPD mod_sftp" version="0.9.9" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:proftpd:proftpd:0.9.9</cpe></service><script id="banner" output="SSH-2.0-mod_sftp/0.9.9\x0D\x0A\x00\x00\x01\xBC\x08\x14\x87\x90&apos;&#xa;\xC1\xFFd\xE2\x1EX\x90\xBF\xD7\xDA\xE0\xCA\x17\x00\x00\x00\xC4ecdh-s...&#xa;"/></port>
+</ports>
+<times srtt="156627" rttvar="7955" to="188447"/>
+</host>
+<runstats><finished time="1552703789" timestr="Sat Mar 16 04:36:29 2019" elapsed="889.52" summary="Nmap done at Sat Mar 16 04:36:29 2019; 1 IP address (1 host up) scanned in 889.52 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
